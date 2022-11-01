@@ -1,5 +1,6 @@
 #pragma once
 #include "Loginform.h"
+#include "User.h"
 namespace Project {
 
 	using namespace System;
@@ -8,6 +9,7 @@ namespace Project {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace System::Data::SqlClient; 
 
 	/// <summary>
 	/// Summary for Registerpage
@@ -18,6 +20,7 @@ namespace Project {
 		Registerpage(void)
 		{
 			InitializeComponent();
+			this->CenterToScreen();
 			//
 			//TODO: Add the constructor code here
 			//
@@ -40,26 +43,40 @@ namespace Project {
 	private: System::Windows::Forms::Label^ label4;
 	private: System::Windows::Forms::Label^ label5;
 	private: System::Windows::Forms::Label^ label6;
-	private: System::Windows::Forms::TextBox^ textBox1;
+	private: System::Windows::Forms::TextBox^ tbUsername;
+	private: System::Windows::Forms::TextBox^ tbPassword;
+	private: System::Windows::Forms::TextBox^ tbCPassword;
 
 
-	private: System::Windows::Forms::TextBox^ textBox4;
-	private: System::Windows::Forms::TextBox^ textBox5;
+
+
+
 	private: System::Windows::Forms::Label^ label7;
-	private: System::Windows::Forms::TextBox^ textBox6;
+	private: System::Windows::Forms::TextBox^ tbEmail;
+
 	private: System::Windows::Forms::Label^ label8;
 
 
 
 	private: System::Windows::Forms::Label^ label10;
-	private: System::Windows::Forms::Button^ button1;
-	private: System::Windows::Forms::CheckBox^ checkBox1;
-	private: System::Windows::Forms::CheckBox^ checkBox2;
-	private: System::Windows::Forms::CheckBox^ checkBox3;
-	private: System::Windows::Forms::DateTimePicker^ dateTimePicker1;
+	private: System::Windows::Forms::Button^ btnRegister;
 
-	private: System::Windows::Forms::TextBox^ textBox7;
+
+
+
+
+
+
+	private: System::Windows::Forms::DateTimePicker^ dtpDob;
+
+	private: System::Windows::Forms::TextBox^ tbName;
+
+
+
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
+	private: System::Windows::Forms::LinkLabel^ linkLabel1;
+	private: System::Windows::Forms::CheckedListBox^ cbGender;
+
 
 
 	protected:
@@ -84,20 +101,19 @@ namespace Project {
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->label6 = (gcnew System::Windows::Forms::Label());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
+			this->tbUsername = (gcnew System::Windows::Forms::TextBox());
+			this->tbPassword = (gcnew System::Windows::Forms::TextBox());
+			this->tbCPassword = (gcnew System::Windows::Forms::TextBox());
 			this->label7 = (gcnew System::Windows::Forms::Label());
-			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
+			this->tbEmail = (gcnew System::Windows::Forms::TextBox());
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->label10 = (gcnew System::Windows::Forms::Label());
-			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->checkBox1 = (gcnew System::Windows::Forms::CheckBox());
-			this->checkBox2 = (gcnew System::Windows::Forms::CheckBox());
-			this->checkBox3 = (gcnew System::Windows::Forms::CheckBox());
-			this->dateTimePicker1 = (gcnew System::Windows::Forms::DateTimePicker());
-			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
+			this->btnRegister = (gcnew System::Windows::Forms::Button());
+			this->dtpDob = (gcnew System::Windows::Forms::DateTimePicker());
+			this->tbName = (gcnew System::Windows::Forms::TextBox());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->linkLabel1 = (gcnew System::Windows::Forms::LinkLabel());
+			this->cbGender = (gcnew System::Windows::Forms::CheckedListBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -179,37 +195,37 @@ namespace Project {
 			this->label6->TabIndex = 4;
 			this->label6->Text = L"Confirm Password";
 			// 
-			// textBox1
+			// tbUsername
 			// 
-			this->textBox1->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->tbUsername->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox1->Location = System::Drawing::Point(401, 293);
-			this->textBox1->Margin = System::Windows::Forms::Padding(8, 7, 8, 7);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(576, 45);
-			this->textBox1->TabIndex = 6;
+			this->tbUsername->Location = System::Drawing::Point(401, 293);
+			this->tbUsername->Margin = System::Windows::Forms::Padding(8, 7, 8, 7);
+			this->tbUsername->Name = L"tbUsername";
+			this->tbUsername->Size = System::Drawing::Size(576, 45);
+			this->tbUsername->TabIndex = 6;
 			// 
-			// textBox4
+			// tbPassword
 			// 
-			this->textBox4->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->tbPassword->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox4->Location = System::Drawing::Point(401, 484);
-			this->textBox4->Margin = System::Windows::Forms::Padding(8, 7, 8, 7);
-			this->textBox4->Name = L"textBox4";
-			this->textBox4->PasswordChar = '*';
-			this->textBox4->Size = System::Drawing::Size(576, 45);
-			this->textBox4->TabIndex = 6;
+			this->tbPassword->Location = System::Drawing::Point(401, 484);
+			this->tbPassword->Margin = System::Windows::Forms::Padding(8, 7, 8, 7);
+			this->tbPassword->Name = L"tbPassword";
+			this->tbPassword->PasswordChar = '*';
+			this->tbPassword->Size = System::Drawing::Size(576, 45);
+			this->tbPassword->TabIndex = 6;
 			// 
-			// textBox5
+			// tbCPassword
 			// 
-			this->textBox5->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->tbCPassword->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox5->Location = System::Drawing::Point(401, 554);
-			this->textBox5->Margin = System::Windows::Forms::Padding(8, 7, 8, 7);
-			this->textBox5->Name = L"textBox5";
-			this->textBox5->PasswordChar = '*';
-			this->textBox5->Size = System::Drawing::Size(576, 45);
-			this->textBox5->TabIndex = 6;
+			this->tbCPassword->Location = System::Drawing::Point(401, 554);
+			this->tbCPassword->Margin = System::Windows::Forms::Padding(8, 7, 8, 7);
+			this->tbCPassword->Name = L"tbCPassword";
+			this->tbCPassword->PasswordChar = '*';
+			this->tbCPassword->Size = System::Drawing::Size(576, 45);
+			this->tbCPassword->TabIndex = 6;
 			// 
 			// label7
 			// 
@@ -224,15 +240,15 @@ namespace Project {
 			this->label7->TabIndex = 3;
 			this->label7->Text = L"Email";
 			// 
-			// textBox6
+			// tbEmail
 			// 
-			this->textBox6->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->tbEmail->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox6->Location = System::Drawing::Point(401, 222);
-			this->textBox6->Margin = System::Windows::Forms::Padding(8, 7, 8, 7);
-			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(576, 45);
-			this->textBox6->TabIndex = 6;
+			this->tbEmail->Location = System::Drawing::Point(401, 222);
+			this->tbEmail->Margin = System::Windows::Forms::Padding(8, 7, 8, 7);
+			this->tbEmail->Name = L"tbEmail";
+			this->tbEmail->Size = System::Drawing::Size(576, 45);
+			this->tbEmail->TabIndex = 6;
 			// 
 			// label8
 			// 
@@ -260,95 +276,76 @@ namespace Project {
 			this->label10->TabIndex = 4;
 			this->label10->Text = L"Gender";
 			// 
-			// button1
+			// btnRegister
 			// 
-			this->button1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
+			this->btnRegister->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)));
-			this->button1->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btnRegister->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button1->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->button1->Location = System::Drawing::Point(573, 644);
-			this->button1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(233, 49);
-			this->button1->TabIndex = 8;
-			this->button1->Text = L"Register";
-			this->button1->UseVisualStyleBackColor = false;
+			this->btnRegister->ForeColor = System::Drawing::SystemColors::ControlLightLight;
+			this->btnRegister->Location = System::Drawing::Point(573, 644);
+			this->btnRegister->Margin = System::Windows::Forms::Padding(4);
+			this->btnRegister->Name = L"btnRegister";
+			this->btnRegister->Size = System::Drawing::Size(233, 49);
+			this->btnRegister->TabIndex = 8;
+			this->btnRegister->Text = L"Register";
+			this->btnRegister->UseVisualStyleBackColor = false;
+			this->btnRegister->Click += gcnew System::EventHandler(this, &Registerpage::btnRegister_Click);
 			// 
-			// checkBox1
+			// dtpDob
 			// 
-			this->checkBox1->AutoSize = true;
-			this->checkBox1->BackColor = System::Drawing::SystemColors::ButtonFace;
-			this->checkBox1->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->dtpDob->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->checkBox1->Location = System::Drawing::Point(401, 434);
-			this->checkBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->checkBox1->Name = L"checkBox1";
-			this->checkBox1->Size = System::Drawing::Size(108, 41);
-			this->checkBox1->TabIndex = 9;
-			this->checkBox1->Text = L"Male";
-			this->checkBox1->UseVisualStyleBackColor = false;
-			this->checkBox1->CheckedChanged += gcnew System::EventHandler(this, &Registerpage::checkBox1_CheckedChanged);
+			this->dtpDob->Location = System::Drawing::Point(401, 364);
+			this->dtpDob->Margin = System::Windows::Forms::Padding(4);
+			this->dtpDob->Name = L"dtpDob";
+			this->dtpDob->Size = System::Drawing::Size(576, 45);
+			this->dtpDob->TabIndex = 10;
 			// 
-			// checkBox2
+			// tbName
 			// 
-			this->checkBox2->AutoSize = true;
-			this->checkBox2->BackColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->checkBox2->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->tbName->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->checkBox2->Location = System::Drawing::Point(517, 434);
-			this->checkBox2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->checkBox2->Name = L"checkBox2";
-			this->checkBox2->Size = System::Drawing::Size(145, 41);
-			this->checkBox2->TabIndex = 9;
-			this->checkBox2->Text = L"Female";
-			this->checkBox2->UseVisualStyleBackColor = false;
-			// 
-			// checkBox3
-			// 
-			this->checkBox3->AutoSize = true;
-			this->checkBox3->BackColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->checkBox3->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->checkBox3->Location = System::Drawing::Point(670, 437);
-			this->checkBox3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->checkBox3->Name = L"checkBox3";
-			this->checkBox3->Size = System::Drawing::Size(123, 41);
-			this->checkBox3->TabIndex = 9;
-			this->checkBox3->Text = L"Other";
-			this->checkBox3->UseVisualStyleBackColor = false;
-			// 
-			// dateTimePicker1
-			// 
-			this->dateTimePicker1->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->dateTimePicker1->Location = System::Drawing::Point(401, 364);
-			this->dateTimePicker1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->dateTimePicker1->Name = L"dateTimePicker1";
-			this->dateTimePicker1->Size = System::Drawing::Size(576, 45);
-			this->dateTimePicker1->TabIndex = 10;
-			// 
-			// textBox7
-			// 
-			this->textBox7->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->textBox7->Location = System::Drawing::Point(401, 156);
-			this->textBox7->Margin = System::Windows::Forms::Padding(8, 7, 8, 7);
-			this->textBox7->Name = L"textBox7";
-			this->textBox7->Size = System::Drawing::Size(576, 45);
-			this->textBox7->TabIndex = 6;
+			this->tbName->Location = System::Drawing::Point(401, 156);
+			this->tbName->Margin = System::Windows::Forms::Padding(8, 7, 8, 7);
+			this->tbName->Name = L"tbName";
+			this->tbName->Size = System::Drawing::Size(576, 45);
+			this->tbName->TabIndex = 6;
 			// 
 			// pictureBox1
 			// 
 			this->pictureBox1->BackColor = System::Drawing::SystemColors::InactiveCaption;
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
 			this->pictureBox1->Location = System::Drawing::Point(16, 15);
-			this->pictureBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->pictureBox1->Margin = System::Windows::Forms::Padding(4);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(92, 74);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox1->TabIndex = 13;
 			this->pictureBox1->TabStop = false;
+			// 
+			// linkLabel1
+			// 
+			this->linkLabel1->AutoSize = true;
+			this->linkLabel1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->linkLabel1->Location = System::Drawing::Point(1025, 652);
+			this->linkLabel1->Name = L"linkLabel1";
+			this->linkLabel1->Size = System::Drawing::Size(73, 29);
+			this->linkLabel1->TabIndex = 14;
+			this->linkLabel1->TabStop = true;
+			this->linkLabel1->Text = L"Login";
+			this->linkLabel1->LinkClicked += gcnew System::Windows::Forms::LinkLabelLinkClickedEventHandler(this, &Registerpage::linkLabel1_LinkClicked_1);
+			// 
+			// cbGender
+			// 
+			this->cbGender->FormattingEnabled = true;
+			this->cbGender->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Male", L"Female", L"Other" });
+			this->cbGender->Location = System::Drawing::Point(401, 425);
+			this->cbGender->Name = L"cbGender";
+			this->cbGender->Size = System::Drawing::Size(187, 55);
+			this->cbGender->TabIndex = 15;
+			this->cbGender->SelectedIndexChanged += gcnew System::EventHandler(this, &Registerpage::checkedListBox1_SelectedIndexChanged);
 			// 
 			// Registerpage
 			// 
@@ -357,17 +354,16 @@ namespace Project {
 			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(1180, 690);
+			this->Controls->Add(this->cbGender);
+			this->Controls->Add(this->linkLabel1);
 			this->Controls->Add(this->pictureBox1);
-			this->Controls->Add(this->dateTimePicker1);
-			this->Controls->Add(this->checkBox3);
-			this->Controls->Add(this->checkBox2);
-			this->Controls->Add(this->checkBox1);
-			this->Controls->Add(this->button1);
-			this->Controls->Add(this->textBox5);
-			this->Controls->Add(this->textBox4);
-			this->Controls->Add(this->textBox7);
-			this->Controls->Add(this->textBox6);
-			this->Controls->Add(this->textBox1);
+			this->Controls->Add(this->dtpDob);
+			this->Controls->Add(this->btnRegister);
+			this->Controls->Add(this->tbCPassword);
+			this->Controls->Add(this->tbPassword);
+			this->Controls->Add(this->tbName);
+			this->Controls->Add(this->tbEmail);
+			this->Controls->Add(this->tbUsername);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label6);
 			this->Controls->Add(this->label5);
@@ -377,7 +373,7 @@ namespace Project {
 			this->Controls->Add(this->label7);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
-			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"Registerpage";
 			this->Text = L"Registerpage";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
@@ -393,6 +389,71 @@ namespace Project {
 	}
 
 private: System::Void checkBox1_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+public: bool switchToLogin = false;
+private: System::Void linkLabel1_LinkClicked_1(System::Object^ sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^ e) {
+	this->switchToLogin = true;
+	this->Close();
+}
+	   public: User^ user=nullptr;
+private: System::Void btnRegister_Click(System::Object^ sender, System::EventArgs^ e) {
+	String^ name = tbName->Text;
+	String^ email = tbEmail->Text;
+	String^ username = tbUsername->Text;
+	String^ gender = cbGender->Text;
+	String^ dob = dtpDob->Text;
+	String^ password = tbPassword->Text;
+	String^ confirmPassword = tbCPassword->Text;
+	
+
+	if (name->Length == 0 || email->Length == 0
+		|| dob->Length == 0 || username->Length == 0
+		|| password->Length == 0 || gender->Length==0) {
+
+		MessageBox::Show("Please enter all the fields",
+			"On or more empty fields", MessageBoxButtons::OK);
+		return;
+	}
+	if (String::Compare(password, confirmPassword) != 0) {
+		MessageBox::Show("Password and Confirm Password do not match",
+			"Password Error", MessageBoxButtons::OK);
+		return;
+	}
+	try {
+		String^ connString = "Data Source=LAPTOP-STT82H7B;Initial Catalog=myDB;Integrated Security=True";
+		SqlConnection sqlConn(connString);
+		sqlConn.Open();
+
+		String^ sqlQuery = "INSERT INTO users " +
+			"(name, email, username, dob, password, gender) VALUES " +
+			"(@name, @email, @username, @dob, @password,@gender);";
+
+		SqlCommand command(sqlQuery, % sqlConn);
+		command.Parameters->AddWithValue("@name", name);
+		command.Parameters->AddWithValue("@email", email);
+		command.Parameters->AddWithValue("@username", username);
+		command.Parameters->AddWithValue("@dob", dob);
+		command.Parameters->AddWithValue("@password", password);
+		command.Parameters->AddWithValue("@gender", gender);
+
+		command.ExecuteNonQuery();
+		user = gcnew User;
+		user->name = name;
+		user->email = email;
+		user->username = username;
+		user->dob = dob;
+		user->password = password;
+		user->gender = gender;
+
+		this->Close();
+	}
+	catch (Exception^ ex) {
+		MessageBox::Show("Failed to register new user",
+			"Register Failure", MessageBoxButtons::OK);
+	}
+
+}
+private: System::Void checkedListBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

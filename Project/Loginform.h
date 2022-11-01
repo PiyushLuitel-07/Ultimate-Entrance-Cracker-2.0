@@ -285,11 +285,10 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 	}
 //aarogya	
 }
-
+public: bool switchToRegister = false;
 private: System::Void linkLabel1_LinkClicked(System::Object^ sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^ e) {
-	this->Hide();
-	/*Registerpage robj;
-	robj.ShowDialog();*/
+	this->switchToRegister=true;
+	this->Close();
 
 	
 }
