@@ -271,8 +271,8 @@ namespace Project {
 	
 private: System::Void pictureBox6_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->Hide();
-	Loginform lobj;
-	lobj.ShowDialog();
+	/*Loginform lobj;
+	lobj.ShowDialog();*/
 
 }
 };

@@ -1,16 +1,28 @@
-#include "Loginform.h"
-#include "Registerpage.h"
+
+#include "LoginForm.h"
+
 
 using namespace System;
 using namespace System::Windows::Forms;
-[STAThread]
 
-int main(array<String^>^ args)
+void main(array<String^>^ args)
 {
-    Application::EnableVisualStyles();
-    Application::SetCompatibleTextRenderingDefault(false);
-    Project::Loginform form;
-    Application::Run(% form);
+	Application::EnableVisualStyles();
+	Application::SetCompatibleTextRenderingDefault(false);
+	Project::Loginform loginForm;
+	loginForm.ShowDialog();
 
-    return 0;
+
+	User^ user = loginForm.user;
+	if (user != nullptr) {
+		MessageBox::Show("Successful Authentication of " + user -> name,
+			"Program.cpp", MessageBoxButtons::OK);
+	}
+	else
+	{
+		MessageBox::Show("Authentication Canceled",
+			"Program.cpp", MessageBoxButtons::OK);
+	}
+
+		
 }

@@ -2,6 +2,7 @@
 #include "Homepage.h"
 #include "Registerpage.h"
 #include "Adminloginpage.h"
+#include "User.h"
 
 namespace Project {
 
@@ -11,6 +12,7 @@ namespace Project {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace System::Data::SqlClient;
 
 	/// <summary>
 	/// Summary for Loginform
@@ -42,9 +44,12 @@ namespace Project {
 
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label3;
-	private: System::Windows::Forms::TextBox^ textBox1;
-	private: System::Windows::Forms::TextBox^ textBox2;
-	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::TextBox^ tbUsername;
+	private: System::Windows::Forms::TextBox^ tbPassword;
+	private: System::Windows::Forms::Button^ btnLogin;
+
+
+
 	private: System::Windows::Forms::LinkLabel^ linkLabel1;
 	private: System::Windows::Forms::LinkLabel^ linkLabel2;
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
@@ -69,9 +74,9 @@ namespace Project {
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Loginform::typeid));
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->tbUsername = (gcnew System::Windows::Forms::TextBox());
+			this->tbPassword = (gcnew System::Windows::Forms::TextBox());
+			this->btnLogin = (gcnew System::Windows::Forms::Button());
 			this->linkLabel1 = (gcnew System::Windows::Forms::LinkLabel());
 			this->linkLabel2 = (gcnew System::Windows::Forms::LinkLabel());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
@@ -89,9 +94,10 @@ namespace Project {
 			this->label2->Location = System::Drawing::Point(401, 228);
 			this->label2->Margin = System::Windows::Forms::Padding(6, 0, 6, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(188, 27);
+			this->label2->Size = System::Drawing::Size(148, 33);
 			this->label2->TabIndex = 2;
-			this->label2->Text = L"Username/email";
+			this->label2->Text = L"Username";
+			this->label2->Click += gcnew System::EventHandler(this, &Loginform::label2_Click);
 			// 
 			// label3
 			// 
@@ -103,48 +109,49 @@ namespace Project {
 			this->label3->Location = System::Drawing::Point(401, 307);
 			this->label3->Margin = System::Windows::Forms::Padding(6, 0, 6, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(113, 27);
+			this->label3->Size = System::Drawing::Size(142, 33);
 			this->label3->TabIndex = 3;
 			this->label3->Text = L"Password";
 			// 
-			// textBox1
+			// tbUsername
 			// 
-			this->textBox1->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->tbUsername->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox1->Location = System::Drawing::Point(401, 263);
-			this->textBox1->Margin = System::Windows::Forms::Padding(6);
-			this->textBox1->MaxLength = 25;
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(406, 37);
-			this->textBox1->TabIndex = 4;
+			this->tbUsername->Location = System::Drawing::Point(401, 263);
+			this->tbUsername->Margin = System::Windows::Forms::Padding(6);
+			this->tbUsername->MaxLength = 25;
+			this->tbUsername->Name = L"tbUsername";
+			this->tbUsername->Size = System::Drawing::Size(406, 45);
+			this->tbUsername->TabIndex = 4;
+			this->tbUsername->TextChanged += gcnew System::EventHandler(this, &Loginform::tbUsername_TextChanged);
 			// 
-			// textBox2
+			// tbPassword
 			// 
-			this->textBox2->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->tbPassword->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox2->Location = System::Drawing::Point(401, 342);
-			this->textBox2->Margin = System::Windows::Forms::Padding(6);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->PasswordChar = '*';
-			this->textBox2->Size = System::Drawing::Size(406, 37);
-			this->textBox2->TabIndex = 4;
+			this->tbPassword->Location = System::Drawing::Point(401, 342);
+			this->tbPassword->Margin = System::Windows::Forms::Padding(6);
+			this->tbPassword->Name = L"tbPassword";
+			this->tbPassword->PasswordChar = '*';
+			this->tbPassword->Size = System::Drawing::Size(406, 45);
+			this->tbPassword->TabIndex = 4;
 			// 
-			// button1
+			// btnLogin
 			// 
-			this->button1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
+			this->btnLogin->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)));
-			this->button1->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->button1->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btnLogin->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnLogin->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btnLogin->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button1->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->button1->Location = System::Drawing::Point(549, 404);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(112, 40);
-			this->button1->TabIndex = 5;
-			this->button1->Text = L"Login";
-			this->button1->UseVisualStyleBackColor = false;
-			this->button1->Click += gcnew System::EventHandler(this, &Loginform::button1_Click);
+			this->btnLogin->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->btnLogin->Location = System::Drawing::Point(549, 404);
+			this->btnLogin->Name = L"btnLogin";
+			this->btnLogin->Size = System::Drawing::Size(112, 40);
+			this->btnLogin->TabIndex = 5;
+			this->btnLogin->Text = L"Login";
+			this->btnLogin->UseVisualStyleBackColor = false;
+			this->btnLogin->Click += gcnew System::EventHandler(this, &Loginform::button1_Click);
 			// 
 			// linkLabel1
 			// 
@@ -157,7 +164,7 @@ namespace Project {
 			this->linkLabel1->LinkColor = System::Drawing::SystemColors::WindowText;
 			this->linkLabel1->Location = System::Drawing::Point(721, 422);
 			this->linkLabel1->Name = L"linkLabel1";
-			this->linkLabel1->Size = System::Drawing::Size(86, 23);
+			this->linkLabel1->Size = System::Drawing::Size(112, 30);
 			this->linkLabel1->TabIndex = 6;
 			this->linkLabel1->TabStop = true;
 			this->linkLabel1->Text = L"Register";
@@ -173,7 +180,7 @@ namespace Project {
 			this->linkLabel2->LinkColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->linkLabel2->Location = System::Drawing::Point(721, 458);
 			this->linkLabel2->Name = L"linkLabel2";
-			this->linkLabel2->Size = System::Drawing::Size(124, 23);
+			this->linkLabel2->Size = System::Drawing::Size(162, 30);
 			this->linkLabel2->TabIndex = 7;
 			this->linkLabel2->TabStop = true;
 			this->linkLabel2->Text = L"Admin Login";
@@ -203,23 +210,23 @@ namespace Project {
 			this->label1->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->label1->Location = System::Drawing::Point(66, 75);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(778, 71);
+			this->label1->Size = System::Drawing::Size(971, 89);
 			this->label1->TabIndex = 9;
 			this->label1->Text = L"Ultimate Entrance Cracker";
 			// 
 			// Loginform
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(12, 25);
+			this->AutoScaleDimensions = System::Drawing::SizeF(15, 30);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::AppWorkspace;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
-			this->ClientSize = System::Drawing::Size(884, 568);
+			this->ClientSize = System::Drawing::Size(1063, 568);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->linkLabel2);
 			this->Controls->Add(this->linkLabel1);
-			this->Controls->Add(this->button1);
-			this->Controls->Add(this->textBox2);
-			this->Controls->Add(this->textBox1);
+			this->Controls->Add(this->btnLogin);
+			this->Controls->Add(this->tbPassword);
+			this->Controls->Add(this->tbUsername);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->pictureBox1);
@@ -233,32 +240,65 @@ namespace Project {
 
 		}
 #pragma endregion
-
+public: User^ user= nullptr;
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 	
-	if (textBox1->Text == username && textBox2->Text == password)
-	{
-		MessageBox::Show("Login Successful");
-		Homepage hobj;
-		this->Hide();
-		hobj.ShowDialog();
+	String^ username = this->tbUsername->Text;
+	String^ password = this->tbPassword->Text;
+
+	if (username->Length == 0 || password->Length == 0) {
+		MessageBox::Show("Please enter username and password",
+			"Username or Password Empty", MessageBoxButtons::OK);
+		return;
 	}
-	else if (textBox1->Text != username || textBox2->Text != password)
-	{
-		MessageBox::Show("Invalid Username or password");
+	try {
+		String^ connString = "Data Source=LAPTOP-STT82H7B;Initial Catalog=myDB;Integrated Security=True";
+		SqlConnection sqlConn(connString);
+		sqlConn.Open();
+
+		String^ sqlQuery = "SELECT * FROM Users WHERE username=@username AND password=@pwd;";
+		SqlCommand command(sqlQuery, % sqlConn);
+		command.Parameters->AddWithValue("@username", username);
+		command.Parameters->AddWithValue("@pwd", password);
+
+		SqlDataReader^ reader = command.ExecuteReader();
+		if (reader->Read()) {
+			user = gcnew User;
+			user->id = reader->GetInt32(0);
+			user->name = reader->GetString(1);
+			user->email = reader->GetString(2);
+			user->username = reader->GetString(3);
+			user->dob = reader->GetString(4);
+			user->gender = reader->GetString(5);
+			user->password = reader->GetString(6);
+
+			this->Close();
+		}
+		else {
+			MessageBox::Show("Username or password is incorrect",
+				"Username or Password Error", MessageBoxButtons::OK);
+		}
+	}
+	catch (Exception^ e) {
+		MessageBox::Show("Failed to connect to database",
+			"Database Connection Error", MessageBoxButtons::OK);
 	}
 	
 }
 
 private: System::Void linkLabel1_LinkClicked(System::Object^ sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^ e) {
 	this->Hide();
-	Registerpage robj;
-	robj.ShowDialog();
+	/*Registerpage robj;
+	robj.ShowDialog();*/
 
 	
 }
 private: System::Void linkLabel2_LinkClicked(System::Object^ sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^ e) {
 	
+}
+private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void tbUsername_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
