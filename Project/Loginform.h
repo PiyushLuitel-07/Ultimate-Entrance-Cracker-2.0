@@ -283,7 +283,7 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 		MessageBox::Show("Failed to connect to database",
 			"Database Connection Error", MessageBoxButtons::OK);
 	}
-	
+//aarogya	
 }
 
 private: System::Void linkLabel1_LinkClicked(System::Object^ sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^ e) {
