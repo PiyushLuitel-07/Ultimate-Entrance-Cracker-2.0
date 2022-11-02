@@ -253,6 +253,7 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 	}
 	try {
 		String^ connString = "Data Source=LAPTOP-STT82H7B;Initial Catalog=myDB;Integrated Security=True";
+		//Data Source=tcp:uec.database.windows.net;Initial Catalog=uecdb;Persist Security Info=True;User ID=sqluec;Password=***********
 		SqlConnection sqlConn(connString);
 		sqlConn.Open();
 
