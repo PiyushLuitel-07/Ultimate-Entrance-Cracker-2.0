@@ -59,7 +59,8 @@ namespace Project {
 	private:
 		String^ username = "admin";
 		String^ password = "admin";
-		/// <summary>
+	private: System::Windows::Forms::Button^ btnCancel;
+		   /// <summary>
 		/// Required designer variable.
 		/// </summary>
 		System::ComponentModel::Container^ components;
@@ -81,6 +82,7 @@ namespace Project {
 			this->linkLabel2 = (gcnew System::Windows::Forms::LinkLabel());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->btnCancel = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -145,7 +147,7 @@ namespace Project {
 			this->btnLogin->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnLogin->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->btnLogin->Location = System::Drawing::Point(549, 404);
+			this->btnLogin->Location = System::Drawing::Point(401, 396);
 			this->btnLogin->Name = L"btnLogin";
 			this->btnLogin->Size = System::Drawing::Size(112, 40);
 			this->btnLogin->TabIndex = 5;
@@ -214,6 +216,19 @@ namespace Project {
 			this->label1->TabIndex = 9;
 			this->label1->Text = L"Ultimate Entrance Cracker";
 			// 
+			// btnCancel
+			// 
+			this->btnCancel->BackColor = System::Drawing::SystemColors::Menu;
+			this->btnCancel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->btnCancel->Location = System::Drawing::Point(519, 395);
+			this->btnCancel->Name = L"btnCancel";
+			this->btnCancel->Size = System::Drawing::Size(154, 41);
+			this->btnCancel->TabIndex = 17;
+			this->btnCancel->Text = L"Cancel";
+			this->btnCancel->UseVisualStyleBackColor = false;
+			this->btnCancel->Click += gcnew System::EventHandler(this, &Loginform::btnCancel_Click);
+			// 
 			// Loginform
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(15, 30);
@@ -221,6 +236,7 @@ namespace Project {
 			this->BackColor = System::Drawing::SystemColors::AppWorkspace;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(1063, 568);
+			this->Controls->Add(this->btnCancel);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->linkLabel2);
 			this->Controls->Add(this->linkLabel1);
@@ -298,6 +314,9 @@ private: System::Void linkLabel2_LinkClicked(System::Object^ sender, System::Win
 private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void tbUsername_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void btnCancel_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Close();
 }
 };
 }
