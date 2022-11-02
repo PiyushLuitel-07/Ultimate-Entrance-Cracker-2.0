@@ -73,9 +73,12 @@ namespace Project {
 
 
 
-	private: System::Windows::Forms::PictureBox^ pictureBox1;
+
+
 	private: System::Windows::Forms::LinkLabel^ linkLabel1;
 	private: System::Windows::Forms::CheckedListBox^ cbGender;
+	private: System::Windows::Forms::Button^ btnCancel;
+
 
 
 
@@ -111,10 +114,9 @@ namespace Project {
 			this->btnRegister = (gcnew System::Windows::Forms::Button());
 			this->dtpDob = (gcnew System::Windows::Forms::DateTimePicker());
 			this->tbName = (gcnew System::Windows::Forms::TextBox());
-			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->linkLabel1 = (gcnew System::Windows::Forms::LinkLabel());
 			this->cbGender = (gcnew System::Windows::Forms::CheckedListBox());
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+			this->btnCancel = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// label1
@@ -312,40 +314,49 @@ namespace Project {
 			this->tbName->Size = System::Drawing::Size(576, 45);
 			this->tbName->TabIndex = 6;
 			// 
-			// pictureBox1
-			// 
-			this->pictureBox1->BackColor = System::Drawing::SystemColors::InactiveCaption;
-			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(16, 15);
-			this->pictureBox1->Margin = System::Windows::Forms::Padding(4);
-			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(92, 74);
-			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->pictureBox1->TabIndex = 13;
-			this->pictureBox1->TabStop = false;
-			// 
 			// linkLabel1
 			// 
+			this->linkLabel1->ActiveLinkColor = System::Drawing::Color::White;
 			this->linkLabel1->AutoSize = true;
-			this->linkLabel1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->linkLabel1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
+				static_cast<System::Int32>(static_cast<System::Byte>(0)));
+			this->linkLabel1->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 19.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->linkLabel1->Location = System::Drawing::Point(1025, 652);
+			this->linkLabel1->LinkColor = System::Drawing::Color::White;
+			this->linkLabel1->Location = System::Drawing::Point(822, 650);
 			this->linkLabel1->Name = L"linkLabel1";
-			this->linkLabel1->Size = System::Drawing::Size(73, 29);
+			this->linkLabel1->Size = System::Drawing::Size(98, 37);
 			this->linkLabel1->TabIndex = 14;
 			this->linkLabel1->TabStop = true;
 			this->linkLabel1->Text = L"Login";
+			this->linkLabel1->VisitedLinkColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)),
+				static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(0)));
 			this->linkLabel1->LinkClicked += gcnew System::Windows::Forms::LinkLabelLinkClickedEventHandler(this, &Registerpage::linkLabel1_LinkClicked_1);
 			// 
 			// cbGender
 			// 
+			this->cbGender->CheckOnClick = true;
 			this->cbGender->FormattingEnabled = true;
 			this->cbGender->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Male", L"Female", L"Other" });
 			this->cbGender->Location = System::Drawing::Point(401, 425);
 			this->cbGender->Name = L"cbGender";
-			this->cbGender->Size = System::Drawing::Size(187, 55);
+			this->cbGender->Size = System::Drawing::Size(262, 55);
 			this->cbGender->TabIndex = 15;
+			this->cbGender->ThreeDCheckBoxes = true;
 			this->cbGender->SelectedIndexChanged += gcnew System::EventHandler(this, &Registerpage::checkedListBox1_SelectedIndexChanged);
+			// 
+			// btnCancel
+			// 
+			this->btnCancel->BackColor = System::Drawing::SystemColors::Menu;
+			this->btnCancel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->btnCancel->Location = System::Drawing::Point(960, 652);
+			this->btnCancel->Name = L"btnCancel";
+			this->btnCancel->Size = System::Drawing::Size(154, 41);
+			this->btnCancel->TabIndex = 16;
+			this->btnCancel->Text = L"Cancel";
+			this->btnCancel->UseVisualStyleBackColor = false;
+			this->btnCancel->Click += gcnew System::EventHandler(this, &Registerpage::button1_Click);
 			// 
 			// Registerpage
 			// 
@@ -354,9 +365,9 @@ namespace Project {
 			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(1180, 690);
+			this->Controls->Add(this->btnCancel);
 			this->Controls->Add(this->cbGender);
 			this->Controls->Add(this->linkLabel1);
-			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->dtpDob);
 			this->Controls->Add(this->btnRegister);
 			this->Controls->Add(this->tbCPassword);
@@ -376,7 +387,6 @@ namespace Project {
 			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"Registerpage";
 			this->Text = L"Registerpage";
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -448,12 +458,25 @@ private: System::Void btnRegister_Click(System::Object^ sender, System::EventArg
 		this->Close();
 	}
 	catch (Exception^ ex) {
-		MessageBox::Show("Failed to register new user, Username already taken",
+		MessageBox::Show("Failed to register new user, Username or Email already taken",
 			"Register Failure", MessageBoxButtons::OK);
 	}
 
 }
 private: System::Void checkedListBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
+
+
+
+
+
+
+
+
+};
+private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Close();
 }
 };
 }

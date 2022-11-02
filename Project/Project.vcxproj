@@ -133,6 +133,7 @@
     <ClCompile Include="Startpage.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Admin.h" />
     <ClInclude Include="Adminloginpage.h">
       <FileType>CppForm</FileType>
     </ClInclude>
