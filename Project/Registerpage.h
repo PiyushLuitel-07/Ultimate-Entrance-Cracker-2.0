@@ -323,12 +323,12 @@ namespace Project {
 			this->linkLabel1->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 19.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->linkLabel1->LinkColor = System::Drawing::Color::White;
-			this->linkLabel1->Location = System::Drawing::Point(822, 650);
+			this->linkLabel1->Location = System::Drawing::Point(12, 31);
 			this->linkLabel1->Name = L"linkLabel1";
-			this->linkLabel1->Size = System::Drawing::Size(98, 37);
+			this->linkLabel1->Size = System::Drawing::Size(267, 37);
 			this->linkLabel1->TabIndex = 14;
 			this->linkLabel1->TabStop = true;
-			this->linkLabel1->Text = L"Login";
+			this->linkLabel1->Text = L"Go Back to Login";
 			this->linkLabel1->VisitedLinkColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)),
 				static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(0)));
 			this->linkLabel1->LinkClicked += gcnew System::Windows::Forms::LinkLabelLinkClickedEventHandler(this, &Registerpage::linkLabel1_LinkClicked_1);
@@ -350,7 +350,7 @@ namespace Project {
 			this->btnCancel->BackColor = System::Drawing::SystemColors::Menu;
 			this->btnCancel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnCancel->Location = System::Drawing::Point(960, 652);
+			this->btnCancel->Location = System::Drawing::Point(823, 651);
 			this->btnCancel->Name = L"btnCancel";
 			this->btnCancel->Size = System::Drawing::Size(154, 41);
 			this->btnCancel->TabIndex = 16;
