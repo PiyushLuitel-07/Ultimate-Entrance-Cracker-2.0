@@ -430,13 +430,13 @@ private: System::Void btnRegister_Click(System::Object^ sender, System::EventArg
 		return;
 	}
 	try {
-		String^ connString = "Data Source=LAPTOP-STT82H7B;Initial Catalog=myDB;Integrated Security=True";
+		String^ connString = "Data Source=tcp:uec.database.windows.net;Initial Catalog=uecdb;Persist Security Info=True;User ID=sqluec;Password=L12@sqd3";
 		SqlConnection sqlConn(connString);
 		sqlConn.Open();
 
-		String^ sqlQuery = "INSERT INTO users " +
-			"(name, email, username, dob, password, gender) VALUES " +
-			"(@name, @email, @username, @dob, @password,@gender);";
+		String^ sqlQuery = "INSERT INTO Users " +
+			"(name, email, username, dob, gender, password) VALUES " +
+			"(@name, @email, @username, @dob, @gender, @password);";
 
 		SqlCommand command(sqlQuery, % sqlConn);
 		command.Parameters->AddWithValue("@name", name);
