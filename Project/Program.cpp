@@ -16,6 +16,7 @@ void main(array<String^>^ args)
 	while (true)
 	{
 		Project::Loginform loginForm;
+		Project::Adminloginpage adminPage;
 		
 		loginForm.ShowDialog();
 		Project::Registerpage registerPage;
@@ -30,14 +31,29 @@ void main(array<String^>^ args)
 				break;
 			}
 		}
+		else if (loginForm.switchToAdminLogin)
+		{
+			adminPage.ShowDialog();
+			if (adminPage.switchToLogin) {
+				continue;
+			}
+			else {
+				admin = adminPage.admin;
+				break;
+			}
+		}
 
-		else {
+		else if (loginForm.switchToRegister==false) {
 		user = loginForm.user;
 		break;
 		}
+		else if(loginForm.switchToAdminLogin==false) {
+			admin = adminPage.admin;
+			break;
+		}
 	}
 	
-	while (true)
+	/*while (true)
 	{
 		Project::Adminloginpage adminPage;
 		Project::Loginform loginForm;
@@ -59,7 +75,7 @@ void main(array<String^>^ args)
 			admin = adminPage.admin;
 			break;
 		}
-	}
+	}*/
 	if (user != nullptr) {
 		MessageBox::Show("Successful Authentication of " + user -> name,
 			"Program.cpp", MessageBoxButtons::OK);
