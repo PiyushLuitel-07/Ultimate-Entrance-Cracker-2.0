@@ -1,6 +1,7 @@
 
 #include "LoginForm.h"
 #include "Registerpage.h"
+#include "Adminloginpage.h"
 
 
 using namespace System;
@@ -11,9 +12,11 @@ void main(array<String^>^ args)
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 	User^ user = nullptr;
+	Admin^ admin = nullptr;
 	while (true)
 	{
 		Project::Loginform loginForm;
+		
 		loginForm.ShowDialog();
 		Project::Registerpage registerPage;
 		if(loginForm.switchToRegister)
@@ -33,11 +36,40 @@ void main(array<String^>^ args)
 		break;
 		}
 	}
+	
+	while (true)
+	{
+		Project::Adminloginpage adminPage;
+		Project::Loginform loginForm;
+		loginForm.ShowDialog();
+		
+		if (loginForm.switchToAdminLogin)
+		{
+			adminPage.ShowDialog();
+			if (adminPage.switchToLogin) {
+				continue;
+			}
+			else {
+				admin = adminPage.admin;
+				break;
+			}
+		}
+
+		else {
+			admin = adminPage.admin;
+			break;
+		}
+	}
 	if (user != nullptr) {
 		MessageBox::Show("Successful Authentication of " + user -> name,
 			"Program.cpp", MessageBoxButtons::OK);
 	}
-	else
+	
+	else if (admin != nullptr) {
+		MessageBox::Show("Successful Authentication of admin  " + admin->username,
+			"Program.cpp", MessageBoxButtons::OK);
+	}
+	else  
 	{
 		MessageBox::Show("Authentication Canceled",
 			"Program.cpp", MessageBoxButtons::OK);

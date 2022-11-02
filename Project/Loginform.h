@@ -308,8 +308,10 @@ private: System::Void linkLabel1_LinkClicked(System::Object^ sender, System::Win
 
 	
 }
+public: bool switchToAdminLogin = false;
 private: System::Void linkLabel2_LinkClicked(System::Object^ sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^ e) {
-	
+	this->switchToAdminLogin = true;
+	this->Close();
 }
 private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
 }

@@ -458,7 +458,7 @@ private: System::Void btnRegister_Click(System::Object^ sender, System::EventArg
 		this->Close();
 	}
 	catch (Exception^ ex) {
-		MessageBox::Show("Failed to register new user, Username already taken",
+		MessageBox::Show("Failed to register new user, Username or Email already taken",
 			"Register Failure", MessageBoxButtons::OK);
 	}
 
