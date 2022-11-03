@@ -2,6 +2,7 @@
 #include "Loginform.h"
 #include "User.h"
 #include "Admin.h"
+#include "Developer.h"
 namespace Project {
 
 	using namespace System;
@@ -229,8 +230,10 @@ namespace Project {
 				admin->id = reader->GetInt32(0);
 				admin->username = reader->GetString(1);
 				admin->password = reader->GetString(2);
-
+				Developer developerPage;
 				this->Close();
+				developerPage.ShowDialog();
+
 			}
 			else 
 			{

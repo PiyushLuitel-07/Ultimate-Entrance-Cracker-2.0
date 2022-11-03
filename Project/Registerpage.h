@@ -436,9 +436,9 @@ private: System::Void btnRegister_Click(System::Object^ sender, System::EventArg
 		sqlConn.Open();
 
 		String^ sqlQuery = "INSERT INTO Users " +
-			"(name, email, username, dob, gender, password) VALUES " +
-			"(@name, @email, @username, @dob, @gender, @password);";
-
+			"(name, email, username, dob, password, gender) VALUES " +
+			"(@name, @email, @username, @dob, @password,@gender);";
+      
 		SqlCommand command(sqlQuery, % sqlConn);
 		command.Parameters->AddWithValue("@name", name);
 		command.Parameters->AddWithValue("@email", email);

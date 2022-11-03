@@ -1,6 +1,7 @@
 #include "LoginForm.h"
 #include "Registerpage.h"
 #include "Adminloginpage.h"
+#include "Developer.h"
 
 
 using namespace System;
@@ -16,6 +17,7 @@ void main(array<String^>^ args)
 	{
 		Project::Loginform loginForm;
 		Project::Adminloginpage adminPage;
+		Project::Developer developerPage;
 		
 		loginForm.ShowDialog();
 		Project::Registerpage registerPage;
@@ -34,7 +36,8 @@ void main(array<String^>^ args)
 		{
 			adminPage.ShowDialog();
 			if (adminPage.switchToLogin) {
-				continue;
+				/*continue;*/
+				developerPage.ShowDialog();
 			}
 			else {
 				admin = adminPage.admin;
