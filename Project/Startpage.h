@@ -291,7 +291,6 @@ private: System::Windows::Forms::RadioButton^ radioButton46;
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(1288, 102);
 			this->textBox1->TabIndex = 0;
-			this->textBox1->TextChanged += gcnew System::EventHandler(this, &Startpage::textBox1_TextChanged);
 			// 
 			// radioButton1
 			// 
@@ -307,7 +306,6 @@ private: System::Windows::Forms::RadioButton^ radioButton46;
 			this->radioButton1->TabStop = true;
 			this->radioButton1->Text = L"b";
 			this->radioButton1->UseVisualStyleBackColor = false;
-			this->radioButton1->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton1_CheckedChanged);
 			// 
 			// radioButton2
 			// 
@@ -353,7 +351,6 @@ private: System::Windows::Forms::RadioButton^ radioButton46;
 			this->radioButton4->TabStop = true;
 			this->radioButton4->Text = L"d";
 			this->radioButton4->UseVisualStyleBackColor = false;
-			this->radioButton4->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton4_CheckedChanged);
 			// 
 			// textBox2
 			// 
@@ -481,7 +478,6 @@ private: System::Windows::Forms::RadioButton^ radioButton46;
 			this->textBox14->Name = L"textBox14";
 			this->textBox14->Size = System::Drawing::Size(1288, 35);
 			this->textBox14->TabIndex = 21;
-			this->textBox14->TextChanged += gcnew System::EventHandler(this, &Startpage::textBox14_TextChanged);
 			// 
 			// radioButton10
 			// 
@@ -537,7 +533,6 @@ private: System::Windows::Forms::RadioButton^ radioButton46;
 			this->textBox16->Name = L"textBox16";
 			this->textBox16->Size = System::Drawing::Size(1288, 102);
 			this->textBox16->TabIndex = 13;
-			this->textBox16->TextChanged += gcnew System::EventHandler(this, &Startpage::textBox16_TextChanged);
 			// 
 			// textBox17
 			// 
@@ -1612,7 +1607,6 @@ private: System::Windows::Forms::RadioButton^ radioButton46;
 			this->Controls->Add(this->textBox1);
 			this->Name = L"Startpage";
 			this->Text = L"Startpage";
-			this->Load += gcnew System::EventHandler(this, &Startpage::Startpage_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 

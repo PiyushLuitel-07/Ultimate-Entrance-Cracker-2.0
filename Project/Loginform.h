@@ -60,6 +60,7 @@ namespace Project {
 		String^ username = "admin";
 		String^ password = "admin";
 	private: System::Windows::Forms::Button^ btnCancel;
+	private: System::Windows::Forms::PictureBox^ pictureBox2;
 		   /// <summary>
 		/// Required designer variable.
 		/// </summary>
@@ -83,40 +84,45 @@ namespace Project {
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->btnCancel = (gcnew System::Windows::Forms::Button());
+			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// label2
 			// 
+			this->label2->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label2->AutoSize = true;
-			this->label2->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label2->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label2->ForeColor = System::Drawing::SystemColors::ControlLightLight;
 			this->label2->Location = System::Drawing::Point(623, 351);
 			this->label2->Margin = System::Windows::Forms::Padding(6, 0, 6, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(119, 27);
+			this->label2->Size = System::Drawing::Size(141, 32);
 			this->label2->TabIndex = 2;
 			this->label2->Text = L"Username";
 			this->label2->Click += gcnew System::EventHandler(this, &Loginform::label2_Click);
 			// 
 			// label3
 			// 
+			this->label3->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label3->AutoSize = true;
-			this->label3->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label3->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label3->ForeColor = System::Drawing::SystemColors::ControlLightLight;
 			this->label3->Location = System::Drawing::Point(623, 430);
 			this->label3->Margin = System::Windows::Forms::Padding(6, 0, 6, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(113, 27);
+			this->label3->Size = System::Drawing::Size(137, 32);
 			this->label3->TabIndex = 3;
 			this->label3->Text = L"Password";
 			// 
 			// tbUsername
 			// 
+			this->tbUsername->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->tbUsername->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->tbUsername->Location = System::Drawing::Point(623, 386);
@@ -129,6 +135,7 @@ namespace Project {
 			// 
 			// tbPassword
 			// 
+			this->tbPassword->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->tbPassword->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->tbPassword->Location = System::Drawing::Point(623, 465);
@@ -140,10 +147,10 @@ namespace Project {
 			// 
 			// btnLogin
 			// 
+			this->btnLogin->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->btnLogin->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)));
 			this->btnLogin->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->btnLogin->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->btnLogin->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnLogin->ForeColor = System::Drawing::SystemColors::ButtonFace;
@@ -158,8 +165,9 @@ namespace Project {
 			// linkLabel1
 			// 
 			this->linkLabel1->ActiveLinkColor = System::Drawing::Color::WhiteSmoke;
+			this->linkLabel1->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->linkLabel1->AutoSize = true;
-			this->linkLabel1->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->linkLabel1->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->linkLabel1->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->linkLabel1->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -175,8 +183,10 @@ namespace Project {
 			// 
 			// linkLabel2
 			// 
+			this->linkLabel2->ActiveLinkColor = System::Drawing::Color::White;
+			this->linkLabel2->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->linkLabel2->AutoSize = true;
-			this->linkLabel2->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->linkLabel2->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->linkLabel2->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->linkLabel2->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -191,6 +201,7 @@ namespace Project {
 			// 
 			// pictureBox1
 			// 
+			this->pictureBox1->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->pictureBox1->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->pictureBox1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.BackgroundImage")));
 			this->pictureBox1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
@@ -205,6 +216,7 @@ namespace Project {
 			// 
 			// label1
 			// 
+			this->label1->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label1->AutoSize = true;
 			this->label1->BackColor = System::Drawing::Color::RosyBrown;
 			this->label1->Cursor = System::Windows::Forms::Cursors::Default;
@@ -219,7 +231,8 @@ namespace Project {
 			// 
 			// btnCancel
 			// 
-			this->btnCancel->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->btnCancel->Anchor = System::Windows::Forms::AnchorStyles::None;
+			this->btnCancel->BackColor = System::Drawing::Color::Firebrick;
 			this->btnCancel->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnCancel->ForeColor = System::Drawing::SystemColors::ControlLightLight;
@@ -230,6 +243,17 @@ namespace Project {
 			this->btnCancel->Text = L"Cancel";
 			this->btnCancel->UseVisualStyleBackColor = false;
 			this->btnCancel->Click += gcnew System::EventHandler(this, &Loginform::btnCancel_Click);
+			// 
+			// pictureBox2
+			// 
+			this->pictureBox2->Anchor = System::Windows::Forms::AnchorStyles::None;
+			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
+			this->pictureBox2->Location = System::Drawing::Point(0, 0);
+			this->pictureBox2->Name = L"pictureBox2";
+			this->pictureBox2->Size = System::Drawing::Size(1370, 749);
+			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pictureBox2->TabIndex = 18;
+			this->pictureBox2->TabStop = false;
 			// 
 			// Loginform
 			// 
@@ -248,11 +272,13 @@ namespace Project {
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->pictureBox1);
+			this->Controls->Add(this->pictureBox2);
 			this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->Margin = System::Windows::Forms::Padding(6);
 			this->Name = L"Loginform";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
