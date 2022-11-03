@@ -124,6 +124,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Adminloginpage.cpp" />
+    <ClCompile Include="Developer.cpp" />
     <ClCompile Include="Helppage.cpp" />
     <ClCompile Include="Homepage.cpp" />
     <ClCompile Include="Leaderboardpage.cpp" />
@@ -135,6 +136,9 @@
   <ItemGroup>
     <ClInclude Include="Admin.h" />
     <ClInclude Include="Adminloginpage.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Developer.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Helppage.h">
@@ -149,6 +153,7 @@
     <ClInclude Include="Loginform.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Questions.h" />
     <ClInclude Include="Registerpage.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -160,6 +165,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Adminloginpage.resx">
       <DependentUpon>Adminloginpage.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer.resx">
+      <DependentUpon>Developer.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Helppage.resx">
       <DependentUpon>Helppage.h</DependentUpon>

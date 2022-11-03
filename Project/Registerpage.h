@@ -434,7 +434,7 @@ private: System::Void btnRegister_Click(System::Object^ sender, System::EventArg
 		SqlConnection sqlConn(connString);
 		sqlConn.Open();
 
-		String^ sqlQuery = "INSERT INTO users " +
+		String^ sqlQuery = "INSERT INTO Users " +
 			"(name, email, username, dob, password, gender) VALUES " +
 			"(@name, @email, @username, @dob, @password,@gender);";
 
