@@ -62,13 +62,13 @@ namespace Project {
 			// 
 			this->label1->AutoSize = true;
 			this->label1->BackColor = System::Drawing::Color::RosyBrown;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 48, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label1->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 72, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label1->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->label1->Location = System::Drawing::Point(357, 22);
+			this->label1->Location = System::Drawing::Point(468, 43);
 			this->label1->Margin = System::Windows::Forms::Padding(24, 0, 24, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(157, 71);
+			this->label1->Size = System::Drawing::Size(234, 106);
 			this->label1->TabIndex = 2;
 			this->label1->Text = L"Help";
 			this->label1->TextAlign = System::Drawing::ContentAlignment::TopCenter;

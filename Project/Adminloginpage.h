@@ -82,12 +82,12 @@ namespace Project {
 			// 
 			this->label2->AutoSize = true;
 			this->label2->BackColor = System::Drawing::SystemColors::GradientActiveCaption;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label2->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 26.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(140, 310);
-			this->label2->Margin = System::Windows::Forms::Padding(8, 0, 8, 0);
+			this->label2->Location = System::Drawing::Point(261, 386);
+			this->label2->Margin = System::Windows::Forms::Padding(6, 0, 6, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(196, 44);
+			this->label2->Size = System::Drawing::Size(172, 38);
 			this->label2->TabIndex = 4;
 			this->label2->Text = L"Username";
 			this->label2->Click += gcnew System::EventHandler(this, &Adminloginpage::label2_Click);
@@ -96,35 +96,35 @@ namespace Project {
 			// 
 			this->label3->AutoSize = true;
 			this->label3->BackColor = System::Drawing::SystemColors::GradientActiveCaption;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label3->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 26.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(147, 389);
-			this->label3->Margin = System::Windows::Forms::Padding(8, 0, 8, 0);
+			this->label3->Location = System::Drawing::Point(266, 450);
+			this->label3->Margin = System::Windows::Forms::Padding(6, 0, 6, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(189, 44);
+			this->label3->Size = System::Drawing::Size(167, 38);
 			this->label3->TabIndex = 5;
 			this->label3->Text = L"Password";
 			// 
 			// tbUsername
 			// 
 			this->tbUsername->BackColor = System::Drawing::SystemColors::Window;
-			this->tbUsername->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->tbUsername->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 26.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->tbUsername->Location = System::Drawing::Point(405, 308);
-			this->tbUsername->Margin = System::Windows::Forms::Padding(8, 7, 8, 7);
+			this->tbUsername->Location = System::Drawing::Point(460, 384);
+			this->tbUsername->Margin = System::Windows::Forms::Padding(6, 6, 6, 6);
 			this->tbUsername->Name = L"tbUsername";
-			this->tbUsername->Size = System::Drawing::Size(540, 46);
+			this->tbUsername->Size = System::Drawing::Size(537, 46);
 			this->tbUsername->TabIndex = 6;
 			// 
 			// tbPassword
 			// 
-			this->tbPassword->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->tbPassword->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 26.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->tbPassword->Location = System::Drawing::Point(405, 389);
-			this->tbPassword->Margin = System::Windows::Forms::Padding(8, 7, 8, 7);
+			this->tbPassword->Location = System::Drawing::Point(460, 450);
+			this->tbPassword->Margin = System::Windows::Forms::Padding(6, 6, 6, 6);
 			this->tbPassword->Name = L"tbPassword";
 			this->tbPassword->PasswordChar = '*';
-			this->tbPassword->Size = System::Drawing::Size(540, 46);
+			this->tbPassword->Size = System::Drawing::Size(537, 46);
 			this->tbPassword->TabIndex = 6;
 			// 
 			// button1
@@ -133,13 +133,12 @@ namespace Project {
 				static_cast<System::Int32>(static_cast<System::Byte>(0)));
 			this->button1->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->button1->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button1->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 26.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button1->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->button1->Location = System::Drawing::Point(612, 492);
-			this->button1->Margin = System::Windows::Forms::Padding(4);
+			this->button1->Location = System::Drawing::Point(615, 580);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(149, 49);
+			this->button1->Size = System::Drawing::Size(112, 45);
 			this->button1->TabIndex = 9;
 			this->button1->Text = L"Login";
 			this->button1->UseVisualStyleBackColor = false;
@@ -150,13 +149,12 @@ namespace Project {
 			this->label1->AutoSize = true;
 			this->label1->BackColor = System::Drawing::Color::RosyBrown;
 			this->label1->Cursor = System::Windows::Forms::Cursors::Default;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 48, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label1->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 72, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label1->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->label1->Location = System::Drawing::Point(419, 123);
-			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label1->Location = System::Drawing::Point(433, 108);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(456, 89);
+			this->label1->Size = System::Drawing::Size(548, 106);
 			this->label1->TabIndex = 10;
 			this->label1->Text = L"Admin login";
 			// 
@@ -164,10 +162,9 @@ namespace Project {
 			// 
 			this->pictureBox1->BackColor = System::Drawing::SystemColors::InactiveCaption;
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(16, 15);
-			this->pictureBox1->Margin = System::Windows::Forms::Padding(4);
+			this->pictureBox1->Location = System::Drawing::Point(12, 12);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(97, 74);
+			this->pictureBox1->Size = System::Drawing::Size(73, 60);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox1->TabIndex = 12;
 			this->pictureBox1->TabStop = false;
@@ -175,12 +172,12 @@ namespace Project {
 			// 
 			// Adminloginpage
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ControlDarkDark;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(1249, 657);
+			this->ClientSize = System::Drawing::Size(1370, 749);
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->button1);
@@ -190,7 +187,6 @@ namespace Project {
 			this->Controls->Add(this->label2);
 			this->DoubleBuffered = true;
 			this->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"Adminloginpage";
 			this->Text = L"Adminloginpage";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
@@ -218,11 +214,11 @@ namespace Project {
 		}
 		try 
 		{
-			String^ connString = "Data Source=LAPTOP-STT82H7B;Initial Catalog=myDB;Integrated Security=True";
+			String^ connString = "Data Source=tcp:uec.database.windows.net;Initial Catalog=uecdb;Persist Security Info=True;User ID=sqluec;Password=L12@sqd3";
 			SqlConnection sqlConn(connString);
 			sqlConn.Open();
 
-			String^ sqlQuery = "SELECT * FROM Admins WHERE username=@username AND password=@pwd;";
+			String^ sqlQuery = "SELECT * FROM Admin WHERE username=@username AND password=@pwd;";
 			SqlCommand command(sqlQuery, % sqlConn);
 			command.Parameters->AddWithValue("@username", username);
 			command.Parameters->AddWithValue("@pwd", password);
