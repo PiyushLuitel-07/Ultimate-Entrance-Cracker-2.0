@@ -27,9 +27,6 @@
     <ClCompile Include="Adminloginpage.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Startpage.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Leaderboardpage.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -40,6 +37,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Developer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Startpage.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -54,9 +54,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Adminloginpage.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Startpage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Leaderboardpage.h">
@@ -75,6 +72,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Questions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Startpage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

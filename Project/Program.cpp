@@ -2,6 +2,9 @@
 #include "Registerpage.h"
 #include "Adminloginpage.h"
 #include "Developer.h"
+#include "Startpage.h"
+#include "Helppage.h"
+#include "Leaderboardpage.h"
 
 
 using namespace System;
@@ -18,9 +21,14 @@ void main(array<String^>^ args)
 		Project::Loginform loginForm;
 		Project::Adminloginpage adminPage;
 		Project::Developer developerPage;
-		
-		loginForm.ShowDialog();
+		Project::Homepage hpage;
+		Project::Startpage spage;
 		Project::Registerpage registerPage;
+		Project::Helppage hepage;
+		Project::Leaderboardpage lpage;
+		Project::Developer dpage;
+		
+		hpage.ShowDialog();
 		if(loginForm.switchToRegister)
 		{
 			registerPage.ShowDialog();
@@ -44,6 +52,20 @@ void main(array<String^>^ args)
 				break;
 			}
 		}
+		if (hpage.switchtostartpage) {
+			spage.ShowDialog();
+		}
+		if (hpage.switchtohelppage) {
+			hepage.ShowDialog();
+			
+		}
+		if (hpage.switchtoleaderboradpage) {
+			lpage.ShowDialog();
+		}
+		if (hepage.switchtomainmenufromhelppage) {
+			hpage.ShowDialog();
+		}
+		
 
 		else if (loginForm.switchToRegister==false) {
 		user = loginForm.user;
@@ -53,6 +75,7 @@ void main(array<String^>^ args)
 			admin = adminPage.admin;
 			break;
 		}
+		
 	}
 	
 	/*while (true)
