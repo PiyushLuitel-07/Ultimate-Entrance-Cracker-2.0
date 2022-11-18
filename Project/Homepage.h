@@ -1,6 +1,8 @@
 #pragma once
 #include "Loginform.h"
-namespace Project {
+
+namespace Project 
+{
 
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -43,7 +45,7 @@ namespace Project {
 	private: System::Windows::Forms::PictureBox^ pictureBox2;
 
 
-	private: System::Windows::Forms::Label^ label2;
+
 
 
 
@@ -53,13 +55,23 @@ namespace Project {
 
 	private: System::Windows::Forms::PictureBox^ pictureBox4;
 	private: System::Windows::Forms::TextBox^ textBox1;
-	private: System::Windows::Forms::Label^ label1;
-	private: System::Windows::Forms::Label^ label3;
-	private: System::Windows::Forms::Label^ label4;
+
+
+
 	private: System::Windows::Forms::Button^ btnLogout;
 	private: System::Windows::Forms::PictureBox^ pictureBox3;
 	private: System::Windows::Forms::Label^ label6;
 	private: System::Windows::Forms::PictureBox^ pictureBox5;
+	private: System::Windows::Forms::Panel^ panel1;
+	private: System::Windows::Forms::Button^ button3;
+	private: System::Windows::Forms::Button^ button2;
+	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::PictureBox^ pictureBox7;
+	private: System::Windows::Forms::TextBox^ textBox2;
+	private: System::Windows::Forms::TextBox^ textBox3;
+	private: System::Windows::Forms::Timer^ timer1;
+	private: System::ComponentModel::IContainer^ components;
+
 
 
 
@@ -71,7 +83,7 @@ namespace Project {
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -80,27 +92,34 @@ namespace Project {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Homepage::typeid));
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
-			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox6 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->btnLogout = (gcnew System::Windows::Forms::Button());
 			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
+			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->pictureBox7 = (gcnew System::Windows::Forms::PictureBox());
+			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
+			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->BeginInit();
+			this->panel1->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox7))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// button4
@@ -118,10 +137,10 @@ namespace Project {
 			this->pictureBox1->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox1->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(180, 257);
+			this->pictureBox1->Location = System::Drawing::Point(220, 190);
 			this->pictureBox1->Margin = System::Windows::Forms::Padding(4);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(253, 233);
+			this->pictureBox1->Size = System::Drawing::Size(51, 56);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox1->TabIndex = 3;
 			this->pictureBox1->TabStop = false;
@@ -132,28 +151,14 @@ namespace Project {
 			this->pictureBox2->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox2->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
-			this->pictureBox2->Location = System::Drawing::Point(578, 257);
+			this->pictureBox2->Location = System::Drawing::Point(220, 254);
 			this->pictureBox2->Margin = System::Windows::Forms::Padding(4);
 			this->pictureBox2->Name = L"pictureBox2";
-			this->pictureBox2->Size = System::Drawing::Size(250, 233);
+			this->pictureBox2->Size = System::Drawing::Size(51, 56);
 			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox2->TabIndex = 3;
 			this->pictureBox2->TabStop = false;
 			this->pictureBox2->Click += gcnew System::EventHandler(this, &Homepage::pictureBox2_Click);
-			// 
-			// label2
-			// 
-			this->label2->AutoSize = true;
-			this->label2->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 60, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label2->ForeColor = System::Drawing::Color::Gold;
-			this->label2->Location = System::Drawing::Point(200, 511);
-			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(210, 89);
-			this->label2->TabIndex = 4;
-			this->label2->Text = L"Start";
 			// 
 			// pictureBox6
 			// 
@@ -173,10 +178,10 @@ namespace Project {
 			this->pictureBox4->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox4->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->pictureBox4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox4.Image")));
-			this->pictureBox4->Location = System::Drawing::Point(885, 224);
+			this->pictureBox4->Location = System::Drawing::Point(220, 323);
 			this->pictureBox4->Margin = System::Windows::Forms::Padding(4);
 			this->pictureBox4->Name = L"pictureBox4";
-			this->pictureBox4->Size = System::Drawing::Size(419, 283);
+			this->pictureBox4->Size = System::Drawing::Size(51, 56);
 			this->pictureBox4->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox4->TabIndex = 3;
 			this->pictureBox4->TabStop = false;
@@ -189,55 +194,13 @@ namespace Project {
 			this->textBox1->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 99.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->textBox1->ForeColor = System::Drawing::Color::Gold;
-			this->textBox1->Location = System::Drawing::Point(2, -16);
+			this->textBox1->Location = System::Drawing::Point(-13, -16);
 			this->textBox1->Multiline = true;
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(1369, 136);
+			this->textBox1->Size = System::Drawing::Size(1384, 136);
 			this->textBox1->TabIndex = 16;
 			this->textBox1->Text = L"Main Menu";
 			this->textBox1->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
-			// 
-			// label1
-			// 
-			this->label1->AutoSize = true;
-			this->label1->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 60, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label1->ForeColor = System::Drawing::Color::Gold;
-			this->label1->Location = System::Drawing::Point(563, 494);
-			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(278, 89);
-			this->label1->TabIndex = 17;
-			this->label1->Text = L"Leader";
-			// 
-			// label3
-			// 
-			this->label3->AutoSize = true;
-			this->label3->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 60, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label3->ForeColor = System::Drawing::Color::Gold;
-			this->label3->Location = System::Drawing::Point(996, 511);
-			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(196, 89);
-			this->label3->TabIndex = 18;
-			this->label3->Text = L"Help";
-			// 
-			// label4
-			// 
-			this->label4->AutoSize = true;
-			this->label4->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->label4->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 60, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label4->ForeColor = System::Drawing::Color::Gold;
-			this->label4->Location = System::Drawing::Point(578, 583);
-			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(250, 89);
-			this->label4->TabIndex = 19;
-			this->label4->Text = L"Board";
 			// 
 			// btnLogout
 			// 
@@ -245,21 +208,22 @@ namespace Project {
 			this->btnLogout->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->btnLogout->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->btnLogout->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->btnLogout->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btnLogout->Font = (gcnew System::Drawing::Font(L"Calibri Light", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnLogout->ForeColor = System::Drawing::Color::Gold;
-			this->btnLogout->Location = System::Drawing::Point(1122, 146);
+			this->btnLogout->Location = System::Drawing::Point(17, 385);
 			this->btnLogout->Margin = System::Windows::Forms::Padding(2);
 			this->btnLogout->Name = L"btnLogout";
-			this->btnLogout->Size = System::Drawing::Size(182, 72);
+			this->btnLogout->Size = System::Drawing::Size(397, 62);
 			this->btnLogout->TabIndex = 20;
-			this->btnLogout->Text = L"Logout";
+			this->btnLogout->Text = L"LOG OUT";
+			this->btnLogout->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnLogout->UseVisualStyleBackColor = false;
 			// 
 			// pictureBox3
 			// 
 			this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.Image")));
-			this->pictureBox3->Location = System::Drawing::Point(12, 146);
+			this->pictureBox3->Location = System::Drawing::Point(33, 48);
 			this->pictureBox3->Name = L"pictureBox3";
 			this->pictureBox3->Size = System::Drawing::Size(88, 85);
 			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
@@ -270,10 +234,12 @@ namespace Project {
 			// 
 			this->label6->AutoSize = true;
 			this->label6->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->label6->Font = (gcnew System::Drawing::Font(L"Calibri Light", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->label6->ForeColor = System::Drawing::Color::Gold;
-			this->label6->Location = System::Drawing::Point(106, 167);
+			this->label6->Location = System::Drawing::Point(137, 77);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(131, 30);
+			this->label6->Size = System::Drawing::Size(125, 33);
 			this->label6->TabIndex = 23;
 			this->label6->Text = L"Username";
 			// 
@@ -282,35 +248,150 @@ namespace Project {
 			this->pictureBox5->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->pictureBox5->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->pictureBox5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox5.Image")));
-			this->pictureBox5->Location = System::Drawing::Point(1330, 1);
+			this->pictureBox5->Location = System::Drawing::Point(1341, 12);
 			this->pictureBox5->Name = L"pictureBox5";
-			this->pictureBox5->Size = System::Drawing::Size(24, 20);
-			this->pictureBox5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox5->Size = System::Drawing::Size(17, 13);
+			this->pictureBox5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox5->TabIndex = 27;
 			this->pictureBox5->TabStop = false;
 			this->pictureBox5->Click += gcnew System::EventHandler(this, &Homepage::pictureBox5_Click);
+			// 
+			// panel1
+			// 
+			this->panel1->BackColor = System::Drawing::SystemColors::InfoText;
+			this->panel1->Controls->Add(this->pictureBox7);
+			this->panel1->Controls->Add(this->pictureBox2);
+			this->panel1->Controls->Add(this->pictureBox4);
+			this->panel1->Controls->Add(this->button3);
+			this->panel1->Controls->Add(this->button2);
+			this->panel1->Controls->Add(this->label6);
+			this->panel1->Controls->Add(this->pictureBox1);
+			this->panel1->Controls->Add(this->btnLogout);
+			this->panel1->Controls->Add(this->button1);
+			this->panel1->Controls->Add(this->pictureBox3);
+			this->panel1->Location = System::Drawing::Point(24, 178);
+			this->panel1->Name = L"panel1";
+			this->panel1->Size = System::Drawing::Size(427, 526);
+			this->panel1->TabIndex = 28;
+			this->panel1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Homepage::panel1_Paint);
+			// 
+			// pictureBox7
+			// 
+			this->pictureBox7->BackColor = System::Drawing::Color::Transparent;
+			this->pictureBox7->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->pictureBox7->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox7.Image")));
+			this->pictureBox7->Location = System::Drawing::Point(220, 387);
+			this->pictureBox7->Margin = System::Windows::Forms::Padding(4);
+			this->pictureBox7->Name = L"pictureBox7";
+			this->pictureBox7->Size = System::Drawing::Size(51, 56);
+			this->pictureBox7->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox7->TabIndex = 3;
+			this->pictureBox7->TabStop = false;
+			this->pictureBox7->Click += gcnew System::EventHandler(this, &Homepage::pictureBox4_Click);
+			// 
+			// button3
+			// 
+			this->button3->Anchor = System::Windows::Forms::AnchorStyles::None;
+			this->button3->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->button3->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button3->Font = (gcnew System::Drawing::Font(L"Calibri Light", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button3->ForeColor = System::Drawing::Color::Gold;
+			this->button3->Location = System::Drawing::Point(17, 318);
+			this->button3->Margin = System::Windows::Forms::Padding(2);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(397, 62);
+			this->button3->TabIndex = 26;
+			this->button3->Text = L"HELP";
+			this->button3->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->button3->UseVisualStyleBackColor = false;
+			this->button3->Click += gcnew System::EventHandler(this, &Homepage::button3_Click);
+			// 
+			// button2
+			// 
+			this->button2->Anchor = System::Windows::Forms::AnchorStyles::None;
+			this->button2->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->button2->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button2->Font = (gcnew System::Drawing::Font(L"Calibri Light", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button2->ForeColor = System::Drawing::Color::Gold;
+			this->button2->Location = System::Drawing::Point(17, 252);
+			this->button2->Margin = System::Windows::Forms::Padding(2);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(397, 62);
+			this->button2->TabIndex = 25;
+			this->button2->Text = L"LEADER BOARD";
+			this->button2->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->button2->UseVisualStyleBackColor = false;
+			this->button2->Click += gcnew System::EventHandler(this, &Homepage::button2_Click);
+			// 
+			// button1
+			// 
+			this->button1->Anchor = System::Windows::Forms::AnchorStyles::None;
+			this->button1->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->button1->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button1->Font = (gcnew System::Drawing::Font(L"Calibri Light", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button1->ForeColor = System::Drawing::Color::Gold;
+			this->button1->Location = System::Drawing::Point(17, 186);
+			this->button1->Margin = System::Windows::Forms::Padding(2);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(397, 62);
+			this->button1->TabIndex = 24;
+			this->button1->Text = L"START";
+			this->button1->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->button1->UseVisualStyleBackColor = false;
+			this->button1->Click += gcnew System::EventHandler(this, &Homepage::button1_Click);
+			// 
+			// textBox2
+			// 
+			this->textBox2->BackColor = System::Drawing::Color::Black;
+			this->textBox2->Font = (gcnew System::Drawing::Font(L"Calibri Light", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->textBox2->ForeColor = System::Drawing::Color::Wheat;
+			this->textBox2->Location = System::Drawing::Point(632, 480);
+			this->textBox2->Multiline = true;
+			this->textBox2->Name = L"textBox2";
+			this->textBox2->ReadOnly = true;
+			this->textBox2->Size = System::Drawing::Size(539, 224);
+			this->textBox2->TabIndex = 29;
+			this->textBox2->Text = resources->GetString(L"textBox2.Text");
+			// 
+			// textBox3
+			// 
+			this->textBox3->BackColor = System::Drawing::Color::Black;
+			this->textBox3->Font = (gcnew System::Drawing::Font(L"Calibri Light", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->textBox3->ForeColor = System::Drawing::Color::Wheat;
+			this->textBox3->Location = System::Drawing::Point(632, 178);
+			this->textBox3->Multiline = true;
+			this->textBox3->Name = L"textBox3";
+			this->textBox3->ReadOnly = true;
+			this->textBox3->Size = System::Drawing::Size(539, 232);
+			this->textBox3->TabIndex = 29;
+			this->textBox3->Text = resources->GetString(L"textBox3.Text");
+			// 
+			// timer1
+			// 
+			this->timer1->Interval = 1000;
+			this->timer1->Tick += gcnew System::EventHandler(this, &Homepage::timer1_Tick);
 			// 
 			// Homepage
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(14, 30);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
-			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(24)), static_cast<System::Int32>(static_cast<System::Byte>(30)),
+				static_cast<System::Int32>(static_cast<System::Byte>(54)));
 			this->ClientSize = System::Drawing::Size(1370, 749);
+			this->Controls->Add(this->textBox3);
+			this->Controls->Add(this->textBox2);
+			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->pictureBox5);
-			this->Controls->Add(this->label6);
-			this->Controls->Add(this->pictureBox3);
-			this->Controls->Add(this->btnLogout);
-			this->Controls->Add(this->label4);
-			this->Controls->Add(this->label3);
-			this->Controls->Add(this->label1);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->pictureBox6);
-			this->Controls->Add(this->label2);
-			this->Controls->Add(this->pictureBox4);
-			this->Controls->Add(this->pictureBox2);
-			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->button4);
 			this->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -320,42 +401,89 @@ namespace Project {
 			this->Name = L"Homepage";
 			this->Text = L"2";
 			this->WindowState = System::Windows::Forms::FormWindowState::Maximized;
+			this->Load += gcnew System::EventHandler(this, &Homepage::Homepage_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->EndInit();
+			this->panel1->ResumeLayout(false);
+			this->panel1->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox7))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
-	
-private: System::Void pictureBox6_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->Hide();
-	/*Loginform lobj;
-	lobj.ShowDialog();*/
 
-}
+	private: System::Void pictureBox6_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Hide();
+		/*Loginform lobj;
+		lobj.ShowDialog();*/
+
+	}
 
 	public: bool switchtostartpage = false;
-private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->switchtostartpage = true;
-	this->Close();
+	private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->switchtostartpage = true;
+		this->Close();
+	}
+	public: bool switchtohelppage = false;
+	private: System::Void pictureBox4_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->switchtohelppage = true;
+		this->Close();
+	}
+	public: bool switchtoleaderboradpage = false;
+	private: System::Void pictureBox2_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->switchtoleaderboradpage = true;
+		this->Close();
+	}
+	private: System::Void pictureBox5_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Close();
+	}
+
+
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->switchtostartpage = true;
+		this->Close();
+	}
+	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->switchtoleaderboradpage = true;
+		this->Close();
+	}
+	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->switchtohelppage = true;
+		this->Close();
+	}
+
+
+private: System::Void panel1_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 }
-	   public: bool switchtohelppage = false;
-private: System::Void pictureBox4_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->switchtohelppage = true;
-    this->Close();
+	   int time_t = 1000;
+private: System::Void timer1_Tick(System::Object^ sender, System::EventArgs^ e) {
+	if (time_t>0) {
+		time_t = time_t - 1;
+		if (time_t % 2 == 0) {
+			this->textBox3->ForeColor = System::Drawing::Color::Wheat;
+			this->textBox2->ForeColor = System::Drawing::Color::Wheat;
+
+
+		}
+		else {
+			this->textBox3->ForeColor = System::Drawing::Color::Transparent;
+			this->textBox2->ForeColor = System::Drawing::Color::Transparent;
+
+			
+		}
+	}
+	else {
+		timer1->Stop();
+		MessageBox::Show("Reload!!");
+	}
 }
-		   public: bool switchtoleaderboradpage = false;
-private: System::Void pictureBox2_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->switchtoleaderboradpage = true;
-	this->Close();
-}
-private: System::Void pictureBox5_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->Close();
+private: System::Void Homepage_Load(System::Object^ sender, System::EventArgs^ e) {
+	timer1->Start();
 }
 };
 }

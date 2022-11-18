@@ -88,13 +88,13 @@ namespace Project {
 			this->richTextBox1->BackColor = System::Drawing::SystemColors::InactiveCaptionText;
 			this->richTextBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->richTextBox1->Cursor = System::Windows::Forms::Cursors::No;
-			this->richTextBox1->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->richTextBox1->Font = (gcnew System::Drawing::Font(L"Calibri Light", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->richTextBox1->ForeColor = System::Drawing::Color::Gold;
 			this->richTextBox1->Location = System::Drawing::Point(54, 161);
 			this->richTextBox1->Name = L"richTextBox1";
 			this->richTextBox1->ReadOnly = true;
-			this->richTextBox1->Size = System::Drawing::Size(1264, 250);
+			this->richTextBox1->Size = System::Drawing::Size(1264, 267);
 			this->richTextBox1->TabIndex = 18;
 			this->richTextBox1->Text = resources->GetString(L"richTextBox1.Text");
 			// 
@@ -102,22 +102,23 @@ namespace Project {
 			// 
 			this->textBox2->BackColor = System::Drawing::SystemColors::InactiveCaptionText;
 			this->textBox2->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBox2->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->textBox2->Font = (gcnew System::Drawing::Font(L"Calibri Light", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->textBox2->ForeColor = System::Drawing::Color::Gold;
-			this->textBox2->Location = System::Drawing::Point(54, 430);
+			this->textBox2->Location = System::Drawing::Point(54, 445);
 			this->textBox2->Multiline = true;
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->ReadOnly = true;
-			this->textBox2->Size = System::Drawing::Size(1264, 61);
+			this->textBox2->Size = System::Drawing::Size(1264, 46);
 			this->textBox2->TabIndex = 19;
-			this->textBox2->Text = L"******************Marks distribution among the subjects in IOE entrance examinati"
-				L"on***********************";
+			this->textBox2->Text = L"Marks distribution among the subjects in IOE entrance examination";
 			this->textBox2->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
 			// textBox3
 			// 
 			this->textBox3->BackColor = System::Drawing::SystemColors::InfoText;
+			this->textBox3->Font = (gcnew System::Drawing::Font(L"Calibri Light", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->textBox3->ForeColor = System::Drawing::Color::Gold;
 			this->textBox3->Location = System::Drawing::Point(54, 497);
 			this->textBox3->Multiline = true;
@@ -130,6 +131,8 @@ namespace Project {
 			// textBox4
 			// 
 			this->textBox4->BackColor = System::Drawing::SystemColors::InfoText;
+			this->textBox4->Font = (gcnew System::Drawing::Font(L"Calibri Light", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->textBox4->ForeColor = System::Drawing::Color::Gold;
 			this->textBox4->Location = System::Drawing::Point(214, 497);
 			this->textBox4->Multiline = true;
@@ -143,6 +146,8 @@ namespace Project {
 			// textBox5
 			// 
 			this->textBox5->BackColor = System::Drawing::SystemColors::InfoText;
+			this->textBox5->Font = (gcnew System::Drawing::Font(L"Calibri Light", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->textBox5->ForeColor = System::Drawing::Color::Gold;
 			this->textBox5->Location = System::Drawing::Point(538, 497);
 			this->textBox5->Multiline = true;
@@ -156,6 +161,8 @@ namespace Project {
 			// textBox6
 			// 
 			this->textBox6->BackColor = System::Drawing::SystemColors::InfoText;
+			this->textBox6->Font = (gcnew System::Drawing::Font(L"Calibri Light", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->textBox6->ForeColor = System::Drawing::Color::Gold;
 			this->textBox6->Location = System::Drawing::Point(825, 497);
 			this->textBox6->Multiline = true;
@@ -169,6 +176,8 @@ namespace Project {
 			// textBox7
 			// 
 			this->textBox7->BackColor = System::Drawing::SystemColors::InfoText;
+			this->textBox7->Font = (gcnew System::Drawing::Font(L"Calibri Light", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->textBox7->ForeColor = System::Drawing::Color::Gold;
 			this->textBox7->Location = System::Drawing::Point(1096, 497);
 			this->textBox7->Multiline = true;
@@ -194,12 +203,12 @@ namespace Project {
 			this->button1->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->button1->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button1->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button1->Font = (gcnew System::Drawing::Font(L"Calibri Light", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button1->ForeColor = System::Drawing::Color::Gold;
-			this->button1->Location = System::Drawing::Point(21, 22);
+			this->button1->Location = System::Drawing::Point(12, 12);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(228, 71);
+			this->button1->Size = System::Drawing::Size(163, 36);
 			this->button1->TabIndex = 23;
 			this->button1->Text = L"Main Menu";
 			this->button1->UseVisualStyleBackColor = false;

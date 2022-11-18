@@ -133,7 +133,7 @@ namespace Project {
 			// panel2
 			// 
 			this->panel2->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->panel2->BackColor = System::Drawing::Color::Coral;
+			this->panel2->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->panel2->Controls->Add(this->btnEnter);
 			this->panel2->Controls->Add(this->tbOptn_d);
 			this->panel2->Controls->Add(this->tbOptn_c);
@@ -158,13 +158,13 @@ namespace Project {
 			this->btnEnter->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->btnEnter->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->btnEnter->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->btnEnter->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btnEnter->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnEnter->ForeColor = System::Drawing::Color::Gold;
-			this->btnEnter->Location = System::Drawing::Point(897, 505);
+			this->btnEnter->Location = System::Drawing::Point(870, 517);
 			this->btnEnter->Margin = System::Windows::Forms::Padding(2);
 			this->btnEnter->Name = L"btnEnter";
-			this->btnEnter->Size = System::Drawing::Size(182, 72);
+			this->btnEnter->Size = System::Drawing::Size(105, 51);
 			this->btnEnter->TabIndex = 12;
 			this->btnEnter->Text = L"Enter";
 			this->btnEnter->UseVisualStyleBackColor = false;
@@ -174,7 +174,7 @@ namespace Project {
 			// 
 			this->tbOptn_d->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->tbOptn_d->BackColor = System::Drawing::SystemColors::InactiveCaptionText;
-			this->tbOptn_d->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->tbOptn_d->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->tbOptn_d->ForeColor = System::Drawing::Color::SpringGreen;
 			this->tbOptn_d->Location = System::Drawing::Point(207, 427);
@@ -188,7 +188,7 @@ namespace Project {
 			// 
 			this->tbOptn_c->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->tbOptn_c->BackColor = System::Drawing::SystemColors::InactiveCaptionText;
-			this->tbOptn_c->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->tbOptn_c->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->tbOptn_c->ForeColor = System::Drawing::Color::SpringGreen;
 			this->tbOptn_c->Location = System::Drawing::Point(208, 377);
@@ -202,7 +202,7 @@ namespace Project {
 			// 
 			this->tbOptn_b->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->tbOptn_b->BackColor = System::Drawing::SystemColors::InactiveCaptionText;
-			this->tbOptn_b->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->tbOptn_b->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->tbOptn_b->ForeColor = System::Drawing::Color::SpringGreen;
 			this->tbOptn_b->Location = System::Drawing::Point(208, 329);
@@ -216,7 +216,7 @@ namespace Project {
 			// 
 			this->tbOptn_a->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->tbOptn_a->BackColor = System::Drawing::SystemColors::InactiveCaptionText;
-			this->tbOptn_a->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->tbOptn_a->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->tbOptn_a->ForeColor = System::Drawing::Color::SpringGreen;
 			this->tbOptn_a->Location = System::Drawing::Point(208, 283);
@@ -231,13 +231,13 @@ namespace Project {
 			this->label6->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label6->AutoSize = true;
 			this->label6->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->label6->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label6->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label6->ForeColor = System::Drawing::Color::Gold;
-			this->label6->Location = System::Drawing::Point(83, 427);
+			this->label6->Location = System::Drawing::Point(71, 427);
 			this->label6->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(110, 27);
+			this->label6->Size = System::Drawing::Size(125, 36);
 			this->label6->TabIndex = 7;
 			this->label6->Text = L"Option d:";
 			// 
@@ -246,13 +246,13 @@ namespace Project {
 			this->label5->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label5->AutoSize = true;
 			this->label5->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->label5->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label5->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label5->ForeColor = System::Drawing::Color::Gold;
-			this->label5->Location = System::Drawing::Point(84, 377);
+			this->label5->Location = System::Drawing::Point(72, 377);
 			this->label5->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(109, 27);
+			this->label5->Size = System::Drawing::Size(122, 36);
 			this->label5->TabIndex = 6;
 			this->label5->Text = L"Option c:";
 			// 
@@ -261,13 +261,13 @@ namespace Project {
 			this->label4->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label4->AutoSize = true;
 			this->label4->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->label4->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label4->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label4->ForeColor = System::Drawing::Color::Gold;
-			this->label4->Location = System::Drawing::Point(84, 329);
+			this->label4->Location = System::Drawing::Point(72, 329);
 			this->label4->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(110, 27);
+			this->label4->Size = System::Drawing::Size(125, 36);
 			this->label4->TabIndex = 5;
 			this->label4->Text = L"Option b:";
 			// 
@@ -276,13 +276,13 @@ namespace Project {
 			this->label3->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label3->AutoSize = true;
 			this->label3->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label3->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label3->ForeColor = System::Drawing::Color::Gold;
-			this->label3->Location = System::Drawing::Point(83, 283);
+			this->label3->Location = System::Drawing::Point(71, 283);
 			this->label3->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(110, 27);
+			this->label3->Size = System::Drawing::Size(124, 36);
 			this->label3->TabIndex = 4;
 			this->label3->Text = L"Option a:";
 			// 
@@ -290,7 +290,7 @@ namespace Project {
 			// 
 			this->tbQuestion->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->tbQuestion->BackColor = System::Drawing::SystemColors::InactiveCaptionText;
-			this->tbQuestion->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->tbQuestion->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->tbQuestion->ForeColor = System::Drawing::Color::SpringGreen;
 			this->tbQuestion->Location = System::Drawing::Point(77, 91);
@@ -305,13 +305,13 @@ namespace Project {
 			this->label2->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label2->AutoSize = true;
 			this->label2->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label2->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label2->ForeColor = System::Drawing::Color::Gold;
 			this->label2->Location = System::Drawing::Point(471, 53);
 			this->label2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(233, 36);
+			this->label2->Size = System::Drawing::Size(199, 36);
 			this->label2->TabIndex = 2;
 			this->label2->Text = L"Enter Question:";
 			this->label2->Click += gcnew System::EventHandler(this, &Developer::label2_Click);
@@ -337,10 +337,12 @@ namespace Project {
 			// 
 			this->radioButton4->AutoSize = true;
 			this->radioButton4->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->radioButton4->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->radioButton4->ForeColor = System::Drawing::Color::Gold;
 			this->radioButton4->Location = System::Drawing::Point(391, 21);
 			this->radioButton4->Name = L"radioButton4";
-			this->radioButton4->Size = System::Drawing::Size(48, 36);
+			this->radioButton4->Size = System::Drawing::Size(48, 40);
 			this->radioButton4->TabIndex = 16;
 			this->radioButton4->TabStop = true;
 			this->radioButton4->Text = L"d";
@@ -350,12 +352,12 @@ namespace Project {
 			// 
 			this->radioButton3->AutoSize = true;
 			this->radioButton3->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->radioButton3->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->radioButton3->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->radioButton3->ForeColor = System::Drawing::Color::Gold;
 			this->radioButton3->Location = System::Drawing::Point(339, 21);
 			this->radioButton3->Name = L"radioButton3";
-			this->radioButton3->Size = System::Drawing::Size(46, 36);
+			this->radioButton3->Size = System::Drawing::Size(45, 40);
 			this->radioButton3->TabIndex = 15;
 			this->radioButton3->TabStop = true;
 			this->radioButton3->Text = L"c";
@@ -365,12 +367,12 @@ namespace Project {
 			// 
 			this->radioButton2->AutoSize = true;
 			this->radioButton2->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->radioButton2->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->radioButton2->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->radioButton2->ForeColor = System::Drawing::Color::Gold;
 			this->radioButton2->Location = System::Drawing::Point(286, 21);
 			this->radioButton2->Name = L"radioButton2";
-			this->radioButton2->Size = System::Drawing::Size(48, 36);
+			this->radioButton2->Size = System::Drawing::Size(48, 40);
 			this->radioButton2->TabIndex = 14;
 			this->radioButton2->TabStop = true;
 			this->radioButton2->Text = L"b";
@@ -380,12 +382,12 @@ namespace Project {
 			// 
 			this->radioButton1->AutoSize = true;
 			this->radioButton1->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->radioButton1->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->radioButton1->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->radioButton1->ForeColor = System::Drawing::Color::Gold;
 			this->radioButton1->Location = System::Drawing::Point(233, 21);
 			this->radioButton1->Name = L"radioButton1";
-			this->radioButton1->Size = System::Drawing::Size(47, 36);
+			this->radioButton1->Size = System::Drawing::Size(47, 40);
 			this->radioButton1->TabIndex = 13;
 			this->radioButton1->TabStop = true;
 			this->radioButton1->Text = L"a";
@@ -396,13 +398,13 @@ namespace Project {
 			this->label7->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label7->AutoSize = true;
 			this->label7->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->label7->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label7->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label7->ForeColor = System::Drawing::Color::Gold;
 			this->label7->Location = System::Drawing::Point(2, 19);
 			this->label7->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(209, 32);
+			this->label7->Size = System::Drawing::Size(196, 36);
 			this->label7->TabIndex = 12;
 			this->label7->Text = L"Correct Option:";
 			// 
@@ -423,13 +425,13 @@ namespace Project {
 			this->btnLogout->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->btnLogout->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->btnLogout->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->btnLogout->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btnLogout->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnLogout->ForeColor = System::Drawing::Color::Gold;
-			this->btnLogout->Location = System::Drawing::Point(1103, 11);
+			this->btnLogout->Location = System::Drawing::Point(1135, 29);
 			this->btnLogout->Margin = System::Windows::Forms::Padding(2);
 			this->btnLogout->Name = L"btnLogout";
-			this->btnLogout->Size = System::Drawing::Size(182, 72);
+			this->btnLogout->Size = System::Drawing::Size(150, 54);
 			this->btnLogout->TabIndex = 13;
 			this->btnLogout->Text = L"Logout";
 			this->btnLogout->UseVisualStyleBackColor = false;

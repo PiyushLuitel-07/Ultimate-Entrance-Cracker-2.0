@@ -1,5 +1,5 @@
 #pragma once
-
+#include "Homepage.h"
 namespace Project {
 
 	using namespace System;
@@ -87,21 +87,22 @@ namespace Project {
 			this->button1->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->button1->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button1->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button1->Font = (gcnew System::Drawing::Font(L"Calibri Light", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button1->ForeColor = System::Drawing::Color::Gold;
-			this->button1->Location = System::Drawing::Point(32, 164);
+			this->button1->Location = System::Drawing::Point(91, 164);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(228, 71);
+			this->button1->Size = System::Drawing::Size(169, 50);
 			this->button1->TabIndex = 24;
 			this->button1->Text = L"Main Menu";
 			this->button1->UseVisualStyleBackColor = false;
+			this->button1->Click += gcnew System::EventHandler(this, &Leaderboardpage::button1_Click);
 			// 
 			// richTextBox1
 			// 
 			this->richTextBox1->BackColor = System::Drawing::SystemColors::InactiveCaptionText;
 			this->richTextBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->richTextBox1->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->richTextBox1->Font = (gcnew System::Drawing::Font(L"Calibri Light", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->richTextBox1->ForeColor = System::Drawing::Color::Gold;
 			this->richTextBox1->Location = System::Drawing::Point(366, 152);
@@ -170,6 +171,12 @@ namespace Project {
 	
 private: System::Void pictureBox3_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->Close();
+}
+
+public:bool switchtomainmenufromleaderboard = false;
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Close();
+	this->switchtomainmenufromleaderboard = true;
 }
 };
 }

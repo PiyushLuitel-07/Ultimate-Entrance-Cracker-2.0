@@ -5,6 +5,7 @@
 #include "Startpage.h"
 #include "Helppage.h"
 #include "Leaderboardpage.h"
+#include "Homepage.h"
 
 
 using namespace System;
@@ -28,7 +29,7 @@ void main(array<String^>^ args)
 		Project::Leaderboardpage lpage;
 		Project::Developer dpage;
 		
-		hpage.ShowDialog();
+		loginForm.ShowDialog();
 		if(loginForm.switchToRegister)
 		{
 			registerPage.ShowDialog();
@@ -63,6 +64,9 @@ void main(array<String^>^ args)
 			lpage.ShowDialog();
 		}
 		if (hepage.switchtomainmenufromhelppage) {
+			hpage.ShowDialog();
+		}
+		if (lpage.switchtomainmenufromleaderboard) {
 			hpage.ShowDialog();
 		}
 		

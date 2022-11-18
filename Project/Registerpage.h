@@ -59,7 +59,6 @@ namespace Project {
 
 
 	private: System::Windows::Forms::Label^ label10;
-	private: System::Windows::Forms::Button^ btnRegister;
 
 
 
@@ -67,7 +66,8 @@ namespace Project {
 
 
 
-	private: System::Windows::Forms::DateTimePicker^ dtpDob;
+
+
 
 	private: System::Windows::Forms::TextBox^ tbName;
 
@@ -81,11 +81,18 @@ namespace Project {
 
 	private: System::Windows::Forms::PictureBox^ pictureBox2;
 	private: System::Windows::Forms::TextBox^ textBox1;
-	private: System::Windows::Forms::PictureBox^ pictureBox1;
-	private: System::Windows::Forms::RadioButton^ radioButton1;
-	private: System::Windows::Forms::RadioButton^ radioButton2;
-	private: System::Windows::Forms::RadioButton^ radioButton3;
+
+
+
+
 	private: System::Windows::Forms::PictureBox^ pictureBox3;
+
+	private: System::Windows::Forms::RadioButton^ radioButton4;
+	private: System::Windows::Forms::RadioButton^ radioButton5;
+	private: System::Windows::Forms::RadioButton^ radioButton6;
+	private: System::Windows::Forms::Button^ btnRegister;
+	private: System::Windows::Forms::DateTimePicker^ dtpDob;
+	private: System::Windows::Forms::Panel^ panel1;
 
 
 
@@ -121,19 +128,19 @@ namespace Project {
 			this->tbEmail = (gcnew System::Windows::Forms::TextBox());
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->label10 = (gcnew System::Windows::Forms::Label());
-			this->btnRegister = (gcnew System::Windows::Forms::Button());
-			this->dtpDob = (gcnew System::Windows::Forms::DateTimePicker());
 			this->tbName = (gcnew System::Windows::Forms::TextBox());
 			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
-			this->radioButton1 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton2 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton3 = (gcnew System::Windows::Forms::RadioButton());
 			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
+			this->radioButton4 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButton5 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButton6 = (gcnew System::Windows::Forms::RadioButton());
+			this->btnRegister = (gcnew System::Windows::Forms::Button());
+			this->dtpDob = (gcnew System::Windows::Forms::DateTimePicker());
+			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
+			this->panel1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// label2
@@ -142,13 +149,13 @@ namespace Project {
 			this->label2->AutoSize = true;
 			this->label2->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->label2->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 36, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+			this->label2->Font = (gcnew System::Drawing::Font(L"Calibri Light", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label2->ForeColor = System::Drawing::Color::Gold;
-			this->label2->Location = System::Drawing::Point(205, 386);
+			this->label2->Location = System::Drawing::Point(405, 385);
 			this->label2->Margin = System::Windows::Forms::Padding(6, 0, 6, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(237, 55);
+			this->label2->Size = System::Drawing::Size(136, 38);
 			this->label2->TabIndex = 3;
 			this->label2->Text = L"Username";
 			// 
@@ -158,7 +165,7 @@ namespace Project {
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 36, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(57, 459);
+			this->label3->Location = System::Drawing::Point(101, 450);
 			this->label3->Margin = System::Windows::Forms::Padding(6, 0, 6, 0);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(0, 55);
@@ -170,13 +177,13 @@ namespace Project {
 			this->label4->AutoSize = true;
 			this->label4->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->label4->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->label4->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 36, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+			this->label4->Font = (gcnew System::Drawing::Font(L"Calibri Light", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label4->ForeColor = System::Drawing::Color::Gold;
-			this->label4->Location = System::Drawing::Point(146, 335);
+			this->label4->Location = System::Drawing::Point(373, 347);
 			this->label4->Margin = System::Windows::Forms::Padding(6, 0, 6, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(296, 55);
+			this->label4->Size = System::Drawing::Size(168, 38);
 			this->label4->TabIndex = 5;
 			this->label4->Text = L"Date of Birth";
 			// 
@@ -186,13 +193,13 @@ namespace Project {
 			this->label5->AutoSize = true;
 			this->label5->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->label5->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->label5->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 36, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+			this->label5->Font = (gcnew System::Drawing::Font(L"Calibri Light", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label5->ForeColor = System::Drawing::Color::Gold;
-			this->label5->Location = System::Drawing::Point(212, 496);
+			this->label5->Location = System::Drawing::Point(414, 461);
 			this->label5->Margin = System::Windows::Forms::Padding(6, 0, 6, 0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(230, 55);
+			this->label5->Size = System::Drawing::Size(127, 38);
 			this->label5->TabIndex = 4;
 			this->label5->Text = L"Password";
 			// 
@@ -202,13 +209,13 @@ namespace Project {
 			this->label6->AutoSize = true;
 			this->label6->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->label6->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->label6->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 36, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+			this->label6->Font = (gcnew System::Drawing::Font(L"Calibri Light", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label6->ForeColor = System::Drawing::Color::Gold;
-			this->label6->Location = System::Drawing::Point(28, 551);
+			this->label6->Location = System::Drawing::Point(313, 499);
 			this->label6->Margin = System::Windows::Forms::Padding(6, 0, 6, 0);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(414, 55);
+			this->label6->Size = System::Drawing::Size(228, 38);
 			this->label6->TabIndex = 4;
 			this->label6->Text = L"Confirm Password";
 			// 
@@ -216,44 +223,44 @@ namespace Project {
 			// 
 			this->tbUsername->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->tbUsername->BackColor = System::Drawing::SystemColors::InfoText;
-			this->tbUsername->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->tbUsername->Font = (gcnew System::Drawing::Font(L"Calibri Light", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->tbUsername->ForeColor = System::Drawing::Color::SpringGreen;
-			this->tbUsername->Location = System::Drawing::Point(447, 384);
+			this->tbUsername->Location = System::Drawing::Point(553, 385);
 			this->tbUsername->Margin = System::Windows::Forms::Padding(6);
 			this->tbUsername->Multiline = true;
 			this->tbUsername->Name = L"tbUsername";
-			this->tbUsername->Size = System::Drawing::Size(801, 57);
+			this->tbUsername->Size = System::Drawing::Size(421, 38);
 			this->tbUsername->TabIndex = 6;
 			// 
 			// tbPassword
 			// 
 			this->tbPassword->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->tbPassword->BackColor = System::Drawing::SystemColors::InfoText;
-			this->tbPassword->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->tbPassword->Font = (gcnew System::Drawing::Font(L"Calibri Light", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->tbPassword->ForeColor = System::Drawing::Color::SpringGreen;
-			this->tbPassword->Location = System::Drawing::Point(447, 494);
+			this->tbPassword->Location = System::Drawing::Point(553, 463);
 			this->tbPassword->Margin = System::Windows::Forms::Padding(6);
 			this->tbPassword->Multiline = true;
 			this->tbPassword->Name = L"tbPassword";
 			this->tbPassword->PasswordChar = '*';
-			this->tbPassword->Size = System::Drawing::Size(801, 57);
+			this->tbPassword->Size = System::Drawing::Size(421, 36);
 			this->tbPassword->TabIndex = 6;
 			// 
 			// tbCPassword
 			// 
 			this->tbCPassword->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->tbCPassword->BackColor = System::Drawing::SystemColors::InfoText;
-			this->tbCPassword->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->tbCPassword->Font = (gcnew System::Drawing::Font(L"Calibri Light", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->tbCPassword->ForeColor = System::Drawing::Color::SpringGreen;
-			this->tbCPassword->Location = System::Drawing::Point(447, 549);
+			this->tbCPassword->Location = System::Drawing::Point(553, 499);
 			this->tbCPassword->Margin = System::Windows::Forms::Padding(6);
 			this->tbCPassword->Multiline = true;
 			this->tbCPassword->Name = L"tbCPassword";
 			this->tbCPassword->PasswordChar = '*';
-			this->tbCPassword->Size = System::Drawing::Size(801, 57);
+			this->tbCPassword->Size = System::Drawing::Size(421, 38);
 			this->tbCPassword->TabIndex = 6;
 			// 
 			// label7
@@ -262,13 +269,13 @@ namespace Project {
 			this->label7->AutoSize = true;
 			this->label7->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->label7->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->label7->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 36, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+			this->label7->Font = (gcnew System::Drawing::Font(L"Calibri Light", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label7->ForeColor = System::Drawing::Color::Gold;
-			this->label7->Location = System::Drawing::Point(301, 280);
+			this->label7->Location = System::Drawing::Point(461, 309);
 			this->label7->Margin = System::Windows::Forms::Padding(6, 0, 6, 0);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(141, 55);
+			this->label7->Size = System::Drawing::Size(80, 38);
 			this->label7->TabIndex = 3;
 			this->label7->Text = L"Email";
 			// 
@@ -276,14 +283,14 @@ namespace Project {
 			// 
 			this->tbEmail->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->tbEmail->BackColor = System::Drawing::SystemColors::InfoText;
-			this->tbEmail->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->tbEmail->Font = (gcnew System::Drawing::Font(L"Calibri Light", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->tbEmail->ForeColor = System::Drawing::Color::SpringGreen;
-			this->tbEmail->Location = System::Drawing::Point(447, 278);
+			this->tbEmail->Location = System::Drawing::Point(553, 309);
 			this->tbEmail->Margin = System::Windows::Forms::Padding(6);
 			this->tbEmail->Multiline = true;
 			this->tbEmail->Name = L"tbEmail";
-			this->tbEmail->Size = System::Drawing::Size(801, 57);
+			this->tbEmail->Size = System::Drawing::Size(421, 40);
 			this->tbEmail->TabIndex = 6;
 			// 
 			// label8
@@ -292,13 +299,13 @@ namespace Project {
 			this->label8->AutoSize = true;
 			this->label8->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->label8->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->label8->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 36, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+			this->label8->Font = (gcnew System::Drawing::Font(L"Calibri Light", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label8->ForeColor = System::Drawing::Color::Gold;
-			this->label8->Location = System::Drawing::Point(300, 225);
+			this->label8->Location = System::Drawing::Point(454, 271);
 			this->label8->Margin = System::Windows::Forms::Padding(6, 0, 6, 0);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(142, 55);
+			this->label8->Size = System::Drawing::Size(87, 38);
 			this->label8->TabIndex = 3;
 			this->label8->Text = L"Name";
 			// 
@@ -308,61 +315,28 @@ namespace Project {
 			this->label10->AutoSize = true;
 			this->label10->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->label10->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->label10->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 36, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+			this->label10->Font = (gcnew System::Drawing::Font(L"Calibri Light", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label10->ForeColor = System::Drawing::Color::Gold;
-			this->label10->Location = System::Drawing::Point(265, 441);
+			this->label10->Location = System::Drawing::Point(438, 423);
 			this->label10->Margin = System::Windows::Forms::Padding(6, 0, 6, 0);
 			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(177, 55);
+			this->label10->Size = System::Drawing::Size(103, 38);
 			this->label10->TabIndex = 4;
 			this->label10->Text = L"Gender";
-			// 
-			// btnRegister
-			// 
-			this->btnRegister->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->btnRegister->BackColor = System::Drawing::Color::Black;
-			this->btnRegister->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->btnRegister->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 36, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->btnRegister->ForeColor = System::Drawing::Color::Gold;
-			this->btnRegister->Location = System::Drawing::Point(604, 640);
-			this->btnRegister->Name = L"btnRegister";
-			this->btnRegister->Size = System::Drawing::Size(268, 85);
-			this->btnRegister->TabIndex = 8;
-			this->btnRegister->Text = L"Register";
-			this->btnRegister->UseVisualStyleBackColor = false;
-			this->btnRegister->Click += gcnew System::EventHandler(this, &Registerpage::btnRegister_Click);
-			// 
-			// dtpDob
-			// 
-			this->dtpDob->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->dtpDob->CalendarFont = (gcnew System::Drawing::Font(L"Britannic Bold", 21.75F, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->dtpDob->CalendarForeColor = System::Drawing::Color::SpringGreen;
-			this->dtpDob->CalendarMonthBackground = System::Drawing::SystemColors::InfoText;
-			this->dtpDob->CalendarTitleBackColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->dtpDob->CalendarTitleForeColor = System::Drawing::Color::SpringGreen;
-			this->dtpDob->CalendarTrailingForeColor = System::Drawing::Color::SpringGreen;
-			this->dtpDob->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 26.25F, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->dtpDob->Location = System::Drawing::Point(447, 335);
-			this->dtpDob->Name = L"dtpDob";
-			this->dtpDob->Size = System::Drawing::Size(801, 46);
-			this->dtpDob->TabIndex = 10;
 			// 
 			// tbName
 			// 
 			this->tbName->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->tbName->BackColor = System::Drawing::SystemColors::InfoText;
-			this->tbName->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->tbName->Font = (gcnew System::Drawing::Font(L"Calibri Light", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->tbName->ForeColor = System::Drawing::Color::SpringGreen;
-			this->tbName->Location = System::Drawing::Point(447, 223);
+			this->tbName->Location = System::Drawing::Point(553, 271);
 			this->tbName->Margin = System::Windows::Forms::Padding(6);
 			this->tbName->Multiline = true;
 			this->tbName->Name = L"tbName";
-			this->tbName->Size = System::Drawing::Size(801, 57);
+			this->tbName->Size = System::Drawing::Size(421, 38);
 			this->tbName->TabIndex = 6;
 			// 
 			// pictureBox2
@@ -370,9 +344,9 @@ namespace Project {
 			this->pictureBox2->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->pictureBox2->BackColor = System::Drawing::SystemColors::Desktop;
 			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
-			this->pictureBox2->Location = System::Drawing::Point(25, 23);
+			this->pictureBox2->Location = System::Drawing::Point(12, 12);
 			this->pictureBox2->Name = L"pictureBox2";
-			this->pictureBox2->Size = System::Drawing::Size(32, 39);
+			this->pictureBox2->Size = System::Drawing::Size(29, 32);
 			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox2->TabIndex = 18;
 			this->pictureBox2->TabStop = false;
@@ -388,73 +362,17 @@ namespace Project {
 			this->textBox1->Location = System::Drawing::Point(2, -16);
 			this->textBox1->Multiline = true;
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(1369, 167);
+			this->textBox1->Size = System::Drawing::Size(1384, 167);
 			this->textBox1->TabIndex = 19;
 			this->textBox1->Text = L"Registration";
 			this->textBox1->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
-			// 
-			// pictureBox1
-			// 
-			this->pictureBox1->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(0, 0);
-			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(1370, 749);
-			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->pictureBox1->TabIndex = 20;
-			this->pictureBox1->TabStop = false;
-			// 
-			// radioButton1
-			// 
-			this->radioButton1->AutoSize = true;
-			this->radioButton1->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->radioButton1->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->radioButton1->ForeColor = System::Drawing::Color::Gold;
-			this->radioButton1->Location = System::Drawing::Point(451, 445);
-			this->radioButton1->Name = L"radioButton1";
-			this->radioButton1->Size = System::Drawing::Size(99, 40);
-			this->radioButton1->TabIndex = 21;
-			this->radioButton1->TabStop = true;
-			this->radioButton1->Text = L"Male";
-			this->radioButton1->UseVisualStyleBackColor = false;
-			// 
-			// radioButton2
-			// 
-			this->radioButton2->AutoSize = true;
-			this->radioButton2->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->radioButton2->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->radioButton2->ForeColor = System::Drawing::Color::Gold;
-			this->radioButton2->Location = System::Drawing::Point(556, 445);
-			this->radioButton2->Name = L"radioButton2";
-			this->radioButton2->Size = System::Drawing::Size(133, 40);
-			this->radioButton2->TabIndex = 21;
-			this->radioButton2->TabStop = true;
-			this->radioButton2->Text = L"Female";
-			this->radioButton2->UseVisualStyleBackColor = false;
-			// 
-			// radioButton3
-			// 
-			this->radioButton3->AutoSize = true;
-			this->radioButton3->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->radioButton3->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->radioButton3->ForeColor = System::Drawing::Color::Gold;
-			this->radioButton3->Location = System::Drawing::Point(695, 445);
-			this->radioButton3->Name = L"radioButton3";
-			this->radioButton3->Size = System::Drawing::Size(127, 40);
-			this->radioButton3->TabIndex = 21;
-			this->radioButton3->TabStop = true;
-			this->radioButton3->Text = L"Others";
-			this->radioButton3->UseVisualStyleBackColor = false;
 			// 
 			// pictureBox3
 			// 
 			this->pictureBox3->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->pictureBox3->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.Image")));
-			this->pictureBox3->Location = System::Drawing::Point(1330, 1);
+			this->pictureBox3->Location = System::Drawing::Point(1374, -8);
 			this->pictureBox3->Name = L"pictureBox3";
 			this->pictureBox3->Size = System::Drawing::Size(24, 20);
 			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
@@ -462,21 +380,94 @@ namespace Project {
 			this->pictureBox3->TabStop = false;
 			this->pictureBox3->Click += gcnew System::EventHandler(this, &Registerpage::pictureBox3_Click);
 			// 
+			// radioButton4
+			// 
+			this->radioButton4->AutoSize = true;
+			this->radioButton4->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->radioButton4->Font = (gcnew System::Drawing::Font(L"Calibri Light", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->radioButton4->ForeColor = System::Drawing::Color::Gold;
+			this->radioButton4->Location = System::Drawing::Point(251, 167);
+			this->radioButton4->Name = L"radioButton4";
+			this->radioButton4->Size = System::Drawing::Size(88, 37);
+			this->radioButton4->TabIndex = 21;
+			this->radioButton4->TabStop = true;
+			this->radioButton4->Text = L"Male";
+			this->radioButton4->UseVisualStyleBackColor = false;
+			// 
+			// radioButton5
+			// 
+			this->radioButton5->AutoSize = true;
+			this->radioButton5->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->radioButton5->Font = (gcnew System::Drawing::Font(L"Calibri Light", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->radioButton5->ForeColor = System::Drawing::Color::Gold;
+			this->radioButton5->Location = System::Drawing::Point(391, 167);
+			this->radioButton5->Name = L"radioButton5";
+			this->radioButton5->Size = System::Drawing::Size(111, 37);
+			this->radioButton5->TabIndex = 21;
+			this->radioButton5->TabStop = true;
+			this->radioButton5->Text = L"Female";
+			this->radioButton5->UseVisualStyleBackColor = false;
+			// 
+			// radioButton6
+			// 
+			this->radioButton6->AutoSize = true;
+			this->radioButton6->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->radioButton6->Font = (gcnew System::Drawing::Font(L"Calibri Light", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->radioButton6->ForeColor = System::Drawing::Color::Gold;
+			this->radioButton6->Location = System::Drawing::Point(567, 167);
+			this->radioButton6->Name = L"radioButton6";
+			this->radioButton6->Size = System::Drawing::Size(105, 37);
+			this->radioButton6->TabIndex = 21;
+			this->radioButton6->TabStop = true;
+			this->radioButton6->Text = L"Others";
+			this->radioButton6->UseVisualStyleBackColor = false;
+			// 
+			// btnRegister
+			// 
+			this->btnRegister->Anchor = System::Windows::Forms::AnchorStyles::None;
+			this->btnRegister->BackColor = System::Drawing::Color::Black;
+			this->btnRegister->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnRegister->Font = (gcnew System::Drawing::Font(L"Calibri Light", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->btnRegister->ForeColor = System::Drawing::Color::Gold;
+			this->btnRegister->Location = System::Drawing::Point(309, 299);
+			this->btnRegister->Name = L"btnRegister";
+			this->btnRegister->Size = System::Drawing::Size(121, 50);
+			this->btnRegister->TabIndex = 8;
+			this->btnRegister->Text = L"Register";
+			this->btnRegister->UseVisualStyleBackColor = false;
+			this->btnRegister->Click += gcnew System::EventHandler(this, &Registerpage::btnRegister_Click);
+			// 
+			// dtpDob
+			// 
+			this->dtpDob->Location = System::Drawing::Point(251, 99);
+			this->dtpDob->Name = L"dtpDob";
+			this->dtpDob->Size = System::Drawing::Size(421, 20);
+			this->dtpDob->TabIndex = 28;
+			// 
+			// panel1
+			// 
+			this->panel1->BackColor = System::Drawing::Color::Black;
+			this->panel1->Controls->Add(this->radioButton4);
+			this->panel1->Controls->Add(this->radioButton5);
+			this->panel1->Controls->Add(this->radioButton6);
+			this->panel1->Controls->Add(this->dtpDob);
+			this->panel1->Controls->Add(this->btnRegister);
+			this->panel1->Location = System::Drawing::Point(302, 257);
+			this->panel1->Name = L"panel1";
+			this->panel1->Size = System::Drawing::Size(698, 375);
+			this->panel1->TabIndex = 29;
+			// 
 			// Registerpage
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
+			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(24)), static_cast<System::Int32>(static_cast<System::Byte>(30)),
+				static_cast<System::Int32>(static_cast<System::Byte>(54)));
 			this->ClientSize = System::Drawing::Size(1370, 749);
-			this->Controls->Add(this->pictureBox3);
-			this->Controls->Add(this->radioButton3);
-			this->Controls->Add(this->radioButton2);
-			this->Controls->Add(this->radioButton1);
-			this->Controls->Add(this->pictureBox2);
-			this->Controls->Add(this->textBox1);
-			this->Controls->Add(this->dtpDob);
-			this->Controls->Add(this->btnRegister);
 			this->Controls->Add(this->tbCPassword);
 			this->Controls->Add(this->tbPassword);
 			this->Controls->Add(this->tbName);
@@ -486,18 +477,23 @@ namespace Project {
 			this->Controls->Add(this->label6);
 			this->Controls->Add(this->label5);
 			this->Controls->Add(this->label10);
-			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label8);
 			this->Controls->Add(this->label7);
 			this->Controls->Add(this->label2);
-			this->Controls->Add(this->pictureBox1);
+			this->Controls->Add(this->panel1);
+			this->Controls->Add(this->pictureBox3);
+			this->Controls->Add(this->pictureBox2);
+			this->Controls->Add(this->textBox1);
+			this->Controls->Add(this->label3);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->Name = L"Registerpage";
 			this->Text = L"Registerpage";
 			this->WindowState = System::Windows::Forms::FormWindowState::Maximized;
+			this->Load += gcnew System::EventHandler(this, &Registerpage::Registerpage_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
+			this->panel1->ResumeLayout(false);
+			this->panel1->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -578,6 +574,8 @@ private: System::Void pictureBox2_Click(System::Object^ sender, System::EventArg
 
 private: System::Void pictureBox3_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->Close();
+}
+private: System::Void Registerpage_Load(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 };

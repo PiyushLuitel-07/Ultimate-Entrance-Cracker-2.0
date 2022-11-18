@@ -54,6 +54,7 @@ namespace Project {
 	private: System::Windows::Forms::PictureBox^ pictureBox2;
 	private: System::Windows::Forms::TextBox^ textBox1;
 	private: System::Windows::Forms::PictureBox^ pictureBox3;
+	private: System::Windows::Forms::Panel^ panel1;
 
 
 
@@ -82,11 +83,13 @@ namespace Project {
 			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
+			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			label2 = (gcnew System::Windows::Forms::Label());
 			label1 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
+			this->panel1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// label2
@@ -94,13 +97,13 @@ namespace Project {
 			label2->Anchor = System::Windows::Forms::AnchorStyles::None;
 			label2->AutoSize = true;
 			label2->BackColor = System::Drawing::SystemColors::ControlText;
-			label2->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 48, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+			label2->Font = (gcnew System::Drawing::Font(L"Calibri", 26.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			label2->ForeColor = System::Drawing::Color::Gold;
-			label2->Location = System::Drawing::Point(173, 304);
+			label2->Location = System::Drawing::Point(20, 43);
 			label2->Margin = System::Windows::Forms::Padding(6, 0, 6, 0);
 			label2->Name = L"label2";
-			label2->Size = System::Drawing::Size(314, 71);
+			label2->Size = System::Drawing::Size(163, 42);
 			label2->TabIndex = 4;
 			label2->Text = L"Username";
 			label2->Click += gcnew System::EventHandler(this, &Adminloginpage::label2_Click);
@@ -110,13 +113,13 @@ namespace Project {
 			label1->Anchor = System::Windows::Forms::AnchorStyles::None;
 			label1->AutoSize = true;
 			label1->BackColor = System::Drawing::SystemColors::ControlText;
-			label1->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 48, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+			label1->Font = (gcnew System::Drawing::Font(L"Calibri", 26.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			label1->ForeColor = System::Drawing::Color::Gold;
-			label1->Location = System::Drawing::Point(185, 389);
+			label1->Location = System::Drawing::Point(30, 104);
 			label1->Margin = System::Windows::Forms::Padding(6, 0, 6, 0);
 			label1->Name = L"label1";
-			label1->Size = System::Drawing::Size(302, 71);
+			label1->Size = System::Drawing::Size(153, 42);
 			label1->TabIndex = 4;
 			label1->Text = L"Password";
 			label1->Click += gcnew System::EventHandler(this, &Adminloginpage::label2_Click);
@@ -125,31 +128,29 @@ namespace Project {
 			// 
 			this->tbUsername->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->tbUsername->BackColor = System::Drawing::SystemColors::InactiveCaptionText;
-			this->tbUsername->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->tbUsername->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 48, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->tbUsername->Font = (gcnew System::Drawing::Font(L"Calibri", 26.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->tbUsername->ForeColor = System::Drawing::Color::SpringGreen;
-			this->tbUsername->Location = System::Drawing::Point(493, 307);
+			this->tbUsername->Location = System::Drawing::Point(195, 40);
 			this->tbUsername->Margin = System::Windows::Forms::Padding(6);
 			this->tbUsername->Multiline = true;
 			this->tbUsername->Name = L"tbUsername";
-			this->tbUsername->Size = System::Drawing::Size(668, 71);
+			this->tbUsername->Size = System::Drawing::Size(668, 47);
 			this->tbUsername->TabIndex = 6;
 			// 
 			// tbPassword
 			// 
 			this->tbPassword->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->tbPassword->BackColor = System::Drawing::SystemColors::InactiveCaptionText;
-			this->tbPassword->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->tbPassword->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 48, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->tbPassword->Font = (gcnew System::Drawing::Font(L"Calibri", 26.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->tbPassword->ForeColor = System::Drawing::Color::SpringGreen;
-			this->tbPassword->Location = System::Drawing::Point(493, 389);
+			this->tbPassword->Location = System::Drawing::Point(195, 99);
 			this->tbPassword->Margin = System::Windows::Forms::Padding(6);
 			this->tbPassword->Multiline = true;
 			this->tbPassword->Name = L"tbPassword";
 			this->tbPassword->PasswordChar = '*';
-			this->tbPassword->Size = System::Drawing::Size(668, 71);
+			this->tbPassword->Size = System::Drawing::Size(668, 47);
 			this->tbPassword->TabIndex = 6;
 			// 
 			// button1
@@ -158,12 +159,12 @@ namespace Project {
 			this->button1->BackColor = System::Drawing::Color::Black;
 			this->button1->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button1->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 36, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button1->Font = (gcnew System::Drawing::Font(L"Calibri", 26.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button1->ForeColor = System::Drawing::Color::Gold;
-			this->button1->Location = System::Drawing::Point(653, 534);
+			this->button1->Location = System::Drawing::Point(395, 155);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(255, 88);
+			this->button1->Size = System::Drawing::Size(166, 54);
 			this->button1->TabIndex = 9;
 			this->button1->Text = L"Login";
 			this->button1->UseVisualStyleBackColor = false;
@@ -174,7 +175,7 @@ namespace Project {
 			this->pictureBox1->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->pictureBox1->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(12, 21);
+			this->pictureBox1->Location = System::Drawing::Point(23, 12);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(29, 33);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
@@ -186,9 +187,9 @@ namespace Project {
 			// 
 			this->pictureBox2->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
-			this->pictureBox2->Location = System::Drawing::Point(-12, 1);
+			this->pictureBox2->Location = System::Drawing::Point(-46, 1);
 			this->pictureBox2->Name = L"pictureBox2";
-			this->pictureBox2->Size = System::Drawing::Size(1370, 749);
+			this->pictureBox2->Size = System::Drawing::Size(1418, 810);
 			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox2->TabIndex = 13;
 			this->pictureBox2->TabStop = false;
@@ -197,13 +198,13 @@ namespace Project {
 			// 
 			this->textBox1->BackColor = System::Drawing::SystemColors::InactiveCaptionText;
 			this->textBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBox1->Font = (gcnew System::Drawing::Font(L"Bernard MT Condensed", 80.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->textBox1->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 80.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->textBox1->ForeColor = System::Drawing::Color::Gold;
-			this->textBox1->Location = System::Drawing::Point(2, -16);
+			this->textBox1->Location = System::Drawing::Point(-12, -16);
 			this->textBox1->Multiline = true;
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(1370, 145);
+			this->textBox1->Size = System::Drawing::Size(1384, 145);
 			this->textBox1->TabIndex = 25;
 			this->textBox1->Text = L"ADMIN LOGIN";
 			this->textBox1->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
@@ -216,10 +217,23 @@ namespace Project {
 			this->pictureBox3->Location = System::Drawing::Point(1330, 1);
 			this->pictureBox3->Name = L"pictureBox3";
 			this->pictureBox3->Size = System::Drawing::Size(24, 20);
-			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox3->TabIndex = 26;
 			this->pictureBox3->TabStop = false;
 			this->pictureBox3->Click += gcnew System::EventHandler(this, &Adminloginpage::pictureBox3_Click);
+			// 
+			// panel1
+			// 
+			this->panel1->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->panel1->Controls->Add(this->tbPassword);
+			this->panel1->Controls->Add(this->button1);
+			this->panel1->Controls->Add(this->tbUsername);
+			this->panel1->Controls->Add(label2);
+			this->panel1->Controls->Add(label1);
+			this->panel1->Location = System::Drawing::Point(253, 291);
+			this->panel1->Name = L"panel1";
+			this->panel1->Size = System::Drawing::Size(885, 230);
+			this->panel1->TabIndex = 27;
 			// 
 			// Adminloginpage
 			// 
@@ -227,14 +241,10 @@ namespace Project {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ControlDarkDark;
 			this->ClientSize = System::Drawing::Size(1370, 749);
+			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->pictureBox3);
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->textBox1);
-			this->Controls->Add(this->button1);
-			this->Controls->Add(this->tbPassword);
-			this->Controls->Add(this->tbUsername);
-			this->Controls->Add(label1);
-			this->Controls->Add(label2);
 			this->Controls->Add(this->pictureBox2);
 			this->DoubleBuffered = true;
 			this->ForeColor = System::Drawing::SystemColors::ControlLightLight;
@@ -245,6 +255,8 @@ namespace Project {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
+			this->panel1->ResumeLayout(false);
+			this->panel1->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
