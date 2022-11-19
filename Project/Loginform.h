@@ -380,20 +380,20 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 		return;
 	}
 	try {
-		String^ connString = "Data Source=LAPTOP-STT82H7B;Initial Catalog=myDB;Integrated Security=True";
+		String^ connString = "Data Source=tcp:uec.database.windows.net;Initial Catalog=uecdb;Persist Security Info=True;User ID=sqluec;Password=L12@sqd3";
 		//Data Source=tcp:uec.database.windows.net;Initial Catalog=uecdb;Persist Security Info=True;User ID=sqluec;Password=***********
 		SqlConnection sqlConn(connString);
 		sqlConn.Open();
 
-		String^ sqlQuery = "SELECT * FROM Users WHERE username=@username AND password=@pwd;";
+		String^ sqlQuery = "SELECT * FROM Users WHERE username=@username AND password=@password;";
 		SqlCommand command(sqlQuery, % sqlConn);
 		command.Parameters->AddWithValue("@username", username);
-		command.Parameters->AddWithValue("@pwd", password);
+		command.Parameters->AddWithValue("@password", password);
 
 		SqlDataReader^ reader = command.ExecuteReader();
 		if (reader->Read()) {
 			user = gcnew User;
-			user->id = reader->GetInt32(0);
+			//user->id = reader->GetInt32(0);
 			user->name = reader->GetString(1);
 			user->email = reader->GetString(2);
 			user->username = reader->GetString(3);
