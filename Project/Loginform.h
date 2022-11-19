@@ -4,6 +4,7 @@
 #include "Adminloginpage.h"
 #include "User.h"
 
+
 namespace Project {
 
 	using namespace System;
@@ -369,6 +370,7 @@ namespace Project {
 		}
 #pragma endregion
 public: User^ user= nullptr;
+public:bool switchtohomepage = false; 
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 	
 	String^ username = this->tbUsername->Text;
@@ -402,6 +404,8 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 			user->password = reader->GetString(6);
 
 			this->Close();
+			this->switchtohomepage = true;
+
 		}
 		else {
 			MessageBox::Show("Username or password is incorrect",

@@ -776,9 +776,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->label1->Font = (gcnew System::Drawing::Font(L"Calibri Light", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->label1->ForeColor = System::Drawing::Color::Gold;
-            this->label1->Location = System::Drawing::Point(1141, 47);
+            this->label1->Location = System::Drawing::Point(1511, 58);
+            this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
             this->label1->Name = L"label1";
-            this->label1->Size = System::Drawing::Size(187, 33);
+            this->label1->Size = System::Drawing::Size(239, 41);
             this->label1->TabIndex = 4;
             this->label1->Text = L"Time Remaining";
             // 
@@ -791,9 +792,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->label2->Font = (gcnew System::Drawing::Font(L"Calibri Light", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->label2->ForeColor = System::Drawing::Color::Gold;
-            this->label2->Location = System::Drawing::Point(1191, 90);
+            this->label2->Location = System::Drawing::Point(1578, 111);
+            this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
             this->label2->Name = L"label2";
-            this->label2->Size = System::Drawing::Size(101, 35);
+            this->label2->Size = System::Drawing::Size(123, 43);
             this->label2->TabIndex = 4;
             this->label2->Text = L"2:00:00";
             // 
@@ -806,9 +808,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->button2->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 36, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->button2->ForeColor = System::Drawing::Color::Gold;
-            this->button2->Location = System::Drawing::Point(962, 4819);
+            this->button2->Location = System::Drawing::Point(1273, 5931);
+            this->button2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->button2->Name = L"button2";
-            this->button2->Size = System::Drawing::Size(255, 69);
+            this->button2->Size = System::Drawing::Size(340, 85);
             this->button2->TabIndex = 58;
             this->button2->Text = L"Cancel";
             this->button2->UseVisualStyleBackColor = false;
@@ -822,9 +825,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->button1->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 36, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->button1->ForeColor = System::Drawing::Color::Gold;
-            this->button1->Location = System::Drawing::Point(701, 4819);
+            this->button1->Location = System::Drawing::Point(925, 5931);
+            this->button1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->button1->Name = L"button1";
-            this->button1->Size = System::Drawing::Size(255, 69);
+            this->button1->Size = System::Drawing::Size(340, 85);
             this->button1->TabIndex = 58;
             this->button1->Text = L"Next";
             this->button1->UseVisualStyleBackColor = false;
@@ -837,9 +841,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->radioButton4->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton4->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton4->Location = System::Drawing::Point(12, 177);
+            this->radioButton4->Location = System::Drawing::Point(16, 218);
+            this->radioButton4->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->radioButton4->Name = L"radioButton4";
-            this->radioButton4->Size = System::Drawing::Size(37, 25);
+            this->radioButton4->Size = System::Drawing::Size(45, 31);
             this->radioButton4->TabIndex = 2;
             this->radioButton4->TabStop = true;
             this->radioButton4->Text = L"c";
@@ -853,9 +858,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->radioButton3->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton3->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton3->Location = System::Drawing::Point(12, 116);
+            this->radioButton3->Location = System::Drawing::Point(16, 143);
+            this->radioButton3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->radioButton3->Name = L"radioButton3";
-            this->radioButton3->Size = System::Drawing::Size(38, 25);
+            this->radioButton3->Size = System::Drawing::Size(46, 31);
             this->radioButton3->TabIndex = 2;
             this->radioButton3->TabStop = true;
             this->radioButton3->Text = L"b";
@@ -869,9 +875,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->radioButton2->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton2->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton2->Location = System::Drawing::Point(13, 62);
+            this->radioButton2->Location = System::Drawing::Point(17, 76);
+            this->radioButton2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->radioButton2->Name = L"radioButton2";
-            this->radioButton2->Size = System::Drawing::Size(38, 25);
+            this->radioButton2->Size = System::Drawing::Size(46, 31);
             this->radioButton2->TabIndex = 2;
             this->radioButton2->TabStop = true;
             this->radioButton2->Text = L"a";
@@ -885,9 +892,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->radioButton1->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton1->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton1->Location = System::Drawing::Point(13, 236);
+            this->radioButton1->Location = System::Drawing::Point(17, 290);
+            this->radioButton1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->radioButton1->Name = L"radioButton1";
-            this->radioButton1->Size = System::Drawing::Size(38, 25);
+            this->radioButton1->Size = System::Drawing::Size(46, 31);
             this->radioButton1->TabIndex = 2;
             this->radioButton1->TabStop = true;
             this->radioButton1->Text = L"d";
@@ -900,11 +908,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->textBox2->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->textBox2->ForeColor = System::Drawing::Color::SpringGreen;
-            this->textBox2->Location = System::Drawing::Point(57, 41);
+            this->textBox2->Location = System::Drawing::Point(76, 50);
+            this->textBox2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->textBox2->Multiline = true;
             this->textBox2->Name = L"textBox2";
             this->textBox2->ReadOnly = true;
-            this->textBox2->Size = System::Drawing::Size(988, 53);
+            this->textBox2->Size = System::Drawing::Size(1316, 64);
             this->textBox2->TabIndex = 1;
             // 
             // panel1
@@ -921,9 +930,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->panel1->Controls->Add(this->radioButton3);
             this->panel1->Controls->Add(this->radioButton4);
             this->panel1->ForeColor = System::Drawing::SystemColors::Desktop;
-            this->panel1->Location = System::Drawing::Point(16, 216);
+            this->panel1->Location = System::Drawing::Point(11, 266);
+            this->panel1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->panel1->Name = L"panel1";
-            this->panel1->Size = System::Drawing::Size(1082, 286);
+            this->panel1->Size = System::Drawing::Size(1443, 352);
             this->panel1->TabIndex = 41;
             // 
             // textBox4
@@ -933,11 +943,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->textBox4->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->textBox4->ForeColor = System::Drawing::Color::SpringGreen;
-            this->textBox4->Location = System::Drawing::Point(57, 218);
+            this->textBox4->Location = System::Drawing::Point(76, 268);
+            this->textBox4->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->textBox4->Multiline = true;
             this->textBox4->Name = L"textBox4";
             this->textBox4->ReadOnly = true;
-            this->textBox4->Size = System::Drawing::Size(988, 53);
+            this->textBox4->Size = System::Drawing::Size(1316, 64);
             this->textBox4->TabIndex = 1;
             // 
             // textBox3
@@ -947,11 +958,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->textBox3->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->textBox3->ForeColor = System::Drawing::Color::SpringGreen;
-            this->textBox3->Location = System::Drawing::Point(57, 159);
+            this->textBox3->Location = System::Drawing::Point(76, 196);
+            this->textBox3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->textBox3->Multiline = true;
             this->textBox3->Name = L"textBox3";
             this->textBox3->ReadOnly = true;
-            this->textBox3->Size = System::Drawing::Size(988, 53);
+            this->textBox3->Size = System::Drawing::Size(1316, 64);
             this->textBox3->TabIndex = 1;
             // 
             // textBox1
@@ -961,11 +973,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->textBox1->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->textBox1->ForeColor = System::Drawing::Color::SpringGreen;
-            this->textBox1->Location = System::Drawing::Point(57, 100);
+            this->textBox1->Location = System::Drawing::Point(76, 123);
+            this->textBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->textBox1->Multiline = true;
             this->textBox1->Name = L"textBox1";
             this->textBox1->ReadOnly = true;
-            this->textBox1->Size = System::Drawing::Size(988, 53);
+            this->textBox1->Size = System::Drawing::Size(1316, 64);
             this->textBox1->TabIndex = 1;
             // 
             // richTextBox2
@@ -977,10 +990,11 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->richTextBox2->Font = (gcnew System::Drawing::Font(L"Calibri Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->richTextBox2->ForeColor = System::Drawing::Color::Gold;
-            this->richTextBox2->Location = System::Drawing::Point(16, 29);
+            this->richTextBox2->Location = System::Drawing::Point(11, 36);
+            this->richTextBox2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->richTextBox2->Name = L"richTextBox2";
             this->richTextBox2->ReadOnly = true;
-            this->richTextBox2->Size = System::Drawing::Size(1082, 181);
+            this->richTextBox2->Size = System::Drawing::Size(1443, 223);
             this->richTextBox2->TabIndex = 40;
             this->richTextBox2->Text = L"";
             // 
@@ -993,10 +1007,11 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             // 
             this->textBox41->BackColor = System::Drawing::SystemColors::ControlText;
             this->textBox41->BorderStyle = System::Windows::Forms::BorderStyle::None;
-            this->textBox41->Location = System::Drawing::Point(1126, 29);
+            this->textBox41->Location = System::Drawing::Point(1501, 36);
+            this->textBox41->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->textBox41->Multiline = true;
             this->textBox41->Name = L"textBox41";
-            this->textBox41->Size = System::Drawing::Size(218, 129);
+            this->textBox41->Size = System::Drawing::Size(291, 159);
             this->textBox41->TabIndex = 60;
             // 
             // panel2
@@ -1013,9 +1028,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->panel2->Controls->Add(this->radioButton7);
             this->panel2->Controls->Add(this->radioButton8);
             this->panel2->ForeColor = System::Drawing::SystemColors::Desktop;
-            this->panel2->Location = System::Drawing::Point(16, 695);
+            this->panel2->Location = System::Drawing::Point(11, 855);
+            this->panel2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->panel2->Name = L"panel2";
-            this->panel2->Size = System::Drawing::Size(1082, 286);
+            this->panel2->Size = System::Drawing::Size(1443, 352);
             this->panel2->TabIndex = 62;
             // 
             // textBox5
@@ -1025,11 +1041,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->textBox5->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->textBox5->ForeColor = System::Drawing::Color::SpringGreen;
-            this->textBox5->Location = System::Drawing::Point(57, 218);
+            this->textBox5->Location = System::Drawing::Point(76, 268);
+            this->textBox5->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->textBox5->Multiline = true;
             this->textBox5->Name = L"textBox5";
             this->textBox5->ReadOnly = true;
-            this->textBox5->Size = System::Drawing::Size(988, 53);
+            this->textBox5->Size = System::Drawing::Size(1316, 64);
             this->textBox5->TabIndex = 1;
             // 
             // textBox6
@@ -1039,11 +1056,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->textBox6->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->textBox6->ForeColor = System::Drawing::Color::SpringGreen;
-            this->textBox6->Location = System::Drawing::Point(57, 159);
+            this->textBox6->Location = System::Drawing::Point(76, 196);
+            this->textBox6->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->textBox6->Multiline = true;
             this->textBox6->Name = L"textBox6";
             this->textBox6->ReadOnly = true;
-            this->textBox6->Size = System::Drawing::Size(988, 53);
+            this->textBox6->Size = System::Drawing::Size(1316, 64);
             this->textBox6->TabIndex = 1;
             // 
             // textBox7
@@ -1053,11 +1071,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->textBox7->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->textBox7->ForeColor = System::Drawing::Color::SpringGreen;
-            this->textBox7->Location = System::Drawing::Point(57, 100);
+            this->textBox7->Location = System::Drawing::Point(76, 123);
+            this->textBox7->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->textBox7->Multiline = true;
             this->textBox7->Name = L"textBox7";
             this->textBox7->ReadOnly = true;
-            this->textBox7->Size = System::Drawing::Size(988, 53);
+            this->textBox7->Size = System::Drawing::Size(1316, 64);
             this->textBox7->TabIndex = 1;
             // 
             // textBox8
@@ -1067,11 +1086,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->textBox8->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->textBox8->ForeColor = System::Drawing::Color::SpringGreen;
-            this->textBox8->Location = System::Drawing::Point(57, 41);
+            this->textBox8->Location = System::Drawing::Point(76, 50);
+            this->textBox8->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->textBox8->Multiline = true;
             this->textBox8->Name = L"textBox8";
             this->textBox8->ReadOnly = true;
-            this->textBox8->Size = System::Drawing::Size(988, 53);
+            this->textBox8->Size = System::Drawing::Size(1316, 64);
             this->textBox8->TabIndex = 1;
             // 
             // radioButton5
@@ -1082,9 +1102,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->radioButton5->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton5->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton5->Location = System::Drawing::Point(13, 236);
+            this->radioButton5->Location = System::Drawing::Point(17, 290);
+            this->radioButton5->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->radioButton5->Name = L"radioButton5";
-            this->radioButton5->Size = System::Drawing::Size(38, 25);
+            this->radioButton5->Size = System::Drawing::Size(46, 31);
             this->radioButton5->TabIndex = 2;
             this->radioButton5->TabStop = true;
             this->radioButton5->Text = L"d";
@@ -1098,9 +1119,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->radioButton6->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton6->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton6->Location = System::Drawing::Point(13, 62);
+            this->radioButton6->Location = System::Drawing::Point(17, 76);
+            this->radioButton6->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->radioButton6->Name = L"radioButton6";
-            this->radioButton6->Size = System::Drawing::Size(38, 25);
+            this->radioButton6->Size = System::Drawing::Size(46, 31);
             this->radioButton6->TabIndex = 2;
             this->radioButton6->TabStop = true;
             this->radioButton6->Text = L"a";
@@ -1114,9 +1136,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->radioButton7->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton7->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton7->Location = System::Drawing::Point(12, 116);
+            this->radioButton7->Location = System::Drawing::Point(16, 143);
+            this->radioButton7->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->radioButton7->Name = L"radioButton7";
-            this->radioButton7->Size = System::Drawing::Size(38, 25);
+            this->radioButton7->Size = System::Drawing::Size(46, 31);
             this->radioButton7->TabIndex = 2;
             this->radioButton7->TabStop = true;
             this->radioButton7->Text = L"b";
@@ -1130,9 +1153,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->radioButton8->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton8->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton8->Location = System::Drawing::Point(12, 177);
+            this->radioButton8->Location = System::Drawing::Point(16, 218);
+            this->radioButton8->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->radioButton8->Name = L"radioButton8";
-            this->radioButton8->Size = System::Drawing::Size(37, 25);
+            this->radioButton8->Size = System::Drawing::Size(45, 31);
             this->radioButton8->TabIndex = 2;
             this->radioButton8->TabStop = true;
             this->radioButton8->Text = L"c";
@@ -1147,10 +1171,11 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->richTextBox1->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->richTextBox1->ForeColor = System::Drawing::Color::Gold;
-            this->richTextBox1->Location = System::Drawing::Point(16, 508);
+            this->richTextBox1->Location = System::Drawing::Point(11, 625);
+            this->richTextBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->richTextBox1->Name = L"richTextBox1";
             this->richTextBox1->ReadOnly = true;
-            this->richTextBox1->Size = System::Drawing::Size(1082, 181);
+            this->richTextBox1->Size = System::Drawing::Size(1443, 223);
             this->richTextBox1->TabIndex = 61;
             this->richTextBox1->Text = L"";
             // 
@@ -1168,9 +1193,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->panel3->Controls->Add(this->radioButton11);
             this->panel3->Controls->Add(this->radioButton12);
             this->panel3->ForeColor = System::Drawing::SystemColors::Desktop;
-            this->panel3->Location = System::Drawing::Point(16, 1174);
+            this->panel3->Location = System::Drawing::Point(11, 1445);
+            this->panel3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->panel3->Name = L"panel3";
-            this->panel3->Size = System::Drawing::Size(1082, 286);
+            this->panel3->Size = System::Drawing::Size(1443, 352);
             this->panel3->TabIndex = 64;
             // 
             // textBox9
@@ -1180,11 +1206,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->textBox9->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->textBox9->ForeColor = System::Drawing::Color::SpringGreen;
-            this->textBox9->Location = System::Drawing::Point(57, 218);
+            this->textBox9->Location = System::Drawing::Point(76, 268);
+            this->textBox9->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->textBox9->Multiline = true;
             this->textBox9->Name = L"textBox9";
             this->textBox9->ReadOnly = true;
-            this->textBox9->Size = System::Drawing::Size(988, 53);
+            this->textBox9->Size = System::Drawing::Size(1316, 64);
             this->textBox9->TabIndex = 1;
             // 
             // textBox10
@@ -1194,11 +1221,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->textBox10->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->textBox10->ForeColor = System::Drawing::Color::SpringGreen;
-            this->textBox10->Location = System::Drawing::Point(57, 159);
+            this->textBox10->Location = System::Drawing::Point(76, 196);
+            this->textBox10->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->textBox10->Multiline = true;
             this->textBox10->Name = L"textBox10";
             this->textBox10->ReadOnly = true;
-            this->textBox10->Size = System::Drawing::Size(988, 53);
+            this->textBox10->Size = System::Drawing::Size(1316, 64);
             this->textBox10->TabIndex = 1;
             // 
             // textBox11
@@ -1208,11 +1236,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->textBox11->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->textBox11->ForeColor = System::Drawing::Color::SpringGreen;
-            this->textBox11->Location = System::Drawing::Point(57, 100);
+            this->textBox11->Location = System::Drawing::Point(76, 123);
+            this->textBox11->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->textBox11->Multiline = true;
             this->textBox11->Name = L"textBox11";
             this->textBox11->ReadOnly = true;
-            this->textBox11->Size = System::Drawing::Size(988, 53);
+            this->textBox11->Size = System::Drawing::Size(1316, 64);
             this->textBox11->TabIndex = 1;
             // 
             // textBox12
@@ -1222,11 +1251,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->textBox12->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->textBox12->ForeColor = System::Drawing::Color::SpringGreen;
-            this->textBox12->Location = System::Drawing::Point(57, 41);
+            this->textBox12->Location = System::Drawing::Point(76, 50);
+            this->textBox12->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->textBox12->Multiline = true;
             this->textBox12->Name = L"textBox12";
             this->textBox12->ReadOnly = true;
-            this->textBox12->Size = System::Drawing::Size(988, 53);
+            this->textBox12->Size = System::Drawing::Size(1316, 64);
             this->textBox12->TabIndex = 1;
             // 
             // radioButton9
@@ -1237,9 +1267,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->radioButton9->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton9->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton9->Location = System::Drawing::Point(13, 236);
+            this->radioButton9->Location = System::Drawing::Point(17, 290);
+            this->radioButton9->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->radioButton9->Name = L"radioButton9";
-            this->radioButton9->Size = System::Drawing::Size(38, 25);
+            this->radioButton9->Size = System::Drawing::Size(46, 31);
             this->radioButton9->TabIndex = 2;
             this->radioButton9->TabStop = true;
             this->radioButton9->Text = L"d";
@@ -1253,9 +1284,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->radioButton10->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton10->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton10->Location = System::Drawing::Point(13, 62);
+            this->radioButton10->Location = System::Drawing::Point(17, 76);
+            this->radioButton10->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->radioButton10->Name = L"radioButton10";
-            this->radioButton10->Size = System::Drawing::Size(38, 25);
+            this->radioButton10->Size = System::Drawing::Size(46, 31);
             this->radioButton10->TabIndex = 2;
             this->radioButton10->TabStop = true;
             this->radioButton10->Text = L"a";
@@ -1269,9 +1301,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->radioButton11->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton11->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton11->Location = System::Drawing::Point(12, 116);
+            this->radioButton11->Location = System::Drawing::Point(16, 143);
+            this->radioButton11->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->radioButton11->Name = L"radioButton11";
-            this->radioButton11->Size = System::Drawing::Size(38, 25);
+            this->radioButton11->Size = System::Drawing::Size(46, 31);
             this->radioButton11->TabIndex = 2;
             this->radioButton11->TabStop = true;
             this->radioButton11->Text = L"b";
@@ -1285,9 +1318,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->radioButton12->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton12->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton12->Location = System::Drawing::Point(12, 177);
+            this->radioButton12->Location = System::Drawing::Point(16, 218);
+            this->radioButton12->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->radioButton12->Name = L"radioButton12";
-            this->radioButton12->Size = System::Drawing::Size(37, 25);
+            this->radioButton12->Size = System::Drawing::Size(45, 31);
             this->radioButton12->TabIndex = 2;
             this->radioButton12->TabStop = true;
             this->radioButton12->Text = L"c";
@@ -1302,10 +1336,11 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->richTextBox3->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->richTextBox3->ForeColor = System::Drawing::Color::Gold;
-            this->richTextBox3->Location = System::Drawing::Point(16, 987);
+            this->richTextBox3->Location = System::Drawing::Point(11, 1215);
+            this->richTextBox3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->richTextBox3->Name = L"richTextBox3";
             this->richTextBox3->ReadOnly = true;
-            this->richTextBox3->Size = System::Drawing::Size(1082, 181);
+            this->richTextBox3->Size = System::Drawing::Size(1443, 223);
             this->richTextBox3->TabIndex = 63;
             this->richTextBox3->Text = L"";
             // 
@@ -1323,9 +1358,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->panel4->Controls->Add(this->radioButton15);
             this->panel4->Controls->Add(this->radioButton16);
             this->panel4->ForeColor = System::Drawing::SystemColors::Desktop;
-            this->panel4->Location = System::Drawing::Point(16, 1653);
+            this->panel4->Location = System::Drawing::Point(11, 2034);
+            this->panel4->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->panel4->Name = L"panel4";
-            this->panel4->Size = System::Drawing::Size(1082, 286);
+            this->panel4->Size = System::Drawing::Size(1443, 352);
             this->panel4->TabIndex = 66;
             // 
             // textBox13
@@ -1335,11 +1371,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->textBox13->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->textBox13->ForeColor = System::Drawing::Color::SpringGreen;
-            this->textBox13->Location = System::Drawing::Point(57, 218);
+            this->textBox13->Location = System::Drawing::Point(76, 268);
+            this->textBox13->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->textBox13->Multiline = true;
             this->textBox13->Name = L"textBox13";
             this->textBox13->ReadOnly = true;
-            this->textBox13->Size = System::Drawing::Size(988, 53);
+            this->textBox13->Size = System::Drawing::Size(1316, 64);
             this->textBox13->TabIndex = 1;
             // 
             // textBox14
@@ -1349,11 +1386,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->textBox14->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->textBox14->ForeColor = System::Drawing::Color::SpringGreen;
-            this->textBox14->Location = System::Drawing::Point(57, 159);
+            this->textBox14->Location = System::Drawing::Point(76, 196);
+            this->textBox14->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->textBox14->Multiline = true;
             this->textBox14->Name = L"textBox14";
             this->textBox14->ReadOnly = true;
-            this->textBox14->Size = System::Drawing::Size(988, 53);
+            this->textBox14->Size = System::Drawing::Size(1316, 64);
             this->textBox14->TabIndex = 1;
             // 
             // textBox15
@@ -1363,11 +1401,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->textBox15->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->textBox15->ForeColor = System::Drawing::Color::SpringGreen;
-            this->textBox15->Location = System::Drawing::Point(57, 100);
+            this->textBox15->Location = System::Drawing::Point(76, 123);
+            this->textBox15->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->textBox15->Multiline = true;
             this->textBox15->Name = L"textBox15";
             this->textBox15->ReadOnly = true;
-            this->textBox15->Size = System::Drawing::Size(988, 53);
+            this->textBox15->Size = System::Drawing::Size(1316, 64);
             this->textBox15->TabIndex = 1;
             // 
             // textBox16
@@ -1377,11 +1416,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->textBox16->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->textBox16->ForeColor = System::Drawing::Color::SpringGreen;
-            this->textBox16->Location = System::Drawing::Point(57, 41);
+            this->textBox16->Location = System::Drawing::Point(76, 50);
+            this->textBox16->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->textBox16->Multiline = true;
             this->textBox16->Name = L"textBox16";
             this->textBox16->ReadOnly = true;
-            this->textBox16->Size = System::Drawing::Size(988, 53);
+            this->textBox16->Size = System::Drawing::Size(1316, 64);
             this->textBox16->TabIndex = 1;
             // 
             // radioButton13
@@ -1392,9 +1432,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->radioButton13->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton13->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton13->Location = System::Drawing::Point(13, 236);
+            this->radioButton13->Location = System::Drawing::Point(17, 290);
+            this->radioButton13->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->radioButton13->Name = L"radioButton13";
-            this->radioButton13->Size = System::Drawing::Size(38, 25);
+            this->radioButton13->Size = System::Drawing::Size(46, 31);
             this->radioButton13->TabIndex = 2;
             this->radioButton13->TabStop = true;
             this->radioButton13->Text = L"d";
@@ -1408,9 +1449,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->radioButton14->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton14->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton14->Location = System::Drawing::Point(13, 62);
+            this->radioButton14->Location = System::Drawing::Point(17, 76);
+            this->radioButton14->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->radioButton14->Name = L"radioButton14";
-            this->radioButton14->Size = System::Drawing::Size(38, 25);
+            this->radioButton14->Size = System::Drawing::Size(46, 31);
             this->radioButton14->TabIndex = 2;
             this->radioButton14->TabStop = true;
             this->radioButton14->Text = L"a";
@@ -1424,9 +1466,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->radioButton15->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton15->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton15->Location = System::Drawing::Point(12, 116);
+            this->radioButton15->Location = System::Drawing::Point(16, 143);
+            this->radioButton15->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->radioButton15->Name = L"radioButton15";
-            this->radioButton15->Size = System::Drawing::Size(38, 25);
+            this->radioButton15->Size = System::Drawing::Size(46, 31);
             this->radioButton15->TabIndex = 2;
             this->radioButton15->TabStop = true;
             this->radioButton15->Text = L"b";
@@ -1440,9 +1483,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->radioButton16->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton16->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton16->Location = System::Drawing::Point(12, 177);
+            this->radioButton16->Location = System::Drawing::Point(16, 218);
+            this->radioButton16->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->radioButton16->Name = L"radioButton16";
-            this->radioButton16->Size = System::Drawing::Size(37, 25);
+            this->radioButton16->Size = System::Drawing::Size(45, 31);
             this->radioButton16->TabIndex = 2;
             this->radioButton16->TabStop = true;
             this->radioButton16->Text = L"c";
@@ -1457,10 +1501,11 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->richTextBox4->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->richTextBox4->ForeColor = System::Drawing::Color::Gold;
-            this->richTextBox4->Location = System::Drawing::Point(16, 1466);
+            this->richTextBox4->Location = System::Drawing::Point(11, 1804);
+            this->richTextBox4->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->richTextBox4->Name = L"richTextBox4";
             this->richTextBox4->ReadOnly = true;
-            this->richTextBox4->Size = System::Drawing::Size(1082, 181);
+            this->richTextBox4->Size = System::Drawing::Size(1443, 223);
             this->richTextBox4->TabIndex = 65;
             this->richTextBox4->Text = L"";
             // 
@@ -1478,9 +1523,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->panel5->Controls->Add(this->radioButton19);
             this->panel5->Controls->Add(this->radioButton20);
             this->panel5->ForeColor = System::Drawing::SystemColors::Desktop;
-            this->panel5->Location = System::Drawing::Point(16, 2132);
+            this->panel5->Location = System::Drawing::Point(11, 2624);
+            this->panel5->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->panel5->Name = L"panel5";
-            this->panel5->Size = System::Drawing::Size(1082, 286);
+            this->panel5->Size = System::Drawing::Size(1443, 352);
             this->panel5->TabIndex = 68;
             // 
             // textBox17
@@ -1490,11 +1536,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->textBox17->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->textBox17->ForeColor = System::Drawing::Color::SpringGreen;
-            this->textBox17->Location = System::Drawing::Point(57, 218);
+            this->textBox17->Location = System::Drawing::Point(76, 268);
+            this->textBox17->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->textBox17->Multiline = true;
             this->textBox17->Name = L"textBox17";
             this->textBox17->ReadOnly = true;
-            this->textBox17->Size = System::Drawing::Size(988, 53);
+            this->textBox17->Size = System::Drawing::Size(1316, 64);
             this->textBox17->TabIndex = 1;
             // 
             // textBox18
@@ -1504,11 +1551,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->textBox18->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->textBox18->ForeColor = System::Drawing::Color::SpringGreen;
-            this->textBox18->Location = System::Drawing::Point(57, 159);
+            this->textBox18->Location = System::Drawing::Point(76, 196);
+            this->textBox18->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->textBox18->Multiline = true;
             this->textBox18->Name = L"textBox18";
             this->textBox18->ReadOnly = true;
-            this->textBox18->Size = System::Drawing::Size(988, 53);
+            this->textBox18->Size = System::Drawing::Size(1316, 64);
             this->textBox18->TabIndex = 1;
             // 
             // textBox19
@@ -1518,11 +1566,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->textBox19->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->textBox19->ForeColor = System::Drawing::Color::SpringGreen;
-            this->textBox19->Location = System::Drawing::Point(57, 100);
+            this->textBox19->Location = System::Drawing::Point(76, 123);
+            this->textBox19->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->textBox19->Multiline = true;
             this->textBox19->Name = L"textBox19";
             this->textBox19->ReadOnly = true;
-            this->textBox19->Size = System::Drawing::Size(988, 53);
+            this->textBox19->Size = System::Drawing::Size(1316, 64);
             this->textBox19->TabIndex = 1;
             // 
             // textBox20
@@ -1532,11 +1581,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->textBox20->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->textBox20->ForeColor = System::Drawing::Color::SpringGreen;
-            this->textBox20->Location = System::Drawing::Point(57, 41);
+            this->textBox20->Location = System::Drawing::Point(76, 50);
+            this->textBox20->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->textBox20->Multiline = true;
             this->textBox20->Name = L"textBox20";
             this->textBox20->ReadOnly = true;
-            this->textBox20->Size = System::Drawing::Size(988, 53);
+            this->textBox20->Size = System::Drawing::Size(1316, 64);
             this->textBox20->TabIndex = 1;
             // 
             // radioButton17
@@ -1547,9 +1597,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->radioButton17->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton17->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton17->Location = System::Drawing::Point(13, 236);
+            this->radioButton17->Location = System::Drawing::Point(17, 290);
+            this->radioButton17->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->radioButton17->Name = L"radioButton17";
-            this->radioButton17->Size = System::Drawing::Size(38, 25);
+            this->radioButton17->Size = System::Drawing::Size(46, 31);
             this->radioButton17->TabIndex = 2;
             this->radioButton17->TabStop = true;
             this->radioButton17->Text = L"d";
@@ -1563,9 +1614,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->radioButton18->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton18->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton18->Location = System::Drawing::Point(13, 62);
+            this->radioButton18->Location = System::Drawing::Point(17, 76);
+            this->radioButton18->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->radioButton18->Name = L"radioButton18";
-            this->radioButton18->Size = System::Drawing::Size(38, 25);
+            this->radioButton18->Size = System::Drawing::Size(46, 31);
             this->radioButton18->TabIndex = 2;
             this->radioButton18->TabStop = true;
             this->radioButton18->Text = L"a";
@@ -1579,9 +1631,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->radioButton19->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton19->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton19->Location = System::Drawing::Point(12, 116);
+            this->radioButton19->Location = System::Drawing::Point(16, 143);
+            this->radioButton19->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->radioButton19->Name = L"radioButton19";
-            this->radioButton19->Size = System::Drawing::Size(38, 25);
+            this->radioButton19->Size = System::Drawing::Size(46, 31);
             this->radioButton19->TabIndex = 2;
             this->radioButton19->TabStop = true;
             this->radioButton19->Text = L"b";
@@ -1595,9 +1648,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->radioButton20->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton20->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton20->Location = System::Drawing::Point(12, 177);
+            this->radioButton20->Location = System::Drawing::Point(16, 218);
+            this->radioButton20->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->radioButton20->Name = L"radioButton20";
-            this->radioButton20->Size = System::Drawing::Size(37, 25);
+            this->radioButton20->Size = System::Drawing::Size(45, 31);
             this->radioButton20->TabIndex = 2;
             this->radioButton20->TabStop = true;
             this->radioButton20->Text = L"c";
@@ -1612,10 +1666,11 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->richTextBox5->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->richTextBox5->ForeColor = System::Drawing::Color::Gold;
-            this->richTextBox5->Location = System::Drawing::Point(16, 1945);
+            this->richTextBox5->Location = System::Drawing::Point(11, 2394);
+            this->richTextBox5->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->richTextBox5->Name = L"richTextBox5";
             this->richTextBox5->ReadOnly = true;
-            this->richTextBox5->Size = System::Drawing::Size(1082, 181);
+            this->richTextBox5->Size = System::Drawing::Size(1443, 223);
             this->richTextBox5->TabIndex = 67;
             this->richTextBox5->Text = L"";
             // 
@@ -1633,9 +1688,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->panel6->Controls->Add(this->radioButton23);
             this->panel6->Controls->Add(this->radioButton24);
             this->panel6->ForeColor = System::Drawing::SystemColors::Desktop;
-            this->panel6->Location = System::Drawing::Point(16, 2611);
+            this->panel6->Location = System::Drawing::Point(11, 3214);
+            this->panel6->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->panel6->Name = L"panel6";
-            this->panel6->Size = System::Drawing::Size(1082, 286);
+            this->panel6->Size = System::Drawing::Size(1443, 352);
             this->panel6->TabIndex = 70;
             // 
             // textBox21
@@ -1645,11 +1701,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->textBox21->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->textBox21->ForeColor = System::Drawing::Color::SpringGreen;
-            this->textBox21->Location = System::Drawing::Point(57, 218);
+            this->textBox21->Location = System::Drawing::Point(76, 268);
+            this->textBox21->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->textBox21->Multiline = true;
             this->textBox21->Name = L"textBox21";
             this->textBox21->ReadOnly = true;
-            this->textBox21->Size = System::Drawing::Size(988, 53);
+            this->textBox21->Size = System::Drawing::Size(1316, 64);
             this->textBox21->TabIndex = 1;
             // 
             // textBox22
@@ -1659,11 +1716,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->textBox22->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->textBox22->ForeColor = System::Drawing::Color::SpringGreen;
-            this->textBox22->Location = System::Drawing::Point(57, 159);
+            this->textBox22->Location = System::Drawing::Point(76, 196);
+            this->textBox22->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->textBox22->Multiline = true;
             this->textBox22->Name = L"textBox22";
             this->textBox22->ReadOnly = true;
-            this->textBox22->Size = System::Drawing::Size(988, 53);
+            this->textBox22->Size = System::Drawing::Size(1316, 64);
             this->textBox22->TabIndex = 1;
             // 
             // textBox23
@@ -1673,11 +1731,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->textBox23->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->textBox23->ForeColor = System::Drawing::Color::SpringGreen;
-            this->textBox23->Location = System::Drawing::Point(57, 100);
+            this->textBox23->Location = System::Drawing::Point(76, 123);
+            this->textBox23->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->textBox23->Multiline = true;
             this->textBox23->Name = L"textBox23";
             this->textBox23->ReadOnly = true;
-            this->textBox23->Size = System::Drawing::Size(988, 53);
+            this->textBox23->Size = System::Drawing::Size(1316, 64);
             this->textBox23->TabIndex = 1;
             // 
             // textBox24
@@ -1687,11 +1746,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->textBox24->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->textBox24->ForeColor = System::Drawing::Color::SpringGreen;
-            this->textBox24->Location = System::Drawing::Point(57, 41);
+            this->textBox24->Location = System::Drawing::Point(76, 50);
+            this->textBox24->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->textBox24->Multiline = true;
             this->textBox24->Name = L"textBox24";
             this->textBox24->ReadOnly = true;
-            this->textBox24->Size = System::Drawing::Size(988, 53);
+            this->textBox24->Size = System::Drawing::Size(1316, 64);
             this->textBox24->TabIndex = 1;
             // 
             // radioButton21
@@ -1702,9 +1762,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->radioButton21->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton21->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton21->Location = System::Drawing::Point(13, 236);
+            this->radioButton21->Location = System::Drawing::Point(17, 290);
+            this->radioButton21->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->radioButton21->Name = L"radioButton21";
-            this->radioButton21->Size = System::Drawing::Size(38, 25);
+            this->radioButton21->Size = System::Drawing::Size(46, 31);
             this->radioButton21->TabIndex = 2;
             this->radioButton21->TabStop = true;
             this->radioButton21->Text = L"d";
@@ -1718,9 +1779,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->radioButton22->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton22->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton22->Location = System::Drawing::Point(13, 62);
+            this->radioButton22->Location = System::Drawing::Point(17, 76);
+            this->radioButton22->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->radioButton22->Name = L"radioButton22";
-            this->radioButton22->Size = System::Drawing::Size(38, 25);
+            this->radioButton22->Size = System::Drawing::Size(46, 31);
             this->radioButton22->TabIndex = 2;
             this->radioButton22->TabStop = true;
             this->radioButton22->Text = L"a";
@@ -1734,9 +1796,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->radioButton23->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton23->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton23->Location = System::Drawing::Point(12, 116);
+            this->radioButton23->Location = System::Drawing::Point(16, 143);
+            this->radioButton23->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->radioButton23->Name = L"radioButton23";
-            this->radioButton23->Size = System::Drawing::Size(38, 25);
+            this->radioButton23->Size = System::Drawing::Size(46, 31);
             this->radioButton23->TabIndex = 2;
             this->radioButton23->TabStop = true;
             this->radioButton23->Text = L"b";
@@ -1750,9 +1813,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->radioButton24->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton24->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton24->Location = System::Drawing::Point(12, 177);
+            this->radioButton24->Location = System::Drawing::Point(16, 218);
+            this->radioButton24->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->radioButton24->Name = L"radioButton24";
-            this->radioButton24->Size = System::Drawing::Size(37, 25);
+            this->radioButton24->Size = System::Drawing::Size(45, 31);
             this->radioButton24->TabIndex = 2;
             this->radioButton24->TabStop = true;
             this->radioButton24->Text = L"c";
@@ -1767,10 +1831,11 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->richTextBox6->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->richTextBox6->ForeColor = System::Drawing::Color::Gold;
-            this->richTextBox6->Location = System::Drawing::Point(16, 2424);
+            this->richTextBox6->Location = System::Drawing::Point(11, 2983);
+            this->richTextBox6->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->richTextBox6->Name = L"richTextBox6";
             this->richTextBox6->ReadOnly = true;
-            this->richTextBox6->Size = System::Drawing::Size(1082, 181);
+            this->richTextBox6->Size = System::Drawing::Size(1443, 223);
             this->richTextBox6->TabIndex = 69;
             this->richTextBox6->Text = L"";
             // 
@@ -1788,9 +1853,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->panel7->Controls->Add(this->radioButton27);
             this->panel7->Controls->Add(this->radioButton28);
             this->panel7->ForeColor = System::Drawing::SystemColors::Desktop;
-            this->panel7->Location = System::Drawing::Point(16, 3090);
+            this->panel7->Location = System::Drawing::Point(11, 3803);
+            this->panel7->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->panel7->Name = L"panel7";
-            this->panel7->Size = System::Drawing::Size(1082, 286);
+            this->panel7->Size = System::Drawing::Size(1443, 352);
             this->panel7->TabIndex = 72;
             // 
             // textBox25
@@ -1800,11 +1866,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->textBox25->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->textBox25->ForeColor = System::Drawing::Color::SpringGreen;
-            this->textBox25->Location = System::Drawing::Point(57, 218);
+            this->textBox25->Location = System::Drawing::Point(76, 268);
+            this->textBox25->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->textBox25->Multiline = true;
             this->textBox25->Name = L"textBox25";
             this->textBox25->ReadOnly = true;
-            this->textBox25->Size = System::Drawing::Size(988, 53);
+            this->textBox25->Size = System::Drawing::Size(1316, 64);
             this->textBox25->TabIndex = 1;
             // 
             // textBox26
@@ -1814,11 +1881,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->textBox26->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->textBox26->ForeColor = System::Drawing::Color::SpringGreen;
-            this->textBox26->Location = System::Drawing::Point(57, 159);
+            this->textBox26->Location = System::Drawing::Point(76, 196);
+            this->textBox26->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->textBox26->Multiline = true;
             this->textBox26->Name = L"textBox26";
             this->textBox26->ReadOnly = true;
-            this->textBox26->Size = System::Drawing::Size(988, 53);
+            this->textBox26->Size = System::Drawing::Size(1316, 64);
             this->textBox26->TabIndex = 1;
             // 
             // textBox27
@@ -1828,11 +1896,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->textBox27->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->textBox27->ForeColor = System::Drawing::Color::SpringGreen;
-            this->textBox27->Location = System::Drawing::Point(57, 100);
+            this->textBox27->Location = System::Drawing::Point(76, 123);
+            this->textBox27->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->textBox27->Multiline = true;
             this->textBox27->Name = L"textBox27";
             this->textBox27->ReadOnly = true;
-            this->textBox27->Size = System::Drawing::Size(988, 53);
+            this->textBox27->Size = System::Drawing::Size(1316, 64);
             this->textBox27->TabIndex = 1;
             // 
             // textBox28
@@ -1842,11 +1911,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->textBox28->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->textBox28->ForeColor = System::Drawing::Color::SpringGreen;
-            this->textBox28->Location = System::Drawing::Point(57, 41);
+            this->textBox28->Location = System::Drawing::Point(76, 50);
+            this->textBox28->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->textBox28->Multiline = true;
             this->textBox28->Name = L"textBox28";
             this->textBox28->ReadOnly = true;
-            this->textBox28->Size = System::Drawing::Size(988, 53);
+            this->textBox28->Size = System::Drawing::Size(1316, 64);
             this->textBox28->TabIndex = 1;
             // 
             // radioButton25
@@ -1857,9 +1927,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->radioButton25->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton25->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton25->Location = System::Drawing::Point(13, 236);
+            this->radioButton25->Location = System::Drawing::Point(17, 290);
+            this->radioButton25->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->radioButton25->Name = L"radioButton25";
-            this->radioButton25->Size = System::Drawing::Size(38, 25);
+            this->radioButton25->Size = System::Drawing::Size(46, 31);
             this->radioButton25->TabIndex = 2;
             this->radioButton25->TabStop = true;
             this->radioButton25->Text = L"d";
@@ -1873,9 +1944,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->radioButton26->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton26->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton26->Location = System::Drawing::Point(13, 62);
+            this->radioButton26->Location = System::Drawing::Point(17, 76);
+            this->radioButton26->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->radioButton26->Name = L"radioButton26";
-            this->radioButton26->Size = System::Drawing::Size(38, 25);
+            this->radioButton26->Size = System::Drawing::Size(46, 31);
             this->radioButton26->TabIndex = 2;
             this->radioButton26->TabStop = true;
             this->radioButton26->Text = L"a";
@@ -1889,9 +1961,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->radioButton27->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton27->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton27->Location = System::Drawing::Point(12, 116);
+            this->radioButton27->Location = System::Drawing::Point(16, 143);
+            this->radioButton27->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->radioButton27->Name = L"radioButton27";
-            this->radioButton27->Size = System::Drawing::Size(38, 25);
+            this->radioButton27->Size = System::Drawing::Size(46, 31);
             this->radioButton27->TabIndex = 2;
             this->radioButton27->TabStop = true;
             this->radioButton27->Text = L"b";
@@ -1905,9 +1978,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->radioButton28->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton28->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton28->Location = System::Drawing::Point(12, 177);
+            this->radioButton28->Location = System::Drawing::Point(16, 218);
+            this->radioButton28->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->radioButton28->Name = L"radioButton28";
-            this->radioButton28->Size = System::Drawing::Size(37, 25);
+            this->radioButton28->Size = System::Drawing::Size(45, 31);
             this->radioButton28->TabIndex = 2;
             this->radioButton28->TabStop = true;
             this->radioButton28->Text = L"c";
@@ -1922,10 +1996,11 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->richTextBox7->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->richTextBox7->ForeColor = System::Drawing::Color::Gold;
-            this->richTextBox7->Location = System::Drawing::Point(16, 2903);
+            this->richTextBox7->Location = System::Drawing::Point(11, 3573);
+            this->richTextBox7->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->richTextBox7->Name = L"richTextBox7";
             this->richTextBox7->ReadOnly = true;
-            this->richTextBox7->Size = System::Drawing::Size(1082, 181);
+            this->richTextBox7->Size = System::Drawing::Size(1443, 223);
             this->richTextBox7->TabIndex = 71;
             this->richTextBox7->Text = L"";
             // 
@@ -1943,9 +2018,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->panel8->Controls->Add(this->radioButton31);
             this->panel8->Controls->Add(this->radioButton32);
             this->panel8->ForeColor = System::Drawing::SystemColors::Desktop;
-            this->panel8->Location = System::Drawing::Point(16, 3569);
+            this->panel8->Location = System::Drawing::Point(11, 4393);
+            this->panel8->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->panel8->Name = L"panel8";
-            this->panel8->Size = System::Drawing::Size(1082, 286);
+            this->panel8->Size = System::Drawing::Size(1443, 352);
             this->panel8->TabIndex = 74;
             // 
             // textBox29
@@ -1955,11 +2031,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->textBox29->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->textBox29->ForeColor = System::Drawing::Color::SpringGreen;
-            this->textBox29->Location = System::Drawing::Point(57, 218);
+            this->textBox29->Location = System::Drawing::Point(76, 268);
+            this->textBox29->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->textBox29->Multiline = true;
             this->textBox29->Name = L"textBox29";
             this->textBox29->ReadOnly = true;
-            this->textBox29->Size = System::Drawing::Size(988, 53);
+            this->textBox29->Size = System::Drawing::Size(1316, 64);
             this->textBox29->TabIndex = 1;
             // 
             // textBox30
@@ -1969,11 +2046,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->textBox30->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->textBox30->ForeColor = System::Drawing::Color::SpringGreen;
-            this->textBox30->Location = System::Drawing::Point(57, 159);
+            this->textBox30->Location = System::Drawing::Point(76, 196);
+            this->textBox30->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->textBox30->Multiline = true;
             this->textBox30->Name = L"textBox30";
             this->textBox30->ReadOnly = true;
-            this->textBox30->Size = System::Drawing::Size(988, 53);
+            this->textBox30->Size = System::Drawing::Size(1316, 64);
             this->textBox30->TabIndex = 1;
             // 
             // textBox31
@@ -1983,11 +2061,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->textBox31->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->textBox31->ForeColor = System::Drawing::Color::SpringGreen;
-            this->textBox31->Location = System::Drawing::Point(57, 100);
+            this->textBox31->Location = System::Drawing::Point(76, 123);
+            this->textBox31->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->textBox31->Multiline = true;
             this->textBox31->Name = L"textBox31";
             this->textBox31->ReadOnly = true;
-            this->textBox31->Size = System::Drawing::Size(988, 53);
+            this->textBox31->Size = System::Drawing::Size(1316, 64);
             this->textBox31->TabIndex = 1;
             // 
             // textBox32
@@ -1997,11 +2076,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->textBox32->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->textBox32->ForeColor = System::Drawing::Color::SpringGreen;
-            this->textBox32->Location = System::Drawing::Point(57, 41);
+            this->textBox32->Location = System::Drawing::Point(76, 50);
+            this->textBox32->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->textBox32->Multiline = true;
             this->textBox32->Name = L"textBox32";
             this->textBox32->ReadOnly = true;
-            this->textBox32->Size = System::Drawing::Size(988, 53);
+            this->textBox32->Size = System::Drawing::Size(1316, 64);
             this->textBox32->TabIndex = 1;
             // 
             // radioButton29
@@ -2012,9 +2092,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->radioButton29->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton29->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton29->Location = System::Drawing::Point(13, 236);
+            this->radioButton29->Location = System::Drawing::Point(17, 290);
+            this->radioButton29->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->radioButton29->Name = L"radioButton29";
-            this->radioButton29->Size = System::Drawing::Size(38, 25);
+            this->radioButton29->Size = System::Drawing::Size(46, 31);
             this->radioButton29->TabIndex = 2;
             this->radioButton29->TabStop = true;
             this->radioButton29->Text = L"d";
@@ -2028,9 +2109,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->radioButton30->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton30->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton30->Location = System::Drawing::Point(13, 62);
+            this->radioButton30->Location = System::Drawing::Point(17, 76);
+            this->radioButton30->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->radioButton30->Name = L"radioButton30";
-            this->radioButton30->Size = System::Drawing::Size(38, 25);
+            this->radioButton30->Size = System::Drawing::Size(46, 31);
             this->radioButton30->TabIndex = 2;
             this->radioButton30->TabStop = true;
             this->radioButton30->Text = L"a";
@@ -2044,9 +2126,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->radioButton31->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton31->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton31->Location = System::Drawing::Point(12, 116);
+            this->radioButton31->Location = System::Drawing::Point(16, 143);
+            this->radioButton31->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->radioButton31->Name = L"radioButton31";
-            this->radioButton31->Size = System::Drawing::Size(38, 25);
+            this->radioButton31->Size = System::Drawing::Size(46, 31);
             this->radioButton31->TabIndex = 2;
             this->radioButton31->TabStop = true;
             this->radioButton31->Text = L"b";
@@ -2060,9 +2143,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->radioButton32->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton32->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton32->Location = System::Drawing::Point(12, 177);
+            this->radioButton32->Location = System::Drawing::Point(16, 218);
+            this->radioButton32->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->radioButton32->Name = L"radioButton32";
-            this->radioButton32->Size = System::Drawing::Size(37, 25);
+            this->radioButton32->Size = System::Drawing::Size(45, 31);
             this->radioButton32->TabIndex = 2;
             this->radioButton32->TabStop = true;
             this->radioButton32->Text = L"c";
@@ -2077,10 +2161,11 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->richTextBox8->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->richTextBox8->ForeColor = System::Drawing::Color::Gold;
-            this->richTextBox8->Location = System::Drawing::Point(16, 3382);
+            this->richTextBox8->Location = System::Drawing::Point(11, 4162);
+            this->richTextBox8->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->richTextBox8->Name = L"richTextBox8";
             this->richTextBox8->ReadOnly = true;
-            this->richTextBox8->Size = System::Drawing::Size(1082, 181);
+            this->richTextBox8->Size = System::Drawing::Size(1443, 223);
             this->richTextBox8->TabIndex = 73;
             this->richTextBox8->Text = L"";
             // 
@@ -2098,9 +2183,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->panel9->Controls->Add(this->radioButton35);
             this->panel9->Controls->Add(this->radioButton36);
             this->panel9->ForeColor = System::Drawing::SystemColors::Desktop;
-            this->panel9->Location = System::Drawing::Point(16, 4048);
+            this->panel9->Location = System::Drawing::Point(11, 4982);
+            this->panel9->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->panel9->Name = L"panel9";
-            this->panel9->Size = System::Drawing::Size(1082, 286);
+            this->panel9->Size = System::Drawing::Size(1443, 352);
             this->panel9->TabIndex = 76;
             // 
             // textBox33
@@ -2110,11 +2196,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->textBox33->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->textBox33->ForeColor = System::Drawing::Color::SpringGreen;
-            this->textBox33->Location = System::Drawing::Point(57, 218);
+            this->textBox33->Location = System::Drawing::Point(76, 268);
+            this->textBox33->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->textBox33->Multiline = true;
             this->textBox33->Name = L"textBox33";
             this->textBox33->ReadOnly = true;
-            this->textBox33->Size = System::Drawing::Size(988, 53);
+            this->textBox33->Size = System::Drawing::Size(1316, 64);
             this->textBox33->TabIndex = 1;
             // 
             // textBox34
@@ -2124,11 +2211,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->textBox34->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->textBox34->ForeColor = System::Drawing::Color::SpringGreen;
-            this->textBox34->Location = System::Drawing::Point(57, 159);
+            this->textBox34->Location = System::Drawing::Point(76, 196);
+            this->textBox34->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->textBox34->Multiline = true;
             this->textBox34->Name = L"textBox34";
             this->textBox34->ReadOnly = true;
-            this->textBox34->Size = System::Drawing::Size(988, 53);
+            this->textBox34->Size = System::Drawing::Size(1316, 64);
             this->textBox34->TabIndex = 1;
             // 
             // textBox35
@@ -2138,11 +2226,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->textBox35->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->textBox35->ForeColor = System::Drawing::Color::SpringGreen;
-            this->textBox35->Location = System::Drawing::Point(57, 100);
+            this->textBox35->Location = System::Drawing::Point(76, 123);
+            this->textBox35->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->textBox35->Multiline = true;
             this->textBox35->Name = L"textBox35";
             this->textBox35->ReadOnly = true;
-            this->textBox35->Size = System::Drawing::Size(988, 53);
+            this->textBox35->Size = System::Drawing::Size(1316, 64);
             this->textBox35->TabIndex = 1;
             // 
             // textBox36
@@ -2152,11 +2241,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->textBox36->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->textBox36->ForeColor = System::Drawing::Color::SpringGreen;
-            this->textBox36->Location = System::Drawing::Point(57, 41);
+            this->textBox36->Location = System::Drawing::Point(76, 50);
+            this->textBox36->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->textBox36->Multiline = true;
             this->textBox36->Name = L"textBox36";
             this->textBox36->ReadOnly = true;
-            this->textBox36->Size = System::Drawing::Size(988, 53);
+            this->textBox36->Size = System::Drawing::Size(1316, 64);
             this->textBox36->TabIndex = 1;
             // 
             // radioButton33
@@ -2167,9 +2257,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->radioButton33->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton33->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton33->Location = System::Drawing::Point(13, 236);
+            this->radioButton33->Location = System::Drawing::Point(17, 290);
+            this->radioButton33->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->radioButton33->Name = L"radioButton33";
-            this->radioButton33->Size = System::Drawing::Size(38, 25);
+            this->radioButton33->Size = System::Drawing::Size(46, 31);
             this->radioButton33->TabIndex = 2;
             this->radioButton33->TabStop = true;
             this->radioButton33->Text = L"d";
@@ -2183,9 +2274,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->radioButton34->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton34->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton34->Location = System::Drawing::Point(13, 62);
+            this->radioButton34->Location = System::Drawing::Point(17, 76);
+            this->radioButton34->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->radioButton34->Name = L"radioButton34";
-            this->radioButton34->Size = System::Drawing::Size(38, 25);
+            this->radioButton34->Size = System::Drawing::Size(46, 31);
             this->radioButton34->TabIndex = 2;
             this->radioButton34->TabStop = true;
             this->radioButton34->Text = L"a";
@@ -2199,9 +2291,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->radioButton35->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton35->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton35->Location = System::Drawing::Point(12, 116);
+            this->radioButton35->Location = System::Drawing::Point(16, 143);
+            this->radioButton35->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->radioButton35->Name = L"radioButton35";
-            this->radioButton35->Size = System::Drawing::Size(38, 25);
+            this->radioButton35->Size = System::Drawing::Size(46, 31);
             this->radioButton35->TabIndex = 2;
             this->radioButton35->TabStop = true;
             this->radioButton35->Text = L"b";
@@ -2215,9 +2308,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->radioButton36->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton36->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton36->Location = System::Drawing::Point(12, 177);
+            this->radioButton36->Location = System::Drawing::Point(16, 218);
+            this->radioButton36->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->radioButton36->Name = L"radioButton36";
-            this->radioButton36->Size = System::Drawing::Size(37, 25);
+            this->radioButton36->Size = System::Drawing::Size(45, 31);
             this->radioButton36->TabIndex = 2;
             this->radioButton36->TabStop = true;
             this->radioButton36->Text = L"c";
@@ -2232,10 +2326,11 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->richTextBox9->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->richTextBox9->ForeColor = System::Drawing::Color::Gold;
-            this->richTextBox9->Location = System::Drawing::Point(16, 3861);
+            this->richTextBox9->Location = System::Drawing::Point(11, 4752);
+            this->richTextBox9->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->richTextBox9->Name = L"richTextBox9";
             this->richTextBox9->ReadOnly = true;
-            this->richTextBox9->Size = System::Drawing::Size(1082, 181);
+            this->richTextBox9->Size = System::Drawing::Size(1443, 223);
             this->richTextBox9->TabIndex = 75;
             this->richTextBox9->Text = L"";
             // 
@@ -2253,9 +2348,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->panel10->Controls->Add(this->radioButton39);
             this->panel10->Controls->Add(this->radioButton40);
             this->panel10->ForeColor = System::Drawing::SystemColors::Desktop;
-            this->panel10->Location = System::Drawing::Point(16, 4527);
+            this->panel10->Location = System::Drawing::Point(11, 5572);
+            this->panel10->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->panel10->Name = L"panel10";
-            this->panel10->Size = System::Drawing::Size(1082, 286);
+            this->panel10->Size = System::Drawing::Size(1443, 352);
             this->panel10->TabIndex = 78;
             // 
             // textBox37
@@ -2265,11 +2361,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->textBox37->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->textBox37->ForeColor = System::Drawing::Color::SpringGreen;
-            this->textBox37->Location = System::Drawing::Point(57, 218);
+            this->textBox37->Location = System::Drawing::Point(76, 268);
+            this->textBox37->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->textBox37->Multiline = true;
             this->textBox37->Name = L"textBox37";
             this->textBox37->ReadOnly = true;
-            this->textBox37->Size = System::Drawing::Size(988, 53);
+            this->textBox37->Size = System::Drawing::Size(1316, 64);
             this->textBox37->TabIndex = 1;
             // 
             // textBox38
@@ -2279,11 +2376,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->textBox38->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->textBox38->ForeColor = System::Drawing::Color::SpringGreen;
-            this->textBox38->Location = System::Drawing::Point(57, 159);
+            this->textBox38->Location = System::Drawing::Point(76, 196);
+            this->textBox38->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->textBox38->Multiline = true;
             this->textBox38->Name = L"textBox38";
             this->textBox38->ReadOnly = true;
-            this->textBox38->Size = System::Drawing::Size(988, 53);
+            this->textBox38->Size = System::Drawing::Size(1316, 64);
             this->textBox38->TabIndex = 1;
             // 
             // textBox39
@@ -2293,11 +2391,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->textBox39->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->textBox39->ForeColor = System::Drawing::Color::SpringGreen;
-            this->textBox39->Location = System::Drawing::Point(57, 100);
+            this->textBox39->Location = System::Drawing::Point(76, 123);
+            this->textBox39->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->textBox39->Multiline = true;
             this->textBox39->Name = L"textBox39";
             this->textBox39->ReadOnly = true;
-            this->textBox39->Size = System::Drawing::Size(988, 53);
+            this->textBox39->Size = System::Drawing::Size(1316, 64);
             this->textBox39->TabIndex = 1;
             // 
             // textBox40
@@ -2307,11 +2406,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->textBox40->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->textBox40->ForeColor = System::Drawing::Color::SpringGreen;
-            this->textBox40->Location = System::Drawing::Point(57, 41);
+            this->textBox40->Location = System::Drawing::Point(76, 50);
+            this->textBox40->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->textBox40->Multiline = true;
             this->textBox40->Name = L"textBox40";
             this->textBox40->ReadOnly = true;
-            this->textBox40->Size = System::Drawing::Size(988, 53);
+            this->textBox40->Size = System::Drawing::Size(1316, 64);
             this->textBox40->TabIndex = 1;
             // 
             // radioButton37
@@ -2322,9 +2422,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->radioButton37->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton37->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton37->Location = System::Drawing::Point(13, 236);
+            this->radioButton37->Location = System::Drawing::Point(17, 290);
+            this->radioButton37->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->radioButton37->Name = L"radioButton37";
-            this->radioButton37->Size = System::Drawing::Size(38, 25);
+            this->radioButton37->Size = System::Drawing::Size(46, 31);
             this->radioButton37->TabIndex = 2;
             this->radioButton37->TabStop = true;
             this->radioButton37->Text = L"d";
@@ -2338,9 +2439,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->radioButton38->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton38->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton38->Location = System::Drawing::Point(13, 62);
+            this->radioButton38->Location = System::Drawing::Point(17, 76);
+            this->radioButton38->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->radioButton38->Name = L"radioButton38";
-            this->radioButton38->Size = System::Drawing::Size(38, 25);
+            this->radioButton38->Size = System::Drawing::Size(46, 31);
             this->radioButton38->TabIndex = 2;
             this->radioButton38->TabStop = true;
             this->radioButton38->Text = L"a";
@@ -2354,9 +2456,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->radioButton39->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton39->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton39->Location = System::Drawing::Point(12, 116);
+            this->radioButton39->Location = System::Drawing::Point(16, 143);
+            this->radioButton39->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->radioButton39->Name = L"radioButton39";
-            this->radioButton39->Size = System::Drawing::Size(38, 25);
+            this->radioButton39->Size = System::Drawing::Size(46, 31);
             this->radioButton39->TabIndex = 2;
             this->radioButton39->TabStop = true;
             this->radioButton39->Text = L"b";
@@ -2370,9 +2473,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->radioButton40->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton40->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton40->Location = System::Drawing::Point(12, 177);
+            this->radioButton40->Location = System::Drawing::Point(16, 218);
+            this->radioButton40->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->radioButton40->Name = L"radioButton40";
-            this->radioButton40->Size = System::Drawing::Size(37, 25);
+            this->radioButton40->Size = System::Drawing::Size(45, 31);
             this->radioButton40->TabIndex = 2;
             this->radioButton40->TabStop = true;
             this->radioButton40->Text = L"c";
@@ -2387,10 +2491,11 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->richTextBox10->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->richTextBox10->ForeColor = System::Drawing::Color::Gold;
-            this->richTextBox10->Location = System::Drawing::Point(16, 4340);
+            this->richTextBox10->Location = System::Drawing::Point(11, 5342);
+            this->richTextBox10->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->richTextBox10->Name = L"richTextBox10";
             this->richTextBox10->ReadOnly = true;
-            this->richTextBox10->Size = System::Drawing::Size(1082, 181);
+            this->richTextBox10->Size = System::Drawing::Size(1443, 223);
             this->richTextBox10->TabIndex = 77;
             this->richTextBox10->Text = L"";
             // 
@@ -2399,9 +2504,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->pictureBox3->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->pictureBox3->Cursor = System::Windows::Forms::Cursors::Hand;
             this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.Image")));
-            this->pictureBox3->Location = System::Drawing::Point(1302, 3);
+            this->pictureBox3->Location = System::Drawing::Point(1726, 4);
+            this->pictureBox3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->pictureBox3->Name = L"pictureBox3";
-            this->pictureBox3->Size = System::Drawing::Size(24, 20);
+            this->pictureBox3->Size = System::Drawing::Size(32, 25);
             this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
             this->pictureBox3->TabIndex = 79;
             this->pictureBox3->TabStop = false;
@@ -2409,13 +2515,13 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             // 
             // Startpage
             // 
-            this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+            this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
             this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
             this->AutoScroll = true;
             this->AutoScrollMinSize = System::Drawing::Size(665, 4900);
             this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(24)), static_cast<System::Int32>(static_cast<System::Byte>(30)),
                 static_cast<System::Int32>(static_cast<System::Byte>(54)));
-            this->ClientSize = System::Drawing::Size(1370, 783);
+            this->ClientSize = System::Drawing::Size(1827, 964);
             this->Controls->Add(this->pictureBox3);
             this->Controls->Add(this->panel10);
             this->Controls->Add(this->richTextBox10);
@@ -2444,6 +2550,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox3;
             this->Controls->Add(this->textBox41);
             this->ForeColor = System::Drawing::Color::Gold;
             this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
+            this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->Name = L"Startpage";
             this->Text = L"Ultimate Entrance Cracker";
             this->WindowState = System::Windows::Forms::FormWindowState::Maximized;

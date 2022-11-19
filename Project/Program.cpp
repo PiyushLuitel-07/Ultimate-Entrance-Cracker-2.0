@@ -28,6 +28,7 @@ void main(array<String^>^ args)
 		Project::Helppage hepage;
 		Project::Leaderboardpage lpage;
 		Project::Developer dpage;
+
 		
 		loginForm.ShowDialog();
 		if(loginForm.switchToRegister)
@@ -52,6 +53,10 @@ void main(array<String^>^ args)
 				admin = adminPage.admin;
 				break;
 			}
+		}
+		else if (loginForm.switchtohomepage)
+		{
+			hpage.ShowDialog();
 		}
 		if (hpage.switchtostartpage) {
 			spage.ShowDialog();
