@@ -395,7 +395,6 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 		SqlDataReader^ reader = command.ExecuteReader();
 		if (reader->Read()) {
 			user = gcnew User;
-			//user->id = reader->GetInt32(0);
 			user->name = reader->GetString(1);
 			user->email = reader->GetString(2);
 			user->username = reader->GetString(3);
