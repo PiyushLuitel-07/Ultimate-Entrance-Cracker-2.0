@@ -226,6 +226,7 @@ namespace Project
 			this->btnLogout->Text = L"LOG OUT";
 			this->btnLogout->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnLogout->UseVisualStyleBackColor = false;
+			this->btnLogout->Click += gcnew System::EventHandler(this, &Homepage::btnLogout_Click);
 			// 
 			// pictureBox3
 			// 
@@ -497,12 +498,16 @@ private: System::Void tbUsernameDisplay_TextChanged(System::Object^ sender, Syst
 }
 
 private: System::Void lbUsernameDisplay_Click(System::Object^ sender, System::EventArgs^ e) {
-	User^ user;
-	lbUsernameDisplay->Text = user->name;
+	
 		
      
 }
 private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+}
+public: bool switchtologin = false;
+private: System::Void btnLogout_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->switchtologin = true;
+	this->Close();
 }
 };
 }

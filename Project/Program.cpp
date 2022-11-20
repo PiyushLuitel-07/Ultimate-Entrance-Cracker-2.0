@@ -74,6 +74,9 @@ void main(array<String^>^ args)
 		if (lpage.switchtomainmenufromleaderboard) {
 			hpage.ShowDialog();
 		}
+		if (hpage.switchtologin) {
+			loginForm.ShowDialog();
+		}
 		
 
 		else if (loginForm.switchToRegister==false) {
