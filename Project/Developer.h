@@ -51,10 +51,14 @@ namespace Project {
 	private: System::Windows::Forms::TextBox^ tbQuestion;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Panel^ panel3;
-	private: System::Windows::Forms::RadioButton^ radioButton4;
-	private: System::Windows::Forms::RadioButton^ radioButton3;
-	private: System::Windows::Forms::RadioButton^ radioButton2;
-	private: System::Windows::Forms::RadioButton^ radioButton1;
+	private: System::Windows::Forms::RadioButton^ rbD;
+
+	private: System::Windows::Forms::RadioButton^ rbC;
+
+	private: System::Windows::Forms::RadioButton^ rbB;
+
+	private: System::Windows::Forms::RadioButton^ rbA;
+
 	private: System::Windows::Forms::Label^ label7;
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
 	private: System::Windows::Forms::Button^ btnLogout;
@@ -116,10 +120,10 @@ namespace Project {
 			this->tbQuestion = (gcnew System::Windows::Forms::TextBox());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
-			this->radioButton4 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton3 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton2 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton1 = (gcnew System::Windows::Forms::RadioButton());
+			this->rbD = (gcnew System::Windows::Forms::RadioButton());
+			this->rbC = (gcnew System::Windows::Forms::RadioButton());
+			this->rbB = (gcnew System::Windows::Forms::RadioButton());
+			this->rbA = (gcnew System::Windows::Forms::RadioButton());
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->btnLogout = (gcnew System::Windows::Forms::Button());
@@ -316,10 +320,10 @@ namespace Project {
 			// 
 			this->panel3->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->panel3->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->panel3->Controls->Add(this->radioButton4);
-			this->panel3->Controls->Add(this->radioButton3);
-			this->panel3->Controls->Add(this->radioButton2);
-			this->panel3->Controls->Add(this->radioButton1);
+			this->panel3->Controls->Add(this->rbD);
+			this->panel3->Controls->Add(this->rbC);
+			this->panel3->Controls->Add(this->rbB);
+			this->panel3->Controls->Add(this->rbA);
 			this->panel3->Controls->Add(this->label7);
 			this->panel3->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -329,69 +333,69 @@ namespace Project {
 			this->panel3->Size = System::Drawing::Size(667, 89);
 			this->panel3->TabIndex = 2;
 			// 
-			// radioButton4
+			// rbD
 			// 
-			this->radioButton4->AutoSize = true;
-			this->radioButton4->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->radioButton4->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->rbD->AutoSize = true;
+			this->rbD->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->rbD->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->radioButton4->ForeColor = System::Drawing::Color::Gold;
-			this->radioButton4->Location = System::Drawing::Point(521, 26);
-			this->radioButton4->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->radioButton4->Name = L"radioButton4";
-			this->radioButton4->Size = System::Drawing::Size(60, 49);
-			this->radioButton4->TabIndex = 16;
-			this->radioButton4->TabStop = true;
-			this->radioButton4->Text = L"d";
-			this->radioButton4->UseVisualStyleBackColor = false;
+			this->rbD->ForeColor = System::Drawing::Color::Gold;
+			this->rbD->Location = System::Drawing::Point(521, 26);
+			this->rbD->Margin = System::Windows::Forms::Padding(4);
+			this->rbD->Name = L"rbD";
+			this->rbD->Size = System::Drawing::Size(60, 49);
+			this->rbD->TabIndex = 16;
+			this->rbD->TabStop = true;
+			this->rbD->Text = L"d";
+			this->rbD->UseVisualStyleBackColor = false;
 			// 
-			// radioButton3
+			// rbC
 			// 
-			this->radioButton3->AutoSize = true;
-			this->radioButton3->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->radioButton3->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->rbC->AutoSize = true;
+			this->rbC->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->rbC->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->radioButton3->ForeColor = System::Drawing::Color::Gold;
-			this->radioButton3->Location = System::Drawing::Point(452, 26);
-			this->radioButton3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->radioButton3->Name = L"radioButton3";
-			this->radioButton3->Size = System::Drawing::Size(57, 49);
-			this->radioButton3->TabIndex = 15;
-			this->radioButton3->TabStop = true;
-			this->radioButton3->Text = L"c";
-			this->radioButton3->UseVisualStyleBackColor = false;
+			this->rbC->ForeColor = System::Drawing::Color::Gold;
+			this->rbC->Location = System::Drawing::Point(452, 26);
+			this->rbC->Margin = System::Windows::Forms::Padding(4);
+			this->rbC->Name = L"rbC";
+			this->rbC->Size = System::Drawing::Size(57, 49);
+			this->rbC->TabIndex = 15;
+			this->rbC->TabStop = true;
+			this->rbC->Text = L"c";
+			this->rbC->UseVisualStyleBackColor = false;
 			// 
-			// radioButton2
+			// rbB
 			// 
-			this->radioButton2->AutoSize = true;
-			this->radioButton2->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->radioButton2->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->rbB->AutoSize = true;
+			this->rbB->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->rbB->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->radioButton2->ForeColor = System::Drawing::Color::Gold;
-			this->radioButton2->Location = System::Drawing::Point(381, 26);
-			this->radioButton2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->radioButton2->Name = L"radioButton2";
-			this->radioButton2->Size = System::Drawing::Size(60, 49);
-			this->radioButton2->TabIndex = 14;
-			this->radioButton2->TabStop = true;
-			this->radioButton2->Text = L"b";
-			this->radioButton2->UseVisualStyleBackColor = false;
+			this->rbB->ForeColor = System::Drawing::Color::Gold;
+			this->rbB->Location = System::Drawing::Point(381, 26);
+			this->rbB->Margin = System::Windows::Forms::Padding(4);
+			this->rbB->Name = L"rbB";
+			this->rbB->Size = System::Drawing::Size(60, 49);
+			this->rbB->TabIndex = 14;
+			this->rbB->TabStop = true;
+			this->rbB->Text = L"b";
+			this->rbB->UseVisualStyleBackColor = false;
 			// 
-			// radioButton1
+			// rbA
 			// 
-			this->radioButton1->AutoSize = true;
-			this->radioButton1->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->radioButton1->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->rbA->AutoSize = true;
+			this->rbA->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->rbA->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->radioButton1->ForeColor = System::Drawing::Color::Gold;
-			this->radioButton1->Location = System::Drawing::Point(311, 26);
-			this->radioButton1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->radioButton1->Name = L"radioButton1";
-			this->radioButton1->Size = System::Drawing::Size(59, 49);
-			this->radioButton1->TabIndex = 13;
-			this->radioButton1->TabStop = true;
-			this->radioButton1->Text = L"a";
-			this->radioButton1->UseVisualStyleBackColor = false;
+			this->rbA->ForeColor = System::Drawing::Color::Gold;
+			this->rbA->Location = System::Drawing::Point(311, 26);
+			this->rbA->Margin = System::Windows::Forms::Padding(4);
+			this->rbA->Name = L"rbA";
+			this->rbA->Size = System::Drawing::Size(59, 49);
+			this->rbA->TabIndex = 13;
+			this->rbA->TabStop = true;
+			this->rbA->Text = L"a";
+			this->rbA->UseVisualStyleBackColor = false;
 			// 
 			// label7
 			// 
@@ -412,7 +416,7 @@ namespace Project {
 			this->pictureBox1->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
 			this->pictureBox1->Location = System::Drawing::Point(0, 0);
-			this->pictureBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->pictureBox1->Margin = System::Windows::Forms::Padding(4);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(1827, 922);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
@@ -441,7 +445,7 @@ namespace Project {
 			this->pictureBox3->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.Image")));
 			this->pictureBox3->Location = System::Drawing::Point(1773, 1);
-			this->pictureBox3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->pictureBox3->Margin = System::Windows::Forms::Padding(4);
 			this->pictureBox3->Name = L"pictureBox3";
 			this->pictureBox3->Size = System::Drawing::Size(32, 25);
 			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -487,7 +491,23 @@ private: System::Void btnEnter_Click(System::Object^ sender, System::EventArgs^ 
 	String^ option_b = tbOptn_b->Text;
 	String^ option_c = tbOptn_c->Text;
 	String^ option_d = tbOptn_d->Text;
-	//String^ correct = cbCorrectOptn->Text;
+	String^ answer;
+	if (rbA)
+	{
+		answer = "a";
+	}
+	else if (rbB)
+	{
+		answer = "b";
+	}
+	else if (rbC)
+	{
+		answer = "c";
+	}
+	else if (rbD)
+	{
+		answer = "d";
+	}
 	if (question->Length == 0 || option_a->Length == 0 || option_b->Length == 0 || option_c->Length == 0 || option_d->Length == 0)
 	{
 		MessageBox::Show("Please enter all the fields!!", "One or more empty fields", MessageBoxButtons::OK);
@@ -495,7 +515,7 @@ private: System::Void btnEnter_Click(System::Object^ sender, System::EventArgs^ 
 	}
 	try
 	{
-		String^ connString = "Data Source=LAPTOP-STT82H7B;Initial Catalog=myDB;Integrated Security=True";
+		String^ connString = "Data Source=tcp:uec.database.windows.net;Initial Catalog=uecdb;Persist Security Info=True;User ID=sqluec;Password=***********";
 		SqlConnection sqlConn(connString);
 		sqlConn.Open();
 		//String^ database = lbDatabase->Text;
@@ -503,8 +523,8 @@ private: System::Void btnEnter_Click(System::Object^ sender, System::EventArgs^ 
 
 
 		/*if (String::Compare(database, "Maths") != 0) {*/
-			String^ sqlQuery = "INSERT INTO Maths" +
-				"(question, option_a, option_b, option_c, option_d, correct) VALUES" +
+			String^ sqlQuery = "INSERT INTO english1" +
+				"(Questions, Option_a, Option_b, Option_c, Option_d, Answer) VALUES" +
 				"(@Questions, @Option_a, @Option_b, @Option_c, @Option_d, @Answer);";
 
 			SqlCommand command(sqlQuery, % sqlConn);
@@ -513,7 +533,7 @@ private: System::Void btnEnter_Click(System::Object^ sender, System::EventArgs^ 
 			command.Parameters->AddWithValue("@Option_b", option_b);
 			command.Parameters->AddWithValue("@Option_c", option_c);
 			command.Parameters->AddWithValue("@Option_d", option_d);
-			//command.Parameters->AddWithValue("@Correct", correct);
+			command.Parameters->AddWithValue("@Correct", answer);
 
 			command.ExecuteNonQuery();
 
@@ -523,8 +543,7 @@ private: System::Void btnEnter_Click(System::Object^ sender, System::EventArgs^ 
 			question_obj->Option_b = option_b;
 			question_obj->Option_c = option_c;
 			question_obj->Option_d = option_d;
-			//question_obj->Correct_optn = correct;
-
+			question_obj->Correct_optn = answer;
 			this->Close();
 		}
 	/*}*/
