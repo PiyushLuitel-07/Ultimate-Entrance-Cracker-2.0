@@ -1,8 +1,9 @@
- #pragma once
+#pragma once
 #include "Homepage.h"
 #include "Registerpage.h"
 #include "Adminloginpage.h"
 #include "User.h"
+#include <string.h>
 
 namespace Project {
 
@@ -369,11 +370,13 @@ namespace Project {
 		}
 #pragma endregion
 public: User^ user= nullptr;
+public:bool switchtohomepage = false;
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 	
 	String^ username = this->tbUsername->Text;
 	String^ password = this->tbPassword->Text;
 
+	Project::Homepage^ hpage = gcnew Homepage(tbUsername->Text);
 	if (username->Length == 0 || password->Length == 0) {
 		MessageBox::Show("Please enter username and password",
 			"Username or Password Empty", MessageBoxButtons::OK);
@@ -401,6 +404,7 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 			user->password = reader->GetString(6);
 
 			this->Close();
+			this->switchtohomepage = true;
 		}
 		else {
 			MessageBox::Show("Username or password is incorrect",

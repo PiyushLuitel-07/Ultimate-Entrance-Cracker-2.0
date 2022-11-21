@@ -6,13 +6,17 @@
 #include "Helppage.h"
 #include "Leaderboardpage.h"
 #include "Homepage.h"
+#include "User.h"
+#include <string.h>
 
 
 using namespace System;
 using namespace System::Windows::Forms;
 
+//char usernameass[20];
+
 void main(array<String^>^ args)
-{
+{	
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 	User^ user = nullptr;
@@ -52,6 +56,9 @@ void main(array<String^>^ args)
 				admin = adminPage.admin;
 				break;
 			}
+		}
+		else if (loginForm.switchtohomepage) {
+			hpage.ShowDialog();
 		}
 		if (hpage.switchtostartpage) {
 			spage.ShowDialog();
