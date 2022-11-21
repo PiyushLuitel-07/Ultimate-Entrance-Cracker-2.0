@@ -57,9 +57,9 @@ void main(array<String^>^ args)
 				break;
 			}
 		}
-		else if (loginForm.switchtohomepage) {
+		/*else if (loginForm.switchtohomepage) {
 			hpage.ShowDialog();
-		}
+		}*/
 		if (hpage.switchtostartpage) {
 			spage.ShowDialog();
 		}
@@ -113,10 +113,9 @@ void main(array<String^>^ args)
 		}
 	}*/
 	if (user != nullptr) {
-		MessageBox::Show("Successful Authentication of " + user -> name,
-			"Program.cpp", MessageBoxButtons::OK);
+		Project::Homepage hpage(user);
+		Application::Run(% hpage);
 	}
-	
 	else if (admin != nullptr) {
 		MessageBox::Show("Successful Authentication of admin  " + admin->username,
 			"Program.cpp", MessageBoxButtons::OK);

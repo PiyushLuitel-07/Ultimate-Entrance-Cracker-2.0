@@ -27,10 +27,12 @@ namespace Project
 			//TODO: Add the constructor code here
 			//
 		}
-		Homepage(String^username){
-
+		Homepage(User^ user)
+		{
 			InitializeComponent();
-			lbUsernameDisplay->Text = username;
+			//
+			lbUsernameDisplay->Text = user->name;
+			//
 		}
 
 	protected:
@@ -78,9 +80,10 @@ namespace Project
 	private: System::Windows::Forms::TextBox^ textBox2;
 	private: System::Windows::Forms::TextBox^ textBox3;
 	private: System::Windows::Forms::Timer^ timer1;
-	private: System::Windows::Forms::Label^ lbUsernameDisplay;
+
 	private: System::Windows::Forms::FontDialog^ fontDialog1;
-	private: System::Windows::Forms::DataGridView^ dataGridView1;
+	private: System::Windows::Forms::Label^ lbUsernameDisplay;
+
 
 
 
@@ -118,7 +121,6 @@ namespace Project
 			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
-			this->lbUsernameDisplay = (gcnew System::Windows::Forms::Label());
 			this->pictureBox7 = (gcnew System::Windows::Forms::PictureBox());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
@@ -127,7 +129,7 @@ namespace Project
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->fontDialog1 = (gcnew System::Windows::Forms::FontDialog());
-			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
+			this->lbUsernameDisplay = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->BeginInit();
@@ -136,7 +138,6 @@ namespace Project
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->BeginInit();
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox7))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// button4
@@ -279,17 +280,6 @@ namespace Project
 			this->panel1->TabIndex = 28;
 			this->panel1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Homepage::panel1_Paint);
 			// 
-			// lbUsernameDisplay
-			// 
-			this->lbUsernameDisplay->BackColor = System::Drawing::SystemColors::GrayText;
-			this->lbUsernameDisplay->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 19.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->lbUsernameDisplay->Location = System::Drawing::Point(154, 64);
-			this->lbUsernameDisplay->Name = L"lbUsernameDisplay";
-			this->lbUsernameDisplay->Size = System::Drawing::Size(223, 55);
-			this->lbUsernameDisplay->TabIndex = 27;
-			this->lbUsernameDisplay->Click += gcnew System::EventHandler(this, &Homepage::lbUsernameDisplay_Click);
-			// 
 			// pictureBox7
 			// 
 			this->pictureBox7->BackColor = System::Drawing::Color::Transparent;
@@ -394,15 +384,14 @@ namespace Project
 			this->timer1->Interval = 1000;
 			this->timer1->Tick += gcnew System::EventHandler(this, &Homepage::timer1_Tick);
 			// 
-			// dataGridView1
+			// lbUsernameDisplay
 			// 
-			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Location = System::Drawing::Point(491, 253);
-			this->dataGridView1->Name = L"dataGridView1";
-			this->dataGridView1->RowHeadersWidth = 51;
-			this->dataGridView1->RowTemplate->Height = 24;
-			this->dataGridView1->Size = System::Drawing::Size(111, 50);
-			this->dataGridView1->TabIndex = 30;
+			this->lbUsernameDisplay->ForeColor = System::Drawing::SystemColors::Control;
+			this->lbUsernameDisplay->Location = System::Drawing::Point(164, 74);
+			this->lbUsernameDisplay->Name = L"lbUsernameDisplay";
+			this->lbUsernameDisplay->Size = System::Drawing::Size(163, 49);
+			this->lbUsernameDisplay->TabIndex = 27;
+			this->lbUsernameDisplay->Click += gcnew System::EventHandler(this, &Homepage::lbUsernameDisplay_Click_1);
 			// 
 			// Homepage
 			// 
@@ -411,7 +400,6 @@ namespace Project
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(24)), static_cast<System::Int32>(static_cast<System::Byte>(30)),
 				static_cast<System::Int32>(static_cast<System::Byte>(54)));
 			this->ClientSize = System::Drawing::Size(1370, 749);
-			this->Controls->Add(this->dataGridView1);
 			this->Controls->Add(this->textBox3);
 			this->Controls->Add(this->textBox2);
 			this->Controls->Add(this->panel1);
@@ -436,7 +424,6 @@ namespace Project
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->EndInit();
 			this->panel1->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox7))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -526,5 +513,7 @@ namespace Project
 	}
 	private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 	}
-	};
+	private: System::Void lbUsernameDisplay_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	}
+};
 }

@@ -376,7 +376,7 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 	String^ username = this->tbUsername->Text;
 	String^ password = this->tbPassword->Text;
 
-	Project::Homepage^ hpage = gcnew Homepage(tbUsername->Text);
+
 	if (username->Length == 0 || password->Length == 0) {
 		MessageBox::Show("Please enter username and password",
 			"Username or Password Empty", MessageBoxButtons::OK);
