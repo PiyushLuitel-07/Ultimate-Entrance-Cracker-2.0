@@ -240,6 +240,7 @@ namespace Project
 			this->btnLogout->Text = L"LOG OUT";
 			this->btnLogout->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnLogout->UseVisualStyleBackColor = false;
+			this->btnLogout->Click += gcnew System::EventHandler(this, &Homepage::btnLogout_Click);
 			// 
 			// pictureBox3
 			// 
@@ -520,5 +521,10 @@ namespace Project
 	}
 	private: System::Void lbUsernameDisplay_Click_1(System::Object^ sender, System::EventArgs^ e) {
 	}
+public: bool switchToLogin = false;
+private: System::Void btnLogout_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->switchToLogin = true;
+	this->Close();
+}
 };
 }
