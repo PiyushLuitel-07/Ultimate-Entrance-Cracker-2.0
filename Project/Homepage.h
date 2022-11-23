@@ -17,6 +17,7 @@ namespace Project
 	/// <summary>
 	/// Summary for Homepage
 	/// </summary>
+	///
 	public ref class Homepage : public System::Windows::Forms::Form
 	{
 	public:
@@ -87,6 +88,8 @@ namespace Project
 
 
 
+
+
 	private: System::ComponentModel::IContainer^ components;
 
 
@@ -121,6 +124,7 @@ namespace Project
 			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->lbUsernameDisplay = (gcnew System::Windows::Forms::Label());
 			this->pictureBox7 = (gcnew System::Windows::Forms::PictureBox());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
@@ -129,7 +133,6 @@ namespace Project
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->fontDialog1 = (gcnew System::Windows::Forms::FontDialog());
-			this->lbUsernameDisplay = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->BeginInit();
@@ -280,6 +283,15 @@ namespace Project
 			this->panel1->TabIndex = 28;
 			this->panel1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Homepage::panel1_Paint);
 			// 
+			// lbUsernameDisplay
+			// 
+			this->lbUsernameDisplay->ForeColor = System::Drawing::SystemColors::Control;
+			this->lbUsernameDisplay->Location = System::Drawing::Point(164, 74);
+			this->lbUsernameDisplay->Name = L"lbUsernameDisplay";
+			this->lbUsernameDisplay->Size = System::Drawing::Size(163, 49);
+			this->lbUsernameDisplay->TabIndex = 27;
+			this->lbUsernameDisplay->Click += gcnew System::EventHandler(this, &Homepage::lbUsernameDisplay_Click_1);
+			// 
 			// pictureBox7
 			// 
 			this->pictureBox7->BackColor = System::Drawing::Color::Transparent;
@@ -383,15 +395,6 @@ namespace Project
 			// 
 			this->timer1->Interval = 1000;
 			this->timer1->Tick += gcnew System::EventHandler(this, &Homepage::timer1_Tick);
-			// 
-			// lbUsernameDisplay
-			// 
-			this->lbUsernameDisplay->ForeColor = System::Drawing::SystemColors::Control;
-			this->lbUsernameDisplay->Location = System::Drawing::Point(164, 74);
-			this->lbUsernameDisplay->Name = L"lbUsernameDisplay";
-			this->lbUsernameDisplay->Size = System::Drawing::Size(163, 49);
-			this->lbUsernameDisplay->TabIndex = 27;
-			this->lbUsernameDisplay->Click += gcnew System::EventHandler(this, &Homepage::lbUsernameDisplay_Click_1);
 			// 
 			// Homepage
 			// 

@@ -538,7 +538,7 @@ private: System::Void btnEnter_Click(System::Object^ sender, System::EventArgs^ 
 			command.ExecuteNonQuery();
 
 			question_obj = gcnew Question;
-			question_obj->Questions = question;
+			question_obj->question = question;
 			question_obj->Option_a = option_a;
 			question_obj->Option_b = option_b;
 			question_obj->Option_c = option_c;
