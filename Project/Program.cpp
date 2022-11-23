@@ -7,165 +7,107 @@
 #include "Leaderboardpage.h"
 #include "Homepage.h"
 #include "User.h"
-#include <string.h>
 
 
 using namespace System;
 using namespace System::Windows::Forms;
 
-//char usernameass[20];
 
 void main(array<String^>^ args)
-{	
+{
+
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 	User^ user = nullptr;
 	Admin^ admin = nullptr;
 	while (true)
 	{
-		Project::Loginform loginForm;
-		Project::Adminloginpage adminPage;
-		Project::Developer developerPage;
-		Project::Homepage hpage;
-		Project::Startpage spage;
-		Project::Registerpage registerPage;
-		Project::Helppage hepage;
-		Project::Leaderboardpage lpage;
-		Project::Developer dpage;
-		
-		loginForm.ShowDialog();
-		if(loginForm.switchToRegister)
+			Project::Loginform loginForm;
+			Project::Adminloginpage adminPage;
+			Project::Developer developerPage;
+			Project::Homepage hpage;
+			Project::Startpage spage;
+			Project::Registerpage registerPage;
+			Project::Helppage hepage;
+			Project::Leaderboardpage lpage;
+			Project::Developer dpage;
+			
+			loginForm.ShowDialog();
+			
+	while (true) 
 		{
-			registerPage.ShowDialog();
-			if (registerPage.switchToLogin) {
-			continue;
+			////////////////////first login page///////////
+			if (loginForm.switchToRegister)
+			{
+				registerPage.ShowDialog();
+				if (registerPage.switchToLogin) {
+					loginForm.ShowDialog();
+				}
 			}
-			else {
+			
+
+			//////////////////////////
+			if (loginForm.switchtohomepage)
+			{
 				user = registerPage.user;
 				break;
 			}
-		}
-		else if (loginForm.switchToAdminLogin)
-		{
-			adminPage.ShowDialog();
-			if (adminPage.switchToLogin) {
-				/*continue;*/
-				adminPage.ShowDialog();
-			}
-			else {
-				admin = adminPage.admin;
-				break;
-			}
-		}
-		//-----------------------Homepage--------------------//	
-		while (true) {
-		 if (loginForm.switchtohomepage)
-		{
-			user = loginForm.user;
-			if (user != nullptr) {
-				Project::Homepage hpage(user);
-				hpage.ShowDialog();
-				if (hpage.switchtostartpage) {
-					spage.ShowDialog();
-					
-
-				}
-				if (hpage.switchtohelppage) {
-					hepage.ShowDialog();
-					if (hepage.switchtomainmenufromhelppage) {
-						hpage.ShowDialog();
-					}
-
-				}
-				if (hpage.switchtoleaderboradpage) {
-					lpage.ShowDialog();
-					if (lpage.switchtomainmenufromleaderboard) {
-						hpage.ShowDialog();
-						continue;
-					}
-					else
-					{
-						MessageBox::Show("Error",
-							"Program.cpp", MessageBoxButtons::OK);
-					}
-				}
-				if (hpage.switchToLogin)
-				{
-					loginForm.ShowDialog();
-				}
-
-			}
-		}
-		 
-			/*else
+			//////////////////
+			if (loginForm.switchToAdminLogin)
 			{
-				MessageBox::Show("Authentication Canceled",
-					"Program.cpp", MessageBoxButtons::OK);
-			}*/
-
-		}
-		
-		/*if (hpage.switchtostartpage) {
-			spage.ShowDialog();
-		}
-		if (hpage.switchtohelppage) {
-			hepage.ShowDialog();
-			
-		}
-		if (hpage.switchtoleaderboradpage) {
-			lpage.ShowDialog();
-		}*/
-		
-		
-		
-
-		if (loginForm.switchToRegister==false) {
-		user = loginForm.user;
-		break;
-		}
-		else if(loginForm.switchToAdminLogin==false) {
-			admin = adminPage.admin;
-			break;
-		}
-		
-	}
-	
-	/*while (true)
-	{
-		Project::Adminloginpage adminPage;
-		Project::Loginform loginForm;
-		loginForm.ShowDialog();
-		
-		if (loginForm.switchToAdminLogin)
-		{
-			adminPage.ShowDialog();
-			if (adminPage.switchToLogin) {
-				continue;
+				adminPage.ShowDialog();
+				if (adminPage.switchToLogin) {
+					/*continue;*/
+				adminPage.ShowDialog();
+				}
+				else {
+					admin = adminPage.admin;
+					break;
+				}
 			}
-			else {
-				admin = adminPage.admin;
-				break;
+
+		}
+			//-----------------------Homepage--------------------//	
+			while (true) {
+				if (loginForm.switchtohomepage)
+				{
+					user = loginForm.user;
+					if (user != nullptr) {
+						Project::Homepage hpage(user);
+						hpage.ShowDialog();
+						if (hpage.switchtostartpage) {
+							spage.ShowDialog();
+
+
+						}
+						if (hpage.switchtohelppage) {
+							hepage.ShowDialog();
+							if (hepage.switchtomainmenufromhelppage) {
+								hpage.ShowDialog();
+							}
+
+						}
+						if (hpage.switchtoleaderboradpage) {
+							lpage.ShowDialog();
+							if (lpage.switchtomainmenufromleaderboard) {
+								hpage.ShowDialog();
+								continue;
+							}
+							else
+							{
+								MessageBox::Show("Error",
+									"Program.cpp", MessageBoxButtons::OK);
+							}
+						}
+						if (hpage.switchToLogin)
+						{
+							break;
+						}
+
+					}
+				}
+
 			}
-		}
-
-		else {
-			admin = adminPage.admin;
-			break;
-		}
-	}*/
-	/*if (user != nullptr) {
-		Project::Homepage hpage(user);
-		Application::Run(% hpage);
+			continue;
 	}
-	 if (admin != nullptr) {
-		MessageBox::Show("Successful Authentication of admin  " + admin->username,
-			"Program.cpp", MessageBoxButtons::OK);
-	}
-	else  
-	{
-		MessageBox::Show("Authentication Canceled",
-			"Program.cpp", MessageBoxButtons::OK);
-	}*/
-
-		
 }

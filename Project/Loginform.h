@@ -3,7 +3,7 @@
 #include "Registerpage.h"
 #include "Adminloginpage.h"
 #include "User.h"
-#include <string.h>
+
 
 namespace Project {
 
@@ -370,6 +370,13 @@ namespace Project {
 
 		}
 #pragma endregion
+
+private: System::Void btnCancel_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Close();
+	Application::Exit();
+
+}
+
 public: User^ user= nullptr;
 public:bool switchtohomepage = false;
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -432,9 +439,6 @@ private: System::Void linkLabel2_LinkClicked(System::Object^ sender, System::Win
 }
 
 
-private: System::Void btnCancel_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->Close();
-}
 
 
 

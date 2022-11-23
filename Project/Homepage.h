@@ -455,6 +455,7 @@ namespace Project
 	}
 	private: System::Void pictureBox5_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Close();
+		Application::Exit();
 	}
 
 

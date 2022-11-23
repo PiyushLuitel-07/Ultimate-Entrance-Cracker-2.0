@@ -84,6 +84,7 @@
       <AdditionalDependencies />
       <SubSystem>Windows</SubSystem>
       <EntryPointSymbol>main</EntryPointSymbol>
+      <AdditionalLibraryDirectories>C:\Program Files %28x86%29\Windows Kits\10\Lib\10.0.19041.0\ucrt\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -93,6 +94,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies />
+      <AdditionalLibraryDirectories>C:\Program Files %28x86%29\Windows Kits\10\Lib\10.0.19041.0\ucrt\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -102,6 +104,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies />
+      <AdditionalLibraryDirectories>C:\Program Files %28x86%29\Windows Kits\10\Lib\10.0.19041.0\ucrt\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -113,6 +116,7 @@
       <AdditionalDependencies />
       <SubSystem>Windows</SubSystem>
       <EntryPointSymbol>main</EntryPointSymbol>
+      <AdditionalLibraryDirectories>C:\Program Files %28x86%29\Windows Kits\10\Lib\10.0.19041.0\ucrt\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
