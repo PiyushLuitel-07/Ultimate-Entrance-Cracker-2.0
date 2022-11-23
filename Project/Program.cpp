@@ -57,14 +57,18 @@ void main(array<String^>^ args)
 				break;
 			}
 		}
-		else if (loginForm.switchtohomepage)
+		//-----------------------Homepage--------------------//	
+		while (true) {
+		 if (loginForm.switchtohomepage)
 		{
 			user = loginForm.user;
 			if (user != nullptr) {
 				Project::Homepage hpage(user);
-				Application::Run(% hpage);
+				hpage.ShowDialog();
 				if (hpage.switchtostartpage) {
 					spage.ShowDialog();
+					
+
 				}
 				if (hpage.switchtohelppage) {
 					hepage.ShowDialog();
@@ -77,16 +81,28 @@ void main(array<String^>^ args)
 					lpage.ShowDialog();
 					if (lpage.switchtomainmenufromleaderboard) {
 						hpage.ShowDialog();
+						continue;
+					}
+					else
+					{
+						MessageBox::Show("Error",
+							"Program.cpp", MessageBoxButtons::OK);
 					}
 				}
-				
+				if (hpage.switchToLogin)
+				{
+					loginForm.ShowDialog();
+				}
+
 			}
-			else
+		}
+		 
+			/*else
 			{
 				MessageBox::Show("Authentication Canceled",
 					"Program.cpp", MessageBoxButtons::OK);
-			}
-			
+			}*/
+
 		}
 		
 		/*if (hpage.switchtostartpage) {
@@ -103,7 +119,7 @@ void main(array<String^>^ args)
 		
 		
 
-		else if (loginForm.switchToRegister==false) {
+		if (loginForm.switchToRegister==false) {
 		user = loginForm.user;
 		break;
 		}

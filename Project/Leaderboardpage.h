@@ -1,5 +1,7 @@
 #pragma once
 #include "Homepage.h"
+#include "Leaderboardpage.h"
+
 namespace Project {
 
 	using namespace System;
@@ -8,6 +10,8 @@ namespace Project {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+
+	
 
 	/// <summary>
 	/// Summary for Leaderboardpage
@@ -177,6 +181,8 @@ public:bool switchtomainmenufromleaderboard = false;
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->Close();
 	this->switchtomainmenufromleaderboard = true;
+	
+	
 }
 };
 }
