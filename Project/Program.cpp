@@ -50,17 +50,46 @@ void main(array<String^>^ args)
 			adminPage.ShowDialog();
 			if (adminPage.switchToLogin) {
 				/*continue;*/
-				developerPage.ShowDialog();
+				adminPage.ShowDialog();
 			}
 			else {
 				admin = adminPage.admin;
 				break;
 			}
 		}
-		/*else if (loginForm.switchtohomepage) {
-			hpage.ShowDialog();
-		}*/
-		if (hpage.switchtostartpage) {
+		else if (loginForm.switchtohomepage)
+		{
+			user = loginForm.user;
+			if (user != nullptr) {
+				Project::Homepage hpage(user);
+				Application::Run(% hpage);
+				if (hpage.switchtostartpage) {
+					spage.ShowDialog();
+				}
+				if (hpage.switchtohelppage) {
+					hepage.ShowDialog();
+					if (hepage.switchtomainmenufromhelppage) {
+						hpage.ShowDialog();
+					}
+
+				}
+				if (hpage.switchtoleaderboradpage) {
+					lpage.ShowDialog();
+					if (lpage.switchtomainmenufromleaderboard) {
+						hpage.ShowDialog();
+					}
+				}
+				
+			}
+			else
+			{
+				MessageBox::Show("Authentication Canceled",
+					"Program.cpp", MessageBoxButtons::OK);
+			}
+			
+		}
+		
+		/*if (hpage.switchtostartpage) {
 			spage.ShowDialog();
 		}
 		if (hpage.switchtohelppage) {
@@ -69,13 +98,9 @@ void main(array<String^>^ args)
 		}
 		if (hpage.switchtoleaderboradpage) {
 			lpage.ShowDialog();
-		}
-		if (hepage.switchtomainmenufromhelppage) {
-			hpage.ShowDialog();
-		}
-		if (lpage.switchtomainmenufromleaderboard) {
-			hpage.ShowDialog();
-		}
+		}*/
+		
+		
 		
 
 		else if (loginForm.switchToRegister==false) {
@@ -112,11 +137,11 @@ void main(array<String^>^ args)
 			break;
 		}
 	}*/
-	if (user != nullptr) {
+	/*if (user != nullptr) {
 		Project::Homepage hpage(user);
 		Application::Run(% hpage);
 	}
-	else if (admin != nullptr) {
+	 if (admin != nullptr) {
 		MessageBox::Show("Successful Authentication of admin  " + admin->username,
 			"Program.cpp", MessageBoxButtons::OK);
 	}
@@ -124,7 +149,7 @@ void main(array<String^>^ args)
 	{
 		MessageBox::Show("Authentication Canceled",
 			"Program.cpp", MessageBoxButtons::OK);
-	}
+	}*/
 
 		
 }

@@ -129,6 +129,7 @@ namespace Project {
 			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox2->TabIndex = 18;
 			this->pictureBox2->TabStop = false;
+			this->pictureBox2->Click += gcnew System::EventHandler(this, &Loginform::pictureBox2_Click);
 			// 
 			// btnCancel
 			// 
@@ -159,7 +160,7 @@ namespace Project {
 			this->label1->ForeColor = System::Drawing::Color::Gold;
 			this->label1->Location = System::Drawing::Point(274, 56);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(939, 85);
+			this->label1->Size = System::Drawing::Size(1174, 108);
 			this->label1->TabIndex = 9;
 			this->label1->Text = L"Ultimate Entrance Cracker";
 			// 
@@ -176,7 +177,7 @@ namespace Project {
 			this->linkLabel2->LinkColor = System::Drawing::Color::MediumSpringGreen;
 			this->linkLabel2->Location = System::Drawing::Point(11, 49);
 			this->linkLabel2->Name = L"linkLabel2";
-			this->linkLabel2->Size = System::Drawing::Size(179, 39);
+			this->linkLabel2->Size = System::Drawing::Size(224, 49);
 			this->linkLabel2->TabIndex = 7;
 			this->linkLabel2->TabStop = true;
 			this->linkLabel2->Text = L"Admin Login";
@@ -195,7 +196,7 @@ namespace Project {
 			this->linkLabel1->LinkColor = System::Drawing::Color::MediumSpringGreen;
 			this->linkLabel1->Location = System::Drawing::Point(29, 10);
 			this->linkLabel1->Name = L"linkLabel1";
-			this->linkLabel1->Size = System::Drawing::Size(122, 39);
+			this->linkLabel1->Size = System::Drawing::Size(154, 49);
 			this->linkLabel1->TabIndex = 6;
 			this->linkLabel1->TabStop = true;
 			this->linkLabel1->Text = L"Register";
@@ -261,7 +262,7 @@ namespace Project {
 			this->label2->Location = System::Drawing::Point(5, 52);
 			this->label2->Margin = System::Windows::Forms::Padding(6, 0, 6, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(163, 42);
+			this->label2->Size = System::Drawing::Size(206, 54);
 			this->label2->TabIndex = 2;
 			this->label2->Text = L"Username";
 			this->label2->Click += gcnew System::EventHandler(this, &Loginform::label2_Click);
@@ -277,7 +278,7 @@ namespace Project {
 			this->label3->Location = System::Drawing::Point(15, 114);
 			this->label3->Margin = System::Windows::Forms::Padding(6, 0, 6, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(153, 42);
+			this->label3->Size = System::Drawing::Size(191, 54);
 			this->label3->TabIndex = 2;
 			this->label3->Text = L"Password";
 			this->label3->Click += gcnew System::EventHandler(this, &Loginform::label3_Click);
@@ -335,7 +336,7 @@ namespace Project {
 			// 
 			// Loginform
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(12, 25);
+			this->AutoScaleDimensions = System::Drawing::SizeF(15, 30);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::WindowText;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
@@ -447,6 +448,8 @@ private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e)
 private: System::Void tbUsername_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void tbPassword_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void pictureBox2_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

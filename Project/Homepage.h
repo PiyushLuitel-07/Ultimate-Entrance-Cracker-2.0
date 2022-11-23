@@ -458,8 +458,10 @@ namespace Project
 
 
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->switchtostartpage = true;
 		this->Close();
+		
+		this->switchtostartpage = true;
+		
 	}
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->switchtoleaderboradpage = true;
