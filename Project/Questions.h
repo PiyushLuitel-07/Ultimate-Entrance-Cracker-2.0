@@ -6,7 +6,7 @@ using namespace System;
 public ref class Question {
 public:
 	int Id;
-	String^ Questions;
+	String^ question;
 	String^ Option_a;
 	String^ Option_b;
 	String^ Option_c;

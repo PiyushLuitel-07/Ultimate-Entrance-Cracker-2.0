@@ -17,6 +17,7 @@ namespace Project
 	/// <summary>
 	/// Summary for Homepage
 	/// </summary>
+	///
 	public ref class Homepage : public System::Windows::Forms::Form
 	{
 	public:
@@ -83,6 +84,8 @@ namespace Project
 
 	private: System::Windows::Forms::FontDialog^ fontDialog1;
 	private: System::Windows::Forms::Label^ lbUsernameDisplay;
+
+
 
 
 
