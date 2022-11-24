@@ -569,7 +569,7 @@ private: System::Void btnRegister_Click(System::Object^ sender, System::EventArg
 		user->dob = dob;
 		user->password = password;
 		user->gender = gender;
-
+		//check here
 		MessageBox::Show("Successfully registered new user! Welcome " + user->name ,
 			"Register Success", MessageBoxButtons::OK);
 
