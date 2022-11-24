@@ -30,14 +30,40 @@ namespace Project {
             //
             try {
 
-                connectSQL(question_list);
+                //connectSQL(question_list);
+                String^ connString = "Data Source=tcp:uec.database.windows.net;Initial Catalog=uecdb;Persist Security Info=True;User ID=sqluec;Password=L12@sqd3";
+                //Data Source=tcp:uec.database.windows.net;Initial Catalog=uecdb;Persist Security Info=True;User ID=sqluec;Password=***********
+                SqlConnection sqlConn(connString);
+                sqlConn.Open();
+                String^ sqlQuery = "SELECT * FROM english1;";
+                SqlCommand command(sqlQuery, % sqlConn);
+                SqlDataReader^ reader = command.ExecuteReader();
+
+                if (reader->Read()) {
+                    question_list = gcnew Question;
+                    question_list->question = reader->GetString(1);
+                    question_list->Option_a = reader->GetString(2);
+                    question_list->Option_b = reader->GetString(3);
+                    question_list->Option_c = reader->GetString(4);
+                    question_list->Option_d = reader->GetString(5);
+                    question_list->Correct_optn = reader->GetString(6);
+                }
                 rtbQuestionDisplay->Text = question_list->question;
                 tbOptnA->Text = question_list->Option_a;
                 tbOptnB->Text = question_list->Option_b;
                 tbOptnC->Text = question_list->Option_c;
                 tbOptnD->Text = question_list->Option_d;
 
-                connectSQL(question_list);
+                //connectSQL(question_list);
+                if (reader->Read()) {
+                    question_list = gcnew Question;
+                    question_list->question = reader->GetString(1);
+                    question_list->Option_a = reader->GetString(2);
+                    question_list->Option_b = reader->GetString(3);
+                    question_list->Option_c = reader->GetString(4);
+                    question_list->Option_d = reader->GetString(5);
+                    question_list->Correct_optn = reader->GetString(6);
+                }
                 rtbQuestionDisplay2->Text = question_list->question;
                 tbOptnA2->Text = question_list->Option_a;
                 tbOptnB2->Text = question_list->Option_b;
