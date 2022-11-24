@@ -53,16 +53,22 @@ void main(array<String^>^ args)
 				break;
 			}
 			//////////////////
+			/////////////////////////adminlogin/////////////
 			if (loginForm.switchToAdminLogin)
 			{
 				adminPage.ShowDialog();
-				if (adminPage.switchToLogin) {
-					/*continue;*/
-				adminPage.ShowDialog();
-				}
-				else {
+			while(true){
+				
+				if (adminPage.switchToLogin = true) {
+					loginForm.ShowDialog();
 					admin = adminPage.admin;
 					break;
+				}
+				if (developerPage.switchTologout) {
+					loginForm.ShowDialog();
+					break;
+				}
+				
 				}
 			}
 

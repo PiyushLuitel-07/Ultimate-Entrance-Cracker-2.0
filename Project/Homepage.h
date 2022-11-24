@@ -222,6 +222,7 @@ namespace Project
 			this->textBox1->TabIndex = 16;
 			this->textBox1->Text = L"Main Menu";
 			this->textBox1->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
+			this->textBox1->TextChanged += gcnew System::EventHandler(this, &Homepage::textBox1_TextChanged);
 			// 
 			// btnLogout
 			// 
@@ -257,9 +258,9 @@ namespace Project
 			this->pictureBox5->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->pictureBox5->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->pictureBox5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox5.Image")));
-			this->pictureBox5->Location = System::Drawing::Point(1341, 12);
+			this->pictureBox5->Location = System::Drawing::Point(1288, 12);
 			this->pictureBox5->Name = L"pictureBox5";
-			this->pictureBox5->Size = System::Drawing::Size(17, 13);
+			this->pictureBox5->Size = System::Drawing::Size(70, 48);
 			this->pictureBox5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox5->TabIndex = 27;
 			this->pictureBox5->TabStop = false;
@@ -399,7 +400,7 @@ namespace Project
 			// 
 			// Homepage
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(18, 37);
+			this->AutoScaleDimensions = System::Drawing::SizeF(14, 30);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(24)), static_cast<System::Int32>(static_cast<System::Byte>(30)),
 				static_cast<System::Int32>(static_cast<System::Byte>(54)));
@@ -414,7 +415,7 @@ namespace Project
 			this->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->ForeColor = System::Drawing::SystemColors::Highlight;
-			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedToolWindow;
 			this->Margin = System::Windows::Forms::Padding(6, 8, 6, 8);
 			this->Name = L"Homepage";
 			this->Text = L"2";
@@ -526,6 +527,8 @@ public: bool switchToLogin = false;
 private: System::Void btnLogout_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->switchToLogin = true;
 	this->Close();
+}
+private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

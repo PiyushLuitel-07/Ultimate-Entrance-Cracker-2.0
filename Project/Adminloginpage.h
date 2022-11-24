@@ -204,10 +204,12 @@ namespace Project {
 			this->textBox1->Location = System::Drawing::Point(-12, -16);
 			this->textBox1->Multiline = true;
 			this->textBox1->Name = L"textBox1";
+			this->textBox1->ReadOnly = true;
 			this->textBox1->Size = System::Drawing::Size(1384, 145);
 			this->textBox1->TabIndex = 25;
 			this->textBox1->Text = L"ADMIN LOGIN";
 			this->textBox1->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
+			this->textBox1->TextChanged += gcnew System::EventHandler(this, &Adminloginpage::textBox1_TextChanged);
 			// 
 			// pictureBox3
 			// 
@@ -297,9 +299,10 @@ namespace Project {
 				admin->id = reader->GetInt32(0);
 				admin->username = reader->GetString(1);
 				admin->password = reader->GetString(2);
-				Developer developerPage;
+			    Developer developerPage;
 				this->Close();
 				developerPage.ShowDialog();
+			
 
 			}
 			else 
@@ -320,6 +323,8 @@ private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArg
 }
 private: System::Void pictureBox3_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->Close();
+}
+private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

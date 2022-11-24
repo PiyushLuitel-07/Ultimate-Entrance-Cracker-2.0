@@ -150,10 +150,10 @@ namespace Project {
 			this->panel2->Controls->Add(this->tbQuestion);
 			this->panel2->Controls->Add(this->label2);
 			this->panel2->Controls->Add(this->panel3);
-			this->panel2->Location = System::Drawing::Point(139, 107);
-			this->panel2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->panel2->Location = System::Drawing::Point(104, 87);
+			this->panel2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(1575, 756);
+			this->panel2->Size = System::Drawing::Size(1181, 614);
 			this->panel2->TabIndex = 1;
 			// 
 			// btnEnter
@@ -165,10 +165,10 @@ namespace Project {
 			this->btnEnter->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnEnter->ForeColor = System::Drawing::Color::Gold;
-			this->btnEnter->Location = System::Drawing::Point(1160, 636);
-			this->btnEnter->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->btnEnter->Location = System::Drawing::Point(870, 517);
+			this->btnEnter->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btnEnter->Name = L"btnEnter";
-			this->btnEnter->Size = System::Drawing::Size(140, 63);
+			this->btnEnter->Size = System::Drawing::Size(105, 51);
 			this->btnEnter->TabIndex = 12;
 			this->btnEnter->Text = L"Enter";
 			this->btnEnter->UseVisualStyleBackColor = false;
@@ -181,11 +181,11 @@ namespace Project {
 			this->tbOptn_d->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->tbOptn_d->ForeColor = System::Drawing::Color::SpringGreen;
-			this->tbOptn_d->Location = System::Drawing::Point(276, 526);
-			this->tbOptn_d->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->tbOptn_d->Location = System::Drawing::Point(207, 427);
+			this->tbOptn_d->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->tbOptn_d->Multiline = true;
 			this->tbOptn_d->Name = L"tbOptn_d";
-			this->tbOptn_d->Size = System::Drawing::Size(1244, 47);
+			this->tbOptn_d->Size = System::Drawing::Size(934, 39);
 			this->tbOptn_d->TabIndex = 11;
 			// 
 			// tbOptn_c
@@ -195,11 +195,11 @@ namespace Project {
 			this->tbOptn_c->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->tbOptn_c->ForeColor = System::Drawing::Color::SpringGreen;
-			this->tbOptn_c->Location = System::Drawing::Point(277, 464);
-			this->tbOptn_c->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->tbOptn_c->Location = System::Drawing::Point(208, 377);
+			this->tbOptn_c->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->tbOptn_c->Multiline = true;
 			this->tbOptn_c->Name = L"tbOptn_c";
-			this->tbOptn_c->Size = System::Drawing::Size(1243, 52);
+			this->tbOptn_c->Size = System::Drawing::Size(933, 43);
 			this->tbOptn_c->TabIndex = 10;
 			// 
 			// tbOptn_b
@@ -209,11 +209,11 @@ namespace Project {
 			this->tbOptn_b->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->tbOptn_b->ForeColor = System::Drawing::Color::SpringGreen;
-			this->tbOptn_b->Location = System::Drawing::Point(277, 405);
-			this->tbOptn_b->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->tbOptn_b->Location = System::Drawing::Point(208, 329);
+			this->tbOptn_b->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->tbOptn_b->Multiline = true;
 			this->tbOptn_b->Name = L"tbOptn_b";
-			this->tbOptn_b->Size = System::Drawing::Size(1243, 53);
+			this->tbOptn_b->Size = System::Drawing::Size(933, 44);
 			this->tbOptn_b->TabIndex = 9;
 			// 
 			// tbOptn_a
@@ -223,11 +223,11 @@ namespace Project {
 			this->tbOptn_a->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->tbOptn_a->ForeColor = System::Drawing::Color::SpringGreen;
-			this->tbOptn_a->Location = System::Drawing::Point(277, 348);
-			this->tbOptn_a->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->tbOptn_a->Location = System::Drawing::Point(208, 283);
+			this->tbOptn_a->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->tbOptn_a->Multiline = true;
 			this->tbOptn_a->Name = L"tbOptn_a";
-			this->tbOptn_a->Size = System::Drawing::Size(1243, 50);
+			this->tbOptn_a->Size = System::Drawing::Size(933, 41);
 			this->tbOptn_a->TabIndex = 8;
 			// 
 			// label6
@@ -238,9 +238,10 @@ namespace Project {
 			this->label6->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label6->ForeColor = System::Drawing::Color::Gold;
-			this->label6->Location = System::Drawing::Point(95, 526);
+			this->label6->Location = System::Drawing::Point(71, 427);
+			this->label6->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(161, 45);
+			this->label6->Size = System::Drawing::Size(125, 36);
 			this->label6->TabIndex = 7;
 			this->label6->Text = L"Option d:";
 			// 
@@ -252,9 +253,10 @@ namespace Project {
 			this->label5->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label5->ForeColor = System::Drawing::Color::Gold;
-			this->label5->Location = System::Drawing::Point(96, 464);
+			this->label5->Location = System::Drawing::Point(72, 377);
+			this->label5->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(158, 45);
+			this->label5->Size = System::Drawing::Size(122, 36);
 			this->label5->TabIndex = 6;
 			this->label5->Text = L"Option c:";
 			// 
@@ -266,9 +268,10 @@ namespace Project {
 			this->label4->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label4->ForeColor = System::Drawing::Color::Gold;
-			this->label4->Location = System::Drawing::Point(96, 405);
+			this->label4->Location = System::Drawing::Point(72, 329);
+			this->label4->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(161, 45);
+			this->label4->Size = System::Drawing::Size(125, 36);
 			this->label4->TabIndex = 5;
 			this->label4->Text = L"Option b:";
 			// 
@@ -280,9 +283,10 @@ namespace Project {
 			this->label3->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label3->ForeColor = System::Drawing::Color::Gold;
-			this->label3->Location = System::Drawing::Point(95, 348);
+			this->label3->Location = System::Drawing::Point(71, 283);
+			this->label3->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(160, 45);
+			this->label3->Size = System::Drawing::Size(124, 36);
 			this->label3->TabIndex = 4;
 			this->label3->Text = L"Option a:";
 			// 
@@ -293,11 +297,11 @@ namespace Project {
 			this->tbQuestion->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->tbQuestion->ForeColor = System::Drawing::Color::SpringGreen;
-			this->tbQuestion->Location = System::Drawing::Point(103, 112);
-			this->tbQuestion->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->tbQuestion->Location = System::Drawing::Point(77, 91);
+			this->tbQuestion->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->tbQuestion->Multiline = true;
 			this->tbQuestion->Name = L"tbQuestion";
-			this->tbQuestion->Size = System::Drawing::Size(1417, 211);
+			this->tbQuestion->Size = System::Drawing::Size(1064, 172);
 			this->tbQuestion->TabIndex = 3;
 			this->tbQuestion->TextChanged += gcnew System::EventHandler(this, &Developer::tbQuestion_TextChanged);
 			// 
@@ -309,9 +313,10 @@ namespace Project {
 			this->label2->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label2->ForeColor = System::Drawing::Color::Gold;
-			this->label2->Location = System::Drawing::Point(628, 65);
+			this->label2->Location = System::Drawing::Point(471, 53);
+			this->label2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(254, 45);
+			this->label2->Size = System::Drawing::Size(199, 36);
 			this->label2->TabIndex = 2;
 			this->label2->Text = L"Enter Question:";
 			this->label2->Click += gcnew System::EventHandler(this, &Developer::label2_Click);
@@ -327,10 +332,10 @@ namespace Project {
 			this->panel3->Controls->Add(this->label7);
 			this->panel3->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->panel3->Location = System::Drawing::Point(459, 624);
-			this->panel3->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->panel3->Location = System::Drawing::Point(344, 507);
+			this->panel3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->panel3->Name = L"panel3";
-			this->panel3->Size = System::Drawing::Size(667, 89);
+			this->panel3->Size = System::Drawing::Size(500, 72);
 			this->panel3->TabIndex = 2;
 			// 
 			// rbD
@@ -340,10 +345,9 @@ namespace Project {
 			this->rbD->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->rbD->ForeColor = System::Drawing::Color::Gold;
-			this->rbD->Location = System::Drawing::Point(521, 26);
-			this->rbD->Margin = System::Windows::Forms::Padding(4);
+			this->rbD->Location = System::Drawing::Point(391, 21);
 			this->rbD->Name = L"rbD";
-			this->rbD->Size = System::Drawing::Size(60, 49);
+			this->rbD->Size = System::Drawing::Size(48, 40);
 			this->rbD->TabIndex = 16;
 			this->rbD->TabStop = true;
 			this->rbD->Text = L"d";
@@ -356,10 +360,9 @@ namespace Project {
 			this->rbC->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->rbC->ForeColor = System::Drawing::Color::Gold;
-			this->rbC->Location = System::Drawing::Point(452, 26);
-			this->rbC->Margin = System::Windows::Forms::Padding(4);
+			this->rbC->Location = System::Drawing::Point(339, 21);
 			this->rbC->Name = L"rbC";
-			this->rbC->Size = System::Drawing::Size(57, 49);
+			this->rbC->Size = System::Drawing::Size(45, 40);
 			this->rbC->TabIndex = 15;
 			this->rbC->TabStop = true;
 			this->rbC->Text = L"c";
@@ -372,10 +375,9 @@ namespace Project {
 			this->rbB->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->rbB->ForeColor = System::Drawing::Color::Gold;
-			this->rbB->Location = System::Drawing::Point(381, 26);
-			this->rbB->Margin = System::Windows::Forms::Padding(4);
+			this->rbB->Location = System::Drawing::Point(286, 21);
 			this->rbB->Name = L"rbB";
-			this->rbB->Size = System::Drawing::Size(60, 49);
+			this->rbB->Size = System::Drawing::Size(48, 40);
 			this->rbB->TabIndex = 14;
 			this->rbB->TabStop = true;
 			this->rbB->Text = L"b";
@@ -388,10 +390,9 @@ namespace Project {
 			this->rbA->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->rbA->ForeColor = System::Drawing::Color::Gold;
-			this->rbA->Location = System::Drawing::Point(311, 26);
-			this->rbA->Margin = System::Windows::Forms::Padding(4);
+			this->rbA->Location = System::Drawing::Point(233, 21);
 			this->rbA->Name = L"rbA";
-			this->rbA->Size = System::Drawing::Size(59, 49);
+			this->rbA->Size = System::Drawing::Size(47, 40);
 			this->rbA->TabIndex = 13;
 			this->rbA->TabStop = true;
 			this->rbA->Text = L"a";
@@ -405,9 +406,10 @@ namespace Project {
 			this->label7->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label7->ForeColor = System::Drawing::Color::Gold;
-			this->label7->Location = System::Drawing::Point(3, 23);
+			this->label7->Location = System::Drawing::Point(2, 19);
+			this->label7->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(254, 45);
+			this->label7->Size = System::Drawing::Size(196, 36);
 			this->label7->TabIndex = 12;
 			this->label7->Text = L"Correct Option:";
 			// 
@@ -416,12 +418,12 @@ namespace Project {
 			this->pictureBox1->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
 			this->pictureBox1->Location = System::Drawing::Point(0, 0);
-			this->pictureBox1->Margin = System::Windows::Forms::Padding(4);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(1827, 922);
+			this->pictureBox1->Size = System::Drawing::Size(1040, 640);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox1->TabIndex = 14;
 			this->pictureBox1->TabStop = false;
+			this->pictureBox1->Click += gcnew System::EventHandler(this, &Developer::pictureBox1_Click);
 			// 
 			// btnLogout
 			// 
@@ -432,10 +434,10 @@ namespace Project {
 			this->btnLogout->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnLogout->ForeColor = System::Drawing::Color::Gold;
-			this->btnLogout->Location = System::Drawing::Point(1513, 36);
-			this->btnLogout->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->btnLogout->Location = System::Drawing::Point(1135, 29);
+			this->btnLogout->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btnLogout->Name = L"btnLogout";
-			this->btnLogout->Size = System::Drawing::Size(200, 66);
+			this->btnLogout->Size = System::Drawing::Size(150, 54);
 			this->btnLogout->TabIndex = 13;
 			this->btnLogout->Text = L"Logout";
 			this->btnLogout->UseVisualStyleBackColor = false;
@@ -444,10 +446,9 @@ namespace Project {
 			// 
 			this->pictureBox3->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.Image")));
-			this->pictureBox3->Location = System::Drawing::Point(1773, 1);
-			this->pictureBox3->Margin = System::Windows::Forms::Padding(4);
+			this->pictureBox3->Location = System::Drawing::Point(1330, 1);
 			this->pictureBox3->Name = L"pictureBox3";
-			this->pictureBox3->Size = System::Drawing::Size(32, 25);
+			this->pictureBox3->Size = System::Drawing::Size(24, 20);
 			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox3->TabIndex = 21;
 			this->pictureBox3->TabStop = false;
@@ -455,16 +456,16 @@ namespace Project {
 			// 
 			// Developer
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ControlLightLight;
-			this->ClientSize = System::Drawing::Size(1827, 922);
+			this->ClientSize = System::Drawing::Size(1040, 640);
 			this->Controls->Add(this->pictureBox3);
 			this->Controls->Add(this->btnLogout);
 			this->Controls->Add(this->panel2);
 			this->Controls->Add(this->pictureBox1);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
-			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Name = L"Developer";
 			this->Text = L"Developer";
 			this->WindowState = System::Windows::Forms::FormWindowState::Maximized;
@@ -557,6 +558,13 @@ private: System::Void pictureBox3_Click(System::Object^ sender, System::EventArg
 	this->Close();
 }
 private: System::Void tbQuestion_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+public: bool switchTologout = false;
+private: System::Void btnLogout_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->switchTologout = true;
+	this->Close();
 }
 };
 }
