@@ -345,7 +345,7 @@ namespace Project {
 			this->pictureBox2->BackColor = System::Drawing::SystemColors::Desktop;
 			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
 			this->pictureBox2->Location = System::Drawing::Point(16, 15);
-			this->pictureBox2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->pictureBox2->Margin = System::Windows::Forms::Padding(4);
 			this->pictureBox2->Name = L"pictureBox2";
 			this->pictureBox2->Size = System::Drawing::Size(39, 39);
 			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
@@ -361,7 +361,7 @@ namespace Project {
 				static_cast<System::Byte>(0)));
 			this->textBox1->ForeColor = System::Drawing::Color::Gold;
 			this->textBox1->Location = System::Drawing::Point(3, -20);
-			this->textBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBox1->Margin = System::Windows::Forms::Padding(4);
 			this->textBox1->Multiline = true;
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(1845, 206);
@@ -375,7 +375,7 @@ namespace Project {
 			this->pictureBox3->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.Image")));
 			this->pictureBox3->Location = System::Drawing::Point(1832, -10);
-			this->pictureBox3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->pictureBox3->Margin = System::Windows::Forms::Padding(4);
 			this->pictureBox3->Name = L"pictureBox3";
 			this->pictureBox3->Size = System::Drawing::Size(32, 25);
 			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
@@ -391,13 +391,14 @@ namespace Project {
 				static_cast<System::Byte>(0)));
 			this->radioButton4->ForeColor = System::Drawing::Color::Gold;
 			this->radioButton4->Location = System::Drawing::Point(454, 252);
-			this->radioButton4->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->radioButton4->Margin = System::Windows::Forms::Padding(4);
 			this->radioButton4->Name = L"radioButton4";
 			this->radioButton4->Size = System::Drawing::Size(109, 45);
 			this->radioButton4->TabIndex = 21;
 			this->radioButton4->TabStop = true;
 			this->radioButton4->Text = L"Male";
 			this->radioButton4->UseVisualStyleBackColor = false;
+			this->radioButton4->CheckedChanged += gcnew System::EventHandler(this, &Registerpage::radioButton4_CheckedChanged);
 			// 
 			// radioButton5
 			// 
@@ -407,13 +408,14 @@ namespace Project {
 				static_cast<System::Byte>(0)));
 			this->radioButton5->ForeColor = System::Drawing::Color::Gold;
 			this->radioButton5->Location = System::Drawing::Point(631, 252);
-			this->radioButton5->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->radioButton5->Margin = System::Windows::Forms::Padding(4);
 			this->radioButton5->Name = L"radioButton5";
 			this->radioButton5->Size = System::Drawing::Size(140, 45);
 			this->radioButton5->TabIndex = 21;
 			this->radioButton5->TabStop = true;
 			this->radioButton5->Text = L"Female";
 			this->radioButton5->UseVisualStyleBackColor = false;
+			this->radioButton5->CheckedChanged += gcnew System::EventHandler(this, &Registerpage::radioButton5_CheckedChanged);
 			// 
 			// radioButton6
 			// 
@@ -423,13 +425,14 @@ namespace Project {
 				static_cast<System::Byte>(0)));
 			this->radioButton6->ForeColor = System::Drawing::Color::Gold;
 			this->radioButton6->Location = System::Drawing::Point(857, 254);
-			this->radioButton6->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->radioButton6->Margin = System::Windows::Forms::Padding(4);
 			this->radioButton6->Name = L"radioButton6";
 			this->radioButton6->Size = System::Drawing::Size(131, 45);
 			this->radioButton6->TabIndex = 21;
 			this->radioButton6->TabStop = true;
 			this->radioButton6->Text = L"Others";
 			this->radioButton6->UseVisualStyleBackColor = false;
+			this->radioButton6->CheckedChanged += gcnew System::EventHandler(this, &Registerpage::radioButton6_CheckedChanged);
 			// 
 			// btnRegister
 			// 
@@ -440,7 +443,7 @@ namespace Project {
 				static_cast<System::Byte>(0)));
 			this->btnRegister->ForeColor = System::Drawing::Color::Gold;
 			this->btnRegister->Location = System::Drawing::Point(825, 551);
-			this->btnRegister->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btnRegister->Margin = System::Windows::Forms::Padding(4);
 			this->btnRegister->Name = L"btnRegister";
 			this->btnRegister->Size = System::Drawing::Size(163, 58);
 			this->btnRegister->TabIndex = 8;
@@ -451,7 +454,7 @@ namespace Project {
 			// dtpDob
 			// 
 			this->dtpDob->Location = System::Drawing::Point(428, 192);
-			this->dtpDob->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->dtpDob->Margin = System::Windows::Forms::Padding(4);
 			this->dtpDob->Name = L"dtpDob";
 			this->dtpDob->Size = System::Drawing::Size(560, 22);
 			this->dtpDob->TabIndex = 28;
@@ -477,7 +480,7 @@ namespace Project {
 			this->panel1->Controls->Add(this->label8);
 			this->panel1->Controls->Add(this->label7);
 			this->panel1->Location = System::Drawing::Point(289, 211);
-			this->panel1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->panel1->Margin = System::Windows::Forms::Padding(4);
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(1045, 613);
 			this->panel1->TabIndex = 29;
@@ -495,7 +498,7 @@ namespace Project {
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->label3);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
-			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"Registerpage";
 			this->Text = L"Registerpage";
 			this->WindowState = System::Windows::Forms::FormWindowState::Maximized;
@@ -522,7 +525,7 @@ private: System::Void btnRegister_Click(System::Object^ sender, System::EventArg
 	String^ name = tbName->Text;
 	String^ email = tbEmail->Text;
 	String^ username = tbUsername->Text;
-	//String^ gender = cbGender->Text;
+	String^ gender = genderis;
 	String^ dob = dtpDob->Text;
 	String^ password = tbPassword->Text;
 	String^ confirmPassword = tbCPassword->Text;
@@ -556,7 +559,7 @@ private: System::Void btnRegister_Click(System::Object^ sender, System::EventArg
 		command.Parameters->AddWithValue("@username", username);
 		command.Parameters->AddWithValue("@dob", dob);
 		command.Parameters->AddWithValue("@password", password);
-		//command.Parameters->AddWithValue("@gender", gender);
+		command.Parameters->AddWithValue("@gender", gender);
 
 		command.ExecuteNonQuery();
 		user = gcnew User;
@@ -565,7 +568,10 @@ private: System::Void btnRegister_Click(System::Object^ sender, System::EventArg
 		user->username = username;
 		user->dob = dob;
 		user->password = password;
-		//user->gender = gender;
+		user->gender = gender;
+
+		MessageBox::Show("Successfully registered new user! Welcome " + user->name ,
+			"Register Success", MessageBoxButtons::OK);
 
 		this->Close();
 	}
@@ -586,6 +592,16 @@ private: System::Void pictureBox3_Click(System::Object^ sender, System::EventArg
 	this->Close();
 }
 private: System::Void Registerpage_Load(System::Object^ sender, System::EventArgs^ e) {
+}
+	   public: String^ genderis = nullptr;
+private: System::Void radioButton4_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+	genderis = "Male";
+}
+private: System::Void radioButton5_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+	genderis = "Female";
+}
+private: System::Void radioButton6_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+	genderis = "other";
 }
 };
 };
