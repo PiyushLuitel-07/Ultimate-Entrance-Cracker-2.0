@@ -691,7 +691,7 @@ namespace Project {
             this->AutoScrollMinSize = System::Drawing::Size(665, 4900);
             this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(24)), static_cast<System::Int32>(static_cast<System::Byte>(30)),
                 static_cast<System::Int32>(static_cast<System::Byte>(54)));
-            this->ClientSize = System::Drawing::Size(1890, 964);
+            this->ClientSize = System::Drawing::Size(1911, 964);
             this->Controls->Add(this->panel2);
             this->Controls->Add(this->rtbQuestionDisplay2);
             this->Controls->Add(this->lb3);
