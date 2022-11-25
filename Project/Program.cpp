@@ -15,7 +15,6 @@ using namespace System::Windows::Forms;
 
 void main(array<String^>^ args)
 {
-
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 	User^ user = nullptr;
@@ -116,6 +115,14 @@ void main(array<String^>^ args)
 	//		}
 	//		continue;
 	//}
-	Project::Startpage spage;
-	spage.ShowDialog();
+	while (true) {
+		for (int i = 1; i < 90; i++) {
+			
+			Project::Startpage spage;
+			spage.ShowDialog();
+			if (spage.nextclick) {
+				spage.ShowDialog();
+			}
+		}
+	}
 }

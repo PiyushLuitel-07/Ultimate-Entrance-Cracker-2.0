@@ -19,7 +19,7 @@ namespace Project {
     public ref class Startpage : public System::Windows::Forms::Form
     {
     public:
-        Startpage(void)
+        Startpage()
         {
             InitializeComponent();
             static int score;
@@ -29,105 +29,105 @@ namespace Project {
             //TODO: Add the constructor code here
             //
             try {
-                    int i = 1;
-                    String^ connString = "Data Source=tcp:uec.database.windows.net;Initial Catalog=uecdb;Persist Security Info=True;User ID=sqluec;Password=L12@sqd3";
-                    //Data Source=tcp:uec.database.windows.net;Initial Catalog=uecdb;Persist Security Info=True;User ID=sqluec;Password=***********
-                    SqlConnection sqlConn(connString);
-                    sqlConn.Open();
-                    String^ sqlQuery = "SELECT * FROM english1;";
-                    SqlCommand command(sqlQuery, % sqlConn);
-                    SqlDataReader^ reader = command.ExecuteReader();
+                int i = 91;
+                String^ connString = "Data Source=tcp:uec.database.windows.net;Initial Catalog=uecdb;Persist Security Info=True;User ID=sqluec;Password=L12@sqd3";
+                //Data Source=tcp:uec.database.windows.net;Initial Catalog=uecdb;Persist Security Info=True;User ID=sqluec;Password=***********
+                SqlConnection sqlConn(connString);
+                sqlConn.Open();
+                String^ sqlQuery = "SELECT * FROM english1;";
+                SqlCommand command(sqlQuery, % sqlConn);
+                SqlDataReader^ reader = command.ExecuteReader();
 
-                    Question^ question_list = gcnew Question;
-                    //1
-                    readdb(reader, question_list);
+                Question^ question_list = gcnew Question;
+                //1
+                readdb(reader, question_list);
 
-                    rtbQuestionDisplay->Text = i + ".\t" + question_list->question;
-                    tbOptnA->Text = question_list->Option_a;
-                    tbOptnB->Text = question_list->Option_b;
-                    tbOptnC->Text = question_list->Option_c;
-                    tbOptnD->Text = question_list->Option_d;
-                    //2
-                    i++;
-                    readdb(reader, question_list);
+                rtbQuestionDisplay->Text = i + ".\t" + question_list->question;
+                tbOptnA->Text = question_list->Option_a;
+                tbOptnB->Text = question_list->Option_b;
+                tbOptnC->Text = question_list->Option_c;
+                tbOptnD->Text = question_list->Option_d;
+                //2
+                i++;
+                readdb(reader, question_list);
 
-                    rtbQuestionDisplay2->Text = i + ".\t" + question_list->question;
-                    tbOptnA2->Text = question_list->Option_a;
-                    tbOptnB2->Text = question_list->Option_b;
-                    tbOptnC2->Text = question_list->Option_c;
-                    tbOptnD2->Text = question_list->Option_d;
-                    //3
-                    i++;
-                    readdb(reader, question_list);
+                rtbQuestionDisplay2->Text = i + ".\t" + question_list->question;
+                tbOptnA2->Text = question_list->Option_a;
+                tbOptnB2->Text = question_list->Option_b;
+                tbOptnC2->Text = question_list->Option_c;
+                tbOptnD2->Text = question_list->Option_d;
+                //3
+                i++;
+                readdb(reader, question_list);
 
-                    rtbQuestionDisplay3->Text = i + ".\t" + question_list->question;
-                    tbOptnA3->Text = question_list->Option_a;
-                    tbOptnB3->Text = question_list->Option_b;
-                    tbOptnC3->Text = question_list->Option_c;
-                    tbOptnD3->Text = question_list->Option_d;
-                    //4
-                    i++;
-                    readdb(reader, question_list);
+                rtbQuestionDisplay3->Text = i + ".\t" + question_list->question;
+                tbOptnA3->Text = question_list->Option_a;
+                tbOptnB3->Text = question_list->Option_b;
+                tbOptnC3->Text = question_list->Option_c;
+                tbOptnD3->Text = question_list->Option_d;
+                //4
+                i++;
+                readdb(reader, question_list);
 
-                    rtbQuestionDisplay4->Text = i + ".\t" + question_list->question;
-                    tbOptnA4->Text = question_list->Option_a;
-                    tbOptnB4->Text = question_list->Option_b;
-                    tbOptnC4->Text = question_list->Option_c;
-                    tbOptnD4->Text = question_list->Option_d;
-                    //5
-                    i++;
-                    readdb(reader, question_list);
+                rtbQuestionDisplay4->Text = i + ".\t" + question_list->question;
+                tbOptnA4->Text = question_list->Option_a;
+                tbOptnB4->Text = question_list->Option_b;
+                tbOptnC4->Text = question_list->Option_c;
+                tbOptnD4->Text = question_list->Option_d;
+                //5
+                i++;
+                readdb(reader, question_list);
 
-                    rtbQuestionDisplay5->Text = i + ".\t" + question_list->question;
-                    tbOptnA5->Text = question_list->Option_a;
-                    tbOptnB5->Text = question_list->Option_b;
-                    tbOptnC5->Text = question_list->Option_c;
-                    tbOptnD5->Text = question_list->Option_d;
-                    //6
-                    i++;
-                    readdb(reader, question_list);
+                rtbQuestionDisplay5->Text = i + ".\t" + question_list->question;
+                tbOptnA5->Text = question_list->Option_a;
+                tbOptnB5->Text = question_list->Option_b;
+                tbOptnC5->Text = question_list->Option_c;
+                tbOptnD5->Text = question_list->Option_d;
+                //6
+                i++;
+                readdb(reader, question_list);
 
-                    rtbQuestionDisplay6->Text = i + ".\t" + question_list->question;
-                    tbOptnA6->Text = question_list->Option_a;
-                    tbOptnB6->Text = question_list->Option_b;
-                    tbOptnC6->Text = question_list->Option_c;
-                    tbOptnD6->Text = question_list->Option_d;
-                    //7
-                    i++;
-                    readdb(reader, question_list);
+                rtbQuestionDisplay6->Text = i + ".\t" + question_list->question;
+                tbOptnA6->Text = question_list->Option_a;
+                tbOptnB6->Text = question_list->Option_b;
+                tbOptnC6->Text = question_list->Option_c;
+                tbOptnD6->Text = question_list->Option_d;
+                //7
+                i++;
+                readdb(reader, question_list);
 
-                    rtbQuestionDisplay7->Text = i + ".\t" + question_list->question;
-                    tbOptnA7->Text = question_list->Option_a;
-                    tbOptnB7->Text = question_list->Option_b;
-                    tbOptnC7->Text = question_list->Option_c;
-                    tbOptnD7->Text = question_list->Option_d;
-                    //8
-                    i++;
-                    readdb(reader, question_list);
+                rtbQuestionDisplay7->Text = i + ".\t" + question_list->question;
+                tbOptnA7->Text = question_list->Option_a;
+                tbOptnB7->Text = question_list->Option_b;
+                tbOptnC7->Text = question_list->Option_c;
+                tbOptnD7->Text = question_list->Option_d;
+                //8
+                i++;
+                readdb(reader, question_list);
 
-                    rtbQuestionDisplay8->Text = i + ".\t" + question_list->question;
-                    tbOptnA8->Text = question_list->Option_a;
-                    tbOptnB8->Text = question_list->Option_b;
-                    tbOptnC8->Text = question_list->Option_c;
-                    tbOptnD8->Text = question_list->Option_d;
-                    //9
-                    i++;
-                    readdb(reader, question_list);
+                rtbQuestionDisplay8->Text = i + ".\t" + question_list->question;
+                tbOptnA8->Text = question_list->Option_a;
+                tbOptnB8->Text = question_list->Option_b;
+                tbOptnC8->Text = question_list->Option_c;
+                tbOptnD8->Text = question_list->Option_d;
+                //9
+                i++;
+                readdb(reader, question_list);
 
-                    rtbQuestionDisplay9->Text = i + ".\t" + question_list->question;
-                    tbOptnA9->Text = question_list->Option_a;
-                    tbOptnB9->Text = question_list->Option_b;
-                    tbOptnC9->Text = question_list->Option_c;
-                    tbOptnD9->Text = question_list->Option_d;
-                    //10
-                    i++;
-                    readdb(reader, question_list);
+                rtbQuestionDisplay9->Text = i + ".\t" + question_list->question;
+                tbOptnA9->Text = question_list->Option_a;
+                tbOptnB9->Text = question_list->Option_b;
+                tbOptnC9->Text = question_list->Option_c;
+                tbOptnD9->Text = question_list->Option_d;
+                //10
+                i++;
+                readdb(reader, question_list);
 
-                    rtbQuestionDisplay10->Text = i + ".\t" + question_list->question;
-                    tbOptnA10->Text = question_list->Option_a;
-                    tbOptnB10->Text = question_list->Option_b;
-                    tbOptnC10->Text = question_list->Option_c;
-                    tbOptnD10->Text = question_list->Option_d;
+                rtbQuestionDisplay10->Text = i + ".\t" + question_list->question;
+                tbOptnA10->Text = question_list->Option_a;
+                tbOptnB10->Text = question_list->Option_b;
+                tbOptnC10->Text = question_list->Option_c;
+                tbOptnD10->Text = question_list->Option_d;
 
             }
             catch (Exception^ e) {
@@ -156,14 +156,14 @@ namespace Project {
 
     private: System::Windows::Forms::Button^ button2;
     private: System::Windows::Forms::Button^ button1;
-private: System::Windows::Forms::RadioButton^ rb1C;
+    private: System::Windows::Forms::RadioButton^ rb1C;
 
 
 
-private: System::Windows::Forms::RadioButton^ rb1B;
+    private: System::Windows::Forms::RadioButton^ rb1B;
 
-private: System::Windows::Forms::RadioButton^ rb1A;
-private: System::Windows::Forms::RadioButton^ rb1D;
+    private: System::Windows::Forms::RadioButton^ rb1A;
+    private: System::Windows::Forms::RadioButton^ rb1D;
 
 
     private: System::Windows::Forms::TextBox^ tbOptnB;
@@ -205,165 +205,165 @@ private: System::Windows::Forms::RadioButton^ rb1D;
 
 
 
-private: System::Windows::Forms::Timer^ timer1;
-private: System::Windows::Forms::Label^ label3;
-private: System::Windows::Forms::RichTextBox^ rtbQuestionDisplay2;
-private: System::Windows::Forms::Panel^ panel2;
-private: System::Windows::Forms::TextBox^ tbOptnD2;
-private: System::Windows::Forms::TextBox^ tbOptnC2;
-private: System::Windows::Forms::TextBox^ tbOptnA2;
-private: System::Windows::Forms::TextBox^ tbOptnB2;
-private: System::Windows::Forms::RadioButton^ rb2D;
+    private: System::Windows::Forms::Timer^ timer1;
+    private: System::Windows::Forms::Label^ label3;
+    private: System::Windows::Forms::RichTextBox^ rtbQuestionDisplay2;
+    private: System::Windows::Forms::Panel^ panel2;
+    private: System::Windows::Forms::TextBox^ tbOptnD2;
+    private: System::Windows::Forms::TextBox^ tbOptnC2;
+    private: System::Windows::Forms::TextBox^ tbOptnA2;
+    private: System::Windows::Forms::TextBox^ tbOptnB2;
+    private: System::Windows::Forms::RadioButton^ rb2D;
 
-private: System::Windows::Forms::RadioButton^ rb2A;
-private: System::Windows::Forms::RadioButton^ rb2B;
-private: System::Windows::Forms::RadioButton^ rb2C;
+    private: System::Windows::Forms::RadioButton^ rb2A;
+    private: System::Windows::Forms::RadioButton^ rb2B;
+    private: System::Windows::Forms::RadioButton^ rb2C;
 
 
 
-private: System::Windows::Forms::RichTextBox^ rtbQuestionDisplay3;
-private: System::Windows::Forms::Panel^ panel3;
-private: System::Windows::Forms::TextBox^ tbOptnD3;
+    private: System::Windows::Forms::RichTextBox^ rtbQuestionDisplay3;
+    private: System::Windows::Forms::Panel^ panel3;
+    private: System::Windows::Forms::TextBox^ tbOptnD3;
 
-private: System::Windows::Forms::TextBox^ tbOptnC3;
+    private: System::Windows::Forms::TextBox^ tbOptnC3;
 
-private: System::Windows::Forms::TextBox^ tbOptnA3;
-private: System::Windows::Forms::TextBox^ tbOptnB3;
-private: System::Windows::Forms::RadioButton^ rb3D;
+    private: System::Windows::Forms::TextBox^ tbOptnA3;
+    private: System::Windows::Forms::TextBox^ tbOptnB3;
+    private: System::Windows::Forms::RadioButton^ rb3D;
 
 
-private: System::Windows::Forms::RadioButton^ rb3A;
-private: System::Windows::Forms::RadioButton^ rb3B;
-private: System::Windows::Forms::RadioButton^ rb3C;
+    private: System::Windows::Forms::RadioButton^ rb3A;
+    private: System::Windows::Forms::RadioButton^ rb3B;
+    private: System::Windows::Forms::RadioButton^ rb3C;
 
 
 
 
-private: System::Windows::Forms::RichTextBox^ rtbQuestionDisplay4;
-private: System::Windows::Forms::Panel^ panel4;
-private: System::Windows::Forms::TextBox^ tbOptnD4;
+    private: System::Windows::Forms::RichTextBox^ rtbQuestionDisplay4;
+    private: System::Windows::Forms::Panel^ panel4;
+    private: System::Windows::Forms::TextBox^ tbOptnD4;
 
-private: System::Windows::Forms::TextBox^ tbOptnC4;
+    private: System::Windows::Forms::TextBox^ tbOptnC4;
 
-private: System::Windows::Forms::TextBox^ tbOptnA4;
-private: System::Windows::Forms::TextBox^ tbOptnB4;
-private: System::Windows::Forms::RadioButton^ rb4D;
+    private: System::Windows::Forms::TextBox^ tbOptnA4;
+    private: System::Windows::Forms::TextBox^ tbOptnB4;
+    private: System::Windows::Forms::RadioButton^ rb4D;
 
 
-private: System::Windows::Forms::RadioButton^ rb4A;
-private: System::Windows::Forms::RadioButton^ rb4B;
-private: System::Windows::Forms::RadioButton^ rb4C;
+    private: System::Windows::Forms::RadioButton^ rb4A;
+    private: System::Windows::Forms::RadioButton^ rb4B;
+    private: System::Windows::Forms::RadioButton^ rb4C;
 
 
 
-private: System::Windows::Forms::RichTextBox^ rtbQuestionDisplay5;
-private: System::Windows::Forms::Panel^ panel5;
-private: System::Windows::Forms::TextBox^ tbOptnD5;
+    private: System::Windows::Forms::RichTextBox^ rtbQuestionDisplay5;
+    private: System::Windows::Forms::Panel^ panel5;
+    private: System::Windows::Forms::TextBox^ tbOptnD5;
 
-private: System::Windows::Forms::TextBox^ tbOptnC5;
+    private: System::Windows::Forms::TextBox^ tbOptnC5;
 
-private: System::Windows::Forms::TextBox^ tbOptnA5;
-private: System::Windows::Forms::TextBox^ tbOptnB5;
-private: System::Windows::Forms::RadioButton^ rb5D;
+    private: System::Windows::Forms::TextBox^ tbOptnA5;
+    private: System::Windows::Forms::TextBox^ tbOptnB5;
+    private: System::Windows::Forms::RadioButton^ rb5D;
 
 
-private: System::Windows::Forms::RadioButton^ rb5A;
-private: System::Windows::Forms::RadioButton^ rb5B;
-private: System::Windows::Forms::RadioButton^ rb5C;
+    private: System::Windows::Forms::RadioButton^ rb5A;
+    private: System::Windows::Forms::RadioButton^ rb5B;
+    private: System::Windows::Forms::RadioButton^ rb5C;
 
 
 
 
-private: System::Windows::Forms::RichTextBox^ rtbQuestionDisplay6;
-private: System::Windows::Forms::Panel^ panel6;
-private: System::Windows::Forms::TextBox^ tbOptnD6;
+    private: System::Windows::Forms::RichTextBox^ rtbQuestionDisplay6;
+    private: System::Windows::Forms::Panel^ panel6;
+    private: System::Windows::Forms::TextBox^ tbOptnD6;
 
-private: System::Windows::Forms::TextBox^ tbOptnC6;
+    private: System::Windows::Forms::TextBox^ tbOptnC6;
 
-private: System::Windows::Forms::TextBox^ tbOptnA6;
-private: System::Windows::Forms::TextBox^ tbOptnB6;
-private: System::Windows::Forms::RadioButton^ rb6D;
+    private: System::Windows::Forms::TextBox^ tbOptnA6;
+    private: System::Windows::Forms::TextBox^ tbOptnB6;
+    private: System::Windows::Forms::RadioButton^ rb6D;
 
 
-private: System::Windows::Forms::RadioButton^ rb6A;
-private: System::Windows::Forms::RadioButton^ rb6B;
-private: System::Windows::Forms::RadioButton^ rb6C;
+    private: System::Windows::Forms::RadioButton^ rb6A;
+    private: System::Windows::Forms::RadioButton^ rb6B;
+    private: System::Windows::Forms::RadioButton^ rb6C;
 
 
 
-private: System::Windows::Forms::RichTextBox^ rtbQuestionDisplay7;
+    private: System::Windows::Forms::RichTextBox^ rtbQuestionDisplay7;
 
-private: System::Windows::Forms::Panel^ panel7;
-private: System::Windows::Forms::TextBox^ tbOptnD7;
+    private: System::Windows::Forms::Panel^ panel7;
+    private: System::Windows::Forms::TextBox^ tbOptnD7;
 
-private: System::Windows::Forms::TextBox^ tbOptnC7;
+    private: System::Windows::Forms::TextBox^ tbOptnC7;
 
-private: System::Windows::Forms::TextBox^ tbOptnA7;
-private: System::Windows::Forms::TextBox^ tbOptnB7;
-private: System::Windows::Forms::RadioButton^ rb7D;
+    private: System::Windows::Forms::TextBox^ tbOptnA7;
+    private: System::Windows::Forms::TextBox^ tbOptnB7;
+    private: System::Windows::Forms::RadioButton^ rb7D;
 
 
 
-private: System::Windows::Forms::RadioButton^ rb7A;
-private: System::Windows::Forms::RadioButton^ rb7B;
-private: System::Windows::Forms::RadioButton^ rb7C;
+    private: System::Windows::Forms::RadioButton^ rb7A;
+    private: System::Windows::Forms::RadioButton^ rb7B;
+    private: System::Windows::Forms::RadioButton^ rb7C;
 
 
 
-private: System::Windows::Forms::RichTextBox^ rtbQuestionDisplay8;
-private: System::Windows::Forms::RadioButton^ rb8C;
+    private: System::Windows::Forms::RichTextBox^ rtbQuestionDisplay8;
+    private: System::Windows::Forms::RadioButton^ rb8C;
 
-private: System::Windows::Forms::RadioButton^ rb8B;
+    private: System::Windows::Forms::RadioButton^ rb8B;
 
-private: System::Windows::Forms::RadioButton^ rb8A;
-private: System::Windows::Forms::RadioButton^ rb8D;
+    private: System::Windows::Forms::RadioButton^ rb8A;
+    private: System::Windows::Forms::RadioButton^ rb8D;
 
 
-private: System::Windows::Forms::TextBox^ tbOptnB8;
-private: System::Windows::Forms::TextBox^ tbOptnA8;
+    private: System::Windows::Forms::TextBox^ tbOptnB8;
+    private: System::Windows::Forms::TextBox^ tbOptnA8;
 
 
-private: System::Windows::Forms::TextBox^ tbOptnC8;
-private: System::Windows::Forms::TextBox^ tbOptnD8;
+    private: System::Windows::Forms::TextBox^ tbOptnC8;
+    private: System::Windows::Forms::TextBox^ tbOptnD8;
 
 
-private: System::Windows::Forms::Panel^ panel8;
+    private: System::Windows::Forms::Panel^ panel8;
 
-private: System::Windows::Forms::RichTextBox^ rtbQuestionDisplay9;
+    private: System::Windows::Forms::RichTextBox^ rtbQuestionDisplay9;
 
-private: System::Windows::Forms::Panel^ panel10;
-private: System::Windows::Forms::TextBox^ tbOptnD9;
+    private: System::Windows::Forms::Panel^ panel10;
+    private: System::Windows::Forms::TextBox^ tbOptnD9;
 
-private: System::Windows::Forms::TextBox^ tbOptnC9;
+    private: System::Windows::Forms::TextBox^ tbOptnC9;
 
-private: System::Windows::Forms::TextBox^ tbOptnA9;
-private: System::Windows::Forms::TextBox^ tbOptnB9;
-private: System::Windows::Forms::RadioButton^ rb9D;
+    private: System::Windows::Forms::TextBox^ tbOptnA9;
+    private: System::Windows::Forms::TextBox^ tbOptnB9;
+    private: System::Windows::Forms::RadioButton^ rb9D;
 
 
 
-private: System::Windows::Forms::RadioButton^ rb9A;
-private: System::Windows::Forms::RadioButton^ rb9B;
-private: System::Windows::Forms::RadioButton^ rb9C;
+    private: System::Windows::Forms::RadioButton^ rb9A;
+    private: System::Windows::Forms::RadioButton^ rb9B;
+    private: System::Windows::Forms::RadioButton^ rb9C;
 
 
 
-private: System::Windows::Forms::RichTextBox^ rtbQuestionDisplay10;
+    private: System::Windows::Forms::RichTextBox^ rtbQuestionDisplay10;
 
-private: System::Windows::Forms::Panel^ panel11;
-private: System::Windows::Forms::TextBox^ tbOptnD10;
+    private: System::Windows::Forms::Panel^ panel11;
+    private: System::Windows::Forms::TextBox^ tbOptnD10;
 
-private: System::Windows::Forms::TextBox^ tbOptnC10;
+    private: System::Windows::Forms::TextBox^ tbOptnC10;
 
-private: System::Windows::Forms::TextBox^ tbOptnA10;
-private: System::Windows::Forms::TextBox^ tbOptnB10;
-private: System::Windows::Forms::RadioButton^ rb10D;
+    private: System::Windows::Forms::TextBox^ tbOptnA10;
+    private: System::Windows::Forms::TextBox^ tbOptnB10;
+    private: System::Windows::Forms::RadioButton^ rb10D;
 
 
 
-private: System::Windows::Forms::RadioButton^ rb10A;
-private: System::Windows::Forms::RadioButton^ rb10B;
-private: System::Windows::Forms::RadioButton^ rb10C;
+    private: System::Windows::Forms::RadioButton^ rb10A;
+    private: System::Windows::Forms::RadioButton^ rb10B;
+    private: System::Windows::Forms::RadioButton^ rb10C;
 
 
 
@@ -606,7 +606,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->label1->Font = (gcnew System::Drawing::Font(L"Calibri Light", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->label1->ForeColor = System::Drawing::Color::Gold;
-            this->label1->Location = System::Drawing::Point(1513, 107);
+            this->label1->Location = System::Drawing::Point(1459, 115);
             this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
             this->label1->Name = L"label1";
             this->label1->Size = System::Drawing::Size(248, 41);
@@ -622,7 +622,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->label2->Font = (gcnew System::Drawing::Font(L"Calibri Light", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->label2->ForeColor = System::Drawing::Color::Gold;
-            this->label2->Location = System::Drawing::Point(1753, 107);
+            this->label2->Location = System::Drawing::Point(1699, 115);
             this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
             this->label2->Name = L"label2";
             this->label2->Size = System::Drawing::Size(121, 41);
@@ -639,7 +639,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->button2->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 36, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->button2->ForeColor = System::Drawing::Color::Gold;
-            this->button2->Location = System::Drawing::Point(1176, 6342);
+            this->button2->Location = System::Drawing::Point(1122, 6350);
             this->button2->Margin = System::Windows::Forms::Padding(4);
             this->button2->Name = L"button2";
             this->button2->Size = System::Drawing::Size(340, 85);
@@ -657,12 +657,12 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->button1->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 36, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->button1->ForeColor = System::Drawing::Color::Gold;
-            this->button1->Location = System::Drawing::Point(828, 6342);
+            this->button1->Location = System::Drawing::Point(774, 6350);
             this->button1->Margin = System::Windows::Forms::Padding(4);
             this->button1->Name = L"button1";
             this->button1->Size = System::Drawing::Size(340, 85);
             this->button1->TabIndex = 58;
-            this->button1->Text = L"Next";
+            this->button1->Text = L"Submit";
             this->button1->UseVisualStyleBackColor = false;
             this->button1->Click += gcnew System::EventHandler(this, &Startpage::button1_Click);
             // 
@@ -774,7 +774,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->panel1->Controls->Add(this->rb1B);
             this->panel1->Controls->Add(this->rb1C);
             this->panel1->ForeColor = System::Drawing::SystemColors::Desktop;
-            this->panel1->Location = System::Drawing::Point(-116, 390);
+            this->panel1->Location = System::Drawing::Point(-146, 394);
             this->panel1->Margin = System::Windows::Forms::Padding(4);
             this->panel1->Name = L"panel1";
             this->panel1->Size = System::Drawing::Size(1994, 390);
@@ -843,7 +843,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->rtbQuestionDisplay->Font = (gcnew System::Drawing::Font(L"Times New Roman", 25.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->rtbQuestionDisplay->ForeColor = System::Drawing::SystemColors::InfoText;
-            this->rtbQuestionDisplay->Location = System::Drawing::Point(9, 166);
+            this->rtbQuestionDisplay->Location = System::Drawing::Point(-21, 170);
             this->rtbQuestionDisplay->Margin = System::Windows::Forms::Padding(4);
             this->rtbQuestionDisplay->Name = L"rtbQuestionDisplay";
             this->rtbQuestionDisplay->ReadOnly = true;
@@ -861,7 +861,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             // lb3
             // 
             this->lb3->AutoSize = true;
-            this->lb3->Location = System::Drawing::Point(1950, -4280);
+            this->lb3->Location = System::Drawing::Point(1916, -4272);
             this->lb3->Name = L"lb3";
             this->lb3->Size = System::Drawing::Size(0, 16);
             this->lb3->TabIndex = 59;
@@ -872,7 +872,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->label3->AutoSize = true;
             this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Uighur", 72, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->label3->Location = System::Drawing::Point(235, 17);
+            this->label3->Location = System::Drawing::Point(201, 25);
             this->label3->Name = L"label3";
             this->label3->Size = System::Drawing::Size(1028, 141);
             this->label3->TabIndex = 62;
@@ -887,7 +887,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->rtbQuestionDisplay2->Font = (gcnew System::Drawing::Font(L"Times New Roman", 25.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->rtbQuestionDisplay2->ForeColor = System::Drawing::SystemColors::InfoText;
-            this->rtbQuestionDisplay2->Location = System::Drawing::Point(9, 768);
+            this->rtbQuestionDisplay2->Location = System::Drawing::Point(-21, 776);
             this->rtbQuestionDisplay2->Margin = System::Windows::Forms::Padding(4);
             this->rtbQuestionDisplay2->Name = L"rtbQuestionDisplay2";
             this->rtbQuestionDisplay2->ReadOnly = true;
@@ -911,7 +911,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->panel2->Controls->Add(this->rb2B);
             this->panel2->Controls->Add(this->rb2C);
             this->panel2->ForeColor = System::Drawing::SystemColors::Desktop;
-            this->panel2->Location = System::Drawing::Point(-116, 995);
+            this->panel2->Location = System::Drawing::Point(-146, 1003);
             this->panel2->Margin = System::Windows::Forms::Padding(4);
             this->panel2->Name = L"panel2";
             this->panel2->Size = System::Drawing::Size(1994, 390);
@@ -1074,7 +1074,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->rtbQuestionDisplay3->Font = (gcnew System::Drawing::Font(L"Times New Roman", 25.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->rtbQuestionDisplay3->ForeColor = System::Drawing::SystemColors::InfoText;
-            this->rtbQuestionDisplay3->Location = System::Drawing::Point(9, 1374);
+            this->rtbQuestionDisplay3->Location = System::Drawing::Point(-21, 1382);
             this->rtbQuestionDisplay3->Margin = System::Windows::Forms::Padding(4);
             this->rtbQuestionDisplay3->Name = L"rtbQuestionDisplay3";
             this->rtbQuestionDisplay3->ReadOnly = true;
@@ -1098,7 +1098,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->panel3->Controls->Add(this->rb3B);
             this->panel3->Controls->Add(this->rb3C);
             this->panel3->ForeColor = System::Drawing::SystemColors::Desktop;
-            this->panel3->Location = System::Drawing::Point(-116, 1601);
+            this->panel3->Location = System::Drawing::Point(-146, 1609);
             this->panel3->Margin = System::Windows::Forms::Padding(4);
             this->panel3->Name = L"panel3";
             this->panel3->Size = System::Drawing::Size(1994, 390);
@@ -1261,7 +1261,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->rtbQuestionDisplay4->Font = (gcnew System::Drawing::Font(L"Times New Roman", 25.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->rtbQuestionDisplay4->ForeColor = System::Drawing::SystemColors::InfoText;
-            this->rtbQuestionDisplay4->Location = System::Drawing::Point(9, 1979);
+            this->rtbQuestionDisplay4->Location = System::Drawing::Point(-21, 1987);
             this->rtbQuestionDisplay4->Margin = System::Windows::Forms::Padding(4);
             this->rtbQuestionDisplay4->Name = L"rtbQuestionDisplay4";
             this->rtbQuestionDisplay4->ReadOnly = true;
@@ -1285,7 +1285,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->panel4->Controls->Add(this->rb4B);
             this->panel4->Controls->Add(this->rb4C);
             this->panel4->ForeColor = System::Drawing::SystemColors::Desktop;
-            this->panel4->Location = System::Drawing::Point(-116, 2200);
+            this->panel4->Location = System::Drawing::Point(-146, 2208);
             this->panel4->Margin = System::Windows::Forms::Padding(4);
             this->panel4->Name = L"panel4";
             this->panel4->Size = System::Drawing::Size(1994, 390);
@@ -1448,7 +1448,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->rtbQuestionDisplay5->Font = (gcnew System::Drawing::Font(L"Times New Roman", 25.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->rtbQuestionDisplay5->ForeColor = System::Drawing::SystemColors::InfoText;
-            this->rtbQuestionDisplay5->Location = System::Drawing::Point(9, 2585);
+            this->rtbQuestionDisplay5->Location = System::Drawing::Point(-21, 2593);
             this->rtbQuestionDisplay5->Margin = System::Windows::Forms::Padding(4);
             this->rtbQuestionDisplay5->Name = L"rtbQuestionDisplay5";
             this->rtbQuestionDisplay5->ReadOnly = true;
@@ -1472,7 +1472,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->panel5->Controls->Add(this->rb5B);
             this->panel5->Controls->Add(this->rb5C);
             this->panel5->ForeColor = System::Drawing::SystemColors::Desktop;
-            this->panel5->Location = System::Drawing::Point(-116, 2808);
+            this->panel5->Location = System::Drawing::Point(-146, 2816);
             this->panel5->Margin = System::Windows::Forms::Padding(4);
             this->panel5->Name = L"panel5";
             this->panel5->Size = System::Drawing::Size(1994, 390);
@@ -1635,7 +1635,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->rtbQuestionDisplay6->Font = (gcnew System::Drawing::Font(L"Times New Roman", 25.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->rtbQuestionDisplay6->ForeColor = System::Drawing::SystemColors::InfoText;
-            this->rtbQuestionDisplay6->Location = System::Drawing::Point(9, 3188);
+            this->rtbQuestionDisplay6->Location = System::Drawing::Point(-21, 3196);
             this->rtbQuestionDisplay6->Margin = System::Windows::Forms::Padding(4);
             this->rtbQuestionDisplay6->Name = L"rtbQuestionDisplay6";
             this->rtbQuestionDisplay6->ReadOnly = true;
@@ -1659,7 +1659,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->panel6->Controls->Add(this->rb6B);
             this->panel6->Controls->Add(this->rb6C);
             this->panel6->ForeColor = System::Drawing::SystemColors::Desktop;
-            this->panel6->Location = System::Drawing::Point(-116, 3407);
+            this->panel6->Location = System::Drawing::Point(-146, 3415);
             this->panel6->Margin = System::Windows::Forms::Padding(4);
             this->panel6->Name = L"panel6";
             this->panel6->Size = System::Drawing::Size(1994, 390);
@@ -1822,7 +1822,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->rtbQuestionDisplay7->Font = (gcnew System::Drawing::Font(L"Times New Roman", 25.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->rtbQuestionDisplay7->ForeColor = System::Drawing::SystemColors::InfoText;
-            this->rtbQuestionDisplay7->Location = System::Drawing::Point(9, 3790);
+            this->rtbQuestionDisplay7->Location = System::Drawing::Point(-21, 3798);
             this->rtbQuestionDisplay7->Margin = System::Windows::Forms::Padding(4);
             this->rtbQuestionDisplay7->Name = L"rtbQuestionDisplay7";
             this->rtbQuestionDisplay7->ReadOnly = true;
@@ -1846,7 +1846,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->panel7->Controls->Add(this->rb7B);
             this->panel7->Controls->Add(this->rb7C);
             this->panel7->ForeColor = System::Drawing::SystemColors::Desktop;
-            this->panel7->Location = System::Drawing::Point(-116, 4010);
+            this->panel7->Location = System::Drawing::Point(-146, 4018);
             this->panel7->Margin = System::Windows::Forms::Padding(4);
             this->panel7->Name = L"panel7";
             this->panel7->Size = System::Drawing::Size(1994, 390);
@@ -2009,7 +2009,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->rtbQuestionDisplay8->Font = (gcnew System::Drawing::Font(L"Times New Roman", 25.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->rtbQuestionDisplay8->ForeColor = System::Drawing::SystemColors::InfoText;
-            this->rtbQuestionDisplay8->Location = System::Drawing::Point(9, 4395);
+            this->rtbQuestionDisplay8->Location = System::Drawing::Point(-21, 4403);
             this->rtbQuestionDisplay8->Margin = System::Windows::Forms::Padding(4);
             this->rtbQuestionDisplay8->Name = L"rtbQuestionDisplay8";
             this->rtbQuestionDisplay8->ReadOnly = true;
@@ -2181,7 +2181,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->panel8->Controls->Add(this->rb8B);
             this->panel8->Controls->Add(this->rb8C);
             this->panel8->ForeColor = System::Drawing::SystemColors::Desktop;
-            this->panel8->Location = System::Drawing::Point(-116, 4619);
+            this->panel8->Location = System::Drawing::Point(-146, 4627);
             this->panel8->Margin = System::Windows::Forms::Padding(4);
             this->panel8->Name = L"panel8";
             this->panel8->Size = System::Drawing::Size(1994, 390);
@@ -2196,7 +2196,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->rtbQuestionDisplay9->Font = (gcnew System::Drawing::Font(L"Times New Roman", 25.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->rtbQuestionDisplay9->ForeColor = System::Drawing::SystemColors::InfoText;
-            this->rtbQuestionDisplay9->Location = System::Drawing::Point(9, 5008);
+            this->rtbQuestionDisplay9->Location = System::Drawing::Point(-21, 5016);
             this->rtbQuestionDisplay9->Margin = System::Windows::Forms::Padding(4);
             this->rtbQuestionDisplay9->Name = L"rtbQuestionDisplay9";
             this->rtbQuestionDisplay9->ReadOnly = true;
@@ -2220,7 +2220,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->panel10->Controls->Add(this->rb9B);
             this->panel10->Controls->Add(this->rb9C);
             this->panel10->ForeColor = System::Drawing::SystemColors::Desktop;
-            this->panel10->Location = System::Drawing::Point(-116, 5234);
+            this->panel10->Location = System::Drawing::Point(-146, 5242);
             this->panel10->Margin = System::Windows::Forms::Padding(4);
             this->panel10->Name = L"panel10";
             this->panel10->Size = System::Drawing::Size(1994, 390);
@@ -2383,7 +2383,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->rtbQuestionDisplay10->Font = (gcnew System::Drawing::Font(L"Times New Roman", 25.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->rtbQuestionDisplay10->ForeColor = System::Drawing::SystemColors::InfoText;
-            this->rtbQuestionDisplay10->Location = System::Drawing::Point(33, 5623);
+            this->rtbQuestionDisplay10->Location = System::Drawing::Point(-21, 5631);
             this->rtbQuestionDisplay10->Margin = System::Windows::Forms::Padding(4);
             this->rtbQuestionDisplay10->Name = L"rtbQuestionDisplay10";
             this->rtbQuestionDisplay10->ReadOnly = true;
@@ -2407,7 +2407,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->panel11->Controls->Add(this->rb10B);
             this->panel11->Controls->Add(this->rb10C);
             this->panel11->ForeColor = System::Drawing::SystemColors::Desktop;
-            this->panel11->Location = System::Drawing::Point(-116, 5847);
+            this->panel11->Location = System::Drawing::Point(-146, 5855);
             this->panel11->Margin = System::Windows::Forms::Padding(4);
             this->panel11->Name = L"panel11";
             this->panel11->Size = System::Drawing::Size(1994, 390);
@@ -2635,22 +2635,10 @@ private: System::Windows::Forms::RadioButton^ rb10C;
 
 
 
-    /*public: int score = 0;
-    public: int score1 = 0;
-    public: int score2 = 0;
-    public: int score3 = 0;
-    public: int score4 = 0;
-    public: int score5 = 0;
-    public: int score6 = 0;
-    public: int score7 = 0;
-    public: int score8 = 0;
-    public: int score9 = 0;
-    public: int score10 = 0;*/
-        char ans;
 
     private: System::Void Startpage_Load(System::Object^ sender, System::EventArgs^ e) {
         timer1->Start();
-    }   
+    }
            int timeleft = 7200;
            int hr, min, sec;
     private: System::Void timer1_Tick(System::Object^ sender, System::EventArgs^ e) {
@@ -2696,244 +2684,232 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             (*question_list).Correct_optn = reader->GetString(6);
         }
 
-}
-private: System::Void rtbQuestionDisplay_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void rtbQuestionDisplay2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void panel2_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
-}
-private: System::Void tbOptnA_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void radioButton2_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans = 'a';
-}
-private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void panel3_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
-}
-private: System::Void rtbQuestionDisplay2_TextChanged_1(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void tbOptnC_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void panel8_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
-}
-       public: bool nextclick = false;
-private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-    this->nextclick = true;
-    //score = score1 + score2 + score3 + score4 + score5 + score6 + score7 + score8 + score9 + score10;
-    this->Close();
-}
-       /*command.Parameters->AddWithValue("@correct_optn", score);
-       score1++;*/
-private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void textBox27_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void radioButton4_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void radioButton3_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans = 'b';
-}
-private: System::Void radioButton1_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void panel1_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
-}
-private: System::Void tbOptnB_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void tbOptnD_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void rtbQuestionDisplay2_TextChanged_2(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void lb3_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void panel2_Paint_1(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
-}
-private: System::Void tbOptnD2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void tbOptnC2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void tbOptnA2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void tbOptnB2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void radioButton5_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void radioButton6_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans = 'a';
-}
-private: System::Void radioButton7_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void radioButton8_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void rtbQuestionDisplay3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void panel3_Paint_1(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
-}
-private: System::Void textBox5_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void textBox6_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void tbOptnA3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void textBox8_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void radioButton9_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void radioButton10_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans = 'a';
-}
-private: System::Void radioButton11_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void radioButton12_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void rtbQuestionDisplay4_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void panel4_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
-}
-private: System::Void textBox9_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void textBox10_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void tbOptnA4_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void textBox12_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void radioButton13_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void radioButton14_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans = 'a';
-}
-private: System::Void radioButton15_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void radioButton16_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void rtbQuestionDisplay5_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void panel5_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
-}
-private: System::Void textBox13_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void textBox14_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void tbOptnA5_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void textBox16_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void radioButton17_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void radioButton18_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans = 'a';
-}
-private: System::Void radioButton19_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void radioButton20_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void rtbQuestionDisplay6_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void panel6_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
-}
-private: System::Void textBox17_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void textBox18_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void tbOptnA6_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void textBox20_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void radioButton21_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void radioButton22_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans = 'a';
-}
-private: System::Void radioButton23_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void radioButton24_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void tbOptnA8_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void panel7_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
-}
-private: System::Void textBox21_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void textBox22_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void textBox23_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void textBox24_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void radioButton25_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void radioButton26_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans = 'a';
-}
-private: System::Void radioButton27_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void radioButton28_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void radioButton32_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void radioButton31_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void radioButton30_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans = 'a';
-}
-private: System::Void radioButton29_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void textBox28_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void textBox26_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void textBox25_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void rtbQuestionDisplay8_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void rtbQuestionDisplay9_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void panel10_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
-}
-private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void textBox3_TextChanged_1(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void textBox4_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void radioButton33_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void radioButton34_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans = 'a';
-}
-private: System::Void radioButton35_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void radioButton36_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void richTextBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void panel11_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
-}
-private: System::Void textBox7_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void textBox11_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void textBox15_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void textBox19_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void radioButton37_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void radioButton38_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void radioButton39_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void radioButton40_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-};
+    }
+    private: System::Void rtbQuestionDisplay_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void rtbQuestionDisplay2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void panel2_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+    }
+    private: System::Void tbOptnA_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void radioButton2_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void panel3_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+    }
+    private: System::Void rtbQuestionDisplay2_TextChanged_1(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void tbOptnC_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void panel8_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+    }
+    public: bool Submit_click = false;
+    private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+        Submit_click = true;
+        //user->score = scored;
+        this->Close();
+    }
+    private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void textBox27_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void radioButton4_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void radioButton3_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void radioButton1_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void panel1_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+    }
+    private: System::Void tbOptnB_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void tbOptnD_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void rtbQuestionDisplay2_TextChanged_2(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void lb3_Click(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void panel2_Paint_1(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+    }
+    private: System::Void tbOptnD2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void tbOptnC2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void tbOptnA2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void tbOptnB2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void radioButton5_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void radioButton6_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void radioButton7_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void radioButton8_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void rtbQuestionDisplay3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void panel3_Paint_1(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+    }
+    private: System::Void textBox5_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void textBox6_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void tbOptnA3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void textBox8_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void radioButton9_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void radioButton10_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void radioButton11_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void radioButton12_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void rtbQuestionDisplay4_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void panel4_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+    }
+    private: System::Void textBox9_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void textBox10_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void tbOptnA4_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void textBox12_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void radioButton13_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void radioButton14_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void radioButton15_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void radioButton16_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void rtbQuestionDisplay5_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void panel5_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+    }
+    private: System::Void textBox13_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void textBox14_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void tbOptnA5_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void textBox16_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void radioButton17_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void radioButton18_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void radioButton19_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void radioButton20_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void rtbQuestionDisplay6_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void panel6_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+    }
+    private: System::Void textBox17_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void textBox18_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void tbOptnA6_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void textBox20_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void radioButton21_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void radioButton22_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void radioButton23_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void radioButton24_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void tbOptnA8_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void panel7_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+    }
+    private: System::Void textBox21_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void textBox22_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void textBox23_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void textBox24_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void radioButton25_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void radioButton26_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void radioButton27_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void radioButton28_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void radioButton32_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void radioButton31_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void radioButton30_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void radioButton29_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void textBox28_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void textBox26_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void textBox25_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void rtbQuestionDisplay8_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void rtbQuestionDisplay9_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void panel10_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+    }
+    private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void textBox3_TextChanged_1(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void textBox4_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void radioButton33_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void radioButton34_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void radioButton35_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void radioButton36_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void richTextBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void panel11_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+    }
+    private: System::Void textBox7_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void textBox11_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void textBox15_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void textBox19_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void radioButton37_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void radioButton38_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void radioButton39_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void radioButton40_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    };
 }

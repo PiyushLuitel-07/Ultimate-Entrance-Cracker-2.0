@@ -145,6 +145,9 @@
     <ClInclude Include="Developer.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Finalpage.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Helppage.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -172,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Developer.resx">
       <DependentUpon>Developer.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finalpage.resx">
+      <DependentUpon>Finalpage.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Helppage.resx">
       <DependentUpon>Helppage.h</DependentUpon>

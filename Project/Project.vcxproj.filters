@@ -77,5 +77,8 @@
     <ClInclude Include="Startpage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Finalpage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
