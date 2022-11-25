@@ -1,6 +1,5 @@
 #pragma once
 #include "Questions.h"
-#include <string.h>
 
 
 
@@ -48,8 +47,8 @@ namespace Project {
                     tbOptnB->Text = question_list->Option_b;
                     tbOptnC->Text = question_list->Option_c;
                     tbOptnD->Text = question_list->Option_d;
-                    char ANS = 'a';
-                    if (ANS == ans1) {
+                    String^ ANS = question_list->Correct_optn;
+                    if (String::Compare(ans1, ANS) != 0) {
                         score1++;
                     }
                     //2
@@ -61,8 +60,8 @@ namespace Project {
                     tbOptnB2->Text = question_list->Option_b;
                     tbOptnC2->Text = question_list->Option_c;
                     tbOptnD2->Text = question_list->Option_d;
-                    //ANS = question_list->Correct_optn;
-                    if (ANS == ans2) {
+                    ANS = question_list->Correct_optn;
+                    if (String::Compare(ans2, ANS) != 0) {
                         score2++;
                     }
                     //3
@@ -74,8 +73,8 @@ namespace Project {
                     tbOptnB3->Text = question_list->Option_b;
                     tbOptnC3->Text = question_list->Option_c;
                     tbOptnD3->Text = question_list->Option_d;
-                    //ANS = question_list->Correct_optn;
-                    if (ANS == ans3) {
+                    ANS = question_list->Correct_optn;
+                    if (String::Compare(ans3, ANS) != 0) {
                         score3++;
                     }
                     //4
@@ -87,8 +86,8 @@ namespace Project {
                     tbOptnB4->Text = question_list->Option_b;
                     tbOptnC4->Text = question_list->Option_c;
                     tbOptnD4->Text = question_list->Option_d;
-                    //ANS = question_list->Correct_optn;
-                    if (ANS == ans4) {
+                    ANS = question_list->Correct_optn;
+                    if (String::Compare(ans4, ANS) != 0) {
                         score4++;
                     }
                     //5
@@ -100,8 +99,8 @@ namespace Project {
                     tbOptnB5->Text = question_list->Option_b;
                     tbOptnC5->Text = question_list->Option_c;
                     tbOptnD5->Text = question_list->Option_d;
-                    //ANS = question_list->Correct_optn;
-                    if (ANS == ans5) {
+                    ANS = question_list->Correct_optn;
+                    if (String::Compare(ans5, ANS) != 0) {
                         score5++;
                     }
                     //6
@@ -113,8 +112,8 @@ namespace Project {
                     tbOptnB6->Text = question_list->Option_b;
                     tbOptnC6->Text = question_list->Option_c;
                     tbOptnD6->Text = question_list->Option_d;
-                    //ANS = question_list->Correct_optn;
-                    if (ANS == ans6) {
+                    ANS = question_list->Correct_optn;
+                    if (String::Compare(ans6, ANS) != 0) {
                         score6++;
                     }
                     //7
@@ -126,8 +125,8 @@ namespace Project {
                     tbOptnB7->Text = question_list->Option_b;
                     tbOptnC7->Text = question_list->Option_c;
                     tbOptnD7->Text = question_list->Option_d;
-                    //ANS = question_list->Correct_optn;
-                    if (ANS == ans7) {
+                    ANS = question_list->Correct_optn;
+                    if (String::Compare(ans7, ANS) != 0) {
                         score7++;
                     }
                     //8
@@ -139,8 +138,8 @@ namespace Project {
                     tbOptnB8->Text = question_list->Option_b;
                     tbOptnC8->Text = question_list->Option_c;
                     tbOptnD8->Text = question_list->Option_d;
-                    //ANS = question_list->Correct_optn;
-                    if (ANS == ans8) {
+                    ANS = question_list->Correct_optn;
+                    if (String::Compare(ans8, ANS) != 0) {
                         score8++;
                     }
                     //9
@@ -152,8 +151,8 @@ namespace Project {
                     tbOptnB9->Text = question_list->Option_b;
                     tbOptnC9->Text = question_list->Option_c;
                     tbOptnD9->Text = question_list->Option_d;
-                    // ANS = question_list->Correct_optn;
-                    if (ANS == ans9) {
+                     ANS = question_list->Correct_optn;
+                    if (String::Compare(ans9, ANS) != 0) {
                         score9++;
                     }
                     //10
@@ -165,10 +164,11 @@ namespace Project {
                     tbOptnB10->Text = question_list->Option_b;
                     tbOptnC10->Text = question_list->Option_c;
                     tbOptnD10->Text = question_list->Option_d;
-                    // ANS = question_list->Correct_optn;
-                    if (ANS == ans10) {
+                    ANS = question_list->Correct_optn;
+                    if (String::Compare(ans1, ANS) != 0) {
                         score10++;
                     }
+      
 
             }
             catch (Exception^ e) {
@@ -2687,17 +2687,16 @@ private: System::Windows::Forms::RadioButton^ rb10C;
     public: int score8 = 0;
     public: int score9 = 0;
     public: int score10 = 0;
-        char ans;
-        char ans1;
-        char ans2;
-        char ans3;
-        char ans4;
-        char ans5;
-        char ans6;
-        char ans7;
-        char ans8;
-        char ans9;
-        char ans10;
+        String^ ans1;
+        String^ ans2;
+        String^ ans3;
+        String^ ans4;
+        String^ ans5;
+        String^ ans6;
+        String^ ans7;
+        String^ ans8;
+        String^ ans9;
+        String^ ans10;
 
     private: System::Void Startpage_Load(System::Object^ sender, System::EventArgs^ e) {
         timer1->Start();
@@ -2759,7 +2758,7 @@ private: System::Void tbOptnA_TextChanged(System::Object^ sender, System::EventA
 private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void rb1A_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans1 = 'a';
+    ans1 = "a";
 }
 private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -2776,22 +2775,26 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
     this->nextclick = true;
 
     score = score1 + score2 + score3 + score4 + score5 + score6 + score7 + score8 + score9 + score10;
+    MessageBox::Show("Your Score is" + score,
+       "score", MessageBoxButtons::OK);
     this->Close();
 }
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+    this->Close();
+    Application::Exit();
 }
 private: System::Void textBox27_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void radioButton4_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans1 = 'c';
+    ans1 = "c";
 }
 private: System::Void radioButton3_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans1 = 'b';
+    ans1 = "b";
 }
 private: System::Void radioButton1_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans1 = 'd';
+    ans1 = "d";
 }
 private: System::Void panel1_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 }
@@ -2816,16 +2819,16 @@ private: System::Void tbOptnA2_TextChanged(System::Object^ sender, System::Event
 private: System::Void tbOptnB2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void radioButton5_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans2 = 'd';
+    ans2 = "d";
 }
 private: System::Void rb2A_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans2 = 'a';
+    ans2 = "a";
 }
 private: System::Void radioButton7_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans2 = 'b';
+    ans2 = "b";
 }
 private: System::Void radioButton8_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans2 = 'c';
+    ans2 = "c";
 }
 private: System::Void rtbQuestionDisplay3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -2840,16 +2843,16 @@ private: System::Void tbOptnA3_TextChanged(System::Object^ sender, System::Event
 private: System::Void textBox8_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void radioButton9_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans3 = 'd';
+    ans3 = "d";
 }
 private: System::Void radioButton10_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans3 = 'a';
+    ans3 = "a";
 }
 private: System::Void radioButton11_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans3 = 'b';
+    ans3 = "b";
 }
 private: System::Void radioButton12_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans3 = 'c';
+    ans3 = "c";
 }
 private: System::Void rtbQuestionDisplay4_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -2864,16 +2867,16 @@ private: System::Void tbOptnA4_TextChanged(System::Object^ sender, System::Event
 private: System::Void textBox12_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void radioButton13_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans4 = 'd';
+    ans4 = "d";
 }
 private: System::Void radioButton14_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans4 = 'a';
+    ans4 = "a";
 }
 private: System::Void radioButton15_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans4 = 'b';
+    ans4 = "b";
 }
 private: System::Void radioButton16_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans4 = 'c';
+    ans4 = "c";
 }
 private: System::Void rtbQuestionDisplay5_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -2888,16 +2891,16 @@ private: System::Void tbOptnA5_TextChanged(System::Object^ sender, System::Event
 private: System::Void textBox16_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void radioButton17_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans5 = 'd';
+    ans5 = "d";
 }
 private: System::Void radioButton18_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans5 = 'a';
+    ans5 = "a";
 }
 private: System::Void radioButton19_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans5 = 'b';
+    ans5 = "b";
 }
 private: System::Void radioButton20_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans5 = 'c';
+    ans5 = "c";
 }
 private: System::Void rtbQuestionDisplay6_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -2912,16 +2915,16 @@ private: System::Void tbOptnA6_TextChanged(System::Object^ sender, System::Event
 private: System::Void textBox20_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void radioButton21_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans6 = 'd';
+    ans6 = "d";
 }
 private: System::Void radioButton22_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans6 = 'a';
+    ans6 = "a";
 }
 private: System::Void radioButton23_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans6 = 'b';
+    ans6 = "b";
 }
 private: System::Void radioButton24_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans6 = 'c';
+    ans6 = "c";
 }
 private: System::Void tbOptnA8_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -2936,28 +2939,28 @@ private: System::Void textBox23_TextChanged(System::Object^ sender, System::Even
 private: System::Void textBox24_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void radioButton25_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans7 = 'd';
+    ans7 = "d";
 }
 private: System::Void radioButton26_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans7 = 'a';
+    ans7 = "a";
 }
 private: System::Void radioButton27_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans7 = 'b';
+    ans7 = "b";
 }
 private: System::Void radioButton28_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans7 = 'c';
+    ans7 = "c";
 }
 private: System::Void radioButton32_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans8 = 'c';
+    ans8 = "c";
 }
 private: System::Void radioButton31_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans8 = 'b';
+    ans8 = "b";
 }
 private: System::Void radioButton30_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans8 = 'a';
+    ans8 = "a";
 }
 private: System::Void radioButton29_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans8 = 'd';
+    ans8 = "d";
 }
 private: System::Void textBox28_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -2980,16 +2983,16 @@ private: System::Void textBox3_TextChanged_1(System::Object^ sender, System::Eve
 //private: System::Void textBox4_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 //}
 private: System::Void radioButton33_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans9 = 'd';
+    ans9 = "d";
 }
 private: System::Void radioButton34_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans9 = 'a';
+    ans9 = "a";
 }
 private: System::Void radioButton35_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans9 = 'b';
+    ans9 = "b";
 }
 private: System::Void radioButton36_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans9 = 'c';
+    ans9 = "c";
 }
 private: System::Void richTextBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -3004,16 +3007,16 @@ private: System::Void textBox15_TextChanged(System::Object^ sender, System::Even
 private: System::Void textBox19_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void radioButton37_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans10 = 'd';
+    ans10 = "d";
 }
 private: System::Void radioButton38_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans10 = 'a';
+    ans10 = "a";
 }
 private: System::Void radioButton39_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans10 = 'b';
+    ans10 = "b";
 }
 private: System::Void radioButton40_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans10 = 'c';
+    ans10 = "c";
 }
 };
 }

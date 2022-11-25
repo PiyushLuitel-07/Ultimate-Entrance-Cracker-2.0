@@ -115,6 +115,7 @@ namespace Project {
 			this->richTextBox1->Size = System::Drawing::Size(654, 570);
 			this->richTextBox1->TabIndex = 25;
 			this->richTextBox1->Text = L"";
+			this->richTextBox1->TextChanged += gcnew System::EventHandler(this, &Leaderboardpage::richTextBox1_TextChanged);
 			// 
 			// textBox1
 			// 
@@ -183,6 +184,12 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 	this->switchtomainmenufromleaderboard = true;
 	
 	
+}
+private: System::Void richTextBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+
+
+
+
 }
 };
 }
