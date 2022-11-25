@@ -29,8 +29,6 @@ namespace Project {
             //TODO: Add the constructor code here
             //
             try {
-
-                //connectSQL(question_list);
                 String^ connString = "Data Source=tcp:uec.database.windows.net;Initial Catalog=uecdb;Persist Security Info=True;User ID=sqluec;Password=L12@sqd3";
                 //Data Source=tcp:uec.database.windows.net;Initial Catalog=uecdb;Persist Security Info=True;User ID=sqluec;Password=***********
                 SqlConnection sqlConn(connString);
@@ -39,38 +37,88 @@ namespace Project {
                 SqlCommand command(sqlQuery, % sqlConn);
                 SqlDataReader^ reader = command.ExecuteReader();
 
-                if (reader->Read()) {
-                    question_list = gcnew Question;
-                    question_list->question = reader->GetString(1);
-                    question_list->Option_a = reader->GetString(2);
-                    question_list->Option_b = reader->GetString(3);
-                    question_list->Option_c = reader->GetString(4);
-                    question_list->Option_d = reader->GetString(5);
-                    question_list->Correct_optn = reader->GetString(6);
-                }
+                Question^ question_list = gcnew Question;
+                //1
+                readdb(reader, question_list);
+
                 rtbQuestionDisplay->Text = question_list->question;
                 tbOptnA->Text = question_list->Option_a;
                 tbOptnB->Text = question_list->Option_b;
                 tbOptnC->Text = question_list->Option_c;
                 tbOptnD->Text = question_list->Option_d;
+                //2
+                readdb(reader, question_list);
 
-                //connectSQL(question_list);
-                if (reader->Read()) {
-                    question_list = gcnew Question;
-                    question_list->question = reader->GetString(1);
-                    question_list->Option_a = reader->GetString(2);
-                    question_list->Option_b = reader->GetString(3);
-                    question_list->Option_c = reader->GetString(4);
-                    question_list->Option_d = reader->GetString(5);
-                    question_list->Correct_optn = reader->GetString(6);
-                }
+                rtbQuestionDisplay2->Text = question_list->question;
+                tbOptnA2->Text = question_list->Option_a;
+                tbOptnB2->Text = question_list->Option_b;
+                tbOptnC2->Text = question_list->Option_c;
+                tbOptnD2->Text = question_list->Option_d;
+                //3
+                readdb(reader, question_list);
+
+                rtbQuestionDisplay3->Text = question_list->question;
+                tbOptnA3->Text = question_list->Option_a;
+                tbOptnB3->Text = question_list->Option_b;
+                tbOptnC3->Text = question_list->Option_c;
+                tbOptnD3->Text = question_list->Option_d;
+                //4
+                readdb(reader, question_list);
+
+                rtbQuestionDisplay4->Text = question_list->question;
+                tbOptnA4->Text = question_list->Option_a;
+                tbOptnB4->Text = question_list->Option_b;
+                tbOptnC4->Text = question_list->Option_c;
+                tbOptnD4->Text = question_list->Option_d;
+                //5
+                readdb(reader, question_list);
+
+                rtbQuestionDisplay5->Text = question_list->question;
+                tbOptnA5->Text = question_list->Option_a;
+                tbOptnB5->Text = question_list->Option_b;
+                tbOptnC5->Text = question_list->Option_c;
+                tbOptnD5->Text = question_list->Option_d;
+                //6
+                readdb(reader, question_list);
+
+                rtbQuestionDisplay6->Text = question_list->question;
+                tbOptnA6->Text = question_list->Option_a;
+                tbOptnB6->Text = question_list->Option_b;
+                tbOptnC6->Text = question_list->Option_c;
+                tbOptnD6->Text = question_list->Option_d;
+                //7
+                readdb(reader, question_list);
+
+                rtbQuestionDisplay7->Text = question_list->question;
+                tbOptnA7->Text = question_list->Option_a;
+                tbOptnB7->Text = question_list->Option_b;
+                tbOptnC7->Text = question_list->Option_c;
+                tbOptnD7->Text = question_list->Option_d;
+                //8
+                readdb(reader, question_list);
+
+                rtbQuestionDisplay8->Text = question_list->question;
+                tbOptnA8->Text = question_list->Option_a;
+                tbOptnB8->Text = question_list->Option_b;
+                tbOptnC8->Text = question_list->Option_c;
+                tbOptnD8->Text = question_list->Option_d;
+                //9
+                readdb(reader, question_list);
+
+                rtbQuestionDisplay9->Text = question_list->question;
+                tbOptnA9->Text = question_list->Option_a;
+                tbOptnB9->Text = question_list->Option_b;
+                tbOptnC9->Text = question_list->Option_c;
+                tbOptnD9->Text = question_list->Option_d;
+                //10
+                readdb(reader, question_list);
+
                 rtbQuestionDisplay2->Text = question_list->question;
                 tbOptnA2->Text = question_list->Option_a;
                 tbOptnB2->Text = question_list->Option_b;
                 tbOptnC2->Text = question_list->Option_c;
                 tbOptnD2->Text = question_list->Option_d;
 
-                //question_list->Correct_optn;
             }
             catch (Exception^ e) {
                 MessageBox::Show("Failed to connect to database",
@@ -114,7 +162,7 @@ namespace Project {
 
 
 
-    private: System::Windows::Forms::Timer^ timer1;
+
 
 
 
@@ -129,20 +177,167 @@ namespace Project {
 
     private: System::Windows::Forms::TextBox^ tbOptnA;
     private: System::Windows::Forms::Label^ lb3;
-    private: System::Windows::Forms::Panel^ panel2;
-    private: System::Windows::Forms::TextBox^ tbOptnD2;
-
-    private: System::Windows::Forms::TextBox^ tbOptnC2;
-
-    private: System::Windows::Forms::TextBox^ tbOptnA2;
-    private: System::Windows::Forms::TextBox^ tbOptnB2;
 
 
-    private: System::Windows::Forms::RadioButton^ radioButton5;
-    private: System::Windows::Forms::RadioButton^ radioButton6;
-    private: System::Windows::Forms::RadioButton^ radioButton7;
-    private: System::Windows::Forms::RadioButton^ radioButton8;
-    private: System::Windows::Forms::RichTextBox^ rtbQuestionDisplay2;
+
+
+
+
+
+
+
+
+
+
+
+
+private: System::Windows::Forms::Timer^ timer1;
+private: System::Windows::Forms::Label^ label3;
+private: System::Windows::Forms::RichTextBox^ rtbQuestionDisplay2;
+private: System::Windows::Forms::Panel^ panel2;
+private: System::Windows::Forms::TextBox^ tbOptnD2;
+private: System::Windows::Forms::TextBox^ tbOptnC2;
+private: System::Windows::Forms::TextBox^ tbOptnA2;
+private: System::Windows::Forms::TextBox^ tbOptnB2;
+private: System::Windows::Forms::RadioButton^ radioButton5;
+private: System::Windows::Forms::RadioButton^ radioButton6;
+private: System::Windows::Forms::RadioButton^ radioButton7;
+private: System::Windows::Forms::RadioButton^ radioButton8;
+private: System::Windows::Forms::RichTextBox^ rtbQuestionDisplay3;
+private: System::Windows::Forms::Panel^ panel3;
+private: System::Windows::Forms::TextBox^ tbOptnD3;
+
+private: System::Windows::Forms::TextBox^ tbOptnC3;
+
+private: System::Windows::Forms::TextBox^ tbOptnA3;
+private: System::Windows::Forms::TextBox^ tbOptnB3;
+
+private: System::Windows::Forms::RadioButton^ radioButton9;
+private: System::Windows::Forms::RadioButton^ radioButton10;
+private: System::Windows::Forms::RadioButton^ radioButton11;
+private: System::Windows::Forms::RadioButton^ radioButton12;
+private: System::Windows::Forms::RichTextBox^ rtbQuestionDisplay4;
+private: System::Windows::Forms::Panel^ panel4;
+private: System::Windows::Forms::TextBox^ tbOptnD4;
+
+private: System::Windows::Forms::TextBox^ tbOptnC4;
+
+private: System::Windows::Forms::TextBox^ tbOptnA4;
+private: System::Windows::Forms::TextBox^ tbOptnB4;
+
+private: System::Windows::Forms::RadioButton^ radioButton13;
+private: System::Windows::Forms::RadioButton^ radioButton14;
+private: System::Windows::Forms::RadioButton^ radioButton15;
+private: System::Windows::Forms::RadioButton^ radioButton16;
+private: System::Windows::Forms::RichTextBox^ rtbQuestionDisplay5;
+private: System::Windows::Forms::Panel^ panel5;
+private: System::Windows::Forms::TextBox^ tbOptnD5;
+
+private: System::Windows::Forms::TextBox^ tbOptnC5;
+
+private: System::Windows::Forms::TextBox^ tbOptnA5;
+private: System::Windows::Forms::TextBox^ tbOptnB5;
+
+private: System::Windows::Forms::RadioButton^ radioButton17;
+private: System::Windows::Forms::RadioButton^ radioButton18;
+private: System::Windows::Forms::RadioButton^ radioButton19;
+private: System::Windows::Forms::RadioButton^ radioButton20;
+private: System::Windows::Forms::RichTextBox^ rtbQuestionDisplay6;
+private: System::Windows::Forms::Panel^ panel6;
+private: System::Windows::Forms::TextBox^ tbOptnD6;
+
+private: System::Windows::Forms::TextBox^ tbOptnC6;
+
+private: System::Windows::Forms::TextBox^ tbOptnA6;
+private: System::Windows::Forms::TextBox^ tbOptnB6;
+
+private: System::Windows::Forms::RadioButton^ radioButton21;
+private: System::Windows::Forms::RadioButton^ radioButton22;
+private: System::Windows::Forms::RadioButton^ radioButton23;
+private: System::Windows::Forms::RadioButton^ radioButton24;
+private: System::Windows::Forms::RichTextBox^ rtbQuestionDisplay7;
+
+private: System::Windows::Forms::Panel^ panel7;
+private: System::Windows::Forms::TextBox^ tbOptnD7;
+
+private: System::Windows::Forms::TextBox^ tbOptnC7;
+
+private: System::Windows::Forms::TextBox^ tbOptnA7;
+private: System::Windows::Forms::TextBox^ tbOptnB7;
+
+
+private: System::Windows::Forms::RadioButton^ radioButton25;
+private: System::Windows::Forms::RadioButton^ radioButton26;
+private: System::Windows::Forms::RadioButton^ radioButton27;
+private: System::Windows::Forms::RadioButton^ radioButton28;
+private: System::Windows::Forms::RichTextBox^ rtbQuestionDisplay8;
+private: System::Windows::Forms::RadioButton^ radioButton32;
+private: System::Windows::Forms::RadioButton^ radioButton31;
+private: System::Windows::Forms::RadioButton^ radioButton30;
+private: System::Windows::Forms::RadioButton^ radioButton29;
+private: System::Windows::Forms::TextBox^ tbOptnB8;
+private: System::Windows::Forms::TextBox^ tbOptnA8;
+
+
+private: System::Windows::Forms::TextBox^ tbOptnC8;
+private: System::Windows::Forms::TextBox^ tbOptnD8;
+
+
+private: System::Windows::Forms::Panel^ panel8;
+
+private: System::Windows::Forms::RichTextBox^ rtbQuestionDisplay9;
+
+private: System::Windows::Forms::Panel^ panel10;
+private: System::Windows::Forms::TextBox^ tbOptnD9;
+
+private: System::Windows::Forms::TextBox^ tbOptnC9;
+
+private: System::Windows::Forms::TextBox^ tbOptnA9;
+private: System::Windows::Forms::TextBox^ tbOptnB9;
+
+
+private: System::Windows::Forms::RadioButton^ radioButton33;
+private: System::Windows::Forms::RadioButton^ radioButton34;
+private: System::Windows::Forms::RadioButton^ radioButton35;
+private: System::Windows::Forms::RadioButton^ radioButton36;
+private: System::Windows::Forms::RichTextBox^ rtbQuestionDisplay10;
+
+private: System::Windows::Forms::Panel^ panel11;
+private: System::Windows::Forms::TextBox^ tbOptnD10;
+
+private: System::Windows::Forms::TextBox^ tbOptnC10;
+
+private: System::Windows::Forms::TextBox^ tbOptnA10;
+private: System::Windows::Forms::TextBox^ tbOptnB10;
+
+
+private: System::Windows::Forms::RadioButton^ radioButton37;
+private: System::Windows::Forms::RadioButton^ radioButton38;
+private: System::Windows::Forms::RadioButton^ radioButton39;
+private: System::Windows::Forms::RadioButton^ radioButton40;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -248,6 +443,8 @@ namespace Project {
             this->rtbQuestionDisplay = (gcnew System::Windows::Forms::RichTextBox());
             this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
             this->lb3 = (gcnew System::Windows::Forms::Label());
+            this->label3 = (gcnew System::Windows::Forms::Label());
+            this->rtbQuestionDisplay2 = (gcnew System::Windows::Forms::RichTextBox());
             this->panel2 = (gcnew System::Windows::Forms::Panel());
             this->tbOptnD2 = (gcnew System::Windows::Forms::TextBox());
             this->tbOptnC2 = (gcnew System::Windows::Forms::TextBox());
@@ -257,9 +454,96 @@ namespace Project {
             this->radioButton6 = (gcnew System::Windows::Forms::RadioButton());
             this->radioButton7 = (gcnew System::Windows::Forms::RadioButton());
             this->radioButton8 = (gcnew System::Windows::Forms::RadioButton());
-            this->rtbQuestionDisplay2 = (gcnew System::Windows::Forms::RichTextBox());
+            this->rtbQuestionDisplay3 = (gcnew System::Windows::Forms::RichTextBox());
+            this->panel3 = (gcnew System::Windows::Forms::Panel());
+            this->tbOptnD3 = (gcnew System::Windows::Forms::TextBox());
+            this->tbOptnC3 = (gcnew System::Windows::Forms::TextBox());
+            this->tbOptnA3 = (gcnew System::Windows::Forms::TextBox());
+            this->tbOptnB3 = (gcnew System::Windows::Forms::TextBox());
+            this->radioButton9 = (gcnew System::Windows::Forms::RadioButton());
+            this->radioButton10 = (gcnew System::Windows::Forms::RadioButton());
+            this->radioButton11 = (gcnew System::Windows::Forms::RadioButton());
+            this->radioButton12 = (gcnew System::Windows::Forms::RadioButton());
+            this->rtbQuestionDisplay4 = (gcnew System::Windows::Forms::RichTextBox());
+            this->panel4 = (gcnew System::Windows::Forms::Panel());
+            this->tbOptnD4 = (gcnew System::Windows::Forms::TextBox());
+            this->tbOptnC4 = (gcnew System::Windows::Forms::TextBox());
+            this->tbOptnA4 = (gcnew System::Windows::Forms::TextBox());
+            this->tbOptnB4 = (gcnew System::Windows::Forms::TextBox());
+            this->radioButton13 = (gcnew System::Windows::Forms::RadioButton());
+            this->radioButton14 = (gcnew System::Windows::Forms::RadioButton());
+            this->radioButton15 = (gcnew System::Windows::Forms::RadioButton());
+            this->radioButton16 = (gcnew System::Windows::Forms::RadioButton());
+            this->rtbQuestionDisplay5 = (gcnew System::Windows::Forms::RichTextBox());
+            this->panel5 = (gcnew System::Windows::Forms::Panel());
+            this->tbOptnD5 = (gcnew System::Windows::Forms::TextBox());
+            this->tbOptnC5 = (gcnew System::Windows::Forms::TextBox());
+            this->tbOptnA5 = (gcnew System::Windows::Forms::TextBox());
+            this->tbOptnB5 = (gcnew System::Windows::Forms::TextBox());
+            this->radioButton17 = (gcnew System::Windows::Forms::RadioButton());
+            this->radioButton18 = (gcnew System::Windows::Forms::RadioButton());
+            this->radioButton19 = (gcnew System::Windows::Forms::RadioButton());
+            this->radioButton20 = (gcnew System::Windows::Forms::RadioButton());
+            this->rtbQuestionDisplay6 = (gcnew System::Windows::Forms::RichTextBox());
+            this->panel6 = (gcnew System::Windows::Forms::Panel());
+            this->tbOptnD6 = (gcnew System::Windows::Forms::TextBox());
+            this->tbOptnC6 = (gcnew System::Windows::Forms::TextBox());
+            this->tbOptnA6 = (gcnew System::Windows::Forms::TextBox());
+            this->tbOptnB6 = (gcnew System::Windows::Forms::TextBox());
+            this->radioButton21 = (gcnew System::Windows::Forms::RadioButton());
+            this->radioButton22 = (gcnew System::Windows::Forms::RadioButton());
+            this->radioButton23 = (gcnew System::Windows::Forms::RadioButton());
+            this->radioButton24 = (gcnew System::Windows::Forms::RadioButton());
+            this->rtbQuestionDisplay7 = (gcnew System::Windows::Forms::RichTextBox());
+            this->panel7 = (gcnew System::Windows::Forms::Panel());
+            this->tbOptnD7 = (gcnew System::Windows::Forms::TextBox());
+            this->tbOptnC7 = (gcnew System::Windows::Forms::TextBox());
+            this->tbOptnA7 = (gcnew System::Windows::Forms::TextBox());
+            this->tbOptnB7 = (gcnew System::Windows::Forms::TextBox());
+            this->radioButton25 = (gcnew System::Windows::Forms::RadioButton());
+            this->radioButton26 = (gcnew System::Windows::Forms::RadioButton());
+            this->radioButton27 = (gcnew System::Windows::Forms::RadioButton());
+            this->radioButton28 = (gcnew System::Windows::Forms::RadioButton());
+            this->rtbQuestionDisplay8 = (gcnew System::Windows::Forms::RichTextBox());
+            this->radioButton32 = (gcnew System::Windows::Forms::RadioButton());
+            this->radioButton31 = (gcnew System::Windows::Forms::RadioButton());
+            this->radioButton30 = (gcnew System::Windows::Forms::RadioButton());
+            this->radioButton29 = (gcnew System::Windows::Forms::RadioButton());
+            this->tbOptnB8 = (gcnew System::Windows::Forms::TextBox());
+            this->tbOptnA8 = (gcnew System::Windows::Forms::TextBox());
+            this->tbOptnC8 = (gcnew System::Windows::Forms::TextBox());
+            this->tbOptnD8 = (gcnew System::Windows::Forms::TextBox());
+            this->panel8 = (gcnew System::Windows::Forms::Panel());
+            this->rtbQuestionDisplay9 = (gcnew System::Windows::Forms::RichTextBox());
+            this->panel10 = (gcnew System::Windows::Forms::Panel());
+            this->tbOptnD9 = (gcnew System::Windows::Forms::TextBox());
+            this->tbOptnC9 = (gcnew System::Windows::Forms::TextBox());
+            this->tbOptnA9 = (gcnew System::Windows::Forms::TextBox());
+            this->tbOptnB9 = (gcnew System::Windows::Forms::TextBox());
+            this->radioButton33 = (gcnew System::Windows::Forms::RadioButton());
+            this->radioButton34 = (gcnew System::Windows::Forms::RadioButton());
+            this->radioButton35 = (gcnew System::Windows::Forms::RadioButton());
+            this->radioButton36 = (gcnew System::Windows::Forms::RadioButton());
+            this->rtbQuestionDisplay10 = (gcnew System::Windows::Forms::RichTextBox());
+            this->panel11 = (gcnew System::Windows::Forms::Panel());
+            this->tbOptnD10 = (gcnew System::Windows::Forms::TextBox());
+            this->tbOptnC10 = (gcnew System::Windows::Forms::TextBox());
+            this->tbOptnA10 = (gcnew System::Windows::Forms::TextBox());
+            this->tbOptnB10 = (gcnew System::Windows::Forms::TextBox());
+            this->radioButton37 = (gcnew System::Windows::Forms::RadioButton());
+            this->radioButton38 = (gcnew System::Windows::Forms::RadioButton());
+            this->radioButton39 = (gcnew System::Windows::Forms::RadioButton());
+            this->radioButton40 = (gcnew System::Windows::Forms::RadioButton());
             this->panel1->SuspendLayout();
             this->panel2->SuspendLayout();
+            this->panel3->SuspendLayout();
+            this->panel4->SuspendLayout();
+            this->panel5->SuspendLayout();
+            this->panel6->SuspendLayout();
+            this->panel7->SuspendLayout();
+            this->panel8->SuspendLayout();
+            this->panel10->SuspendLayout();
+            this->panel11->SuspendLayout();
             this->SuspendLayout();
             // 
             // label1
@@ -270,28 +554,29 @@ namespace Project {
             this->label1->Font = (gcnew System::Drawing::Font(L"Calibri Light", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->label1->ForeColor = System::Drawing::Color::Gold;
-            this->label1->Location = System::Drawing::Point(1467, 58);
+            this->label1->Location = System::Drawing::Point(1486, 123);
             this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
             this->label1->Name = L"label1";
-            this->label1->Size = System::Drawing::Size(239, 41);
+            this->label1->Size = System::Drawing::Size(248, 41);
             this->label1->TabIndex = 4;
-            this->label1->Text = L"Time Remaining";
+            this->label1->Text = L"Time Remaining:";
+            this->label1->Click += gcnew System::EventHandler(this, &Startpage::label1_Click);
             // 
             // label2
             // 
             this->label2->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->label2->AutoSize = true;
             this->label2->BackColor = System::Drawing::Color::Transparent;
-            this->label2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
             this->label2->Font = (gcnew System::Drawing::Font(L"Calibri Light", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->label2->ForeColor = System::Drawing::Color::Gold;
-            this->label2->Location = System::Drawing::Point(1534, 111);
+            this->label2->Location = System::Drawing::Point(1726, 123);
             this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
             this->label2->Name = L"label2";
-            this->label2->Size = System::Drawing::Size(123, 43);
+            this->label2->Size = System::Drawing::Size(121, 41);
             this->label2->TabIndex = 4;
             this->label2->Text = L"2:00:00";
+            this->label2->Click += gcnew System::EventHandler(this, &Startpage::label2_Click);
             // 
             // button2
             // 
@@ -302,13 +587,14 @@ namespace Project {
             this->button2->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 36, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->button2->ForeColor = System::Drawing::Color::Gold;
-            this->button2->Location = System::Drawing::Point(1174, 5931);
+            this->button2->Location = System::Drawing::Point(1149, 6358);
             this->button2->Margin = System::Windows::Forms::Padding(4);
             this->button2->Name = L"button2";
             this->button2->Size = System::Drawing::Size(340, 85);
             this->button2->TabIndex = 58;
             this->button2->Text = L"Cancel";
             this->button2->UseVisualStyleBackColor = false;
+            this->button2->Click += gcnew System::EventHandler(this, &Startpage::button2_Click);
             // 
             // button1
             // 
@@ -319,23 +605,25 @@ namespace Project {
             this->button1->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 36, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->button1->ForeColor = System::Drawing::Color::Gold;
-            this->button1->Location = System::Drawing::Point(826, 5931);
+            this->button1->Location = System::Drawing::Point(801, 6358);
             this->button1->Margin = System::Windows::Forms::Padding(4);
             this->button1->Name = L"button1";
             this->button1->Size = System::Drawing::Size(340, 85);
             this->button1->TabIndex = 58;
             this->button1->Text = L"Next";
             this->button1->UseVisualStyleBackColor = false;
+            this->button1->Click += gcnew System::EventHandler(this, &Startpage::button1_Click);
             // 
             // radioButton4
             // 
             this->radioButton4->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->radioButton4->AutoSize = true;
             this->radioButton4->BackColor = System::Drawing::Color::Transparent;
+            this->radioButton4->Cursor = System::Windows::Forms::Cursors::Hand;
             this->radioButton4->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton4->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton4->Location = System::Drawing::Point(101, 176);
+            this->radioButton4->Location = System::Drawing::Point(174, 205);
             this->radioButton4->Margin = System::Windows::Forms::Padding(4);
             this->radioButton4->Name = L"radioButton4";
             this->radioButton4->Size = System::Drawing::Size(45, 31);
@@ -343,16 +631,18 @@ namespace Project {
             this->radioButton4->TabStop = true;
             this->radioButton4->Text = L"c";
             this->radioButton4->UseVisualStyleBackColor = false;
+            this->radioButton4->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton4_CheckedChanged);
             // 
             // radioButton3
             // 
             this->radioButton3->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->radioButton3->AutoSize = true;
             this->radioButton3->BackColor = System::Drawing::Color::Transparent;
+            this->radioButton3->Cursor = System::Windows::Forms::Cursors::Hand;
             this->radioButton3->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton3->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton3->Location = System::Drawing::Point(101, 101);
+            this->radioButton3->Location = System::Drawing::Point(174, 129);
             this->radioButton3->Margin = System::Windows::Forms::Padding(4);
             this->radioButton3->Name = L"radioButton3";
             this->radioButton3->Size = System::Drawing::Size(46, 31);
@@ -360,16 +650,18 @@ namespace Project {
             this->radioButton3->TabStop = true;
             this->radioButton3->Text = L"b";
             this->radioButton3->UseVisualStyleBackColor = false;
+            this->radioButton3->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton3_CheckedChanged);
             // 
             // radioButton2
             // 
             this->radioButton2->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->radioButton2->AutoSize = true;
             this->radioButton2->BackColor = System::Drawing::Color::Transparent;
+            this->radioButton2->Cursor = System::Windows::Forms::Cursors::Hand;
             this->radioButton2->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton2->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton2->Location = System::Drawing::Point(102, 34);
+            this->radioButton2->Location = System::Drawing::Point(175, 54);
             this->radioButton2->Margin = System::Windows::Forms::Padding(4);
             this->radioButton2->Name = L"radioButton2";
             this->radioButton2->Size = System::Drawing::Size(46, 31);
@@ -377,16 +669,18 @@ namespace Project {
             this->radioButton2->TabStop = true;
             this->radioButton2->Text = L"a";
             this->radioButton2->UseVisualStyleBackColor = false;
+            this->radioButton2->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton2_CheckedChanged);
             // 
             // radioButton1
             // 
             this->radioButton1->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->radioButton1->AutoSize = true;
             this->radioButton1->BackColor = System::Drawing::Color::Transparent;
+            this->radioButton1->Cursor = System::Windows::Forms::Cursors::Hand;
             this->radioButton1->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton1->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton1->Location = System::Drawing::Point(102, 248);
+            this->radioButton1->Location = System::Drawing::Point(175, 283);
             this->radioButton1->Margin = System::Windows::Forms::Padding(4);
             this->radioButton1->Name = L"radioButton1";
             this->radioButton1->Size = System::Drawing::Size(46, 31);
@@ -394,22 +688,25 @@ namespace Project {
             this->radioButton1->TabStop = true;
             this->radioButton1->Text = L"d";
             this->radioButton1->UseVisualStyleBackColor = false;
+            this->radioButton1->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton1_CheckedChanged);
             // 
             // tbOptnB
             // 
             this->tbOptnB->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->tbOptnB->BackColor = System::Drawing::Color::Gray;
-            this->tbOptnB->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            this->tbOptnB->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->tbOptnB->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->tbOptnB->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-            this->tbOptnB->Location = System::Drawing::Point(161, 82);
+            this->tbOptnB->Location = System::Drawing::Point(229, 110);
             this->tbOptnB->Margin = System::Windows::Forms::Padding(4);
             this->tbOptnB->Multiline = true;
             this->tbOptnB->Name = L"tbOptnB";
             this->tbOptnB->ReadOnly = true;
-            this->tbOptnB->Size = System::Drawing::Size(1282, 64);
+            this->tbOptnB->Size = System::Drawing::Size(1755, 70);
             this->tbOptnB->TabIndex = 1;
-            this->tbOptnB->Text = L"dddd";
+            this->tbOptnB->Text = L"dddd\r\nddd";
+            this->tbOptnB->TextChanged += gcnew System::EventHandler(this, &Startpage::tbOptnB_TextChanged);
             // 
             // panel1
             // 
@@ -425,75 +722,81 @@ namespace Project {
             this->panel1->Controls->Add(this->radioButton3);
             this->panel1->Controls->Add(this->radioButton4);
             this->panel1->ForeColor = System::Drawing::SystemColors::Desktop;
-            this->panel1->Location = System::Drawing::Point(-88, 266);
+            this->panel1->Location = System::Drawing::Point(-119, 402);
             this->panel1->Margin = System::Windows::Forms::Padding(4);
             this->panel1->Name = L"panel1";
-            this->panel1->Size = System::Drawing::Size(1635, 302);
+            this->panel1->Size = System::Drawing::Size(1994, 390);
             this->panel1->TabIndex = 41;
+            this->panel1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Startpage::panel1_Paint);
             // 
             // tbOptnD
             // 
             this->tbOptnD->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->tbOptnD->BackColor = System::Drawing::Color::Gray;
-            this->tbOptnD->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            this->tbOptnD->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->tbOptnD->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->tbOptnD->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-            this->tbOptnD->Location = System::Drawing::Point(161, 226);
+            this->tbOptnD->Location = System::Drawing::Point(229, 267);
             this->tbOptnD->Margin = System::Windows::Forms::Padding(4);
             this->tbOptnD->Multiline = true;
             this->tbOptnD->Name = L"tbOptnD";
             this->tbOptnD->ReadOnly = true;
-            this->tbOptnD->Size = System::Drawing::Size(1282, 64);
+            this->tbOptnD->Size = System::Drawing::Size(1755, 70);
             this->tbOptnD->TabIndex = 1;
-            this->tbOptnD->Text = L"dddd";
+            this->tbOptnD->Text = L"dddd\r\nddd";
+            this->tbOptnD->TextChanged += gcnew System::EventHandler(this, &Startpage::tbOptnD_TextChanged);
             // 
             // tbOptnC
             // 
             this->tbOptnC->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->tbOptnC->BackColor = System::Drawing::Color::Gray;
-            this->tbOptnC->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            this->tbOptnC->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->tbOptnC->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->tbOptnC->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-            this->tbOptnC->Location = System::Drawing::Point(161, 154);
+            this->tbOptnC->Location = System::Drawing::Point(229, 188);
             this->tbOptnC->Margin = System::Windows::Forms::Padding(4);
             this->tbOptnC->Multiline = true;
             this->tbOptnC->Name = L"tbOptnC";
             this->tbOptnC->ReadOnly = true;
-            this->tbOptnC->Size = System::Drawing::Size(1282, 64);
+            this->tbOptnC->Size = System::Drawing::Size(1755, 70);
             this->tbOptnC->TabIndex = 1;
-            this->tbOptnC->Text = L"dddd";
+            this->tbOptnC->Text = L"dddd\r\nddd";
+            this->tbOptnC->TextChanged += gcnew System::EventHandler(this, &Startpage::tbOptnC_TextChanged);
             // 
             // tbOptnA
             // 
             this->tbOptnA->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->tbOptnA->BackColor = System::Drawing::Color::Gray;
-            this->tbOptnA->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            this->tbOptnA->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->tbOptnA->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->tbOptnA->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-            this->tbOptnA->Location = System::Drawing::Point(161, 10);
+            this->tbOptnA->Location = System::Drawing::Point(229, 32);
             this->tbOptnA->Margin = System::Windows::Forms::Padding(4);
             this->tbOptnA->Multiline = true;
             this->tbOptnA->Name = L"tbOptnA";
             this->tbOptnA->ReadOnly = true;
-            this->tbOptnA->Size = System::Drawing::Size(1282, 64);
+            this->tbOptnA->Size = System::Drawing::Size(1755, 70);
             this->tbOptnA->TabIndex = 1;
-            this->tbOptnA->Text = L"dddd";
+            this->tbOptnA->Text = L"dddd\r\nddd";
             this->tbOptnA->TextChanged += gcnew System::EventHandler(this, &Startpage::tbOptnA_TextChanged);
             // 
             // rtbQuestionDisplay
             // 
             this->rtbQuestionDisplay->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->rtbQuestionDisplay->BackColor = System::Drawing::Color::DimGray;
-            this->rtbQuestionDisplay->Cursor = System::Windows::Forms::Cursors::No;
-            this->rtbQuestionDisplay->Font = (gcnew System::Drawing::Font(L"Baskerville Old Face", 36, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+            this->rtbQuestionDisplay->Cursor = System::Windows::Forms::Cursors::Default;
+            this->rtbQuestionDisplay->Font = (gcnew System::Drawing::Font(L"Times New Roman", 25.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->rtbQuestionDisplay->ForeColor = System::Drawing::SystemColors::InfoText;
-            this->rtbQuestionDisplay->Location = System::Drawing::Point(-9, 35);
+            this->rtbQuestionDisplay->Location = System::Drawing::Point(6, 178);
             this->rtbQuestionDisplay->Margin = System::Windows::Forms::Padding(4);
             this->rtbQuestionDisplay->Name = L"rtbQuestionDisplay";
             this->rtbQuestionDisplay->ReadOnly = true;
             this->rtbQuestionDisplay->ScrollBars = System::Windows::Forms::RichTextBoxScrollBars::None;
-            this->rtbQuestionDisplay->Size = System::Drawing::Size(1443, 223);
+            this->rtbQuestionDisplay->Size = System::Drawing::Size(1869, 223);
             this->rtbQuestionDisplay->TabIndex = 40;
             this->rtbQuestionDisplay->Text = L"ddddd";
             this->rtbQuestionDisplay->TextChanged += gcnew System::EventHandler(this, &Startpage::rtbQuestionDisplay_TextChanged);
@@ -506,10 +809,41 @@ namespace Project {
             // lb3
             // 
             this->lb3->AutoSize = true;
-            this->lb3->Location = System::Drawing::Point(1639, 175);
+            this->lb3->Location = System::Drawing::Point(1866, -4264);
             this->lb3->Name = L"lb3";
             this->lb3->Size = System::Drawing::Size(0, 16);
             this->lb3->TabIndex = 59;
+            this->lb3->Click += gcnew System::EventHandler(this, &Startpage::lb3_Click);
+            // 
+            // label3
+            // 
+            this->label3->AutoSize = true;
+            this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Uighur", 72, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->label3->Location = System::Drawing::Point(151, 33);
+            this->label3->Name = L"label3";
+            this->label3->Size = System::Drawing::Size(1028, 141);
+            this->label3->TabIndex = 62;
+            this->label3->Text = L"Ultimate Entrance Cracker";
+            this->label3->Click += gcnew System::EventHandler(this, &Startpage::label3_Click);
+            // 
+            // rtbQuestionDisplay2
+            // 
+            this->rtbQuestionDisplay2->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->rtbQuestionDisplay2->BackColor = System::Drawing::Color::DimGray;
+            this->rtbQuestionDisplay2->Cursor = System::Windows::Forms::Cursors::Default;
+            this->rtbQuestionDisplay2->Font = (gcnew System::Drawing::Font(L"Times New Roman", 25.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->rtbQuestionDisplay2->ForeColor = System::Drawing::SystemColors::InfoText;
+            this->rtbQuestionDisplay2->Location = System::Drawing::Point(6, 784);
+            this->rtbQuestionDisplay2->Margin = System::Windows::Forms::Padding(4);
+            this->rtbQuestionDisplay2->Name = L"rtbQuestionDisplay2";
+            this->rtbQuestionDisplay2->ReadOnly = true;
+            this->rtbQuestionDisplay2->ScrollBars = System::Windows::Forms::RichTextBoxScrollBars::None;
+            this->rtbQuestionDisplay2->Size = System::Drawing::Size(1869, 223);
+            this->rtbQuestionDisplay2->TabIndex = 63;
+            this->rtbQuestionDisplay2->Text = L"ddddd";
+            this->rtbQuestionDisplay2->TextChanged += gcnew System::EventHandler(this, &Startpage::rtbQuestionDisplay2_TextChanged_2);
             // 
             // panel2
             // 
@@ -525,87 +859,95 @@ namespace Project {
             this->panel2->Controls->Add(this->radioButton7);
             this->panel2->Controls->Add(this->radioButton8);
             this->panel2->ForeColor = System::Drawing::SystemColors::Desktop;
-            this->panel2->Location = System::Drawing::Point(-88, 836);
+            this->panel2->Location = System::Drawing::Point(-119, 1011);
             this->panel2->Margin = System::Windows::Forms::Padding(4);
             this->panel2->Name = L"panel2";
-            this->panel2->Size = System::Drawing::Size(1635, 302);
-            this->panel2->TabIndex = 61;
-            this->panel2->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Startpage::panel2_Paint);
+            this->panel2->Size = System::Drawing::Size(1994, 390);
+            this->panel2->TabIndex = 64;
+            this->panel2->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Startpage::panel2_Paint_1);
             // 
             // tbOptnD2
             // 
             this->tbOptnD2->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->tbOptnD2->BackColor = System::Drawing::Color::Gray;
-            this->tbOptnD2->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            this->tbOptnD2->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->tbOptnD2->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->tbOptnD2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-            this->tbOptnD2->Location = System::Drawing::Point(161, 226);
+            this->tbOptnD2->Location = System::Drawing::Point(229, 267);
             this->tbOptnD2->Margin = System::Windows::Forms::Padding(4);
             this->tbOptnD2->Multiline = true;
             this->tbOptnD2->Name = L"tbOptnD2";
             this->tbOptnD2->ReadOnly = true;
-            this->tbOptnD2->Size = System::Drawing::Size(1282, 64);
+            this->tbOptnD2->Size = System::Drawing::Size(1755, 70);
             this->tbOptnD2->TabIndex = 1;
-            this->tbOptnD2->Text = L"dddd";
+            this->tbOptnD2->Text = L"dddd\r\nddd";
+            this->tbOptnD2->TextChanged += gcnew System::EventHandler(this, &Startpage::tbOptnD2_TextChanged);
             // 
             // tbOptnC2
             // 
             this->tbOptnC2->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->tbOptnC2->BackColor = System::Drawing::Color::Gray;
-            this->tbOptnC2->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            this->tbOptnC2->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->tbOptnC2->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->tbOptnC2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-            this->tbOptnC2->Location = System::Drawing::Point(161, 154);
+            this->tbOptnC2->Location = System::Drawing::Point(229, 188);
             this->tbOptnC2->Margin = System::Windows::Forms::Padding(4);
             this->tbOptnC2->Multiline = true;
             this->tbOptnC2->Name = L"tbOptnC2";
             this->tbOptnC2->ReadOnly = true;
-            this->tbOptnC2->Size = System::Drawing::Size(1282, 64);
+            this->tbOptnC2->Size = System::Drawing::Size(1755, 70);
             this->tbOptnC2->TabIndex = 1;
-            this->tbOptnC2->Text = L"dddd";
+            this->tbOptnC2->Text = L"dddd\r\nddd";
+            this->tbOptnC2->TextChanged += gcnew System::EventHandler(this, &Startpage::tbOptnC2_TextChanged);
             // 
             // tbOptnA2
             // 
             this->tbOptnA2->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->tbOptnA2->BackColor = System::Drawing::Color::Gray;
-            this->tbOptnA2->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            this->tbOptnA2->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->tbOptnA2->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->tbOptnA2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-            this->tbOptnA2->Location = System::Drawing::Point(161, 10);
+            this->tbOptnA2->Location = System::Drawing::Point(229, 32);
             this->tbOptnA2->Margin = System::Windows::Forms::Padding(4);
             this->tbOptnA2->Multiline = true;
             this->tbOptnA2->Name = L"tbOptnA2";
             this->tbOptnA2->ReadOnly = true;
-            this->tbOptnA2->Size = System::Drawing::Size(1282, 64);
+            this->tbOptnA2->Size = System::Drawing::Size(1755, 70);
             this->tbOptnA2->TabIndex = 1;
-            this->tbOptnA2->Text = L"dddd";
-            this->tbOptnA2->TextChanged += gcnew System::EventHandler(this, &Startpage::textBox3_TextChanged);
+            this->tbOptnA2->Text = L"dddd\r\nddd";
+            this->tbOptnA2->TextChanged += gcnew System::EventHandler(this, &Startpage::tbOptnA2_TextChanged);
             // 
             // tbOptnB2
             // 
             this->tbOptnB2->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->tbOptnB2->BackColor = System::Drawing::Color::Gray;
-            this->tbOptnB2->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            this->tbOptnB2->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->tbOptnB2->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->tbOptnB2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-            this->tbOptnB2->Location = System::Drawing::Point(161, 82);
+            this->tbOptnB2->Location = System::Drawing::Point(229, 110);
             this->tbOptnB2->Margin = System::Windows::Forms::Padding(4);
             this->tbOptnB2->Multiline = true;
             this->tbOptnB2->Name = L"tbOptnB2";
             this->tbOptnB2->ReadOnly = true;
-            this->tbOptnB2->Size = System::Drawing::Size(1282, 64);
+            this->tbOptnB2->Size = System::Drawing::Size(1755, 70);
             this->tbOptnB2->TabIndex = 1;
-            this->tbOptnB2->Text = L"dddd";
+            this->tbOptnB2->Text = L"dddd\r\nddd";
+            this->tbOptnB2->TextChanged += gcnew System::EventHandler(this, &Startpage::tbOptnB2_TextChanged);
             // 
             // radioButton5
             // 
             this->radioButton5->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->radioButton5->AutoSize = true;
             this->radioButton5->BackColor = System::Drawing::Color::Transparent;
+            this->radioButton5->Cursor = System::Windows::Forms::Cursors::Hand;
             this->radioButton5->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton5->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton5->Location = System::Drawing::Point(102, 248);
+            this->radioButton5->Location = System::Drawing::Point(175, 283);
             this->radioButton5->Margin = System::Windows::Forms::Padding(4);
             this->radioButton5->Name = L"radioButton5";
             this->radioButton5->Size = System::Drawing::Size(46, 31);
@@ -613,16 +955,18 @@ namespace Project {
             this->radioButton5->TabStop = true;
             this->radioButton5->Text = L"d";
             this->radioButton5->UseVisualStyleBackColor = false;
+            this->radioButton5->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton5_CheckedChanged);
             // 
             // radioButton6
             // 
             this->radioButton6->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->radioButton6->AutoSize = true;
             this->radioButton6->BackColor = System::Drawing::Color::Transparent;
+            this->radioButton6->Cursor = System::Windows::Forms::Cursors::Hand;
             this->radioButton6->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton6->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton6->Location = System::Drawing::Point(102, 34);
+            this->radioButton6->Location = System::Drawing::Point(175, 54);
             this->radioButton6->Margin = System::Windows::Forms::Padding(4);
             this->radioButton6->Name = L"radioButton6";
             this->radioButton6->Size = System::Drawing::Size(46, 31);
@@ -630,16 +974,18 @@ namespace Project {
             this->radioButton6->TabStop = true;
             this->radioButton6->Text = L"a";
             this->radioButton6->UseVisualStyleBackColor = false;
+            this->radioButton6->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton6_CheckedChanged);
             // 
             // radioButton7
             // 
             this->radioButton7->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->radioButton7->AutoSize = true;
             this->radioButton7->BackColor = System::Drawing::Color::Transparent;
+            this->radioButton7->Cursor = System::Windows::Forms::Cursors::Hand;
             this->radioButton7->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton7->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton7->Location = System::Drawing::Point(101, 101);
+            this->radioButton7->Location = System::Drawing::Point(174, 129);
             this->radioButton7->Margin = System::Windows::Forms::Padding(4);
             this->radioButton7->Name = L"radioButton7";
             this->radioButton7->Size = System::Drawing::Size(46, 31);
@@ -647,16 +993,18 @@ namespace Project {
             this->radioButton7->TabStop = true;
             this->radioButton7->Text = L"b";
             this->radioButton7->UseVisualStyleBackColor = false;
+            this->radioButton7->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton7_CheckedChanged);
             // 
             // radioButton8
             // 
             this->radioButton8->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->radioButton8->AutoSize = true;
             this->radioButton8->BackColor = System::Drawing::Color::Transparent;
+            this->radioButton8->Cursor = System::Windows::Forms::Cursors::Hand;
             this->radioButton8->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->radioButton8->ForeColor = System::Drawing::Color::Gold;
-            this->radioButton8->Location = System::Drawing::Point(101, 176);
+            this->radioButton8->Location = System::Drawing::Point(174, 205);
             this->radioButton8->Margin = System::Windows::Forms::Padding(4);
             this->radioButton8->Name = L"radioButton8";
             this->radioButton8->Size = System::Drawing::Size(45, 31);
@@ -664,45 +1012,1541 @@ namespace Project {
             this->radioButton8->TabStop = true;
             this->radioButton8->Text = L"c";
             this->radioButton8->UseVisualStyleBackColor = false;
+            this->radioButton8->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton8_CheckedChanged);
             // 
-            // rtbQuestionDisplay2
+            // rtbQuestionDisplay3
             // 
-            this->rtbQuestionDisplay2->Anchor = System::Windows::Forms::AnchorStyles::None;
-            this->rtbQuestionDisplay2->BackColor = System::Drawing::Color::DimGray;
-            this->rtbQuestionDisplay2->Cursor = System::Windows::Forms::Cursors::No;
-            this->rtbQuestionDisplay2->Font = (gcnew System::Drawing::Font(L"Baskerville Old Face", 36, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+            this->rtbQuestionDisplay3->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->rtbQuestionDisplay3->BackColor = System::Drawing::Color::DimGray;
+            this->rtbQuestionDisplay3->Cursor = System::Windows::Forms::Cursors::Default;
+            this->rtbQuestionDisplay3->Font = (gcnew System::Drawing::Font(L"Times New Roman", 25.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->rtbQuestionDisplay2->ForeColor = System::Drawing::SystemColors::InfoText;
-            this->rtbQuestionDisplay2->Location = System::Drawing::Point(-9, 605);
-            this->rtbQuestionDisplay2->Margin = System::Windows::Forms::Padding(4);
-            this->rtbQuestionDisplay2->Name = L"rtbQuestionDisplay2";
-            this->rtbQuestionDisplay2->ReadOnly = true;
-            this->rtbQuestionDisplay2->ScrollBars = System::Windows::Forms::RichTextBoxScrollBars::None;
-            this->rtbQuestionDisplay2->Size = System::Drawing::Size(1443, 223);
-            this->rtbQuestionDisplay2->TabIndex = 60;
-            this->rtbQuestionDisplay2->Text = L"ddddd";
-            this->rtbQuestionDisplay2->TextChanged += gcnew System::EventHandler(this, &Startpage::rtbQuestionDisplay2_TextChanged);
+            this->rtbQuestionDisplay3->ForeColor = System::Drawing::SystemColors::InfoText;
+            this->rtbQuestionDisplay3->Location = System::Drawing::Point(6, 1390);
+            this->rtbQuestionDisplay3->Margin = System::Windows::Forms::Padding(4);
+            this->rtbQuestionDisplay3->Name = L"rtbQuestionDisplay3";
+            this->rtbQuestionDisplay3->ReadOnly = true;
+            this->rtbQuestionDisplay3->ScrollBars = System::Windows::Forms::RichTextBoxScrollBars::None;
+            this->rtbQuestionDisplay3->Size = System::Drawing::Size(1869, 223);
+            this->rtbQuestionDisplay3->TabIndex = 65;
+            this->rtbQuestionDisplay3->Text = L"ddddd";
+            this->rtbQuestionDisplay3->TextChanged += gcnew System::EventHandler(this, &Startpage::rtbQuestionDisplay3_TextChanged);
+            // 
+            // panel3
+            // 
+            this->panel3->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->panel3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(24)), static_cast<System::Int32>(static_cast<System::Byte>(30)),
+                static_cast<System::Int32>(static_cast<System::Byte>(54)));
+            this->panel3->Controls->Add(this->tbOptnD3);
+            this->panel3->Controls->Add(this->tbOptnC3);
+            this->panel3->Controls->Add(this->tbOptnA3);
+            this->panel3->Controls->Add(this->tbOptnB3);
+            this->panel3->Controls->Add(this->radioButton9);
+            this->panel3->Controls->Add(this->radioButton10);
+            this->panel3->Controls->Add(this->radioButton11);
+            this->panel3->Controls->Add(this->radioButton12);
+            this->panel3->ForeColor = System::Drawing::SystemColors::Desktop;
+            this->panel3->Location = System::Drawing::Point(-119, 1617);
+            this->panel3->Margin = System::Windows::Forms::Padding(4);
+            this->panel3->Name = L"panel3";
+            this->panel3->Size = System::Drawing::Size(1994, 390);
+            this->panel3->TabIndex = 66;
+            this->panel3->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Startpage::panel3_Paint_1);
+            // 
+            // tbOptnD3
+            // 
+            this->tbOptnD3->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->tbOptnD3->BackColor = System::Drawing::Color::Gray;
+            this->tbOptnD3->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->tbOptnD3->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->tbOptnD3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+            this->tbOptnD3->Location = System::Drawing::Point(229, 267);
+            this->tbOptnD3->Margin = System::Windows::Forms::Padding(4);
+            this->tbOptnD3->Multiline = true;
+            this->tbOptnD3->Name = L"tbOptnD3";
+            this->tbOptnD3->ReadOnly = true;
+            this->tbOptnD3->Size = System::Drawing::Size(1755, 70);
+            this->tbOptnD3->TabIndex = 1;
+            this->tbOptnD3->Text = L"dddd\r\nddd";
+            this->tbOptnD3->TextChanged += gcnew System::EventHandler(this, &Startpage::textBox5_TextChanged);
+            // 
+            // tbOptnC3
+            // 
+            this->tbOptnC3->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->tbOptnC3->BackColor = System::Drawing::Color::Gray;
+            this->tbOptnC3->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->tbOptnC3->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->tbOptnC3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+            this->tbOptnC3->Location = System::Drawing::Point(229, 188);
+            this->tbOptnC3->Margin = System::Windows::Forms::Padding(4);
+            this->tbOptnC3->Multiline = true;
+            this->tbOptnC3->Name = L"tbOptnC3";
+            this->tbOptnC3->ReadOnly = true;
+            this->tbOptnC3->Size = System::Drawing::Size(1755, 70);
+            this->tbOptnC3->TabIndex = 1;
+            this->tbOptnC3->Text = L"dddd\r\nddd";
+            this->tbOptnC3->TextChanged += gcnew System::EventHandler(this, &Startpage::textBox6_TextChanged);
+            // 
+            // tbOptnA3
+            // 
+            this->tbOptnA3->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->tbOptnA3->BackColor = System::Drawing::Color::Gray;
+            this->tbOptnA3->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->tbOptnA3->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->tbOptnA3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+            this->tbOptnA3->Location = System::Drawing::Point(229, 32);
+            this->tbOptnA3->Margin = System::Windows::Forms::Padding(4);
+            this->tbOptnA3->Multiline = true;
+            this->tbOptnA3->Name = L"tbOptnA3";
+            this->tbOptnA3->ReadOnly = true;
+            this->tbOptnA3->Size = System::Drawing::Size(1755, 70);
+            this->tbOptnA3->TabIndex = 1;
+            this->tbOptnA3->Text = L"dddd\r\nddd";
+            this->tbOptnA3->TextChanged += gcnew System::EventHandler(this, &Startpage::tbOptnA3_TextChanged);
+            // 
+            // tbOptnB3
+            // 
+            this->tbOptnB3->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->tbOptnB3->BackColor = System::Drawing::Color::Gray;
+            this->tbOptnB3->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->tbOptnB3->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->tbOptnB3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+            this->tbOptnB3->Location = System::Drawing::Point(229, 110);
+            this->tbOptnB3->Margin = System::Windows::Forms::Padding(4);
+            this->tbOptnB3->Multiline = true;
+            this->tbOptnB3->Name = L"tbOptnB3";
+            this->tbOptnB3->ReadOnly = true;
+            this->tbOptnB3->Size = System::Drawing::Size(1755, 70);
+            this->tbOptnB3->TabIndex = 1;
+            this->tbOptnB3->Text = L"dddd\r\nddd";
+            this->tbOptnB3->TextChanged += gcnew System::EventHandler(this, &Startpage::textBox8_TextChanged);
+            // 
+            // radioButton9
+            // 
+            this->radioButton9->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->radioButton9->AutoSize = true;
+            this->radioButton9->BackColor = System::Drawing::Color::Transparent;
+            this->radioButton9->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->radioButton9->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->radioButton9->ForeColor = System::Drawing::Color::Gold;
+            this->radioButton9->Location = System::Drawing::Point(175, 283);
+            this->radioButton9->Margin = System::Windows::Forms::Padding(4);
+            this->radioButton9->Name = L"radioButton9";
+            this->radioButton9->Size = System::Drawing::Size(46, 31);
+            this->radioButton9->TabIndex = 2;
+            this->radioButton9->TabStop = true;
+            this->radioButton9->Text = L"d";
+            this->radioButton9->UseVisualStyleBackColor = false;
+            this->radioButton9->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton9_CheckedChanged);
+            // 
+            // radioButton10
+            // 
+            this->radioButton10->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->radioButton10->AutoSize = true;
+            this->radioButton10->BackColor = System::Drawing::Color::Transparent;
+            this->radioButton10->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->radioButton10->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->radioButton10->ForeColor = System::Drawing::Color::Gold;
+            this->radioButton10->Location = System::Drawing::Point(175, 54);
+            this->radioButton10->Margin = System::Windows::Forms::Padding(4);
+            this->radioButton10->Name = L"radioButton10";
+            this->radioButton10->Size = System::Drawing::Size(46, 31);
+            this->radioButton10->TabIndex = 2;
+            this->radioButton10->TabStop = true;
+            this->radioButton10->Text = L"a";
+            this->radioButton10->UseVisualStyleBackColor = false;
+            this->radioButton10->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton10_CheckedChanged);
+            // 
+            // radioButton11
+            // 
+            this->radioButton11->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->radioButton11->AutoSize = true;
+            this->radioButton11->BackColor = System::Drawing::Color::Transparent;
+            this->radioButton11->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->radioButton11->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->radioButton11->ForeColor = System::Drawing::Color::Gold;
+            this->radioButton11->Location = System::Drawing::Point(174, 129);
+            this->radioButton11->Margin = System::Windows::Forms::Padding(4);
+            this->radioButton11->Name = L"radioButton11";
+            this->radioButton11->Size = System::Drawing::Size(46, 31);
+            this->radioButton11->TabIndex = 2;
+            this->radioButton11->TabStop = true;
+            this->radioButton11->Text = L"b";
+            this->radioButton11->UseVisualStyleBackColor = false;
+            this->radioButton11->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton11_CheckedChanged);
+            // 
+            // radioButton12
+            // 
+            this->radioButton12->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->radioButton12->AutoSize = true;
+            this->radioButton12->BackColor = System::Drawing::Color::Transparent;
+            this->radioButton12->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->radioButton12->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->radioButton12->ForeColor = System::Drawing::Color::Gold;
+            this->radioButton12->Location = System::Drawing::Point(174, 205);
+            this->radioButton12->Margin = System::Windows::Forms::Padding(4);
+            this->radioButton12->Name = L"radioButton12";
+            this->radioButton12->Size = System::Drawing::Size(45, 31);
+            this->radioButton12->TabIndex = 2;
+            this->radioButton12->TabStop = true;
+            this->radioButton12->Text = L"c";
+            this->radioButton12->UseVisualStyleBackColor = false;
+            this->radioButton12->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton12_CheckedChanged);
+            // 
+            // rtbQuestionDisplay4
+            // 
+            this->rtbQuestionDisplay4->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->rtbQuestionDisplay4->BackColor = System::Drawing::Color::DimGray;
+            this->rtbQuestionDisplay4->Cursor = System::Windows::Forms::Cursors::Default;
+            this->rtbQuestionDisplay4->Font = (gcnew System::Drawing::Font(L"Times New Roman", 25.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->rtbQuestionDisplay4->ForeColor = System::Drawing::SystemColors::InfoText;
+            this->rtbQuestionDisplay4->Location = System::Drawing::Point(6, 1995);
+            this->rtbQuestionDisplay4->Margin = System::Windows::Forms::Padding(4);
+            this->rtbQuestionDisplay4->Name = L"rtbQuestionDisplay4";
+            this->rtbQuestionDisplay4->ReadOnly = true;
+            this->rtbQuestionDisplay4->ScrollBars = System::Windows::Forms::RichTextBoxScrollBars::None;
+            this->rtbQuestionDisplay4->Size = System::Drawing::Size(1869, 223);
+            this->rtbQuestionDisplay4->TabIndex = 67;
+            this->rtbQuestionDisplay4->Text = L"ddddd";
+            this->rtbQuestionDisplay4->TextChanged += gcnew System::EventHandler(this, &Startpage::rtbQuestionDisplay4_TextChanged);
+            // 
+            // panel4
+            // 
+            this->panel4->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->panel4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(24)), static_cast<System::Int32>(static_cast<System::Byte>(30)),
+                static_cast<System::Int32>(static_cast<System::Byte>(54)));
+            this->panel4->Controls->Add(this->tbOptnD4);
+            this->panel4->Controls->Add(this->tbOptnC4);
+            this->panel4->Controls->Add(this->tbOptnA4);
+            this->panel4->Controls->Add(this->tbOptnB4);
+            this->panel4->Controls->Add(this->radioButton13);
+            this->panel4->Controls->Add(this->radioButton14);
+            this->panel4->Controls->Add(this->radioButton15);
+            this->panel4->Controls->Add(this->radioButton16);
+            this->panel4->ForeColor = System::Drawing::SystemColors::Desktop;
+            this->panel4->Location = System::Drawing::Point(-119, 2216);
+            this->panel4->Margin = System::Windows::Forms::Padding(4);
+            this->panel4->Name = L"panel4";
+            this->panel4->Size = System::Drawing::Size(1994, 390);
+            this->panel4->TabIndex = 68;
+            this->panel4->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Startpage::panel4_Paint);
+            // 
+            // tbOptnD4
+            // 
+            this->tbOptnD4->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->tbOptnD4->BackColor = System::Drawing::Color::Gray;
+            this->tbOptnD4->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->tbOptnD4->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->tbOptnD4->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+            this->tbOptnD4->Location = System::Drawing::Point(229, 267);
+            this->tbOptnD4->Margin = System::Windows::Forms::Padding(4);
+            this->tbOptnD4->Multiline = true;
+            this->tbOptnD4->Name = L"tbOptnD4";
+            this->tbOptnD4->ReadOnly = true;
+            this->tbOptnD4->Size = System::Drawing::Size(1755, 70);
+            this->tbOptnD4->TabIndex = 1;
+            this->tbOptnD4->Text = L"dddd\r\nddd";
+            this->tbOptnD4->TextChanged += gcnew System::EventHandler(this, &Startpage::textBox9_TextChanged);
+            // 
+            // tbOptnC4
+            // 
+            this->tbOptnC4->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->tbOptnC4->BackColor = System::Drawing::Color::Gray;
+            this->tbOptnC4->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->tbOptnC4->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->tbOptnC4->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+            this->tbOptnC4->Location = System::Drawing::Point(229, 188);
+            this->tbOptnC4->Margin = System::Windows::Forms::Padding(4);
+            this->tbOptnC4->Multiline = true;
+            this->tbOptnC4->Name = L"tbOptnC4";
+            this->tbOptnC4->ReadOnly = true;
+            this->tbOptnC4->Size = System::Drawing::Size(1755, 70);
+            this->tbOptnC4->TabIndex = 1;
+            this->tbOptnC4->Text = L"dddd\r\nddd";
+            this->tbOptnC4->TextChanged += gcnew System::EventHandler(this, &Startpage::textBox10_TextChanged);
+            // 
+            // tbOptnA4
+            // 
+            this->tbOptnA4->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->tbOptnA4->BackColor = System::Drawing::Color::Gray;
+            this->tbOptnA4->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->tbOptnA4->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->tbOptnA4->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+            this->tbOptnA4->Location = System::Drawing::Point(229, 32);
+            this->tbOptnA4->Margin = System::Windows::Forms::Padding(4);
+            this->tbOptnA4->Multiline = true;
+            this->tbOptnA4->Name = L"tbOptnA4";
+            this->tbOptnA4->ReadOnly = true;
+            this->tbOptnA4->Size = System::Drawing::Size(1755, 70);
+            this->tbOptnA4->TabIndex = 1;
+            this->tbOptnA4->Text = L"dddd\r\nddd";
+            this->tbOptnA4->TextChanged += gcnew System::EventHandler(this, &Startpage::tbOptnA4_TextChanged);
+            // 
+            // tbOptnB4
+            // 
+            this->tbOptnB4->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->tbOptnB4->BackColor = System::Drawing::Color::Gray;
+            this->tbOptnB4->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->tbOptnB4->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->tbOptnB4->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+            this->tbOptnB4->Location = System::Drawing::Point(229, 110);
+            this->tbOptnB4->Margin = System::Windows::Forms::Padding(4);
+            this->tbOptnB4->Multiline = true;
+            this->tbOptnB4->Name = L"tbOptnB4";
+            this->tbOptnB4->ReadOnly = true;
+            this->tbOptnB4->Size = System::Drawing::Size(1755, 70);
+            this->tbOptnB4->TabIndex = 1;
+            this->tbOptnB4->Text = L"dddd\r\nddd";
+            this->tbOptnB4->TextChanged += gcnew System::EventHandler(this, &Startpage::textBox12_TextChanged);
+            // 
+            // radioButton13
+            // 
+            this->radioButton13->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->radioButton13->AutoSize = true;
+            this->radioButton13->BackColor = System::Drawing::Color::Transparent;
+            this->radioButton13->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->radioButton13->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->radioButton13->ForeColor = System::Drawing::Color::Gold;
+            this->radioButton13->Location = System::Drawing::Point(175, 283);
+            this->radioButton13->Margin = System::Windows::Forms::Padding(4);
+            this->radioButton13->Name = L"radioButton13";
+            this->radioButton13->Size = System::Drawing::Size(46, 31);
+            this->radioButton13->TabIndex = 2;
+            this->radioButton13->TabStop = true;
+            this->radioButton13->Text = L"d";
+            this->radioButton13->UseVisualStyleBackColor = false;
+            this->radioButton13->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton13_CheckedChanged);
+            // 
+            // radioButton14
+            // 
+            this->radioButton14->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->radioButton14->AutoSize = true;
+            this->radioButton14->BackColor = System::Drawing::Color::Transparent;
+            this->radioButton14->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->radioButton14->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->radioButton14->ForeColor = System::Drawing::Color::Gold;
+            this->radioButton14->Location = System::Drawing::Point(175, 54);
+            this->radioButton14->Margin = System::Windows::Forms::Padding(4);
+            this->radioButton14->Name = L"radioButton14";
+            this->radioButton14->Size = System::Drawing::Size(46, 31);
+            this->radioButton14->TabIndex = 2;
+            this->radioButton14->TabStop = true;
+            this->radioButton14->Text = L"a";
+            this->radioButton14->UseVisualStyleBackColor = false;
+            this->radioButton14->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton14_CheckedChanged);
+            // 
+            // radioButton15
+            // 
+            this->radioButton15->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->radioButton15->AutoSize = true;
+            this->radioButton15->BackColor = System::Drawing::Color::Transparent;
+            this->radioButton15->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->radioButton15->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->radioButton15->ForeColor = System::Drawing::Color::Gold;
+            this->radioButton15->Location = System::Drawing::Point(174, 129);
+            this->radioButton15->Margin = System::Windows::Forms::Padding(4);
+            this->radioButton15->Name = L"radioButton15";
+            this->radioButton15->Size = System::Drawing::Size(46, 31);
+            this->radioButton15->TabIndex = 2;
+            this->radioButton15->TabStop = true;
+            this->radioButton15->Text = L"b";
+            this->radioButton15->UseVisualStyleBackColor = false;
+            this->radioButton15->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton15_CheckedChanged);
+            // 
+            // radioButton16
+            // 
+            this->radioButton16->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->radioButton16->AutoSize = true;
+            this->radioButton16->BackColor = System::Drawing::Color::Transparent;
+            this->radioButton16->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->radioButton16->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->radioButton16->ForeColor = System::Drawing::Color::Gold;
+            this->radioButton16->Location = System::Drawing::Point(174, 205);
+            this->radioButton16->Margin = System::Windows::Forms::Padding(4);
+            this->radioButton16->Name = L"radioButton16";
+            this->radioButton16->Size = System::Drawing::Size(45, 31);
+            this->radioButton16->TabIndex = 2;
+            this->radioButton16->TabStop = true;
+            this->radioButton16->Text = L"c";
+            this->radioButton16->UseVisualStyleBackColor = false;
+            this->radioButton16->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton16_CheckedChanged);
+            // 
+            // rtbQuestionDisplay5
+            // 
+            this->rtbQuestionDisplay5->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->rtbQuestionDisplay5->BackColor = System::Drawing::Color::DimGray;
+            this->rtbQuestionDisplay5->Cursor = System::Windows::Forms::Cursors::Default;
+            this->rtbQuestionDisplay5->Font = (gcnew System::Drawing::Font(L"Times New Roman", 25.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->rtbQuestionDisplay5->ForeColor = System::Drawing::SystemColors::InfoText;
+            this->rtbQuestionDisplay5->Location = System::Drawing::Point(6, 2601);
+            this->rtbQuestionDisplay5->Margin = System::Windows::Forms::Padding(4);
+            this->rtbQuestionDisplay5->Name = L"rtbQuestionDisplay5";
+            this->rtbQuestionDisplay5->ReadOnly = true;
+            this->rtbQuestionDisplay5->ScrollBars = System::Windows::Forms::RichTextBoxScrollBars::None;
+            this->rtbQuestionDisplay5->Size = System::Drawing::Size(1869, 223);
+            this->rtbQuestionDisplay5->TabIndex = 69;
+            this->rtbQuestionDisplay5->Text = L"ddddd";
+            this->rtbQuestionDisplay5->TextChanged += gcnew System::EventHandler(this, &Startpage::rtbQuestionDisplay5_TextChanged);
+            // 
+            // panel5
+            // 
+            this->panel5->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->panel5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(24)), static_cast<System::Int32>(static_cast<System::Byte>(30)),
+                static_cast<System::Int32>(static_cast<System::Byte>(54)));
+            this->panel5->Controls->Add(this->tbOptnD5);
+            this->panel5->Controls->Add(this->tbOptnC5);
+            this->panel5->Controls->Add(this->tbOptnA5);
+            this->panel5->Controls->Add(this->tbOptnB5);
+            this->panel5->Controls->Add(this->radioButton17);
+            this->panel5->Controls->Add(this->radioButton18);
+            this->panel5->Controls->Add(this->radioButton19);
+            this->panel5->Controls->Add(this->radioButton20);
+            this->panel5->ForeColor = System::Drawing::SystemColors::Desktop;
+            this->panel5->Location = System::Drawing::Point(-119, 2824);
+            this->panel5->Margin = System::Windows::Forms::Padding(4);
+            this->panel5->Name = L"panel5";
+            this->panel5->Size = System::Drawing::Size(1994, 390);
+            this->panel5->TabIndex = 70;
+            this->panel5->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Startpage::panel5_Paint);
+            // 
+            // tbOptnD5
+            // 
+            this->tbOptnD5->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->tbOptnD5->BackColor = System::Drawing::Color::Gray;
+            this->tbOptnD5->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->tbOptnD5->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->tbOptnD5->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+            this->tbOptnD5->Location = System::Drawing::Point(229, 267);
+            this->tbOptnD5->Margin = System::Windows::Forms::Padding(4);
+            this->tbOptnD5->Multiline = true;
+            this->tbOptnD5->Name = L"tbOptnD5";
+            this->tbOptnD5->ReadOnly = true;
+            this->tbOptnD5->Size = System::Drawing::Size(1755, 70);
+            this->tbOptnD5->TabIndex = 1;
+            this->tbOptnD5->Text = L"dddd\r\nddd";
+            this->tbOptnD5->TextChanged += gcnew System::EventHandler(this, &Startpage::textBox13_TextChanged);
+            // 
+            // tbOptnC5
+            // 
+            this->tbOptnC5->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->tbOptnC5->BackColor = System::Drawing::Color::Gray;
+            this->tbOptnC5->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->tbOptnC5->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->tbOptnC5->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+            this->tbOptnC5->Location = System::Drawing::Point(229, 188);
+            this->tbOptnC5->Margin = System::Windows::Forms::Padding(4);
+            this->tbOptnC5->Multiline = true;
+            this->tbOptnC5->Name = L"tbOptnC5";
+            this->tbOptnC5->ReadOnly = true;
+            this->tbOptnC5->Size = System::Drawing::Size(1755, 70);
+            this->tbOptnC5->TabIndex = 1;
+            this->tbOptnC5->Text = L"dddd\r\nddd";
+            this->tbOptnC5->TextChanged += gcnew System::EventHandler(this, &Startpage::textBox14_TextChanged);
+            // 
+            // tbOptnA5
+            // 
+            this->tbOptnA5->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->tbOptnA5->BackColor = System::Drawing::Color::Gray;
+            this->tbOptnA5->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->tbOptnA5->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->tbOptnA5->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+            this->tbOptnA5->Location = System::Drawing::Point(229, 32);
+            this->tbOptnA5->Margin = System::Windows::Forms::Padding(4);
+            this->tbOptnA5->Multiline = true;
+            this->tbOptnA5->Name = L"tbOptnA5";
+            this->tbOptnA5->ReadOnly = true;
+            this->tbOptnA5->Size = System::Drawing::Size(1755, 70);
+            this->tbOptnA5->TabIndex = 1;
+            this->tbOptnA5->Text = L"dddd\r\nddd";
+            this->tbOptnA5->TextChanged += gcnew System::EventHandler(this, &Startpage::tbOptnA5_TextChanged);
+            // 
+            // tbOptnB5
+            // 
+            this->tbOptnB5->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->tbOptnB5->BackColor = System::Drawing::Color::Gray;
+            this->tbOptnB5->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->tbOptnB5->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->tbOptnB5->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+            this->tbOptnB5->Location = System::Drawing::Point(229, 110);
+            this->tbOptnB5->Margin = System::Windows::Forms::Padding(4);
+            this->tbOptnB5->Multiline = true;
+            this->tbOptnB5->Name = L"tbOptnB5";
+            this->tbOptnB5->ReadOnly = true;
+            this->tbOptnB5->Size = System::Drawing::Size(1755, 70);
+            this->tbOptnB5->TabIndex = 1;
+            this->tbOptnB5->Text = L"dddd\r\nddd";
+            this->tbOptnB5->TextChanged += gcnew System::EventHandler(this, &Startpage::textBox16_TextChanged);
+            // 
+            // radioButton17
+            // 
+            this->radioButton17->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->radioButton17->AutoSize = true;
+            this->radioButton17->BackColor = System::Drawing::Color::Transparent;
+            this->radioButton17->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->radioButton17->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->radioButton17->ForeColor = System::Drawing::Color::Gold;
+            this->radioButton17->Location = System::Drawing::Point(175, 283);
+            this->radioButton17->Margin = System::Windows::Forms::Padding(4);
+            this->radioButton17->Name = L"radioButton17";
+            this->radioButton17->Size = System::Drawing::Size(46, 31);
+            this->radioButton17->TabIndex = 2;
+            this->radioButton17->TabStop = true;
+            this->radioButton17->Text = L"d";
+            this->radioButton17->UseVisualStyleBackColor = false;
+            this->radioButton17->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton17_CheckedChanged);
+            // 
+            // radioButton18
+            // 
+            this->radioButton18->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->radioButton18->AutoSize = true;
+            this->radioButton18->BackColor = System::Drawing::Color::Transparent;
+            this->radioButton18->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->radioButton18->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->radioButton18->ForeColor = System::Drawing::Color::Gold;
+            this->radioButton18->Location = System::Drawing::Point(175, 54);
+            this->radioButton18->Margin = System::Windows::Forms::Padding(4);
+            this->radioButton18->Name = L"radioButton18";
+            this->radioButton18->Size = System::Drawing::Size(46, 31);
+            this->radioButton18->TabIndex = 2;
+            this->radioButton18->TabStop = true;
+            this->radioButton18->Text = L"a";
+            this->radioButton18->UseVisualStyleBackColor = false;
+            this->radioButton18->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton18_CheckedChanged);
+            // 
+            // radioButton19
+            // 
+            this->radioButton19->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->radioButton19->AutoSize = true;
+            this->radioButton19->BackColor = System::Drawing::Color::Transparent;
+            this->radioButton19->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->radioButton19->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->radioButton19->ForeColor = System::Drawing::Color::Gold;
+            this->radioButton19->Location = System::Drawing::Point(174, 129);
+            this->radioButton19->Margin = System::Windows::Forms::Padding(4);
+            this->radioButton19->Name = L"radioButton19";
+            this->radioButton19->Size = System::Drawing::Size(46, 31);
+            this->radioButton19->TabIndex = 2;
+            this->radioButton19->TabStop = true;
+            this->radioButton19->Text = L"b";
+            this->radioButton19->UseVisualStyleBackColor = false;
+            this->radioButton19->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton19_CheckedChanged);
+            // 
+            // radioButton20
+            // 
+            this->radioButton20->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->radioButton20->AutoSize = true;
+            this->radioButton20->BackColor = System::Drawing::Color::Transparent;
+            this->radioButton20->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->radioButton20->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->radioButton20->ForeColor = System::Drawing::Color::Gold;
+            this->radioButton20->Location = System::Drawing::Point(174, 205);
+            this->radioButton20->Margin = System::Windows::Forms::Padding(4);
+            this->radioButton20->Name = L"radioButton20";
+            this->radioButton20->Size = System::Drawing::Size(45, 31);
+            this->radioButton20->TabIndex = 2;
+            this->radioButton20->TabStop = true;
+            this->radioButton20->Text = L"c";
+            this->radioButton20->UseVisualStyleBackColor = false;
+            this->radioButton20->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton20_CheckedChanged);
+            // 
+            // rtbQuestionDisplay6
+            // 
+            this->rtbQuestionDisplay6->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->rtbQuestionDisplay6->BackColor = System::Drawing::Color::DimGray;
+            this->rtbQuestionDisplay6->Cursor = System::Windows::Forms::Cursors::Default;
+            this->rtbQuestionDisplay6->Font = (gcnew System::Drawing::Font(L"Times New Roman", 25.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->rtbQuestionDisplay6->ForeColor = System::Drawing::SystemColors::InfoText;
+            this->rtbQuestionDisplay6->Location = System::Drawing::Point(6, 3204);
+            this->rtbQuestionDisplay6->Margin = System::Windows::Forms::Padding(4);
+            this->rtbQuestionDisplay6->Name = L"rtbQuestionDisplay6";
+            this->rtbQuestionDisplay6->ReadOnly = true;
+            this->rtbQuestionDisplay6->ScrollBars = System::Windows::Forms::RichTextBoxScrollBars::None;
+            this->rtbQuestionDisplay6->Size = System::Drawing::Size(1869, 223);
+            this->rtbQuestionDisplay6->TabIndex = 71;
+            this->rtbQuestionDisplay6->Text = L"ddddd";
+            this->rtbQuestionDisplay6->TextChanged += gcnew System::EventHandler(this, &Startpage::rtbQuestionDisplay6_TextChanged);
+            // 
+            // panel6
+            // 
+            this->panel6->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->panel6->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(24)), static_cast<System::Int32>(static_cast<System::Byte>(30)),
+                static_cast<System::Int32>(static_cast<System::Byte>(54)));
+            this->panel6->Controls->Add(this->tbOptnD6);
+            this->panel6->Controls->Add(this->tbOptnC6);
+            this->panel6->Controls->Add(this->tbOptnA6);
+            this->panel6->Controls->Add(this->tbOptnB6);
+            this->panel6->Controls->Add(this->radioButton21);
+            this->panel6->Controls->Add(this->radioButton22);
+            this->panel6->Controls->Add(this->radioButton23);
+            this->panel6->Controls->Add(this->radioButton24);
+            this->panel6->ForeColor = System::Drawing::SystemColors::Desktop;
+            this->panel6->Location = System::Drawing::Point(-119, 3423);
+            this->panel6->Margin = System::Windows::Forms::Padding(4);
+            this->panel6->Name = L"panel6";
+            this->panel6->Size = System::Drawing::Size(1994, 390);
+            this->panel6->TabIndex = 72;
+            this->panel6->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Startpage::panel6_Paint);
+            // 
+            // tbOptnD6
+            // 
+            this->tbOptnD6->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->tbOptnD6->BackColor = System::Drawing::Color::Gray;
+            this->tbOptnD6->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->tbOptnD6->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->tbOptnD6->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+            this->tbOptnD6->Location = System::Drawing::Point(229, 267);
+            this->tbOptnD6->Margin = System::Windows::Forms::Padding(4);
+            this->tbOptnD6->Multiline = true;
+            this->tbOptnD6->Name = L"tbOptnD6";
+            this->tbOptnD6->ReadOnly = true;
+            this->tbOptnD6->Size = System::Drawing::Size(1755, 70);
+            this->tbOptnD6->TabIndex = 1;
+            this->tbOptnD6->Text = L"dddd\r\nddd";
+            this->tbOptnD6->TextChanged += gcnew System::EventHandler(this, &Startpage::textBox17_TextChanged);
+            // 
+            // tbOptnC6
+            // 
+            this->tbOptnC6->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->tbOptnC6->BackColor = System::Drawing::Color::Gray;
+            this->tbOptnC6->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->tbOptnC6->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->tbOptnC6->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+            this->tbOptnC6->Location = System::Drawing::Point(229, 188);
+            this->tbOptnC6->Margin = System::Windows::Forms::Padding(4);
+            this->tbOptnC6->Multiline = true;
+            this->tbOptnC6->Name = L"tbOptnC6";
+            this->tbOptnC6->ReadOnly = true;
+            this->tbOptnC6->Size = System::Drawing::Size(1755, 70);
+            this->tbOptnC6->TabIndex = 1;
+            this->tbOptnC6->Text = L"dddd\r\nddd";
+            this->tbOptnC6->TextChanged += gcnew System::EventHandler(this, &Startpage::textBox18_TextChanged);
+            // 
+            // tbOptnA6
+            // 
+            this->tbOptnA6->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->tbOptnA6->BackColor = System::Drawing::Color::Gray;
+            this->tbOptnA6->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->tbOptnA6->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->tbOptnA6->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+            this->tbOptnA6->Location = System::Drawing::Point(229, 32);
+            this->tbOptnA6->Margin = System::Windows::Forms::Padding(4);
+            this->tbOptnA6->Multiline = true;
+            this->tbOptnA6->Name = L"tbOptnA6";
+            this->tbOptnA6->ReadOnly = true;
+            this->tbOptnA6->Size = System::Drawing::Size(1755, 70);
+            this->tbOptnA6->TabIndex = 1;
+            this->tbOptnA6->Text = L"dddd\r\nddd";
+            this->tbOptnA6->TextChanged += gcnew System::EventHandler(this, &Startpage::tbOptnA6_TextChanged);
+            // 
+            // tbOptnB6
+            // 
+            this->tbOptnB6->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->tbOptnB6->BackColor = System::Drawing::Color::Gray;
+            this->tbOptnB6->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->tbOptnB6->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->tbOptnB6->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+            this->tbOptnB6->Location = System::Drawing::Point(229, 110);
+            this->tbOptnB6->Margin = System::Windows::Forms::Padding(4);
+            this->tbOptnB6->Multiline = true;
+            this->tbOptnB6->Name = L"tbOptnB6";
+            this->tbOptnB6->ReadOnly = true;
+            this->tbOptnB6->Size = System::Drawing::Size(1755, 70);
+            this->tbOptnB6->TabIndex = 1;
+            this->tbOptnB6->Text = L"dddd\r\nddd";
+            this->tbOptnB6->TextChanged += gcnew System::EventHandler(this, &Startpage::textBox20_TextChanged);
+            // 
+            // radioButton21
+            // 
+            this->radioButton21->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->radioButton21->AutoSize = true;
+            this->radioButton21->BackColor = System::Drawing::Color::Transparent;
+            this->radioButton21->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->radioButton21->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->radioButton21->ForeColor = System::Drawing::Color::Gold;
+            this->radioButton21->Location = System::Drawing::Point(175, 283);
+            this->radioButton21->Margin = System::Windows::Forms::Padding(4);
+            this->radioButton21->Name = L"radioButton21";
+            this->radioButton21->Size = System::Drawing::Size(46, 31);
+            this->radioButton21->TabIndex = 2;
+            this->radioButton21->TabStop = true;
+            this->radioButton21->Text = L"d";
+            this->radioButton21->UseVisualStyleBackColor = false;
+            this->radioButton21->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton21_CheckedChanged);
+            // 
+            // radioButton22
+            // 
+            this->radioButton22->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->radioButton22->AutoSize = true;
+            this->radioButton22->BackColor = System::Drawing::Color::Transparent;
+            this->radioButton22->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->radioButton22->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->radioButton22->ForeColor = System::Drawing::Color::Gold;
+            this->radioButton22->Location = System::Drawing::Point(175, 54);
+            this->radioButton22->Margin = System::Windows::Forms::Padding(4);
+            this->radioButton22->Name = L"radioButton22";
+            this->radioButton22->Size = System::Drawing::Size(46, 31);
+            this->radioButton22->TabIndex = 2;
+            this->radioButton22->TabStop = true;
+            this->radioButton22->Text = L"a";
+            this->radioButton22->UseVisualStyleBackColor = false;
+            this->radioButton22->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton22_CheckedChanged);
+            // 
+            // radioButton23
+            // 
+            this->radioButton23->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->radioButton23->AutoSize = true;
+            this->radioButton23->BackColor = System::Drawing::Color::Transparent;
+            this->radioButton23->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->radioButton23->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->radioButton23->ForeColor = System::Drawing::Color::Gold;
+            this->radioButton23->Location = System::Drawing::Point(174, 129);
+            this->radioButton23->Margin = System::Windows::Forms::Padding(4);
+            this->radioButton23->Name = L"radioButton23";
+            this->radioButton23->Size = System::Drawing::Size(46, 31);
+            this->radioButton23->TabIndex = 2;
+            this->radioButton23->TabStop = true;
+            this->radioButton23->Text = L"b";
+            this->radioButton23->UseVisualStyleBackColor = false;
+            this->radioButton23->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton23_CheckedChanged);
+            // 
+            // radioButton24
+            // 
+            this->radioButton24->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->radioButton24->AutoSize = true;
+            this->radioButton24->BackColor = System::Drawing::Color::Transparent;
+            this->radioButton24->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->radioButton24->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->radioButton24->ForeColor = System::Drawing::Color::Gold;
+            this->radioButton24->Location = System::Drawing::Point(174, 205);
+            this->radioButton24->Margin = System::Windows::Forms::Padding(4);
+            this->radioButton24->Name = L"radioButton24";
+            this->radioButton24->Size = System::Drawing::Size(45, 31);
+            this->radioButton24->TabIndex = 2;
+            this->radioButton24->TabStop = true;
+            this->radioButton24->Text = L"c";
+            this->radioButton24->UseVisualStyleBackColor = false;
+            this->radioButton24->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton24_CheckedChanged);
+            // 
+            // rtbQuestionDisplay7
+            // 
+            this->rtbQuestionDisplay7->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->rtbQuestionDisplay7->BackColor = System::Drawing::Color::DimGray;
+            this->rtbQuestionDisplay7->Cursor = System::Windows::Forms::Cursors::Default;
+            this->rtbQuestionDisplay7->Font = (gcnew System::Drawing::Font(L"Times New Roman", 25.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->rtbQuestionDisplay7->ForeColor = System::Drawing::SystemColors::InfoText;
+            this->rtbQuestionDisplay7->Location = System::Drawing::Point(6, 3806);
+            this->rtbQuestionDisplay7->Margin = System::Windows::Forms::Padding(4);
+            this->rtbQuestionDisplay7->Name = L"rtbQuestionDisplay7";
+            this->rtbQuestionDisplay7->ReadOnly = true;
+            this->rtbQuestionDisplay7->ScrollBars = System::Windows::Forms::RichTextBoxScrollBars::None;
+            this->rtbQuestionDisplay7->Size = System::Drawing::Size(1869, 223);
+            this->rtbQuestionDisplay7->TabIndex = 73;
+            this->rtbQuestionDisplay7->Text = L"ddddd";
+            this->rtbQuestionDisplay7->TextChanged += gcnew System::EventHandler(this, &Startpage::tbOptnA8_TextChanged);
+            // 
+            // panel7
+            // 
+            this->panel7->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->panel7->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(24)), static_cast<System::Int32>(static_cast<System::Byte>(30)),
+                static_cast<System::Int32>(static_cast<System::Byte>(54)));
+            this->panel7->Controls->Add(this->tbOptnD7);
+            this->panel7->Controls->Add(this->tbOptnC7);
+            this->panel7->Controls->Add(this->tbOptnA7);
+            this->panel7->Controls->Add(this->tbOptnB7);
+            this->panel7->Controls->Add(this->radioButton25);
+            this->panel7->Controls->Add(this->radioButton26);
+            this->panel7->Controls->Add(this->radioButton27);
+            this->panel7->Controls->Add(this->radioButton28);
+            this->panel7->ForeColor = System::Drawing::SystemColors::Desktop;
+            this->panel7->Location = System::Drawing::Point(-119, 4026);
+            this->panel7->Margin = System::Windows::Forms::Padding(4);
+            this->panel7->Name = L"panel7";
+            this->panel7->Size = System::Drawing::Size(1994, 390);
+            this->panel7->TabIndex = 74;
+            this->panel7->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Startpage::panel7_Paint);
+            // 
+            // tbOptnD7
+            // 
+            this->tbOptnD7->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->tbOptnD7->BackColor = System::Drawing::Color::Gray;
+            this->tbOptnD7->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->tbOptnD7->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->tbOptnD7->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+            this->tbOptnD7->Location = System::Drawing::Point(229, 267);
+            this->tbOptnD7->Margin = System::Windows::Forms::Padding(4);
+            this->tbOptnD7->Multiline = true;
+            this->tbOptnD7->Name = L"tbOptnD7";
+            this->tbOptnD7->ReadOnly = true;
+            this->tbOptnD7->Size = System::Drawing::Size(1755, 70);
+            this->tbOptnD7->TabIndex = 1;
+            this->tbOptnD7->Text = L"dddd\r\nddd";
+            this->tbOptnD7->TextChanged += gcnew System::EventHandler(this, &Startpage::textBox21_TextChanged);
+            // 
+            // tbOptnC7
+            // 
+            this->tbOptnC7->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->tbOptnC7->BackColor = System::Drawing::Color::Gray;
+            this->tbOptnC7->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->tbOptnC7->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->tbOptnC7->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+            this->tbOptnC7->Location = System::Drawing::Point(229, 188);
+            this->tbOptnC7->Margin = System::Windows::Forms::Padding(4);
+            this->tbOptnC7->Multiline = true;
+            this->tbOptnC7->Name = L"tbOptnC7";
+            this->tbOptnC7->ReadOnly = true;
+            this->tbOptnC7->Size = System::Drawing::Size(1755, 70);
+            this->tbOptnC7->TabIndex = 1;
+            this->tbOptnC7->Text = L"dddd\r\nddd";
+            this->tbOptnC7->TextChanged += gcnew System::EventHandler(this, &Startpage::textBox22_TextChanged);
+            // 
+            // tbOptnA7
+            // 
+            this->tbOptnA7->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->tbOptnA7->BackColor = System::Drawing::Color::Gray;
+            this->tbOptnA7->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->tbOptnA7->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->tbOptnA7->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+            this->tbOptnA7->Location = System::Drawing::Point(229, 32);
+            this->tbOptnA7->Margin = System::Windows::Forms::Padding(4);
+            this->tbOptnA7->Multiline = true;
+            this->tbOptnA7->Name = L"tbOptnA7";
+            this->tbOptnA7->ReadOnly = true;
+            this->tbOptnA7->Size = System::Drawing::Size(1755, 70);
+            this->tbOptnA7->TabIndex = 1;
+            this->tbOptnA7->Text = L"dddd\r\nddd";
+            this->tbOptnA7->TextChanged += gcnew System::EventHandler(this, &Startpage::textBox23_TextChanged);
+            // 
+            // tbOptnB7
+            // 
+            this->tbOptnB7->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->tbOptnB7->BackColor = System::Drawing::Color::Gray;
+            this->tbOptnB7->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->tbOptnB7->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->tbOptnB7->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+            this->tbOptnB7->Location = System::Drawing::Point(229, 110);
+            this->tbOptnB7->Margin = System::Windows::Forms::Padding(4);
+            this->tbOptnB7->Multiline = true;
+            this->tbOptnB7->Name = L"tbOptnB7";
+            this->tbOptnB7->ReadOnly = true;
+            this->tbOptnB7->Size = System::Drawing::Size(1755, 70);
+            this->tbOptnB7->TabIndex = 1;
+            this->tbOptnB7->Text = L"dddd\r\nddd";
+            this->tbOptnB7->TextChanged += gcnew System::EventHandler(this, &Startpage::textBox24_TextChanged);
+            // 
+            // radioButton25
+            // 
+            this->radioButton25->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->radioButton25->AutoSize = true;
+            this->radioButton25->BackColor = System::Drawing::Color::Transparent;
+            this->radioButton25->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->radioButton25->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->radioButton25->ForeColor = System::Drawing::Color::Gold;
+            this->radioButton25->Location = System::Drawing::Point(175, 283);
+            this->radioButton25->Margin = System::Windows::Forms::Padding(4);
+            this->radioButton25->Name = L"radioButton25";
+            this->radioButton25->Size = System::Drawing::Size(46, 31);
+            this->radioButton25->TabIndex = 2;
+            this->radioButton25->TabStop = true;
+            this->radioButton25->Text = L"d";
+            this->radioButton25->UseVisualStyleBackColor = false;
+            this->radioButton25->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton25_CheckedChanged);
+            // 
+            // radioButton26
+            // 
+            this->radioButton26->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->radioButton26->AutoSize = true;
+            this->radioButton26->BackColor = System::Drawing::Color::Transparent;
+            this->radioButton26->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->radioButton26->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->radioButton26->ForeColor = System::Drawing::Color::Gold;
+            this->radioButton26->Location = System::Drawing::Point(175, 54);
+            this->radioButton26->Margin = System::Windows::Forms::Padding(4);
+            this->radioButton26->Name = L"radioButton26";
+            this->radioButton26->Size = System::Drawing::Size(46, 31);
+            this->radioButton26->TabIndex = 2;
+            this->radioButton26->TabStop = true;
+            this->radioButton26->Text = L"a";
+            this->radioButton26->UseVisualStyleBackColor = false;
+            this->radioButton26->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton26_CheckedChanged);
+            // 
+            // radioButton27
+            // 
+            this->radioButton27->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->radioButton27->AutoSize = true;
+            this->radioButton27->BackColor = System::Drawing::Color::Transparent;
+            this->radioButton27->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->radioButton27->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->radioButton27->ForeColor = System::Drawing::Color::Gold;
+            this->radioButton27->Location = System::Drawing::Point(174, 129);
+            this->radioButton27->Margin = System::Windows::Forms::Padding(4);
+            this->radioButton27->Name = L"radioButton27";
+            this->radioButton27->Size = System::Drawing::Size(46, 31);
+            this->radioButton27->TabIndex = 2;
+            this->radioButton27->TabStop = true;
+            this->radioButton27->Text = L"b";
+            this->radioButton27->UseVisualStyleBackColor = false;
+            this->radioButton27->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton27_CheckedChanged);
+            // 
+            // radioButton28
+            // 
+            this->radioButton28->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->radioButton28->AutoSize = true;
+            this->radioButton28->BackColor = System::Drawing::Color::Transparent;
+            this->radioButton28->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->radioButton28->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->radioButton28->ForeColor = System::Drawing::Color::Gold;
+            this->radioButton28->Location = System::Drawing::Point(174, 205);
+            this->radioButton28->Margin = System::Windows::Forms::Padding(4);
+            this->radioButton28->Name = L"radioButton28";
+            this->radioButton28->Size = System::Drawing::Size(45, 31);
+            this->radioButton28->TabIndex = 2;
+            this->radioButton28->TabStop = true;
+            this->radioButton28->Text = L"c";
+            this->radioButton28->UseVisualStyleBackColor = false;
+            this->radioButton28->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton28_CheckedChanged);
+            // 
+            // rtbQuestionDisplay8
+            // 
+            this->rtbQuestionDisplay8->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->rtbQuestionDisplay8->BackColor = System::Drawing::Color::DimGray;
+            this->rtbQuestionDisplay8->Cursor = System::Windows::Forms::Cursors::Default;
+            this->rtbQuestionDisplay8->Font = (gcnew System::Drawing::Font(L"Times New Roman", 25.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->rtbQuestionDisplay8->ForeColor = System::Drawing::SystemColors::InfoText;
+            this->rtbQuestionDisplay8->Location = System::Drawing::Point(6, 4411);
+            this->rtbQuestionDisplay8->Margin = System::Windows::Forms::Padding(4);
+            this->rtbQuestionDisplay8->Name = L"rtbQuestionDisplay8";
+            this->rtbQuestionDisplay8->ReadOnly = true;
+            this->rtbQuestionDisplay8->ScrollBars = System::Windows::Forms::RichTextBoxScrollBars::None;
+            this->rtbQuestionDisplay8->Size = System::Drawing::Size(1869, 223);
+            this->rtbQuestionDisplay8->TabIndex = 75;
+            this->rtbQuestionDisplay8->Text = L"ddddd";
+            this->rtbQuestionDisplay8->TextChanged += gcnew System::EventHandler(this, &Startpage::rtbQuestionDisplay8_TextChanged);
+            // 
+            // radioButton32
+            // 
+            this->radioButton32->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->radioButton32->AutoSize = true;
+            this->radioButton32->BackColor = System::Drawing::Color::Transparent;
+            this->radioButton32->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->radioButton32->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->radioButton32->ForeColor = System::Drawing::Color::Gold;
+            this->radioButton32->Location = System::Drawing::Point(174, 205);
+            this->radioButton32->Margin = System::Windows::Forms::Padding(4);
+            this->radioButton32->Name = L"radioButton32";
+            this->radioButton32->Size = System::Drawing::Size(45, 31);
+            this->radioButton32->TabIndex = 2;
+            this->radioButton32->TabStop = true;
+            this->radioButton32->Text = L"c";
+            this->radioButton32->UseVisualStyleBackColor = false;
+            this->radioButton32->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton32_CheckedChanged);
+            // 
+            // radioButton31
+            // 
+            this->radioButton31->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->radioButton31->AutoSize = true;
+            this->radioButton31->BackColor = System::Drawing::Color::Transparent;
+            this->radioButton31->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->radioButton31->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->radioButton31->ForeColor = System::Drawing::Color::Gold;
+            this->radioButton31->Location = System::Drawing::Point(174, 129);
+            this->radioButton31->Margin = System::Windows::Forms::Padding(4);
+            this->radioButton31->Name = L"radioButton31";
+            this->radioButton31->Size = System::Drawing::Size(46, 31);
+            this->radioButton31->TabIndex = 2;
+            this->radioButton31->TabStop = true;
+            this->radioButton31->Text = L"b";
+            this->radioButton31->UseVisualStyleBackColor = false;
+            this->radioButton31->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton31_CheckedChanged);
+            // 
+            // radioButton30
+            // 
+            this->radioButton30->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->radioButton30->AutoSize = true;
+            this->radioButton30->BackColor = System::Drawing::Color::Transparent;
+            this->radioButton30->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->radioButton30->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->radioButton30->ForeColor = System::Drawing::Color::Gold;
+            this->radioButton30->Location = System::Drawing::Point(175, 54);
+            this->radioButton30->Margin = System::Windows::Forms::Padding(4);
+            this->radioButton30->Name = L"radioButton30";
+            this->radioButton30->Size = System::Drawing::Size(46, 31);
+            this->radioButton30->TabIndex = 2;
+            this->radioButton30->TabStop = true;
+            this->radioButton30->Text = L"a";
+            this->radioButton30->UseVisualStyleBackColor = false;
+            this->radioButton30->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton30_CheckedChanged);
+            // 
+            // radioButton29
+            // 
+            this->radioButton29->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->radioButton29->AutoSize = true;
+            this->radioButton29->BackColor = System::Drawing::Color::Transparent;
+            this->radioButton29->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->radioButton29->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->radioButton29->ForeColor = System::Drawing::Color::Gold;
+            this->radioButton29->Location = System::Drawing::Point(175, 283);
+            this->radioButton29->Margin = System::Windows::Forms::Padding(4);
+            this->radioButton29->Name = L"radioButton29";
+            this->radioButton29->Size = System::Drawing::Size(46, 31);
+            this->radioButton29->TabIndex = 2;
+            this->radioButton29->TabStop = true;
+            this->radioButton29->Text = L"d";
+            this->radioButton29->UseVisualStyleBackColor = false;
+            this->radioButton29->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton29_CheckedChanged);
+            // 
+            // tbOptnB8
+            // 
+            this->tbOptnB8->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->tbOptnB8->BackColor = System::Drawing::Color::Gray;
+            this->tbOptnB8->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->tbOptnB8->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->tbOptnB8->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+            this->tbOptnB8->Location = System::Drawing::Point(229, 110);
+            this->tbOptnB8->Margin = System::Windows::Forms::Padding(4);
+            this->tbOptnB8->Multiline = true;
+            this->tbOptnB8->Name = L"tbOptnB8";
+            this->tbOptnB8->ReadOnly = true;
+            this->tbOptnB8->Size = System::Drawing::Size(1755, 70);
+            this->tbOptnB8->TabIndex = 1;
+            this->tbOptnB8->Text = L"dddd\r\nddd";
+            this->tbOptnB8->TextChanged += gcnew System::EventHandler(this, &Startpage::textBox28_TextChanged);
+            // 
+            // tbOptnA8
+            // 
+            this->tbOptnA8->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->tbOptnA8->BackColor = System::Drawing::Color::Gray;
+            this->tbOptnA8->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->tbOptnA8->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->tbOptnA8->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+            this->tbOptnA8->Location = System::Drawing::Point(229, 32);
+            this->tbOptnA8->Margin = System::Windows::Forms::Padding(4);
+            this->tbOptnA8->Multiline = true;
+            this->tbOptnA8->Name = L"tbOptnA8";
+            this->tbOptnA8->ReadOnly = true;
+            this->tbOptnA8->Size = System::Drawing::Size(1755, 70);
+            this->tbOptnA8->TabIndex = 1;
+            this->tbOptnA8->Text = L"dddd\r\nddd";
+            this->tbOptnA8->TextChanged += gcnew System::EventHandler(this, &Startpage::textBox27_TextChanged);
+            // 
+            // tbOptnC8
+            // 
+            this->tbOptnC8->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->tbOptnC8->BackColor = System::Drawing::Color::Gray;
+            this->tbOptnC8->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->tbOptnC8->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->tbOptnC8->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+            this->tbOptnC8->Location = System::Drawing::Point(229, 188);
+            this->tbOptnC8->Margin = System::Windows::Forms::Padding(4);
+            this->tbOptnC8->Multiline = true;
+            this->tbOptnC8->Name = L"tbOptnC8";
+            this->tbOptnC8->ReadOnly = true;
+            this->tbOptnC8->Size = System::Drawing::Size(1755, 70);
+            this->tbOptnC8->TabIndex = 1;
+            this->tbOptnC8->Text = L"dddd\r\nddd";
+            this->tbOptnC8->TextChanged += gcnew System::EventHandler(this, &Startpage::textBox26_TextChanged);
+            // 
+            // tbOptnD8
+            // 
+            this->tbOptnD8->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->tbOptnD8->BackColor = System::Drawing::Color::Gray;
+            this->tbOptnD8->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->tbOptnD8->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->tbOptnD8->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+            this->tbOptnD8->Location = System::Drawing::Point(229, 267);
+            this->tbOptnD8->Margin = System::Windows::Forms::Padding(4);
+            this->tbOptnD8->Multiline = true;
+            this->tbOptnD8->Name = L"tbOptnD8";
+            this->tbOptnD8->ReadOnly = true;
+            this->tbOptnD8->Size = System::Drawing::Size(1755, 70);
+            this->tbOptnD8->TabIndex = 1;
+            this->tbOptnD8->Text = L"dddd\r\nddd";
+            this->tbOptnD8->TextChanged += gcnew System::EventHandler(this, &Startpage::textBox25_TextChanged);
+            // 
+            // panel8
+            // 
+            this->panel8->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->panel8->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(24)), static_cast<System::Int32>(static_cast<System::Byte>(30)),
+                static_cast<System::Int32>(static_cast<System::Byte>(54)));
+            this->panel8->Controls->Add(this->tbOptnD8);
+            this->panel8->Controls->Add(this->tbOptnC8);
+            this->panel8->Controls->Add(this->tbOptnA8);
+            this->panel8->Controls->Add(this->tbOptnB8);
+            this->panel8->Controls->Add(this->radioButton29);
+            this->panel8->Controls->Add(this->radioButton30);
+            this->panel8->Controls->Add(this->radioButton31);
+            this->panel8->Controls->Add(this->radioButton32);
+            this->panel8->ForeColor = System::Drawing::SystemColors::Desktop;
+            this->panel8->Location = System::Drawing::Point(-119, 4635);
+            this->panel8->Margin = System::Windows::Forms::Padding(4);
+            this->panel8->Name = L"panel8";
+            this->panel8->Size = System::Drawing::Size(1994, 390);
+            this->panel8->TabIndex = 76;
+            this->panel8->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Startpage::panel8_Paint);
+            // 
+            // rtbQuestionDisplay9
+            // 
+            this->rtbQuestionDisplay9->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->rtbQuestionDisplay9->BackColor = System::Drawing::Color::DimGray;
+            this->rtbQuestionDisplay9->Cursor = System::Windows::Forms::Cursors::Default;
+            this->rtbQuestionDisplay9->Font = (gcnew System::Drawing::Font(L"Times New Roman", 25.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->rtbQuestionDisplay9->ForeColor = System::Drawing::SystemColors::InfoText;
+            this->rtbQuestionDisplay9->Location = System::Drawing::Point(6, 5024);
+            this->rtbQuestionDisplay9->Margin = System::Windows::Forms::Padding(4);
+            this->rtbQuestionDisplay9->Name = L"rtbQuestionDisplay9";
+            this->rtbQuestionDisplay9->ReadOnly = true;
+            this->rtbQuestionDisplay9->ScrollBars = System::Windows::Forms::RichTextBoxScrollBars::None;
+            this->rtbQuestionDisplay9->Size = System::Drawing::Size(1869, 223);
+            this->rtbQuestionDisplay9->TabIndex = 78;
+            this->rtbQuestionDisplay9->Text = L"ddddd";
+            this->rtbQuestionDisplay9->TextChanged += gcnew System::EventHandler(this, &Startpage::rtbQuestionDisplay9_TextChanged);
+            // 
+            // panel10
+            // 
+            this->panel10->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->panel10->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(24)), static_cast<System::Int32>(static_cast<System::Byte>(30)),
+                static_cast<System::Int32>(static_cast<System::Byte>(54)));
+            this->panel10->Controls->Add(this->tbOptnD9);
+            this->panel10->Controls->Add(this->tbOptnC9);
+            this->panel10->Controls->Add(this->tbOptnA9);
+            this->panel10->Controls->Add(this->tbOptnB9);
+            this->panel10->Controls->Add(this->radioButton33);
+            this->panel10->Controls->Add(this->radioButton34);
+            this->panel10->Controls->Add(this->radioButton35);
+            this->panel10->Controls->Add(this->radioButton36);
+            this->panel10->ForeColor = System::Drawing::SystemColors::Desktop;
+            this->panel10->Location = System::Drawing::Point(-119, 5250);
+            this->panel10->Margin = System::Windows::Forms::Padding(4);
+            this->panel10->Name = L"panel10";
+            this->panel10->Size = System::Drawing::Size(1994, 390);
+            this->panel10->TabIndex = 79;
+            this->panel10->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Startpage::panel10_Paint);
+            // 
+            // tbOptnD9
+            // 
+            this->tbOptnD9->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->tbOptnD9->BackColor = System::Drawing::Color::Gray;
+            this->tbOptnD9->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->tbOptnD9->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->tbOptnD9->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+            this->tbOptnD9->Location = System::Drawing::Point(229, 267);
+            this->tbOptnD9->Margin = System::Windows::Forms::Padding(4);
+            this->tbOptnD9->Multiline = true;
+            this->tbOptnD9->Name = L"tbOptnD9";
+            this->tbOptnD9->ReadOnly = true;
+            this->tbOptnD9->Size = System::Drawing::Size(1755, 70);
+            this->tbOptnD9->TabIndex = 1;
+            this->tbOptnD9->Text = L"dddd\r\nddd";
+            this->tbOptnD9->TextChanged += gcnew System::EventHandler(this, &Startpage::textBox1_TextChanged);
+            // 
+            // tbOptnC9
+            // 
+            this->tbOptnC9->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->tbOptnC9->BackColor = System::Drawing::Color::Gray;
+            this->tbOptnC9->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->tbOptnC9->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->tbOptnC9->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+            this->tbOptnC9->Location = System::Drawing::Point(229, 188);
+            this->tbOptnC9->Margin = System::Windows::Forms::Padding(4);
+            this->tbOptnC9->Multiline = true;
+            this->tbOptnC9->Name = L"tbOptnC9";
+            this->tbOptnC9->ReadOnly = true;
+            this->tbOptnC9->Size = System::Drawing::Size(1755, 70);
+            this->tbOptnC9->TabIndex = 1;
+            this->tbOptnC9->Text = L"dddd\r\nddd";
+            this->tbOptnC9->TextChanged += gcnew System::EventHandler(this, &Startpage::textBox2_TextChanged);
+            // 
+            // tbOptnA9
+            // 
+            this->tbOptnA9->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->tbOptnA9->BackColor = System::Drawing::Color::Gray;
+            this->tbOptnA9->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->tbOptnA9->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->tbOptnA9->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+            this->tbOptnA9->Location = System::Drawing::Point(229, 32);
+            this->tbOptnA9->Margin = System::Windows::Forms::Padding(4);
+            this->tbOptnA9->Multiline = true;
+            this->tbOptnA9->Name = L"tbOptnA9";
+            this->tbOptnA9->ReadOnly = true;
+            this->tbOptnA9->Size = System::Drawing::Size(1755, 70);
+            this->tbOptnA9->TabIndex = 1;
+            this->tbOptnA9->Text = L"dddd\r\nddd";
+            this->tbOptnA9->TextChanged += gcnew System::EventHandler(this, &Startpage::textBox3_TextChanged_1);
+            // 
+            // tbOptnB9
+            // 
+            this->tbOptnB9->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->tbOptnB9->BackColor = System::Drawing::Color::Gray;
+            this->tbOptnB9->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->tbOptnB9->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->tbOptnB9->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+            this->tbOptnB9->Location = System::Drawing::Point(229, 110);
+            this->tbOptnB9->Margin = System::Windows::Forms::Padding(4);
+            this->tbOptnB9->Multiline = true;
+            this->tbOptnB9->Name = L"tbOptnB9";
+            this->tbOptnB9->ReadOnly = true;
+            this->tbOptnB9->Size = System::Drawing::Size(1755, 70);
+            this->tbOptnB9->TabIndex = 1;
+            this->tbOptnB9->Text = L"dddd\r\nddd";
+            this->tbOptnB9->TextChanged += gcnew System::EventHandler(this, &Startpage::textBox4_TextChanged);
+            // 
+            // radioButton33
+            // 
+            this->radioButton33->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->radioButton33->AutoSize = true;
+            this->radioButton33->BackColor = System::Drawing::Color::Transparent;
+            this->radioButton33->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->radioButton33->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->radioButton33->ForeColor = System::Drawing::Color::Gold;
+            this->radioButton33->Location = System::Drawing::Point(175, 283);
+            this->radioButton33->Margin = System::Windows::Forms::Padding(4);
+            this->radioButton33->Name = L"radioButton33";
+            this->radioButton33->Size = System::Drawing::Size(46, 31);
+            this->radioButton33->TabIndex = 2;
+            this->radioButton33->TabStop = true;
+            this->radioButton33->Text = L"d";
+            this->radioButton33->UseVisualStyleBackColor = false;
+            this->radioButton33->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton33_CheckedChanged);
+            // 
+            // radioButton34
+            // 
+            this->radioButton34->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->radioButton34->AutoSize = true;
+            this->radioButton34->BackColor = System::Drawing::Color::Transparent;
+            this->radioButton34->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->radioButton34->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->radioButton34->ForeColor = System::Drawing::Color::Gold;
+            this->radioButton34->Location = System::Drawing::Point(175, 54);
+            this->radioButton34->Margin = System::Windows::Forms::Padding(4);
+            this->radioButton34->Name = L"radioButton34";
+            this->radioButton34->Size = System::Drawing::Size(46, 31);
+            this->radioButton34->TabIndex = 2;
+            this->radioButton34->TabStop = true;
+            this->radioButton34->Text = L"a";
+            this->radioButton34->UseVisualStyleBackColor = false;
+            this->radioButton34->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton34_CheckedChanged);
+            // 
+            // radioButton35
+            // 
+            this->radioButton35->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->radioButton35->AutoSize = true;
+            this->radioButton35->BackColor = System::Drawing::Color::Transparent;
+            this->radioButton35->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->radioButton35->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->radioButton35->ForeColor = System::Drawing::Color::Gold;
+            this->radioButton35->Location = System::Drawing::Point(174, 129);
+            this->radioButton35->Margin = System::Windows::Forms::Padding(4);
+            this->radioButton35->Name = L"radioButton35";
+            this->radioButton35->Size = System::Drawing::Size(46, 31);
+            this->radioButton35->TabIndex = 2;
+            this->radioButton35->TabStop = true;
+            this->radioButton35->Text = L"b";
+            this->radioButton35->UseVisualStyleBackColor = false;
+            this->radioButton35->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton35_CheckedChanged);
+            // 
+            // radioButton36
+            // 
+            this->radioButton36->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->radioButton36->AutoSize = true;
+            this->radioButton36->BackColor = System::Drawing::Color::Transparent;
+            this->radioButton36->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->radioButton36->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->radioButton36->ForeColor = System::Drawing::Color::Gold;
+            this->radioButton36->Location = System::Drawing::Point(174, 205);
+            this->radioButton36->Margin = System::Windows::Forms::Padding(4);
+            this->radioButton36->Name = L"radioButton36";
+            this->radioButton36->Size = System::Drawing::Size(45, 31);
+            this->radioButton36->TabIndex = 2;
+            this->radioButton36->TabStop = true;
+            this->radioButton36->Text = L"c";
+            this->radioButton36->UseVisualStyleBackColor = false;
+            this->radioButton36->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton36_CheckedChanged);
+            // 
+            // rtbQuestionDisplay10
+            // 
+            this->rtbQuestionDisplay10->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->rtbQuestionDisplay10->BackColor = System::Drawing::Color::DimGray;
+            this->rtbQuestionDisplay10->Cursor = System::Windows::Forms::Cursors::Default;
+            this->rtbQuestionDisplay10->Font = (gcnew System::Drawing::Font(L"Times New Roman", 25.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->rtbQuestionDisplay10->ForeColor = System::Drawing::SystemColors::InfoText;
+            this->rtbQuestionDisplay10->Location = System::Drawing::Point(6, 5639);
+            this->rtbQuestionDisplay10->Margin = System::Windows::Forms::Padding(4);
+            this->rtbQuestionDisplay10->Name = L"rtbQuestionDisplay10";
+            this->rtbQuestionDisplay10->ReadOnly = true;
+            this->rtbQuestionDisplay10->ScrollBars = System::Windows::Forms::RichTextBoxScrollBars::None;
+            this->rtbQuestionDisplay10->Size = System::Drawing::Size(1869, 223);
+            this->rtbQuestionDisplay10->TabIndex = 80;
+            this->rtbQuestionDisplay10->Text = L"ddddd";
+            this->rtbQuestionDisplay10->TextChanged += gcnew System::EventHandler(this, &Startpage::richTextBox2_TextChanged);
+            // 
+            // panel11
+            // 
+            this->panel11->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->panel11->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(24)), static_cast<System::Int32>(static_cast<System::Byte>(30)),
+                static_cast<System::Int32>(static_cast<System::Byte>(54)));
+            this->panel11->Controls->Add(this->tbOptnD10);
+            this->panel11->Controls->Add(this->tbOptnC10);
+            this->panel11->Controls->Add(this->tbOptnA10);
+            this->panel11->Controls->Add(this->tbOptnB10);
+            this->panel11->Controls->Add(this->radioButton37);
+            this->panel11->Controls->Add(this->radioButton38);
+            this->panel11->Controls->Add(this->radioButton39);
+            this->panel11->Controls->Add(this->radioButton40);
+            this->panel11->ForeColor = System::Drawing::SystemColors::Desktop;
+            this->panel11->Location = System::Drawing::Point(-119, 5863);
+            this->panel11->Margin = System::Windows::Forms::Padding(4);
+            this->panel11->Name = L"panel11";
+            this->panel11->Size = System::Drawing::Size(1994, 390);
+            this->panel11->TabIndex = 81;
+            this->panel11->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Startpage::panel11_Paint);
+            // 
+            // tbOptnD10
+            // 
+            this->tbOptnD10->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->tbOptnD10->BackColor = System::Drawing::Color::Gray;
+            this->tbOptnD10->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->tbOptnD10->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->tbOptnD10->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+            this->tbOptnD10->Location = System::Drawing::Point(229, 267);
+            this->tbOptnD10->Margin = System::Windows::Forms::Padding(4);
+            this->tbOptnD10->Multiline = true;
+            this->tbOptnD10->Name = L"tbOptnD10";
+            this->tbOptnD10->ReadOnly = true;
+            this->tbOptnD10->Size = System::Drawing::Size(1755, 70);
+            this->tbOptnD10->TabIndex = 1;
+            this->tbOptnD10->Text = L"dddd\r\nddd";
+            this->tbOptnD10->TextChanged += gcnew System::EventHandler(this, &Startpage::textBox7_TextChanged);
+            // 
+            // tbOptnC10
+            // 
+            this->tbOptnC10->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->tbOptnC10->BackColor = System::Drawing::Color::Gray;
+            this->tbOptnC10->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->tbOptnC10->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->tbOptnC10->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+            this->tbOptnC10->Location = System::Drawing::Point(229, 188);
+            this->tbOptnC10->Margin = System::Windows::Forms::Padding(4);
+            this->tbOptnC10->Multiline = true;
+            this->tbOptnC10->Name = L"tbOptnC10";
+            this->tbOptnC10->ReadOnly = true;
+            this->tbOptnC10->Size = System::Drawing::Size(1755, 70);
+            this->tbOptnC10->TabIndex = 1;
+            this->tbOptnC10->Text = L"dddd\r\nddd";
+            this->tbOptnC10->TextChanged += gcnew System::EventHandler(this, &Startpage::textBox11_TextChanged);
+            // 
+            // tbOptnA10
+            // 
+            this->tbOptnA10->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->tbOptnA10->BackColor = System::Drawing::Color::Gray;
+            this->tbOptnA10->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->tbOptnA10->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->tbOptnA10->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+            this->tbOptnA10->Location = System::Drawing::Point(229, 32);
+            this->tbOptnA10->Margin = System::Windows::Forms::Padding(4);
+            this->tbOptnA10->Multiline = true;
+            this->tbOptnA10->Name = L"tbOptnA10";
+            this->tbOptnA10->ReadOnly = true;
+            this->tbOptnA10->Size = System::Drawing::Size(1755, 70);
+            this->tbOptnA10->TabIndex = 1;
+            this->tbOptnA10->Text = L"dddd\r\nddd";
+            this->tbOptnA10->TextChanged += gcnew System::EventHandler(this, &Startpage::textBox15_TextChanged);
+            // 
+            // tbOptnB10
+            // 
+            this->tbOptnB10->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->tbOptnB10->BackColor = System::Drawing::Color::Gray;
+            this->tbOptnB10->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->tbOptnB10->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->tbOptnB10->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+            this->tbOptnB10->Location = System::Drawing::Point(229, 110);
+            this->tbOptnB10->Margin = System::Windows::Forms::Padding(4);
+            this->tbOptnB10->Multiline = true;
+            this->tbOptnB10->Name = L"tbOptnB10";
+            this->tbOptnB10->ReadOnly = true;
+            this->tbOptnB10->Size = System::Drawing::Size(1755, 70);
+            this->tbOptnB10->TabIndex = 1;
+            this->tbOptnB10->Text = L"dddd\r\nddd";
+            this->tbOptnB10->TextChanged += gcnew System::EventHandler(this, &Startpage::textBox19_TextChanged);
+            // 
+            // radioButton37
+            // 
+            this->radioButton37->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->radioButton37->AutoSize = true;
+            this->radioButton37->BackColor = System::Drawing::Color::Transparent;
+            this->radioButton37->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->radioButton37->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->radioButton37->ForeColor = System::Drawing::Color::Gold;
+            this->radioButton37->Location = System::Drawing::Point(175, 283);
+            this->radioButton37->Margin = System::Windows::Forms::Padding(4);
+            this->radioButton37->Name = L"radioButton37";
+            this->radioButton37->Size = System::Drawing::Size(46, 31);
+            this->radioButton37->TabIndex = 2;
+            this->radioButton37->TabStop = true;
+            this->radioButton37->Text = L"d";
+            this->radioButton37->UseVisualStyleBackColor = false;
+            this->radioButton37->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton37_CheckedChanged);
+            // 
+            // radioButton38
+            // 
+            this->radioButton38->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->radioButton38->AutoSize = true;
+            this->radioButton38->BackColor = System::Drawing::Color::Transparent;
+            this->radioButton38->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->radioButton38->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->radioButton38->ForeColor = System::Drawing::Color::Gold;
+            this->radioButton38->Location = System::Drawing::Point(175, 54);
+            this->radioButton38->Margin = System::Windows::Forms::Padding(4);
+            this->radioButton38->Name = L"radioButton38";
+            this->radioButton38->Size = System::Drawing::Size(46, 31);
+            this->radioButton38->TabIndex = 2;
+            this->radioButton38->TabStop = true;
+            this->radioButton38->Text = L"a";
+            this->radioButton38->UseVisualStyleBackColor = false;
+            this->radioButton38->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton38_CheckedChanged);
+            // 
+            // radioButton39
+            // 
+            this->radioButton39->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->radioButton39->AutoSize = true;
+            this->radioButton39->BackColor = System::Drawing::Color::Transparent;
+            this->radioButton39->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->radioButton39->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->radioButton39->ForeColor = System::Drawing::Color::Gold;
+            this->radioButton39->Location = System::Drawing::Point(174, 129);
+            this->radioButton39->Margin = System::Windows::Forms::Padding(4);
+            this->radioButton39->Name = L"radioButton39";
+            this->radioButton39->Size = System::Drawing::Size(46, 31);
+            this->radioButton39->TabIndex = 2;
+            this->radioButton39->TabStop = true;
+            this->radioButton39->Text = L"b";
+            this->radioButton39->UseVisualStyleBackColor = false;
+            this->radioButton39->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton39_CheckedChanged);
+            // 
+            // radioButton40
+            // 
+            this->radioButton40->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->radioButton40->AutoSize = true;
+            this->radioButton40->BackColor = System::Drawing::Color::Transparent;
+            this->radioButton40->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->radioButton40->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->radioButton40->ForeColor = System::Drawing::Color::Gold;
+            this->radioButton40->Location = System::Drawing::Point(174, 205);
+            this->radioButton40->Margin = System::Windows::Forms::Padding(4);
+            this->radioButton40->Name = L"radioButton40";
+            this->radioButton40->Size = System::Drawing::Size(45, 31);
+            this->radioButton40->TabIndex = 2;
+            this->radioButton40->TabStop = true;
+            this->radioButton40->Text = L"c";
+            this->radioButton40->UseVisualStyleBackColor = false;
+            this->radioButton40->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton40_CheckedChanged);
             // 
             // Startpage
             // 
             this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
             this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
             this->AutoScroll = true;
-            this->AutoScrollMinSize = System::Drawing::Size(665, 4900);
+            this->AutoScrollMinSize = System::Drawing::Size(665, 5300);
             this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(24)), static_cast<System::Int32>(static_cast<System::Byte>(30)),
                 static_cast<System::Int32>(static_cast<System::Byte>(54)));
-            this->ClientSize = System::Drawing::Size(1911, 964);
-            this->Controls->Add(this->panel2);
+            this->ClientSize = System::Drawing::Size(1920, 964);
+            this->Controls->Add(this->rtbQuestionDisplay10);
+            this->Controls->Add(this->panel11);
+            this->Controls->Add(this->rtbQuestionDisplay9);
+            this->Controls->Add(this->panel10);
+            this->Controls->Add(this->rtbQuestionDisplay8);
+            this->Controls->Add(this->panel8);
+            this->Controls->Add(this->rtbQuestionDisplay7);
+            this->Controls->Add(this->panel7);
+            this->Controls->Add(this->rtbQuestionDisplay6);
+            this->Controls->Add(this->panel6);
+            this->Controls->Add(this->rtbQuestionDisplay5);
+            this->Controls->Add(this->panel5);
+            this->Controls->Add(this->rtbQuestionDisplay4);
+            this->Controls->Add(this->panel4);
+            this->Controls->Add(this->rtbQuestionDisplay3);
+            this->Controls->Add(this->panel3);
             this->Controls->Add(this->rtbQuestionDisplay2);
+            this->Controls->Add(this->panel2);
             this->Controls->Add(this->lb3);
             this->Controls->Add(this->button2);
             this->Controls->Add(this->button1);
             this->Controls->Add(this->label2);
             this->Controls->Add(this->label1);
-            this->Controls->Add(this->panel1);
             this->Controls->Add(this->rtbQuestionDisplay);
+            this->Controls->Add(this->label3);
+            this->Controls->Add(this->panel1);
             this->ForeColor = System::Drawing::Color::Gold;
-            this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
+            this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::Fixed3D;
             this->Margin = System::Windows::Forms::Padding(4);
             this->Name = L"Startpage";
             this->Text = L"Ultimate Entrance Cracker";
@@ -712,6 +2556,22 @@ namespace Project {
             this->panel1->PerformLayout();
             this->panel2->ResumeLayout(false);
             this->panel2->PerformLayout();
+            this->panel3->ResumeLayout(false);
+            this->panel3->PerformLayout();
+            this->panel4->ResumeLayout(false);
+            this->panel4->PerformLayout();
+            this->panel5->ResumeLayout(false);
+            this->panel5->PerformLayout();
+            this->panel6->ResumeLayout(false);
+            this->panel6->PerformLayout();
+            this->panel7->ResumeLayout(false);
+            this->panel7->PerformLayout();
+            this->panel8->ResumeLayout(false);
+            this->panel8->PerformLayout();
+            this->panel10->ResumeLayout(false);
+            this->panel10->PerformLayout();
+            this->panel11->ResumeLayout(false);
+            this->panel11->PerformLayout();
             this->ResumeLayout(false);
             this->PerformLayout();
 
@@ -736,26 +2596,11 @@ namespace Project {
             if (timeleft % 2 == 0) {
                 this->label2->ForeColor = System::Drawing::Color::Gold;
                 this->label1->ForeColor = System::Drawing::Color::Gold;
-                this->label1->Location = System::Drawing::Point(1150, 33);
-                this->label2->Location = System::Drawing::Point(1167, 72);
-                this->lb3->Location = System::Drawing::Point(1141, 29);
 
             }
             else {
                 this->label2->ForeColor = System::Drawing::Color::Turquoise;
                 this->label1->ForeColor = System::Drawing::Color::Turquoise;
-                this->label1->Location = System::Drawing::Point(1150, 33);
-                this->label2->Location = System::Drawing::Point(1167, 72);
-                this->lb3->Location = System::Drawing::Point(1141, 29);
-
-
-
-
-
-
-
-
-
             }
             hr = timeleft / 3600;
             sec = timeleft % 3600;
@@ -777,23 +2622,14 @@ namespace Project {
     }
 
 
-    public: void Startpage::connectSQL(Question^ question_list) {
-        String^ connString = "Data Source=tcp:uec.database.windows.net;Initial Catalog=uecdb;Persist Security Info=True;User ID=sqluec;Password=L12@sqd3";
-        //Data Source=tcp:uec.database.windows.net;Initial Catalog=uecdb;Persist Security Info=True;User ID=sqluec;Password=***********
-        SqlConnection sqlConn(connString);
-        sqlConn.Open();
-        String^ sqlQuery = "SELECT * FROM english1;";
-        SqlCommand command(sqlQuery, % sqlConn);
-        SqlDataReader^ reader = command.ExecuteReader();
-
+    public: void Startpage::readdb(SqlDataReader^ reader, Question^ question_list) {
         if (reader->Read()) {
-            question_list = gcnew Question;
-            question_list->question = reader->GetString(1);
-            question_list->Option_a = reader->GetString(2);
-            question_list->Option_b = reader->GetString(3);
-            question_list->Option_c = reader->GetString(4);
-            question_list->Option_d = reader->GetString(5);
-            question_list->Correct_optn = reader->GetString(6);
+            (*question_list).question = reader->GetString(1);
+            (*question_list).Option_a = reader->GetString(2);
+            (*question_list).Option_b = reader->GetString(3);
+            (*question_list).Option_c = reader->GetString(4);
+            (*question_list).Option_d = reader->GetString(5);
+            (*question_list).Correct_optn = reader->GetString(6);
         }
 
 }
@@ -804,8 +2640,226 @@ private: System::Void rtbQuestionDisplay2_TextChanged(System::Object^ sender, Sy
 private: System::Void panel2_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 }
 private: System::Void tbOptnA_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    radioButton2->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton2_CheckedChanged);
+}
+private: System::Void tbOptnA_Click(System::Object^ sender, System::EventArgs^ e) {
+           radioButton2->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton2_CheckedChanged);
 }
 private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void radioButton2_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
+    radioButton2->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton2_CheckedChanged);
+    //Refresh();
+}
+private: System::Void panel3_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+private: System::Void rtbQuestionDisplay2_TextChanged_1(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void tbOptnC_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void panel8_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox27_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void radioButton4_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void radioButton3_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void radioButton1_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void panel1_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+private: System::Void tbOptnB_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void tbOptnD_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void rtbQuestionDisplay2_TextChanged_2(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void lb3_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void panel2_Paint_1(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+private: System::Void tbOptnD2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void tbOptnC2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void tbOptnA2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void tbOptnB2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void radioButton5_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void radioButton6_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void radioButton7_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void radioButton8_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void rtbQuestionDisplay3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void panel3_Paint_1(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+private: System::Void textBox5_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox6_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void tbOptnA3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox8_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void radioButton9_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void radioButton10_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void radioButton11_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void radioButton12_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void rtbQuestionDisplay4_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void panel4_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+private: System::Void textBox9_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox10_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void tbOptnA4_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox12_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void radioButton13_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void radioButton14_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void radioButton15_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void radioButton16_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void rtbQuestionDisplay5_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void panel5_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+private: System::Void textBox13_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox14_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void tbOptnA5_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox16_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void radioButton17_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void radioButton18_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void radioButton19_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void radioButton20_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void rtbQuestionDisplay6_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void panel6_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+private: System::Void textBox17_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox18_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void tbOptnA6_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox20_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void radioButton21_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void radioButton22_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void radioButton23_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void radioButton24_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void tbOptnA8_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void panel7_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+private: System::Void textBox21_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox22_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox23_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox24_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void radioButton25_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void radioButton26_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void radioButton27_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void radioButton28_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void radioButton32_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void radioButton31_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void radioButton30_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void radioButton29_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox28_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox26_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox25_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void rtbQuestionDisplay8_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void rtbQuestionDisplay9_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void panel10_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox3_TextChanged_1(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox4_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void radioButton33_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void radioButton34_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void radioButton35_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void radioButton36_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void richTextBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void panel11_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+private: System::Void textBox7_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox11_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox15_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox19_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void radioButton37_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void radioButton38_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void radioButton39_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void radioButton40_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
