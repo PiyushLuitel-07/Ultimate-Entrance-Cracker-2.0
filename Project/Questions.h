@@ -11,5 +11,5 @@ public:
 	String^ Option_b;
 	String^ Option_c;
 	String^ Option_d;
-	String^ Correct_optn;
+	char Correct_optn;
 };

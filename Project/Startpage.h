@@ -1,5 +1,6 @@
 #pragma once
 #include "Questions.h"
+#include <string.h>
 
 
 
@@ -47,6 +48,10 @@ namespace Project {
                     tbOptnB->Text = question_list->Option_b;
                     tbOptnC->Text = question_list->Option_c;
                     tbOptnD->Text = question_list->Option_d;
+                    char ANS = 'a';
+                    if (ANS == ans1) {
+                        score1++;
+                    }
                     //2
                     i++;
                     readdb(reader, question_list);
@@ -56,6 +61,10 @@ namespace Project {
                     tbOptnB2->Text = question_list->Option_b;
                     tbOptnC2->Text = question_list->Option_c;
                     tbOptnD2->Text = question_list->Option_d;
+                    //ANS = question_list->Correct_optn;
+                    if (ANS == ans2) {
+                        score2++;
+                    }
                     //3
                     i++;
                     readdb(reader, question_list);
@@ -65,6 +74,10 @@ namespace Project {
                     tbOptnB3->Text = question_list->Option_b;
                     tbOptnC3->Text = question_list->Option_c;
                     tbOptnD3->Text = question_list->Option_d;
+                    //ANS = question_list->Correct_optn;
+                    if (ANS == ans3) {
+                        score3++;
+                    }
                     //4
                     i++;
                     readdb(reader, question_list);
@@ -74,6 +87,10 @@ namespace Project {
                     tbOptnB4->Text = question_list->Option_b;
                     tbOptnC4->Text = question_list->Option_c;
                     tbOptnD4->Text = question_list->Option_d;
+                    //ANS = question_list->Correct_optn;
+                    if (ANS == ans4) {
+                        score4++;
+                    }
                     //5
                     i++;
                     readdb(reader, question_list);
@@ -83,6 +100,10 @@ namespace Project {
                     tbOptnB5->Text = question_list->Option_b;
                     tbOptnC5->Text = question_list->Option_c;
                     tbOptnD5->Text = question_list->Option_d;
+                    //ANS = question_list->Correct_optn;
+                    if (ANS == ans5) {
+                        score5++;
+                    }
                     //6
                     i++;
                     readdb(reader, question_list);
@@ -92,6 +113,10 @@ namespace Project {
                     tbOptnB6->Text = question_list->Option_b;
                     tbOptnC6->Text = question_list->Option_c;
                     tbOptnD6->Text = question_list->Option_d;
+                    //ANS = question_list->Correct_optn;
+                    if (ANS == ans6) {
+                        score6++;
+                    }
                     //7
                     i++;
                     readdb(reader, question_list);
@@ -101,6 +126,10 @@ namespace Project {
                     tbOptnB7->Text = question_list->Option_b;
                     tbOptnC7->Text = question_list->Option_c;
                     tbOptnD7->Text = question_list->Option_d;
+                    //ANS = question_list->Correct_optn;
+                    if (ANS == ans7) {
+                        score7++;
+                    }
                     //8
                     i++;
                     readdb(reader, question_list);
@@ -110,6 +139,10 @@ namespace Project {
                     tbOptnB8->Text = question_list->Option_b;
                     tbOptnC8->Text = question_list->Option_c;
                     tbOptnD8->Text = question_list->Option_d;
+                    //ANS = question_list->Correct_optn;
+                    if (ANS == ans8) {
+                        score8++;
+                    }
                     //9
                     i++;
                     readdb(reader, question_list);
@@ -119,6 +152,10 @@ namespace Project {
                     tbOptnB9->Text = question_list->Option_b;
                     tbOptnC9->Text = question_list->Option_c;
                     tbOptnD9->Text = question_list->Option_d;
+                    // ANS = question_list->Correct_optn;
+                    if (ANS == ans9) {
+                        score9++;
+                    }
                     //10
                     i++;
                     readdb(reader, question_list);
@@ -128,6 +165,10 @@ namespace Project {
                     tbOptnB10->Text = question_list->Option_b;
                     tbOptnC10->Text = question_list->Option_c;
                     tbOptnD10->Text = question_list->Option_d;
+                    // ANS = question_list->Correct_optn;
+                    if (ANS == ans10) {
+                        score10++;
+                    }
 
             }
             catch (Exception^ e) {
@@ -606,7 +647,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->label1->Font = (gcnew System::Drawing::Font(L"Calibri Light", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->label1->ForeColor = System::Drawing::Color::Gold;
-            this->label1->Location = System::Drawing::Point(1513, 107);
+            this->label1->Location = System::Drawing::Point(1511, 93);
             this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
             this->label1->Name = L"label1";
             this->label1->Size = System::Drawing::Size(248, 41);
@@ -622,7 +663,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->label2->Font = (gcnew System::Drawing::Font(L"Calibri Light", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->label2->ForeColor = System::Drawing::Color::Gold;
-            this->label2->Location = System::Drawing::Point(1753, 107);
+            this->label2->Location = System::Drawing::Point(1751, 93);
             this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
             this->label2->Name = L"label2";
             this->label2->Size = System::Drawing::Size(121, 41);
@@ -639,7 +680,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->button2->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 36, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->button2->ForeColor = System::Drawing::Color::Gold;
-            this->button2->Location = System::Drawing::Point(1176, 6342);
+            this->button2->Location = System::Drawing::Point(1174, 6328);
             this->button2->Margin = System::Windows::Forms::Padding(4);
             this->button2->Name = L"button2";
             this->button2->Size = System::Drawing::Size(340, 85);
@@ -657,7 +698,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->button1->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 36, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->button1->ForeColor = System::Drawing::Color::Gold;
-            this->button1->Location = System::Drawing::Point(828, 6342);
+            this->button1->Location = System::Drawing::Point(826, 6328);
             this->button1->Margin = System::Windows::Forms::Padding(4);
             this->button1->Name = L"button1";
             this->button1->Size = System::Drawing::Size(340, 85);
@@ -721,7 +762,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->rb1A->TabStop = true;
             this->rb1A->Text = L"a";
             this->rb1A->UseVisualStyleBackColor = false;
-            this->rb1A->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton2_CheckedChanged);
+            this->rb1A->CheckedChanged += gcnew System::EventHandler(this, &Startpage::rb1A_CheckedChanged);
             // 
             // rb1D
             // 
@@ -774,7 +815,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->panel1->Controls->Add(this->rb1B);
             this->panel1->Controls->Add(this->rb1C);
             this->panel1->ForeColor = System::Drawing::SystemColors::Desktop;
-            this->panel1->Location = System::Drawing::Point(-116, 390);
+            this->panel1->Location = System::Drawing::Point(-118, 376);
             this->panel1->Margin = System::Windows::Forms::Padding(4);
             this->panel1->Name = L"panel1";
             this->panel1->Size = System::Drawing::Size(1994, 390);
@@ -843,7 +884,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->rtbQuestionDisplay->Font = (gcnew System::Drawing::Font(L"Times New Roman", 25.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->rtbQuestionDisplay->ForeColor = System::Drawing::SystemColors::InfoText;
-            this->rtbQuestionDisplay->Location = System::Drawing::Point(9, 166);
+            this->rtbQuestionDisplay->Location = System::Drawing::Point(7, 152);
             this->rtbQuestionDisplay->Margin = System::Windows::Forms::Padding(4);
             this->rtbQuestionDisplay->Name = L"rtbQuestionDisplay";
             this->rtbQuestionDisplay->ReadOnly = true;
@@ -861,7 +902,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             // lb3
             // 
             this->lb3->AutoSize = true;
-            this->lb3->Location = System::Drawing::Point(1950, -4280);
+            this->lb3->Location = System::Drawing::Point(1923, -4294);
             this->lb3->Name = L"lb3";
             this->lb3->Size = System::Drawing::Size(0, 16);
             this->lb3->TabIndex = 59;
@@ -872,7 +913,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->label3->AutoSize = true;
             this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Uighur", 72, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->label3->Location = System::Drawing::Point(235, 17);
+            this->label3->Location = System::Drawing::Point(208, 3);
             this->label3->Name = L"label3";
             this->label3->Size = System::Drawing::Size(1028, 141);
             this->label3->TabIndex = 62;
@@ -887,7 +928,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->rtbQuestionDisplay2->Font = (gcnew System::Drawing::Font(L"Times New Roman", 25.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->rtbQuestionDisplay2->ForeColor = System::Drawing::SystemColors::InfoText;
-            this->rtbQuestionDisplay2->Location = System::Drawing::Point(9, 768);
+            this->rtbQuestionDisplay2->Location = System::Drawing::Point(7, 754);
             this->rtbQuestionDisplay2->Margin = System::Windows::Forms::Padding(4);
             this->rtbQuestionDisplay2->Name = L"rtbQuestionDisplay2";
             this->rtbQuestionDisplay2->ReadOnly = true;
@@ -911,7 +952,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->panel2->Controls->Add(this->rb2B);
             this->panel2->Controls->Add(this->rb2C);
             this->panel2->ForeColor = System::Drawing::SystemColors::Desktop;
-            this->panel2->Location = System::Drawing::Point(-116, 995);
+            this->panel2->Location = System::Drawing::Point(-118, 981);
             this->panel2->Margin = System::Windows::Forms::Padding(4);
             this->panel2->Name = L"panel2";
             this->panel2->Size = System::Drawing::Size(1994, 390);
@@ -1026,7 +1067,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->rb2A->TabStop = true;
             this->rb2A->Text = L"a";
             this->rb2A->UseVisualStyleBackColor = false;
-            this->rb2A->CheckedChanged += gcnew System::EventHandler(this, &Startpage::radioButton6_CheckedChanged);
+            this->rb2A->CheckedChanged += gcnew System::EventHandler(this, &Startpage::rb2A_CheckedChanged);
             // 
             // rb2B
             // 
@@ -1074,7 +1115,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->rtbQuestionDisplay3->Font = (gcnew System::Drawing::Font(L"Times New Roman", 25.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->rtbQuestionDisplay3->ForeColor = System::Drawing::SystemColors::InfoText;
-            this->rtbQuestionDisplay3->Location = System::Drawing::Point(9, 1374);
+            this->rtbQuestionDisplay3->Location = System::Drawing::Point(7, 1360);
             this->rtbQuestionDisplay3->Margin = System::Windows::Forms::Padding(4);
             this->rtbQuestionDisplay3->Name = L"rtbQuestionDisplay3";
             this->rtbQuestionDisplay3->ReadOnly = true;
@@ -1098,7 +1139,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->panel3->Controls->Add(this->rb3B);
             this->panel3->Controls->Add(this->rb3C);
             this->panel3->ForeColor = System::Drawing::SystemColors::Desktop;
-            this->panel3->Location = System::Drawing::Point(-116, 1601);
+            this->panel3->Location = System::Drawing::Point(-118, 1587);
             this->panel3->Margin = System::Windows::Forms::Padding(4);
             this->panel3->Name = L"panel3";
             this->panel3->Size = System::Drawing::Size(1994, 390);
@@ -1261,7 +1302,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->rtbQuestionDisplay4->Font = (gcnew System::Drawing::Font(L"Times New Roman", 25.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->rtbQuestionDisplay4->ForeColor = System::Drawing::SystemColors::InfoText;
-            this->rtbQuestionDisplay4->Location = System::Drawing::Point(9, 1979);
+            this->rtbQuestionDisplay4->Location = System::Drawing::Point(7, 1965);
             this->rtbQuestionDisplay4->Margin = System::Windows::Forms::Padding(4);
             this->rtbQuestionDisplay4->Name = L"rtbQuestionDisplay4";
             this->rtbQuestionDisplay4->ReadOnly = true;
@@ -1285,7 +1326,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->panel4->Controls->Add(this->rb4B);
             this->panel4->Controls->Add(this->rb4C);
             this->panel4->ForeColor = System::Drawing::SystemColors::Desktop;
-            this->panel4->Location = System::Drawing::Point(-116, 2200);
+            this->panel4->Location = System::Drawing::Point(-118, 2186);
             this->panel4->Margin = System::Windows::Forms::Padding(4);
             this->panel4->Name = L"panel4";
             this->panel4->Size = System::Drawing::Size(1994, 390);
@@ -1448,7 +1489,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->rtbQuestionDisplay5->Font = (gcnew System::Drawing::Font(L"Times New Roman", 25.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->rtbQuestionDisplay5->ForeColor = System::Drawing::SystemColors::InfoText;
-            this->rtbQuestionDisplay5->Location = System::Drawing::Point(9, 2585);
+            this->rtbQuestionDisplay5->Location = System::Drawing::Point(7, 2571);
             this->rtbQuestionDisplay5->Margin = System::Windows::Forms::Padding(4);
             this->rtbQuestionDisplay5->Name = L"rtbQuestionDisplay5";
             this->rtbQuestionDisplay5->ReadOnly = true;
@@ -1472,7 +1513,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->panel5->Controls->Add(this->rb5B);
             this->panel5->Controls->Add(this->rb5C);
             this->panel5->ForeColor = System::Drawing::SystemColors::Desktop;
-            this->panel5->Location = System::Drawing::Point(-116, 2808);
+            this->panel5->Location = System::Drawing::Point(-118, 2794);
             this->panel5->Margin = System::Windows::Forms::Padding(4);
             this->panel5->Name = L"panel5";
             this->panel5->Size = System::Drawing::Size(1994, 390);
@@ -1635,7 +1676,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->rtbQuestionDisplay6->Font = (gcnew System::Drawing::Font(L"Times New Roman", 25.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->rtbQuestionDisplay6->ForeColor = System::Drawing::SystemColors::InfoText;
-            this->rtbQuestionDisplay6->Location = System::Drawing::Point(9, 3188);
+            this->rtbQuestionDisplay6->Location = System::Drawing::Point(7, 3174);
             this->rtbQuestionDisplay6->Margin = System::Windows::Forms::Padding(4);
             this->rtbQuestionDisplay6->Name = L"rtbQuestionDisplay6";
             this->rtbQuestionDisplay6->ReadOnly = true;
@@ -1659,7 +1700,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->panel6->Controls->Add(this->rb6B);
             this->panel6->Controls->Add(this->rb6C);
             this->panel6->ForeColor = System::Drawing::SystemColors::Desktop;
-            this->panel6->Location = System::Drawing::Point(-116, 3407);
+            this->panel6->Location = System::Drawing::Point(-118, 3393);
             this->panel6->Margin = System::Windows::Forms::Padding(4);
             this->panel6->Name = L"panel6";
             this->panel6->Size = System::Drawing::Size(1994, 390);
@@ -1822,7 +1863,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->rtbQuestionDisplay7->Font = (gcnew System::Drawing::Font(L"Times New Roman", 25.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->rtbQuestionDisplay7->ForeColor = System::Drawing::SystemColors::InfoText;
-            this->rtbQuestionDisplay7->Location = System::Drawing::Point(9, 3790);
+            this->rtbQuestionDisplay7->Location = System::Drawing::Point(7, 3776);
             this->rtbQuestionDisplay7->Margin = System::Windows::Forms::Padding(4);
             this->rtbQuestionDisplay7->Name = L"rtbQuestionDisplay7";
             this->rtbQuestionDisplay7->ReadOnly = true;
@@ -1846,7 +1887,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->panel7->Controls->Add(this->rb7B);
             this->panel7->Controls->Add(this->rb7C);
             this->panel7->ForeColor = System::Drawing::SystemColors::Desktop;
-            this->panel7->Location = System::Drawing::Point(-116, 4010);
+            this->panel7->Location = System::Drawing::Point(-118, 3996);
             this->panel7->Margin = System::Windows::Forms::Padding(4);
             this->panel7->Name = L"panel7";
             this->panel7->Size = System::Drawing::Size(1994, 390);
@@ -2009,7 +2050,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->rtbQuestionDisplay8->Font = (gcnew System::Drawing::Font(L"Times New Roman", 25.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->rtbQuestionDisplay8->ForeColor = System::Drawing::SystemColors::InfoText;
-            this->rtbQuestionDisplay8->Location = System::Drawing::Point(9, 4395);
+            this->rtbQuestionDisplay8->Location = System::Drawing::Point(7, 4381);
             this->rtbQuestionDisplay8->Margin = System::Windows::Forms::Padding(4);
             this->rtbQuestionDisplay8->Name = L"rtbQuestionDisplay8";
             this->rtbQuestionDisplay8->ReadOnly = true;
@@ -2181,7 +2222,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->panel8->Controls->Add(this->rb8B);
             this->panel8->Controls->Add(this->rb8C);
             this->panel8->ForeColor = System::Drawing::SystemColors::Desktop;
-            this->panel8->Location = System::Drawing::Point(-116, 4619);
+            this->panel8->Location = System::Drawing::Point(-118, 4605);
             this->panel8->Margin = System::Windows::Forms::Padding(4);
             this->panel8->Name = L"panel8";
             this->panel8->Size = System::Drawing::Size(1994, 390);
@@ -2196,7 +2237,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->rtbQuestionDisplay9->Font = (gcnew System::Drawing::Font(L"Times New Roman", 25.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->rtbQuestionDisplay9->ForeColor = System::Drawing::SystemColors::InfoText;
-            this->rtbQuestionDisplay9->Location = System::Drawing::Point(9, 5008);
+            this->rtbQuestionDisplay9->Location = System::Drawing::Point(7, 4994);
             this->rtbQuestionDisplay9->Margin = System::Windows::Forms::Padding(4);
             this->rtbQuestionDisplay9->Name = L"rtbQuestionDisplay9";
             this->rtbQuestionDisplay9->ReadOnly = true;
@@ -2220,7 +2261,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->panel10->Controls->Add(this->rb9B);
             this->panel10->Controls->Add(this->rb9C);
             this->panel10->ForeColor = System::Drawing::SystemColors::Desktop;
-            this->panel10->Location = System::Drawing::Point(-116, 5234);
+            this->panel10->Location = System::Drawing::Point(-118, 5220);
             this->panel10->Margin = System::Windows::Forms::Padding(4);
             this->panel10->Name = L"panel10";
             this->panel10->Size = System::Drawing::Size(1994, 390);
@@ -2297,7 +2338,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->tbOptnB9->Size = System::Drawing::Size(1755, 70);
             this->tbOptnB9->TabIndex = 1;
             this->tbOptnB9->Text = L"dddd\r\nddd";
-            this->tbOptnB9->TextChanged += gcnew System::EventHandler(this, &Startpage::textBox4_TextChanged);
+            //this->tbOptnB9->TextChanged += gcnew System::EventHandler(this, &Startpage::textBox4_TextChanged);
             // 
             // rb9D
             // 
@@ -2383,7 +2424,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->rtbQuestionDisplay10->Font = (gcnew System::Drawing::Font(L"Times New Roman", 25.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->rtbQuestionDisplay10->ForeColor = System::Drawing::SystemColors::InfoText;
-            this->rtbQuestionDisplay10->Location = System::Drawing::Point(33, 5623);
+            this->rtbQuestionDisplay10->Location = System::Drawing::Point(31, 5609);
             this->rtbQuestionDisplay10->Margin = System::Windows::Forms::Padding(4);
             this->rtbQuestionDisplay10->Name = L"rtbQuestionDisplay10";
             this->rtbQuestionDisplay10->ReadOnly = true;
@@ -2407,7 +2448,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
             this->panel11->Controls->Add(this->rb10B);
             this->panel11->Controls->Add(this->rb10C);
             this->panel11->ForeColor = System::Drawing::SystemColors::Desktop;
-            this->panel11->Location = System::Drawing::Point(-116, 5847);
+            this->panel11->Location = System::Drawing::Point(-118, 5833);
             this->panel11->Margin = System::Windows::Forms::Padding(4);
             this->panel11->Name = L"panel11";
             this->panel11->Size = System::Drawing::Size(1994, 390);
@@ -2635,7 +2676,7 @@ private: System::Windows::Forms::RadioButton^ rb10C;
 
 
 
-    /*public: int score = 0;
+    public: int score = 0;
     public: int score1 = 0;
     public: int score2 = 0;
     public: int score3 = 0;
@@ -2645,8 +2686,18 @@ private: System::Windows::Forms::RadioButton^ rb10C;
     public: int score7 = 0;
     public: int score8 = 0;
     public: int score9 = 0;
-    public: int score10 = 0;*/
+    public: int score10 = 0;
         char ans;
+        char ans1;
+        char ans2;
+        char ans3;
+        char ans4;
+        char ans5;
+        char ans6;
+        char ans7;
+        char ans8;
+        char ans9;
+        char ans10;
 
     private: System::Void Startpage_Load(System::Object^ sender, System::EventArgs^ e) {
         timer1->Start();
@@ -2707,8 +2758,8 @@ private: System::Void tbOptnA_TextChanged(System::Object^ sender, System::EventA
 }
 private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
-private: System::Void radioButton2_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans = 'a';
+private: System::Void rb1A_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    ans1 = 'a';
 }
 private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -2723,11 +2774,10 @@ private: System::Void panel8_Paint(System::Object^ sender, System::Windows::Form
        public: bool nextclick = false;
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
     this->nextclick = true;
-    //score = score1 + score2 + score3 + score4 + score5 + score6 + score7 + score8 + score9 + score10;
+
+    score = score1 + score2 + score3 + score4 + score5 + score6 + score7 + score8 + score9 + score10;
     this->Close();
 }
-       /*command.Parameters->AddWithValue("@correct_optn", score);
-       score1++;*/
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void textBox27_TextChanged(System::Object^ sender, System::EventArgs^ e) {
@@ -2735,11 +2785,13 @@ private: System::Void textBox27_TextChanged(System::Object^ sender, System::Even
 private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void radioButton4_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    ans1 = 'c';
 }
 private: System::Void radioButton3_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans = 'b';
+    ans1 = 'b';
 }
 private: System::Void radioButton1_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    ans1 = 'd';
 }
 private: System::Void panel1_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 }
@@ -2764,13 +2816,16 @@ private: System::Void tbOptnA2_TextChanged(System::Object^ sender, System::Event
 private: System::Void tbOptnB2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void radioButton5_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    ans2 = 'd';
 }
-private: System::Void radioButton6_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans = 'a';
+private: System::Void rb2A_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    ans2 = 'a';
 }
 private: System::Void radioButton7_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    ans2 = 'b';
 }
 private: System::Void radioButton8_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    ans2 = 'c';
 }
 private: System::Void rtbQuestionDisplay3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -2785,13 +2840,16 @@ private: System::Void tbOptnA3_TextChanged(System::Object^ sender, System::Event
 private: System::Void textBox8_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void radioButton9_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    ans3 = 'd';
 }
 private: System::Void radioButton10_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans = 'a';
+    ans3 = 'a';
 }
 private: System::Void radioButton11_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    ans3 = 'b';
 }
 private: System::Void radioButton12_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    ans3 = 'c';
 }
 private: System::Void rtbQuestionDisplay4_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -2806,13 +2864,16 @@ private: System::Void tbOptnA4_TextChanged(System::Object^ sender, System::Event
 private: System::Void textBox12_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void radioButton13_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    ans4 = 'd';
 }
 private: System::Void radioButton14_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans = 'a';
+    ans4 = 'a';
 }
 private: System::Void radioButton15_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    ans4 = 'b';
 }
 private: System::Void radioButton16_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    ans4 = 'c';
 }
 private: System::Void rtbQuestionDisplay5_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -2827,13 +2888,16 @@ private: System::Void tbOptnA5_TextChanged(System::Object^ sender, System::Event
 private: System::Void textBox16_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void radioButton17_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    ans5 = 'd';
 }
 private: System::Void radioButton18_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans = 'a';
+    ans5 = 'a';
 }
 private: System::Void radioButton19_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    ans5 = 'b';
 }
 private: System::Void radioButton20_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    ans5 = 'c';
 }
 private: System::Void rtbQuestionDisplay6_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -2848,13 +2912,16 @@ private: System::Void tbOptnA6_TextChanged(System::Object^ sender, System::Event
 private: System::Void textBox20_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void radioButton21_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    ans6 = 'd';
 }
 private: System::Void radioButton22_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans = 'a';
+    ans6 = 'a';
 }
 private: System::Void radioButton23_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    ans6 = 'b';
 }
 private: System::Void radioButton24_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    ans6 = 'c';
 }
 private: System::Void tbOptnA8_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -2869,22 +2936,28 @@ private: System::Void textBox23_TextChanged(System::Object^ sender, System::Even
 private: System::Void textBox24_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void radioButton25_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    ans7 = 'd';
 }
 private: System::Void radioButton26_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans = 'a';
+    ans7 = 'a';
 }
 private: System::Void radioButton27_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    ans7 = 'b';
 }
 private: System::Void radioButton28_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    ans7 = 'c';
 }
 private: System::Void radioButton32_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    ans8 = 'c';
 }
 private: System::Void radioButton31_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    ans8 = 'b';
 }
 private: System::Void radioButton30_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans = 'a';
+    ans8 = 'a';
 }
 private: System::Void radioButton29_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    ans8 = 'd';
 }
 private: System::Void textBox28_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -2904,16 +2977,19 @@ private: System::Void textBox2_TextChanged(System::Object^ sender, System::Event
 }
 private: System::Void textBox3_TextChanged_1(System::Object^ sender, System::EventArgs^ e) {
 }
-private: System::Void textBox4_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
+//private: System::Void textBox4_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+//}
 private: System::Void radioButton33_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    ans9 = 'd';
 }
 private: System::Void radioButton34_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    ans = 'a';
+    ans9 = 'a';
 }
 private: System::Void radioButton35_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    ans9 = 'b';
 }
 private: System::Void radioButton36_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    ans9 = 'c';
 }
 private: System::Void richTextBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -2928,12 +3004,16 @@ private: System::Void textBox15_TextChanged(System::Object^ sender, System::Even
 private: System::Void textBox19_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void radioButton37_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    ans10 = 'd';
 }
 private: System::Void radioButton38_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    ans10 = 'a';
 }
 private: System::Void radioButton39_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    ans10 = 'b';
 }
 private: System::Void radioButton40_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    ans10 = 'c';
 }
 };
 }
