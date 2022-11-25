@@ -53,7 +53,7 @@ namespace Project {
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
 	private: System::Windows::Forms::PictureBox^ pictureBox2;
 	private: System::Windows::Forms::TextBox^ textBox1;
-	private: System::Windows::Forms::PictureBox^ pictureBox3;
+
 	private: System::Windows::Forms::Panel^ panel1;
 
 
@@ -82,13 +82,11 @@ namespace Project {
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			label2 = (gcnew System::Windows::Forms::Label());
 			label1 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
 			this->panel1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -175,7 +173,7 @@ namespace Project {
 			this->pictureBox1->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->pictureBox1->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(23, 12);
+			this->pictureBox1->Location = System::Drawing::Point(21, 10);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(29, 33);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
@@ -187,7 +185,7 @@ namespace Project {
 			// 
 			this->pictureBox2->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
-			this->pictureBox2->Location = System::Drawing::Point(-46, 1);
+			this->pictureBox2->Location = System::Drawing::Point(-48, -1);
 			this->pictureBox2->Name = L"pictureBox2";
 			this->pictureBox2->Size = System::Drawing::Size(1418, 810);
 			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
@@ -209,19 +207,6 @@ namespace Project {
 			this->textBox1->Text = L"ADMIN LOGIN";
 			this->textBox1->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
-			// pictureBox3
-			// 
-			this->pictureBox3->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->pictureBox3->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.Image")));
-			this->pictureBox3->Location = System::Drawing::Point(1330, 1);
-			this->pictureBox3->Name = L"pictureBox3";
-			this->pictureBox3->Size = System::Drawing::Size(24, 20);
-			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->pictureBox3->TabIndex = 26;
-			this->pictureBox3->TabStop = false;
-			this->pictureBox3->Click += gcnew System::EventHandler(this, &Adminloginpage::pictureBox3_Click);
-			// 
 			// panel1
 			// 
 			this->panel1->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
@@ -242,19 +227,17 @@ namespace Project {
 			this->BackColor = System::Drawing::SystemColors::ControlDarkDark;
 			this->ClientSize = System::Drawing::Size(1370, 749);
 			this->Controls->Add(this->panel1);
-			this->Controls->Add(this->pictureBox3);
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->pictureBox2);
 			this->DoubleBuffered = true;
 			this->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::Fixed3D;
 			this->Name = L"Adminloginpage";
 			this->Text = L"Adminloginpage";
 			this->WindowState = System::Windows::Forms::FormWindowState::Maximized;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
 			this->ResumeLayout(false);

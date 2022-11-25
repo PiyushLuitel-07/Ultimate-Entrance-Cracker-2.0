@@ -73,7 +73,7 @@ namespace Project {
 
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
-	private: System::Windows::Forms::PictureBox^ pictureBox3;
+
 	private: System::Windows::Forms::Panel^ panel1;
 	private: System::Windows::Forms::Panel^ panel2;
 	private: System::Windows::Forms::Panel^ panel3;
@@ -106,13 +106,11 @@ namespace Project {
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
-			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
 			this->panel1->SuspendLayout();
 			this->panel2->SuspendLayout();
 			this->panel3->SuspendLayout();
@@ -161,7 +159,7 @@ namespace Project {
 			this->label1->ForeColor = System::Drawing::Color::Gold;
 			this->label1->Location = System::Drawing::Point(274, 56);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(1174, 108);
+			this->label1->Size = System::Drawing::Size(939, 85);
 			this->label1->TabIndex = 9;
 			this->label1->Text = L"Ultimate Entrance Cracker";
 			// 
@@ -178,7 +176,7 @@ namespace Project {
 			this->linkLabel2->LinkColor = System::Drawing::Color::MediumSpringGreen;
 			this->linkLabel2->Location = System::Drawing::Point(11, 49);
 			this->linkLabel2->Name = L"linkLabel2";
-			this->linkLabel2->Size = System::Drawing::Size(224, 49);
+			this->linkLabel2->Size = System::Drawing::Size(179, 39);
 			this->linkLabel2->TabIndex = 7;
 			this->linkLabel2->TabStop = true;
 			this->linkLabel2->Text = L"Admin Login";
@@ -197,7 +195,7 @@ namespace Project {
 			this->linkLabel1->LinkColor = System::Drawing::Color::MediumSpringGreen;
 			this->linkLabel1->Location = System::Drawing::Point(29, 10);
 			this->linkLabel1->Name = L"linkLabel1";
-			this->linkLabel1->Size = System::Drawing::Size(154, 49);
+			this->linkLabel1->Size = System::Drawing::Size(122, 39);
 			this->linkLabel1->TabIndex = 6;
 			this->linkLabel1->TabStop = true;
 			this->linkLabel1->Text = L"Register";
@@ -263,7 +261,7 @@ namespace Project {
 			this->label2->Location = System::Drawing::Point(5, 52);
 			this->label2->Margin = System::Windows::Forms::Padding(6, 0, 6, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(206, 54);
+			this->label2->Size = System::Drawing::Size(163, 42);
 			this->label2->TabIndex = 2;
 			this->label2->Text = L"Username";
 			this->label2->Click += gcnew System::EventHandler(this, &Loginform::label2_Click);
@@ -279,7 +277,7 @@ namespace Project {
 			this->label3->Location = System::Drawing::Point(15, 114);
 			this->label3->Margin = System::Windows::Forms::Padding(6, 0, 6, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(191, 54);
+			this->label3->Size = System::Drawing::Size(153, 42);
 			this->label3->TabIndex = 2;
 			this->label3->Text = L"Password";
 			this->label3->Click += gcnew System::EventHandler(this, &Loginform::label3_Click);
@@ -295,18 +293,6 @@ namespace Project {
 			this->pictureBox1->TabIndex = 19;
 			this->pictureBox1->TabStop = false;
 			// 
-			// pictureBox3
-			// 
-			this->pictureBox3->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.Image")));
-			this->pictureBox3->Location = System::Drawing::Point(1333, 29);
-			this->pictureBox3->Name = L"pictureBox3";
-			this->pictureBox3->Size = System::Drawing::Size(20, 20);
-			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->pictureBox3->TabIndex = 20;
-			this->pictureBox3->TabStop = false;
-			this->pictureBox3->Click += gcnew System::EventHandler(this, &Loginform::pictureBox3_Click);
-			// 
 			// panel1
 			// 
 			this->panel1->Controls->Add(this->linkLabel2);
@@ -318,7 +304,6 @@ namespace Project {
 			// 
 			// panel2
 			// 
-			this->panel2->Controls->Add(this->pictureBox3);
 			this->panel2->Controls->Add(this->pictureBox1);
 			this->panel2->Controls->Add(this->label1);
 			this->panel2->Location = System::Drawing::Point(-7, -17);
@@ -337,7 +322,7 @@ namespace Project {
 			// 
 			// Loginform
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(15, 30);
+			this->AutoScaleDimensions = System::Drawing::SizeF(12, 25);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::WindowText;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
@@ -353,13 +338,12 @@ namespace Project {
 			this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::Fixed3D;
 			this->Margin = System::Windows::Forms::Padding(6);
 			this->Name = L"Loginform";
 			this->WindowState = System::Windows::Forms::FormWindowState::Maximized;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
 			this->panel2->ResumeLayout(false);

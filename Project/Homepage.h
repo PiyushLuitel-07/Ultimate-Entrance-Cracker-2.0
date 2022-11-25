@@ -72,7 +72,7 @@ namespace Project
 	private: System::Windows::Forms::Button^ btnLogout;
 	private: System::Windows::Forms::PictureBox^ pictureBox3;
 
-	private: System::Windows::Forms::PictureBox^ pictureBox5;
+
 	private: System::Windows::Forms::Panel^ panel1;
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::Button^ button2;
@@ -122,7 +122,6 @@ namespace Project
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->btnLogout = (gcnew System::Windows::Forms::Button());
 			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
-			this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->lbUsernameDisplay = (gcnew System::Windows::Forms::Label());
 			this->pictureBox7 = (gcnew System::Windows::Forms::PictureBox());
@@ -138,7 +137,6 @@ namespace Project
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->BeginInit();
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox7))->BeginInit();
 			this->SuspendLayout();
@@ -251,19 +249,6 @@ namespace Project
 			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox3->TabIndex = 21;
 			this->pictureBox3->TabStop = false;
-			// 
-			// pictureBox5
-			// 
-			this->pictureBox5->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->pictureBox5->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->pictureBox5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox5.Image")));
-			this->pictureBox5->Location = System::Drawing::Point(1341, 12);
-			this->pictureBox5->Name = L"pictureBox5";
-			this->pictureBox5->Size = System::Drawing::Size(17, 13);
-			this->pictureBox5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->pictureBox5->TabIndex = 27;
-			this->pictureBox5->TabStop = false;
-			this->pictureBox5->Click += gcnew System::EventHandler(this, &Homepage::pictureBox5_Click);
 			// 
 			// panel1
 			// 
@@ -399,7 +384,7 @@ namespace Project
 			// 
 			// Homepage
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(18, 37);
+			this->AutoScaleDimensions = System::Drawing::SizeF(14, 30);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(24)), static_cast<System::Int32>(static_cast<System::Byte>(30)),
 				static_cast<System::Int32>(static_cast<System::Byte>(54)));
@@ -407,14 +392,13 @@ namespace Project
 			this->Controls->Add(this->textBox3);
 			this->Controls->Add(this->textBox2);
 			this->Controls->Add(this->panel1);
-			this->Controls->Add(this->pictureBox5);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->pictureBox6);
 			this->Controls->Add(this->button4);
 			this->Font = (gcnew System::Drawing::Font(L"Britannic Bold", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->ForeColor = System::Drawing::SystemColors::Highlight;
-			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::Fixed3D;
 			this->Margin = System::Windows::Forms::Padding(6, 8, 6, 8);
 			this->Name = L"Homepage";
 			this->Text = L"2";
@@ -425,7 +409,6 @@ namespace Project
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->EndInit();
 			this->panel1->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox7))->EndInit();
 			this->ResumeLayout(false);

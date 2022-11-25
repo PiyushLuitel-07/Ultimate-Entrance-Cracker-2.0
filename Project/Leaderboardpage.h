@@ -46,7 +46,7 @@ namespace Project {
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::RichTextBox^ richTextBox1;
 	private: System::Windows::Forms::TextBox^ textBox1;
-	private: System::Windows::Forms::PictureBox^ pictureBox3;
+
 
 
 
@@ -70,9 +70,7 @@ namespace Project {
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->richTextBox1 = (gcnew System::Windows::Forms::RichTextBox());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// pictureBox4
@@ -133,38 +131,23 @@ namespace Project {
 			this->textBox1->Text = L"LEADER BOARD";
 			this->textBox1->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
-			// pictureBox3
-			// 
-			this->pictureBox3->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->pictureBox3->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.Image")));
-			this->pictureBox3->Location = System::Drawing::Point(1330, 1);
-			this->pictureBox3->Name = L"pictureBox3";
-			this->pictureBox3->Size = System::Drawing::Size(24, 20);
-			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
-			this->pictureBox3->TabIndex = 27;
-			this->pictureBox3->TabStop = false;
-			this->pictureBox3->Click += gcnew System::EventHandler(this, &Leaderboardpage::pictureBox3_Click);
-			// 
 			// Leaderboardpage
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(11, 24);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1370, 749);
-			this->Controls->Add(this->pictureBox3);
 			this->Controls->Add(this->richTextBox1);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->pictureBox4);
 			this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::Fixed3D;
 			this->Margin = System::Windows::Forms::Padding(6);
 			this->Name = L"Leaderboardpage";
 			this->Text = L"Leaderboardpage";
 			this->WindowState = System::Windows::Forms::FormWindowState::Maximized;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
