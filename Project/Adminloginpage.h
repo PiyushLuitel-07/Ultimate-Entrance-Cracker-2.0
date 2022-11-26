@@ -315,6 +315,7 @@ namespace Project {
 			MessageBox::Show("Failed to connect to database",
 				"Database Connection Error", MessageBoxButtons::OK);
 		}
+		this->Close();
 	}
 public: bool switchToLogin = false;
 private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArgs^ e) {

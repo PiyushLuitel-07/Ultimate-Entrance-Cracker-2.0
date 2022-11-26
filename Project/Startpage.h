@@ -22,7 +22,6 @@ namespace Project {
         Startpage(void)
         {
             InitializeComponent();
-            static int score;
             Question^ question_list = nullptr;
 
             //
@@ -30,6 +29,7 @@ namespace Project {
             //
             try {
                     int i = 1;
+      
                     String^ connString = "Data Source=tcp:uec.database.windows.net;Initial Catalog=uecdb;Persist Security Info=True;User ID=sqluec;Password=L12@sqd3";
                     //Data Source=tcp:uec.database.windows.net;Initial Catalog=uecdb;Persist Security Info=True;User ID=sqluec;Password=***********
                     SqlConnection sqlConn(connString);
@@ -49,7 +49,7 @@ namespace Project {
                     tbOptnD->Text = question_list->Option_d;
                     String^ ANS = question_list->Correct_optn;
                     if (String::Compare(ans1, ANS) != 0) {
-                        score1++;
+                        score++;
                     }
                     //2
                     i++;
@@ -62,7 +62,7 @@ namespace Project {
                     tbOptnD2->Text = question_list->Option_d;
                     ANS = question_list->Correct_optn;
                     if (String::Compare(ans2, ANS) != 0) {
-                        score2++;
+                        score++;
                     }
                     //3
                     i++;
@@ -75,7 +75,7 @@ namespace Project {
                     tbOptnD3->Text = question_list->Option_d;
                     ANS = question_list->Correct_optn;
                     if (String::Compare(ans3, ANS) != 0) {
-                        score3++;
+                        score++;
                     }
                     //4
                     i++;
@@ -88,7 +88,7 @@ namespace Project {
                     tbOptnD4->Text = question_list->Option_d;
                     ANS = question_list->Correct_optn;
                     if (String::Compare(ans4, ANS) != 0) {
-                        score4++;
+                        score++;
                     }
                     //5
                     i++;
@@ -101,7 +101,7 @@ namespace Project {
                     tbOptnD5->Text = question_list->Option_d;
                     ANS = question_list->Correct_optn;
                     if (String::Compare(ans5, ANS) != 0) {
-                        score5++;
+                        score++;
                     }
                     //6
                     i++;
@@ -114,7 +114,7 @@ namespace Project {
                     tbOptnD6->Text = question_list->Option_d;
                     ANS = question_list->Correct_optn;
                     if (String::Compare(ans6, ANS) != 0) {
-                        score6++;
+                        score++;
                     }
                     //7
                     i++;
@@ -127,7 +127,7 @@ namespace Project {
                     tbOptnD7->Text = question_list->Option_d;
                     ANS = question_list->Correct_optn;
                     if (String::Compare(ans7, ANS) != 0) {
-                        score7++;
+                        score++;
                     }
                     //8
                     i++;
@@ -140,7 +140,7 @@ namespace Project {
                     tbOptnD8->Text = question_list->Option_d;
                     ANS = question_list->Correct_optn;
                     if (String::Compare(ans8, ANS) != 0) {
-                        score8++;
+                        score++;
                     }
                     //9
                     i++;
@@ -153,7 +153,7 @@ namespace Project {
                     tbOptnD9->Text = question_list->Option_d;
                      ANS = question_list->Correct_optn;
                     if (String::Compare(ans9, ANS) != 0) {
-                        score9++;
+                        score++;
                     }
                     //10
                     i++;
@@ -166,7 +166,7 @@ namespace Project {
                     tbOptnD10->Text = question_list->Option_d;
                     ANS = question_list->Correct_optn;
                     if (String::Compare(ans1, ANS) != 0) {
-                        score10++;
+                        score++;
                     }
       
 
@@ -2677,16 +2677,6 @@ private: System::Windows::Forms::RadioButton^ rb10C;
 
 
     public: int score = 0;
-    public: int score1 = 0;
-    public: int score2 = 0;
-    public: int score3 = 0;
-    public: int score4 = 0;
-    public: int score5 = 0;
-    public: int score6 = 0;
-    public: int score7 = 0;
-    public: int score8 = 0;
-    public: int score9 = 0;
-    public: int score10 = 0;
         String^ ans1;
         String^ ans2;
         String^ ans3;
@@ -2774,7 +2764,6 @@ private: System::Void panel8_Paint(System::Object^ sender, System::Windows::Form
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
     this->nextclick = true;
 
-    score = score1 + score2 + score3 + score4 + score5 + score6 + score7 + score8 + score9 + score10;
     MessageBox::Show("Your Score is" + score,
        "score", MessageBoxButtons::OK);
     this->Close();

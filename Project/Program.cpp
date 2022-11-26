@@ -83,7 +83,6 @@ void main(array<String^>^ args)
 					if (hpage.switchtostartpage) {
 						spage.ShowDialog();
 
-
 					}
 					if (hpage.switchtohelppage) {
 						hepage.ShowDialog();
